@@ -1,0 +1,28 @@
+\documentclass[a4paper,10pt]{article}
+\usepackage[utf8]{inputenc}
+
+%opening
+\title{Mining Academic Expertise from Funded Research}
+\author{Peeranat Fupongsiripan 2056647}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+\input{abstract}
+\end{abstract}
+
+\tableofcontents
+
+%==============================================================================
+\chapter{Introduction}
+\label{introduction}
+
+\input{../Intro/final_individual_writing}
+
+%==============================================================================
+
+%\section{}
+
+\end{document}

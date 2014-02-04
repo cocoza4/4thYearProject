@@ -1,0 +1,39 @@
+
+
+\section{Introduction}
+
+\subsection{Definition of Mining Academic Expertise from Funded Research (Expert Search System)}
+In an expert search task, the users' need is to identify people who have relevant expertise to a topic of interest.
+An expert search system is an Information Retrieval(IR) system that can aid users with their ``expertise need''. 
+Moreover, it predicts and ranks the expertise of a set of candidate persons with respect to the users' query.
+Mining academic Expertise from funded research is to develop tools for funded research data which can extract, analyse and retrieve those data.
+
+\subsection{Why Implement one?}
+With the advent of the vast pools of information and documents in large enterprise organisations, collaborative users regularly have the need to find 
+not only documents, but also people with whom they share common interests, or who have specific knowledge in a required area. The system makes use of
+textual evidence of expertise to rank candidates.
+
+\subsection{Aims}
+http://experts.sicsa.ac.uk/ is an existing academic search engine that assists in identifying the relevant experts within Scottish Universities, 
+based on their recent publication output. The aim of this project is to develop mining tools for the data (funded research), 
+and research ways to integrate it with existing deployed academic search engines to obtain the most effective search results. 
+Learning to Rank Algorithm for Information Retrieval (IR) is also used in this project in order to enhance the effectiveness of the system.
+Funded projects from Grant on the Web are obtained from 
+- http://gow.epsrc.ac.uk/ and Research Councils UK - http://gtr.rcuk.ac.uk/. Academic funded projects and publications are used as expertise evidence 
+to assist in identifying the relevant experts with respect to a user query.
+
+\subsection{Prerequisites}
+Where possible all technical concepts used within this paper will be clearly defined. However, to fully understand the remainder of this report, 
+the reader should have at least some knowledge of the following concepts:
+\begin{itemize}
+ \item Object-Oriented programming concepts (preferably in Java)
+ \item Concepts of Information Retrieval (IR)
+ \item Basics of Learning to Rank Algorithms for IR (preferably AdaRank)
+\end{itemize}
+
+\subsection{Previous Work}
+This project is extended from the previous one. It used only publication as expertise evidence.
+
+
+
+

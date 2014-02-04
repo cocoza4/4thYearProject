@@ -1,0 +1,38 @@
+\documentclass[a4paper,10pt]{article}
+%\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+
+%opening
+\title{Mining Academic Expertise from Funded Research (Expert Search System)}
+\author{Peeranat Fupongsiripan 2056647}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+\input{abstract}
+\end{abstract}
+
+
+\renewcommand{\abstractname}{Acknowledgements}
+\begin{abstract}
+Thanks to Prof. Craig Macdonald for his advice and supervision throughout this project. 
+\end{abstract}
+
+\tableofcontents
+
+%==============================================================================
+%\label{introduction}
+
+\input{introduction}
+
+%==============================================================================
+
+\input{requirements}
+
+%==============================================================================
+%\section{}
+
+\end{document}
