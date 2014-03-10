@@ -2,6 +2,11 @@
 %\documentclass{article}
 \usepackage[utf8]{inputenc}
 \usepackage{graphicx}
+\usepackage{url}
+\usepackage{amsmath, mathtools}
+
+%\usepackage{natbib}
+%%\usepackage{cite}
 
 %opening
 \title{Mining Academic Expertise from Funded Research (Expert Search System)}
@@ -22,17 +27,29 @@ Thanks to Prof. Craig Macdonald for his advice and supervision throughout this p
 \end{abstract}
 
 \tableofcontents
-
+%\setcounter{secnumdepth}{4}
 %==============================================================================
-%\label{introduction}
 
 \input{introduction}
 
 %==============================================================================
 
-\input{requirements}
+%%\input{requirements}
 
 %==============================================================================
-%\section{}
+
+\input{background}
+
+%==============================================================================
+
+\input{design}
+
+%==============================================================================
+
+
+%==============================================================================
+
+\bibliography{references}
+\bibliographystyle{plain}
 
 \end{document}

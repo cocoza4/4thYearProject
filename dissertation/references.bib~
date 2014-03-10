@@ -1,0 +1,89 @@
+
+
+
+@article{expertsearch,
+  title = {Voting for Candidates: Adapting Data Fusion Techniques for an Expert Search Task},
+  author = {Craig Macdonald, Iadh Ounis},
+  year = {2006},
+  pages = {387, 388}
+}
+
+@misc{sicsa,
+  title = {The Scottish Informatics and Computer Science Alliance (SICSA)},
+  howpublished = "\url{http://www.sicsa.ac.uk/home/}"
+}
+
+@misc{IR,
+  title = {Information Retrieval},
+  howpublished = "\url{http://en.wikipedia.org/wiki/Information_retrieval}"
+}
+
+@misc{sicsasearch,
+  howpublished = "\url{http://experts.sicsa.ac.uk/}",
+  title = {The Scottish Informatics and Computer Science Alliance Expert Search System}
+}
+
+@misc{terrier,
+  howpublished = "\url{http://www.terrier.org/}",
+  title = {Terrier},
+}
+
+@misc{gow,
+  howpublished = "\url{http://gow.epsrc.ac.uk/}",
+  title = {Engineering and Physical Sciences Research Council (EPSRC)}
+ }
+ 
+@misc{gtr,
+  howpublished = "\url{http://gtr.rcuk.ac.uk/}",
+  title = {Research Councils UK - Gateway to Research}
+}
+
+@book{letor,
+  title = {Foundations of Machine Learning},
+  publisher = {The MIT Press},
+  year = {2012},
+  author = {Mehryar Mohri, Afshin Rostamizadeh, and Ameet Talwalkar},
+  isbn = {9780262018258}
+}
+
+@article{learningmodel,
+  title = {About Learning Models with Multiple Query Dependent Features},
+  author = {Craig Macdonald, Rdrygo L.T. and Iadh Ounis},
+  year = {2012}
+}
+
+@misc{ranklib,
+  howpublished = "\url{http://sourceforge.net/p/lemur/wiki/RankLib/}",
+  title = {RankLib}
+}
+
+@article{eval,
+  title = {Information Retrieval - Evaluation Methodology},
+  author = {Joemon M Jose},
+  year = {2013}
+}
+
+@misc{evalweb,
+  url = "\url{http://nlp.stanford.edu/IR-book/html/htmledition/information-retrieval-system-evaluation-1.html}",
+  year = {2009},
+  title = {Information retrieval system evaluation},
+  publisher = {Cambridge University Press}
+}
+  
+@misc{invertedindex,
+  url = "\url{http://en.wikipedia.org/wiki/Inverted_index}",
+  title = {Inverted Index},
+  year = {2012}
+}
+
+@misc{craig,
+  title = {Conversation of Dr. Craig Macdonald},
+  year = {2014}
+}
+  
+  
+  
+  
+  
+  
+  

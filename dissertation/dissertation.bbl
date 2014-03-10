@@ -1,0 +1,61 @@
+\begin{thebibliography}{10}
+
+\bibitem{gow}
+Engineering and physical sciences research council (epsrc).
+\newblock \url{http://gow.epsrc.ac.uk/}.
+
+\bibitem{IR}
+Information retrieval.
+\newblock \url{http://en.wikipedia.org/wiki/Information_retrieval}.
+
+\bibitem{ranklib}
+Ranklib.
+\newblock \url{http://sourceforge.net/p/lemur/wiki/RankLib/}.
+
+\bibitem{gtr}
+Research councils uk - gateway to research.
+\newblock \url{http://gtr.rcuk.ac.uk/}.
+
+\bibitem{sicsasearch}
+The scottish informatics and computer science alliance expert search system.
+\newblock \url{http://experts.sicsa.ac.uk/}.
+
+\bibitem{sicsa}
+The scottish informatics and computer science alliance (sicsa).
+\newblock \url{http://www.sicsa.ac.uk/home/}.
+
+\bibitem{terrier}
+Terrier.
+\newblock \url{http://www.terrier.org/}.
+
+\bibitem{evalweb}
+Information retrieval system evaluation, 2009.
+
+\bibitem{invertedindex}
+Inverted index, 2012.
+
+\bibitem{craig}
+Conversation of dr. craig macdonald, 2014.
+
+\bibitem{expertsearch}
+Iadh~Ounis Craig~Macdonald.
+\newblock Voting for candidates: Adapting data fusion techniques for an expert
+  search task.
+\newblock pages 387, 388, 389, 2006.
+
+\bibitem{learningmodel}
+Rdrygo~L.T. Craig~Macdonald and Iadh Ounis.
+\newblock About learning models with multiple query dependent features.
+\newblock 2012.
+
+\bibitem{eval}
+Joemon~M Jose.
+\newblock Information retrieval - evaluation methodology.
+\newblock 2013.
+
+\bibitem{letor}
+Afshin~Rostamizadeh Mehryar~Mohri and Ameet Talwalkar.
+\newblock {\em Foundations of Machine Learning}.
+\newblock The MIT Press, 2012.
+
+\end{thebibliography}

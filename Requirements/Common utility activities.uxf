@@ -20,7 +20,7 @@
       <w>180</w>
       <h>40</h>
     </coordinates>
-    <panel_attributes>View academic profile
+    <panel_attributes>View academic's profile
 </panel_attributes>
     <additional_attributes/>
   </element>
@@ -32,7 +32,7 @@
       <w>350</w>
       <h>40</h>
     </coordinates>
-    <panel_attributes>Search for experts most relevant to a query
+    <panel_attributes>Search for experts
 </panel_attributes>
     <additional_attributes/>
   </element>

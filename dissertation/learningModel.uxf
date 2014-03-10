@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="11.5">
+  <zoom_level>10</zoom_level>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>0</x>
+      <y>70</y>
+      <w>470</w>
+      <h>360</h>
+    </coordinates>
+    <panel_attributes>LearningModel
+--
+- aq : AcademTechQuerying
+- existingQueryRS : Hashtable&lt;String, HashMap&lt;String, Integer&gt;&gt;
+- allCands : String[]
+- pw : PrintWriter
+- finalProjScores : double[]
+- finalPubScores : double[]
+- candFundingScores : double[]
+- publicationCoAuthorScores : double[]
+- projectCoAuthorScores : double[]
+- totalProjectScores : double[]
+- totalPublicationScores : double[]
+--
++ LearningModel()
++ loadQueries() : void
++ processQueries() : void
++ setScores(query : String, pubRS : RetrievedResults,
+projRS : RetrievedResults) : void
++ setFeatures(query : String) : void
++ learnModel() : void
+_+ main(args : String[]) : void_</panel_attributes>
+    <additional_attributes/>
+  </element>
+</diagram>

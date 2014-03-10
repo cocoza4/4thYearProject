@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="11.5">
+  <zoom_level>10</zoom_level>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>170</x>
+      <y>70</y>
+      <w>650</w>
+      <h>150</h>
+    </coordinates>
+    <panel_attributes>AcademTechQuerying
+--
+- queryingManager : Manager
+- index : Index
+- candMeta : MetaIndex 
+- srq : SearchRequest
+--
+# createManager() : void
++ getIndex() : Index
++ processQuery(query : String, supportDocs : boolean, candId : String) : RetrievedResults
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>240</x>
+      <y>270</y>
+      <w>510</w>
+      <h>150</h>
+    </coordinates>
+    <panel_attributes>RetrievedResults
+--
+- ids: String[]
+- tdocids: Integer[]
+- scores : Double[]
+--
++ RetrievedResults(ids : String[], tdocids : Integer[], scores : Double[])
++ getDocIds() : String[]
++ gettDocIds() : Integer[]
++ getScores() : Double[]</panel_attributes>
+    <additional_attributes/>
+  </element>
+</diagram>

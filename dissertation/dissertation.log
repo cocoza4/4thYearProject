@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012/Debian) (format=pdflatex 2012.11.18)  4 FEB 2014 22:25
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012/Debian) (format=pdflatex 2012.11.18)  10 MAR 2014 20:45
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -273,35 +273,126 @@ Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
 \Gin@req@height=\dimen103
 \Gin@req@width=\dimen104
 )
+(/usr/share/texlive/texmf-dist/tex/latex/url/url.sty
+\Urlmuskip=\muskip10
+Package: url 2006/04/12  ver 3.3  Verb mode for urls, etc.
+)
+(/usr/share/texlive/texmf-dist/tex/latex/mh/mathtools.sty
+Package: mathtools 2012/04/24 v1.12 mathematical typesetting tools
+
+(/usr/share/texlive/texmf-dist/tex/latex/tools/calc.sty
+Package: calc 2007/08/22 v4.3 Infix arithmetic (KKT,FJ)
+\calc@Acount=\count88
+\calc@Bcount=\count89
+\calc@Adimen=\dimen105
+\calc@Bdimen=\dimen106
+\calc@Askip=\skip43
+\calc@Bskip=\skip44
+LaTeX Info: Redefining \setlength on input line 76.
+LaTeX Info: Redefining \addtolength on input line 77.
+\calc@Ccount=\count90
+\calc@Cskip=\skip45
+)
+(/usr/share/texlive/texmf-dist/tex/latex/mh/mhsetup.sty
+Package: mhsetup 2010/01/21 v1.2a programming setup (MH)
+)
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsmath.sty
+Package: amsmath 2000/07/18 v2.13 AMS math features
+\@mathmargin=\skip46
+
+For additional information on amsmath, use the `?' option.
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amstext.sty
+Package: amstext 2000/06/29 v2.01
+
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsgen.sty
+File: amsgen.sty 1999/11/30 v2.0
+\@emptytoks=\toks17
+\ex@=\dimen107
+))
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsbsy.sty
+Package: amsbsy 1999/11/29 v1.2d
+\pmbraise@=\dimen108
+)
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsopn.sty
+Package: amsopn 1999/12/14 v2.01 operator names
+)
+\inf@bad=\count91
+LaTeX Info: Redefining \frac on input line 211.
+\uproot@=\count92
+\leftroot@=\count93
+LaTeX Info: Redefining \overline on input line 307.
+\classnum@=\count94
+\DOTSCASE@=\count95
+LaTeX Info: Redefining \ldots on input line 379.
+LaTeX Info: Redefining \dots on input line 382.
+LaTeX Info: Redefining \cdots on input line 467.
+\Mathstrutbox@=\box26
+\strutbox@=\box27
+\big@size=\dimen109
+LaTeX Font Info:    Redeclaring font encoding OML on input line 567.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 568.
+\macc@depth=\count96
+\c@MaxMatrixCols=\count97
+\dotsspace@=\muskip11
+\c@parentequation=\count98
+\dspbrk@lvl=\count99
+\tag@help=\toks18
+\row@=\count100
+\column@=\count101
+\maxfields@=\count102
+\andhelp@=\toks19
+\eqnshift@=\dimen110
+\alignsep@=\dimen111
+\tagshift@=\dimen112
+\tagwidth@=\dimen113
+\totwidth@=\dimen114
+\lineht@=\dimen115
+\@envbody=\toks20
+\multlinegap=\skip47
+\multlinetaggap=\skip48
+\mathdisplay@stack=\toks21
+LaTeX Info: Redefining \[ on input line 2666.
+LaTeX Info: Redefining \] on input line 2667.
+)
+\g_MT_multlinerow_int=\count103
+\l_MT_multwidth_dim=\dimen116
+\origjot=\skip49
+\l_MT_shortvdotswithinadjustabove_dim=\dimen117
+\l_MT_shortvdotswithinadjustbelow_dim=\dimen118
+\l_MT_above_intertext_dim=\dimen119
+\l_MT_below_intertext_dim=\dimen120
+\l_MT_above_shortintertext_dim=\dimen121
+\l_MT_below_shortintertext_dim=\dimen122
+)
 (./dissertation.aux)
 \openout1 = `dissertation.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 10.
-LaTeX Font Info:    ... okay on input line 10.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 10.
-LaTeX Font Info:    ... okay on input line 10.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 10.
-LaTeX Font Info:    ... okay on input line 10.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 10.
-LaTeX Font Info:    ... okay on input line 10.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 10.
-LaTeX Font Info:    ... okay on input line 10.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 10.
-LaTeX Font Info:    ... okay on input line 10.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
 
 (/usr/share/texlive/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count88
-\scratchdimen=\dimen105
-\scratchbox=\box26
-\nofMPsegments=\count89
-\nofMParguments=\count90
-\everyMPshowfont=\toks17
-\MPscratchCnt=\count91
-\MPscratchDim=\dimen106
-\MPnumerator=\count92
-\makeMPintoPDFobject=\count93
-\everyMPtoPDFconversion=\toks18
+\scratchcounter=\count104
+\scratchdimen=\dimen123
+\scratchbox=\box28
+\nofMPsegments=\count105
+\nofMParguments=\count106
+\everyMPshowfont=\toks22
+\MPscratchCnt=\count107
+\MPscratchDim=\dimen124
+\MPnumerator=\count108
+\makeMPintoPDFobject=\count109
+\everyMPtoPDFconversion=\toks23
 ) (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
 Package: pdftexcmds 2011/11/29 v0.20 Utility functions of pdfTeX for LuaTeX (HO
 )
@@ -350,75 +441,210 @@ G,.JBIG2,.JB2,.eps]
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <12> on input line 12.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 12.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 12.
+(./abstract.tex) (./dissertation.toc [1
 
-(./abstract.tex) (./dissertation.toc
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 2.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 2.
-)
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}])
 \tf@toc=\write3
 \openout3 = `dissertation.toc'.
 
- (./introduction.tex [1
-
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 29.
+ (./introduction.tex
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 15.
 
 (/usr/share/texlive/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 29.
-) (./requirements.tex
-<./figures/actors.jpg, id=13, 140.525pt x 391.4625pt>
-File: ./figures/actors.jpg Graphic file (type jpg)
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 15.
+ [2]) [3]
+(./background.tex
+<./figures/retrieval_process.png, id=20, 234.1247pt x 131.74219pt>
+File: ./figures/retrieval_process.png Graphic file (type png)
 
-<use ./figures/actors.jpg>
-Package pdftex.def Info: ./figures/actors.jpg used on input line 10.
-(pdftex.def)             Requested size: 56.20898pt x 156.58221pt.
- [2]
-<./figures/use_case.jpg, id=18, 803.0pt x 471.7625pt>
-File: ./figures/use_case.jpg Graphic file (type jpg)
+<use ./figures/retrieval_process.png>
+Package pdftex.def Info: ./figures/retrieval_process.png used on input line 15.
 
-<use ./figures/use_case.jpg>
-Package pdftex.def Info: ./figures/use_case.jpg used on input line 44.
-(pdftex.def)             Requested size: 321.1943pt x 188.70164pt.
+(pdftex.def)             Requested size: 234.12411pt x 131.74185pt.
+ [4 <./figures/retrieval_process.png (PNG copy)>] <./figures/text.png, id=24, 5
+58.58687pt x 161.10187pt>
+File: ./figures/text.png Graphic file (type png)
 
-<./figures/login.jpg, id=19, 441.65pt x 672.5125pt>
-File: ./figures/login.jpg Graphic file (type jpg)
- <use ./figures/login.jpg>
-Package pdftex.def Info: ./figures/login.jpg used on input line 55.
-(pdftex.def)             Requested size: 220.82445pt x 336.25542pt.
+<use ./figures/text.png>
+Package pdftex.def Info: ./figures/text.png used on input line 32.
+(pdftex.def)             Requested size: 279.29276pt x 80.55074pt.
+ [5 <./figures/text.png (PNG copy)>]
+<./figures/invertedIndex.png, id=28, 433.62pt x 245.41687pt>
+File: ./figures/invertedIndex.png Graphic file (type png)
 
-[3 <./figures/actors.jpg>] [4 <./figures/use_case.jpg>] [5 <./figures/login.jpg
->]) [6] [7] (./dissertation.aux) ) 
+<use ./figures/invertedIndex.png>
+Package pdftex.def Info: ./figures/invertedIndex.png used on input line 121.
+(pdftex.def)             Requested size: 216.80946pt x 122.70813pt.
+ [6 <./figures/invertedIndex.png (PNG copy)>]
+<./figures/retrieval.png, id=32, 923.45pt x 618.31pt>
+File: ./figures/retrieval.png Graphic file (type png)
+
+<use ./figures/retrieval.png>
+Package pdftex.def Info: ./figures/retrieval.png used on input line 134.
+(pdftex.def)             Requested size: 277.03712pt x 185.49443pt.
+ [7 <./figures/retrieval.png (PNG copy)>]
+<./figures/precision.png, id=37, 450.68375pt x 45.16875pt>
+File: ./figures/precision.png Graphic file (type png)
+
+<use ./figures/precision.png>
+Package pdftex.def Info: ./figures/precision.png used on input line 186.
+(pdftex.def)             Requested size: 225.34131pt x 22.5843pt.
+
+<./figures/recall.png, id=38, 429.605pt x 45.16875pt>
+File: ./figures/recall.png Graphic file (type png)
+
+<use ./figures/recall.png>
+Package pdftex.def Info: ./figures/recall.png used on input line 191.
+(pdftex.def)             Requested size: 214.80197pt x 22.5843pt.
+ [8 <./figures/precision.png>]
+<./figures/pr_example.png, id=44, 616.3025pt x 376.40625pt>
+File: ./figures/pr_example.png Graphic file (type png)
+
+<use ./figures/pr_example.png>
+Package pdftex.def Info: ./figures/pr_example.png used on input line 201.
+(pdftex.def)             Requested size: 308.1505pt x 188.20265pt.
+
+<./figures/map.png, id=45, 286.06876pt x 59.22125pt>
+File: ./figures/map.png Graphic file (type png)
+ <use ./figures/map.png>
+Package pdftex.def Info: ./figures/map.png used on input line 208.
+(pdftex.def)             Requested size: 143.03403pt x 29.61053pt.
+
+[9 <./figures/pr_example.png (PNG copy)> <./figures/recall.png> <./figures/map.
+png>] [10] <./figures/letor.png, id=54, 250.9375pt x 230.8625pt>
+File: ./figures/letor.png Graphic file (type png)
+
+<use ./figures/letor.png>
+Package pdftex.def Info: ./figures/letor.png used on input line 255.
+(pdftex.def)             Requested size: 175.65504pt x 161.60263pt.
+ [11 <./figures/letor.png>]
+<./figures/query.png, id=61, 1369.115pt x 719.68875pt>
+File: ./figures/query.png Graphic file (type png)
+
+<use ./figures/query.png>
+Package pdftex.def Info: ./figures/query.png used on input line 309.
+(pdftex.def)             Requested size: 410.73767pt x 215.9083pt.
+
+Overfull \hbox (65.73767pt too wide) in paragraph at lines 309--310
+ [][] 
+ []
+
+[12] [13 <./figures/query.png (PNG copy)>] [14]) (./design.tex
+<./figures/classDiagram1.png, id=77, 973.6375pt x 662.475pt>
+File: ./figures/classDiagram1.png Graphic file (type png)
+
+<use ./figures/classDiagram1.png>
+Package pdftex.def Info: ./figures/classDiagram1.png used on input line 14.
+(pdftex.def)             Requested size: 389.44809pt x 264.9853pt.
+
+Overfull \hbox (44.44809pt too wide) in paragraph at lines 14--15
+ [][] 
+ []
+
+<./figures/AcademTechQuerying.png, id=78, 692.5875pt x 391.4625pt>
+File: ./figures/AcademTechQuerying.png Graphic file (type png)
+
+<use ./figures/AcademTechQuerying.png>
+Package pdftex.def Info: ./figures/AcademTechQuerying.png used on input line 23
+.
+(pdftex.def)             Requested size: 277.03009pt x 156.58221pt.
+
+Overfull \hbox (5.08385pt too wide) in paragraph at lines 27--30
+[]\OT1/cmr/m/n/10 Figure  9[] shows class di-a-grams of AcademTech-Query-ing an
+d Re-trieve-dResults.
+ []
+
+[15 <./figures/classDiagram1.png (PNG copy)>]
+<./figures/projectsExtraction.png, id=82, 1124.2pt x 642.4pt>
+File: ./figures/projectsExtraction.png Graphic file (type png)
+
+<use ./figures/projectsExtraction.png>
+Package pdftex.def Info: ./figures/projectsExtraction.png used on input line 48
+.
+(pdftex.def)             Requested size: 393.47589pt x 224.84337pt.
+
+Overfull \hbox (48.47589pt too wide) in paragraph at lines 48--49
+ [][] 
+ []
+
+[16 <./figures/AcademTechQuerying.png (PNG copy)>]
+Overfull \hbox (2.11787pt too wide) in paragraph at lines 62--63
+ \OT1/cmr/bx/n/10 GtR-Pro-jectWrap-per[] \OT1/cmr/m/n/10 is a class used GOWHas
+hTable Class to ex-tract funded
+ []
+
+<./figures/querying.png, id=86, 526.96875pt x 188.20313pt>
+File: ./figures/querying.png Graphic file (type png)
+
+<use ./figures/querying.png>
+Package pdftex.def Info: ./figures/querying.png used on input line 82.
+(pdftex.def)             Requested size: 368.8756pt x 131.74127pt.
+
+Overfull \hbox (23.8756pt too wide) in paragraph at lines 82--83
+ [][] 
+ []
+
+<./figures/union.png, id=87, 143.03438pt x 153.57375pt>
+File: ./figures/union.png Graphic file (type png)
+
+<use ./figures/union.png>
+Package pdftex.def Info: ./figures/union.png used on input line 88.
+(pdftex.def)             Requested size: 100.12337pt x 107.50089pt.
+ [17 <./figures/projectsExtraction.png (PNG copy)>]
+Overfull \hbox (40.47284pt too wide) in paragraph at lines 105--126
+ [][] 
+ []
+
+[18 <./figures/querying.png> <./figures/union.png (PNG copy)>]
+<./figures/learningModel.png, id=94, 511.9125pt x 401.5pt>
+File: ./figures/learningModel.png Graphic file (type png)
+
+<use ./figures/learningModel.png>
+Package pdftex.def Info: ./figures/learningModel.png used on input line 131.
+(pdftex.def)             Requested size: 358.3363pt x 281.04808pt.
+
+Overfull \hbox (13.3363pt too wide) in paragraph at lines 131--132
+ [][] 
+ []
+
+
+Overfull \hbox (9.97292pt too wide) in paragraph at lines 141--142
+[]\OT1/cmr/m/n/10 learnModel() is a method that pro-duces a learned model us-in
+g RankLib 2.4.2[]. 
+ []
+
+) (./dissertation.bbl [19] [20 <./figures/learningModel.png (PNG copy)>])
+[21] (./dissertation.aux) ) 
 Here is how much of TeX's memory you used:
- 1742 strings out of 495059
- 23905 string characters out of 3182029
- 82927 words of memory out of 3000000
- 4900 multiletter control sequences out of 15000+200000
- 8502 words of font info for 30 fonts, out of 3000000 for 9000
+ 3058 strings out of 495059
+ 42933 string characters out of 3182029
+ 105502 words of memory out of 3000000
+ 6163 multiletter control sequences out of 15000+200000
+ 10144 words of font info for 37 fonts, out of 3000000 for 9000
  14 hyphenation exceptions out of 8191
- 37i,14n,23p,238b,251s stack positions out of 5000i,500n,10000p,200000b,50000s
-</usr/share/texlive/texmf-dist/fonts/type1/pu
-blic/amsfonts/cm/cmbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/a
-msfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfont
-s/cm/cmbx9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cm
-r10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb
-></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/
-share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/share/te
-xlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
-Output written on dissertation.pdf (7 pages, 174873 bytes).
+ 38i,8n,23p,245b,315s stack positions out of 5000i,500n,10000p,200000b,50000s
+</usr/share/texlive/texmf-dist/fonts/type1/public/am
+sfonts/cm/cmbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts
+/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cm
+bx9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pf
+b></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></us
+r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share
+/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texliv
+e/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf
+-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texlive/texmf-dist/f
+onts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/typ
+e1/public/amsfonts/cm/cmr9.pfb></usr/share/texlive/texmf-dist/fonts/type1/publi
+c/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsf
+onts/cm/cmsy7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm
+/cmti10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt1
+0.pfb>
+Output written on dissertation.pdf (21 pages, 677656 bytes).
 PDF statistics:
- 63 PDF objects out of 1000 (max. 8388607)
- 42 compressed objects within 1 object stream
+ 153 PDF objects out of 1000 (max. 8388607)
+ 94 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 16 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 81 words of extra memory for PDF output out of 10000 (max. 10000000)
 

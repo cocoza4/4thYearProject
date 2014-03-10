@@ -50,7 +50,7 @@ relevant to a query</panel_attributes>
     <type>com.umlet.element.custom.State</type>
     <coordinates>
       <x>330</x>
-      <y>320</y>
+      <y>420</y>
       <w>160</w>
       <h>40</h>
     </coordinates>
@@ -61,7 +61,7 @@ relevant to a query</panel_attributes>
     <type>com.umlet.element.Relation</type>
     <coordinates>
       <x>380</x>
-      <y>340</y>
+      <y>440</y>
       <w>50</w>
       <h>100</h>
     </coordinates>
@@ -72,11 +72,45 @@ relevant to a query</panel_attributes>
     <type>com.umlet.element.custom.FinalState</type>
     <coordinates>
       <x>400</x>
-      <y>430</y>
+      <y>530</y>
       <w>20</w>
       <h>20</h>
     </coordinates>
     <panel_attributes>i</panel_attributes>
     <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.custom.Decision</type>
+    <coordinates>
+      <x>390</x>
+      <y>320</y>
+      <w>40</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>400</x>
+      <y>120</y>
+      <w>268</w>
+      <h>240</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+[Refine/Explore?]</panel_attributes>
+    <additional_attributes>30;30;180;30;180;220;40;220</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>380</x>
+      <y>340</y>
+      <w>50</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>30;70;30;30</additional_attributes>
   </element>
 </diagram>

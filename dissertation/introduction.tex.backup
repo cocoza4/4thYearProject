@@ -1,22 +1,68 @@
 
 
+
 \section{Introduction}
 
-\subsection{Definition of Mining Academic Expertise from Funded Research (Expert Search System)}
-In an expert search task, the users' need is to identify people who have relevant expertise to a topic of interest.
-An expert search system is an Information Retrieval(IR) system that can aid users with their ``expertise need''. 
-Moreover, it predicts and ranks the expertise of a set of candidate persons with respect to the users' query.
-Mining academic Expertise from funded research is to develop tools for funded research data which can extract, analyse and retrieve those data.
+\subsection{The Scottish Informatics and Computer Science Alliance(SICSA)}
 
-\subsection{Why Implement one?}
+``The Scottish Informatics and Computer Science Alliance (SICSA) is a collaboration of Scottish Universities whose goal is to develop 
+and extend Scotland's position as a world leader in Informatics and Computer Science research and education''~\cite{sicsa}. 
+SICSA achieves this by working cooperatively rather than competitively, by providing support and sharing facilities, by working closely 
+with industry and government and by appointing and retaining world-class staff and research students in Scottish Universities.
+A list of members of SICSA is given below.
+
+\begin{itemize}
+ \item University of Aberdeen
+ \item University of Abertay
+ \item University of Dundee
+ \item University of Edinburgh
+ \item Edinburgh Napier University
+ \item University of Glasgow
+ \item Glasgow Caledonian University
+ \item Heriot-Watt University
+ \item Robert Gordon University
+ \item University of St Andrews
+ \item University of Stirling
+ \item University of Strathclyde
+ \item University of the West of Scotland
+\end{itemize}
+
+Research excellence is critical in a modern economy as a driver for enterprise and innovation. SICSA works closely with companies of all 
+sizes to transfer advanced research to industry and informs researchers of current industrial problems. 
+all aspects of informatics and computer science are of interest but focus on four research themes that are particularly timely and important:
+\begin{itemize}
+ \item Next Generation Internet
+ \item Multi-modal Interaction
+ \item Modelling and Abstraction
+ \item Complex Systems Engineering
+\end{itemize}
+
+\subsection{What is Expert Search?}
 With the advent of the vast pools of information and documents in large enterprise organisations, collaborative users regularly have the need to find 
-not only documents, but also people with whom they share common interests, or who have specific knowledge in a required area. The system makes use of
-textual evidence of expertise to rank candidates.
+not only documents, but also people with whom they share common interests, or who have specific knowledge in a required area. In an expert search task,
+the users' need is to identify people who have relevant expertise to a 
+topic of interest~\cite[P. 387]{expertsearch}. An expert search system is an Information Retrieval~\cite{IR} system that makes use of textual evidence 
+of expertise to rank candidates and and can aid users with their ``expertise need''. Predominantly, these systems work by generating a ``profile'' 
+of textual evidence for each candidate~\cite[P. 388]{expertsearch}. The profiles represent the system's knowledge of the expertise of each 
+candidate, and they are ranked in response to a user query~\cite[P. 388]{expertsearch}. In real world scenario, the user formulates a query to 
+represent their topic of interest to the system; the system then uses the available textual evdience of expertise to rank candidate persons with 
+respect to their predicted expertise about the query.
 
-\subsection{Aims}
-http://experts.sicsa.ac.uk/ is an existing academic search engine that assists in identifying the relevant experts within Scottish Universities, 
-based on their recent publication output. The aim of this project is to develop mining tools for the data (funded research), 
-and research ways to integrate it with existing deployed academic search engines to obtain the most effective search results. 
-funded projects from Grant on the Web are obtained from 
-- http://gow.epsrc.ac.uk/ and Research Councils UK - http://gtr.rcuk.ac.uk/. Academic funded projects and publications are used as expertise evidence 
-to assist in identifying the relevant experts with respect to a user query.
+\subsection{Definition of Mining Academic Expertise from Funded Research and Aims}
+http://experts.sicsa.ac.uk/ ~\cite{sicsasearch} is a deployed academic search engine that assists in identifying the relevant experts within Scottish Universities, 
+based on their recent publication output. However, integrating different kind of academic expertise evidence with the existing one may improve
+the effectiveness of the retrieval system. The aim of this project is to develop mining tools for the funded projects, 
+and research ways to integrate them with the existing academic search engines to obtain the most effective search results. 
+The sources of the new evidence, funded projects, are from Grant on the Web~\cite{gow} and Research Councils UK~\cite{gtr}.
+Io integrate academic funded projects and publications together, Learning to Rank Algorithms for Information Retrieval (IR) are applied in this project.
+
+\subsection{Context}
+This project was initially developed by an undergraduate student a few years ago. It used academic's publications as an expertise evidence to find experts.
+I have access to funded projects data in the UK. This data is integrated with existing data to improve the performance of http://experts.sicsa.ac.uk/ ~\cite{sicsasearch}
+
+\subsection{Overview}
+In this dissertation, Section 2 discusses about Requirements Specification which is grouped into functional and non-functional requirements. Section 3 aims
+to explain the backgrounds of the project to readers. This section is necessary for readers to understand subsequent sections. Section 4 discusses
+about Designs and Implementations of the system which also references to deployed SICSA search system~\cite{sicsasearch}. Section 5 provides results and
+analysis of the techiques used. This section can be seen as the most important part of the whole project since it analyses adding expertise evidence 
+improves the relevance of the search or not. The last section is the conclusion of the project.
