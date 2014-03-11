@@ -3,38 +3,43 @@
 \contentsline {subsection}{\numberline {1.2}What is Expert Search?}{3}
 \contentsline {subsection}{\numberline {1.3}Definition of Mining Academic Expertise from Funded Research and Aims}{3}
 \contentsline {subsection}{\numberline {1.4}Context}{3}
-\contentsline {subsection}{\numberline {1.5}Overview}{3}
-\contentsline {section}{\numberline {2}Background}{4}
-\contentsline {subsection}{\numberline {2.1}Information Retrieval (IR)}{4}
-\contentsline {subsubsection}{\numberline {2.1.1}Brief Overview of Information Retrieval System Architecture}{4}
-\contentsline {paragraph}{Stopwords Removal}{5}
-\contentsline {paragraph}{Stemming}{6}
+\contentsline {subsection}{\numberline {1.5}Overview}{4}
+\contentsline {section}{\numberline {2}Requirements Specification}{4}
+\contentsline {subsubsection}{\numberline {2.0.1}Must Have}{4}
+\contentsline {section}{\numberline {3}Background}{5}
+\contentsline {subsection}{\numberline {3.1}Information Retrieval (IR)}{5}
+\contentsline {subsubsection}{\numberline {3.1.1}Brief Overview of Information Retrieval System Architecture}{5}
+\contentsline {paragraph}{Tokenisation}{6}
+\contentsline {paragraph}{Stopwords Removal}{6}
+\contentsline {paragraph}{Stemming}{7}
 \contentsline {paragraph}{Inverted Index Structure Creation}{7}
-\contentsline {subsubsection}{\numberline {2.1.2}Retrieving results in Information Retrieval}{7}
-\contentsline {subsubsection}{\numberline {2.1.3}Evaluation}{8}
-\contentsline {subsubsection}{\numberline {2.1.4}Precision and Recall}{8}
-\contentsline {subsection}{\numberline {2.2}Search Engine}{9}
-\contentsline {subsection}{\numberline {2.3}Learning to Rank}{10}
-\contentsline {subsubsection}{\numberline {2.3.1}Query Dependent Feature}{10}
-\contentsline {subsubsection}{\numberline {2.3.2}Query Independent Feature}{10}
-\contentsline {subsubsection}{\numberline {2.3.3}Obtaining and Deploying a Learned Model}{10}
-\contentsline {subsection}{\numberline {2.4}Tools}{11}
-\contentsline {subsubsection}{\numberline {2.4.1}Terrier}{11}
-\contentsline {subsubsection}{\numberline {2.4.2}RankLib}{11}
-\contentsline {subsubsection}{\numberline {2.4.3}trec\_eval}{12}
-\contentsline {subsection}{\numberline {2.5}Expert Search}{12}
-\contentsline {subsubsection}{\numberline {2.5.1}Determining Good Query Results}{12}
-\contentsline {subsubsection}{\numberline {2.5.2}What makes an expert a good expert?}{13}
-\contentsline {subsubsection}{\numberline {2.5.3}Voting Technique}{14}
-\contentsline {subsection}{\numberline {2.6}Design and Implementation}{15}
-\contentsline {subsubsection}{\numberline {2.6.1}Class Diagrams}{15}
-\contentsline {subsubsection}{\numberline {2.6.2}Data Extraction}{16}
-\contentsline {paragraph}{AcademicsHashTable}{16}
-\contentsline {paragraph}{GtRHashTable}{17}
-\contentsline {paragraph}{GOWHashTable}{17}
-\contentsline {paragraph}{SSProjectsExtractor}{17}
-\contentsline {paragraph}{GtRProjectWrapper}{17}
-\contentsline {paragraph}{ProjectExtractor}{17}
-\contentsline {subsubsection}{\numberline {2.6.3}Retrieving Documents (Experts) with respect to a Query}{18}
-\contentsline {subsubsection}{\numberline {2.6.4}Producing a Learned Model}{18}
-\contentsline {subsubsection}{\numberline {2.6.5}Applying a Learned Model}{19}
+\contentsline {subsubsection}{\numberline {3.1.2}Retrieving results in Information Retrieval}{9}
+\contentsline {subsubsection}{\numberline {3.1.3}Evaluation}{9}
+\contentsline {subsubsection}{\numberline {3.1.4}Precision and Recall}{10}
+\contentsline {subsection}{\numberline {3.2}Search Engine}{10}
+\contentsline {subsection}{\numberline {3.3}Learning to Rank}{11}
+\contentsline {subsubsection}{\numberline {3.3.1}Query Dependent Feature}{11}
+\contentsline {subsubsection}{\numberline {3.3.2}Query Independent Feature}{11}
+\contentsline {subsubsection}{\numberline {3.3.3}Obtaining and Deploying a Learned Model}{12}
+\contentsline {subsection}{\numberline {3.4}Tools}{13}
+\contentsline {subsubsection}{\numberline {3.4.1}Terrier}{13}
+\contentsline {subsubsection}{\numberline {3.4.2}RankLib}{13}
+\contentsline {subsubsection}{\numberline {3.4.3}trec\_eval}{13}
+\contentsline {subsection}{\numberline {3.5}Expert Search}{13}
+\contentsline {subsubsection}{\numberline {3.5.1}Determining Good Query Results}{13}
+\contentsline {subsubsection}{\numberline {3.5.2}What makes an expert a good expert?}{15}
+\contentsline {subsubsection}{\numberline {3.5.3}Voting Technique}{15}
+\contentsline {subsection}{\numberline {3.6}Design and Implementation}{16}
+\contentsline {subsubsection}{\numberline {3.6.1}Overview of Important Class Diagrams}{16}
+\contentsline {subsubsection}{\numberline {3.6.2}Data Extraction}{18}
+\contentsline {paragraph}{AcademicsHashTable}{19}
+\contentsline {paragraph}{GtRHashTable}{19}
+\contentsline {paragraph}{GOWHashTable}{19}
+\contentsline {paragraph}{SSProjectsExtractor}{19}
+\contentsline {paragraph}{GtRProjectWrapper}{19}
+\contentsline {paragraph}{ProjectExtractor}{19}
+\contentsline {subsubsection}{\numberline {3.6.3}Indexing}{20}
+\contentsline {subsubsection}{\numberline {3.6.4}Retrieving Documents (Experts) with respect to a Query}{21}
+\contentsline {subsubsection}{\numberline {3.6.5}Producing a Learned Model}{21}
+\contentsline {subsubsection}{\numberline {3.6.6}Applying a Learned Model}{24}
+\contentsline {subsubsection}{\numberline {3.6.7}Differences Between Old and New Systems}{24}

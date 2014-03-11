@@ -16,7 +16,7 @@ be discussed in more details in later section.
 \caption{Search Process} \label{fig:retrieval_process} 
 \end{figure}
 
-\subsubsection{Brief Overview of Information Retrieval System Architecture}
+\subsubsection{Brief Overview of Information Retrieval System Architecture}\label{section:IRarchitecture}
 In IR systems, two main objectives have to be met. First, the results must satisfy user - this means retrieving information to meet urser
 information need. Second, retrieving process is fast. This section is devoted to a brief overiew of the architecture of IR system which makes readers
 understand how documents are retrieved and the data structure used in IR systems.To understand how retrieval process works, indexing process
@@ -222,18 +222,18 @@ a promising approach to information retrieval~\cite{letor}. In particular, many 
 producing the final ranking of documents for a query~\cite[P. 3]{learningmodel}. In learning to rank, a feature is a binary or numberical indicator 
 representing the quality of a document, or its relation to the query~\cite[P. 4]{learningmodel}. This will be discussed in more details in later section.
 
-\subsubsection{Query Dependent Feature}
+\subsubsection{Query Dependent Feature}\label{section:querydependent}
 Figure~\ref{fig:retrieval_process} shows a simple search process in IR. After a user submits a query into an IR system. The system ranks the results 
 with respect to the query and returns a result set to the user. It can be clearly seen that the results obtained with respect to the query depends on the 
-query the user submitted. In other words, an document A can have 2 different degree of relevancy if a user changes a query.
+query the user submitted. In other words, document A can have 2 different degree of relevancy if a user changes a query.
 In learning to rank, this is called query dependent feature.
 
-\subsubsection{Query Independent Feature}
+\subsubsection{Query Independent Feature}\label{section:queryindependent}
 In contrast to Query Dependent Feature, a feature that does not depend on a user query is called query independent feature. This feature is fixed for each
 document. For now, it is better to not dig into great details about this because this will be focused in later section.
 
-\subsubsection{Obtaining and Deploying a Learned Model}
-Regardless of the applied technique, the general steps for obtaining a learned moel using a learning to rank technique are the following~\cite[P. 4]{learningmodel}:
+\subsubsection{Obtaining and Deploying a Learned Model} \label{section:learnedmodel}
+The general steps for obtaining a learned model using a learning to rank technique are the following~\cite[P. 4]{learningmodel}:
 
 \begin{quote}
   \item 1. Top k Retrieval: For a set of training queries, generate a sample of k documents using an initial retrieval approach.
@@ -243,7 +243,7 @@ Regardless of the applied technique, the general steps for obtaining a learned m
 
 Once a learned model has been obtained from the above learning steps, it can be deployed within a search engine as follows~\cite[P. 4]{learningmodel}
 
- \item 4. Top k Retrieval: For an unseen test query, a sample of k documents is generated inthe same manner as step (1).
+ \item 4. Top k Retrieval: For an unseen test query, a sample of k documents is generated in the same manner as step (1).
  \item 5. Feature Extraction: As in step (2), a vector of feature values is extracted for each document in the sample. The set of features should be exactly
 	the same as for (2).
  \item 6. Learned Model Application: The final ranking of documents for the query is obtained by applying the learned model on every document in the sample,
@@ -259,7 +259,7 @@ Figure~\ref{fig:letor} illustrates an architecture of a machine-learned IR syste
 Implementation Section.
 
 \subsection{Tools}
-\subsubsection{Terrier}
+\subsubsection{Terrier}\label{section:terrier}
 Every IR system requires programs that handle indexing, retrieving, ranking, etc. To build everything from scratch, it would be impossible within
 the time range. However, there are a number of search engine platforms that deal with IR functionalities effectively.
 Terrier~\cite{terrier} is a highly flexible, efficient, and effective open source search engine, readily deployable on large-scale collections of documents. 
@@ -267,7 +267,7 @@ Terrier implements state-of-the-art indexing and retrieval functionalities, and 
 of large-scale retrieval applications. It is open source, and is a comprehensive, flexible and transparent platform for research and 
 experimentation in text retrieval. Research can easily be carried out on standard TREC and CLEF test collections.
 
-\subsubsection{RankLib}
+\subsubsection{RankLib}\label{section:rankLib}
 RankLib~\cite{ranklib} is an open source library of learning to rank algorithms. It also implements many retrieval metrics as well as provides many ways to carry out evaluation.
 Currently eight popular algorithms have been implemented:
 \begin{itemize}
@@ -313,34 +313,71 @@ Figure \ref{fig:query} shows the results of the query ``database normalization''
 include the keywords a user submitted, and the third result does not have query keywords included in the URL. All of which, the second result has more 
 evidence than others. It has an author name, a photo of an author that other results do not.
 
-\subsubsection{What makes an expert a good expert?}
+\subsubsection{What makes an expert a good expert?}\label{section:goodexpert}
 Last section, it was obvious that some evidence could be used to convince users how reliable a document (link) is. In this secion, the evidence within
 the context of this project will be discussed. As discussed in ~\ref{section:aims}, this project makes use of publications and funded projects as 
 expertise evidence. Based on these evidence, what makes an expert a good expert? Well, it is common sense to assume that an expert is professional if 
 \begin{itemize}
- \item he has published a lot of publications
- \item he has co-authored with a lot of other experts in publications
- \item he has co-authored with a lot of other experts in funded projects
- \item he has received a lot of funding
- \item he has involved in a lot of projects
+ \item he has published a lot of publications.
+ \item he has co-authored with a lot of other experts in publications.
+ \item he has co-authored with a lot of other experts in funded projects.
+ \item he has received a lot of funding.
+ \item he has involved in a lot of projects.
 \end{itemize}
+
+It can be seen clearly that these assumptions or features in learning to rank are independent on the query a user submits. These features are query independent
+(section ~\ref{section:queryindependent}). However, query dependent features (section~\ref{section:querydependent}) should take into account as well. 
+In this project, there are 2 query dependent features: funded project and publication features. To sum up, 
 
 Based on these extracted data from publications and funded projects, each of which is used as a feature for learning to rank.
 
 \subsubsection{Voting Technique}\label{section:voting}
-In section ~\ref{section:retrieving}, we briefly talk about weighting model. In other words, how documents are assigned scores using tf-idf. In this section,
-it aims to give overview of voting technique. To understand this section, readers must understand what data fusion technique is. ``Data fustion techniques
-also known as metasearch techniques, are used to combine separate rankings of documents into a single ranking, with the aim of improving over the 
-performance of any constituent ranking''~\cite[P. 388]{expertsearch}. Within the context of this project, expert search is seen as a voting problem.
-the profile of each candidate is a set of documents associated to a candidate to represent their expertise.
+In section ~\ref{section:retrieving}, we very briefly talk about weighting model. In other words, how documents are assigned scores using tf-idf. In this section,
+it aims to give overview of voting technique used in this project. To understand this section, readers must understand what data fusion technique is. 
+``Data fustion techniques also known as metasearch techniques, are used to combine separate rankings of documents into a single ranking,
+with the aim of improving over the performance of any constituent ranking''~\cite[P. 388]{expertsearch}. Within the context of this project, 
+expert search is seen as a voting problem. The profile of each candidate is a set of documents associated to him to represent their expertise.
+When each document associated to a candidate's profile get retrieved by the IR system, implicit vote for that candidate occurs~\cite[P. 389]{expertsearch}.
+Data fusion technique is then used to combine the ranking with respect to the query and the implicit vote. In expert search task, it shows that 
+``improving the quality of the underlying document representation can significantly improve the retrieval performance of the data fusion techniques 
+on an expert search task''~\cite[P. 387]{expertsearch}. To give a simple example how data fusion technique works, take a look at this example
 
+Let R(Q) be the set of documents retrieved for query Q, and the set of documents belonging to the profile candidate C be denoted profile(C). In expert
+search, we need to find a ranking of candidates, given R(Q). Consider the simple example in Tables ~\ref{table:ranking} and ~\ref{table:profiles}.
+The ranking of documents with respect to the query has retrieved documents \{D1, D2, D3, D4\}. Using the candidate profiles, candidate C1 has accumulated
+3 votes, C2 2 votes, C3 2 votes and C4 no votes. If all votes are counted equally, and each document in a candidate's profile is equally weighted, a possible
+ranking of candidates to this query could be \{C1, C2, C3\}. However, in this project, the technique used is expCombMNZ and the formular is as follows
 
+\begin{table}
+\centering
+\begin{tabular}{|c|c|c|}
+\hline \textbf{Rank} & \textbf{Docs} & \textbf{Scores}\\
+\hline 1 & D1 & 5.4 \\
+\hline 2 & D2 & 4.2\\
+\hline 3 & D3 & 3.9 \\
+\hline 4 & D4 & 2.0 \\  
+\hline
+\end{tabular}
+\caption{R(Q)} \label{table:ranking}
+\end{table}
+\quad
+\begin{table}
+\centering
+\begin{tabular}{|c|l|}
+\hline \textbf{Profiles} & \textbf{Docs}\\
+\hline C1 & D3, D4, D2 \\
+\hline C2 & D1, D2 \\
+\hline C3 & D3, D2 \\
+\hline C4 & D5, D6 \\  
+\hline
+\end{tabular}
+\caption{Profiles} \label{table:profiles}
+\end{table}
 
-
-In expert search task, it shows that improving the quality of the underlying document representation can 
-significantly improve the retrieval performance on an expert search task~\cite[P. 387]{expertsearch}.
-
-
+\[
+candScore(C,Q) = |R(Q) \cap profile(C)| \sum_{d \in R(Q) \cap profile(C)} score_d
+\]
+where \[|R(Q) \cap profile(C)|\] is the number of documents from the profile of candidate C that are in the ranking R(Q).
 
 
 

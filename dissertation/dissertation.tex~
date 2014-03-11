@@ -1,9 +1,9 @@
 \documentclass[a4paper,10pt]{article}
-%\documentclass{article}
+%\documentclass{l4proj}
 \usepackage[utf8]{inputenc}
 \usepackage{graphicx}
 \usepackage{url}
-\usepackage{amsmath, mathtools}
+\usepackage{mathtools}
 
 %\usepackage{natbib}
 %%\usepackage{cite}
@@ -34,7 +34,7 @@ Thanks to Prof. Craig Macdonald for his advice and supervision throughout this p
 
 %==============================================================================
 
-%%\input{requirements}
+\input{requirements}
 
 %==============================================================================
 
@@ -48,7 +48,7 @@ Thanks to Prof. Craig Macdonald for his advice and supervision throughout this p
 
 
 %==============================================================================
-
+\clearpage
 \bibliography{references}
 \bibliographystyle{plain}
 

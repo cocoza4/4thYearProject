@@ -3,7 +3,7 @@
 
 \subsection{Design and Implementation}
 
-\subsubsection{Class Diagrams}
+\subsubsection{Overview of Important Class Diagrams}
 
 As stated in section ~\ref{section:aims}, this project extends from SICSA project which uses only publications as expertise evidence.
 The aim of this project is to integrate funded projects with publications to improve the performance of the retrieval.
@@ -62,6 +62,16 @@ has different implementations of hash() and checkAcademicName() methods to GOWHa
 \paragraph{GtRProjectWrapper} is a class used GOWHashTable Class to extract funded projects from Research Councils UK~\cite{gtr}.
 \paragraph{ProjectExtractor} is a class that makes use of SSProjectsExtractor and GtRProjectWrapper Classes to extract funded projects from both sources.
 
+The most difficult part in extracting projects is to match the known expert's names with the expert's names in each source. This is because each source
+records expert's name in different formats. For example, Prof. Joemon Jose may be recorded Jose JM in one source and Jose J in another. This is why Polymorphism~\cite{polymorphism} 
+(different implementations of has() and checkAcademicName() methods between GtRHashTable and GOWHashTable) is required. However, pattern matching between
+expert's names in Grant on the Web~\cite{gow} spreadsheet is still impossible as this source records in the following format: 
+[lastname], [role] [the first letter of name] such as Jose, Professor JM. The problem occurs with experts, Dr. Craig Macdonald lecturing at
+University of Glasgow and Prof. Catriona Macdonald lecturing at Glasgow Caledonian University
+as the source records Macdonald, Dr C for the former and Macdonald, Professor C for the latter. Although, role might be used to distinguish between them but
+for some expert the role is not known and there might be the situation that the role is also the same. 
+Therefore, university is used as part of the matching as well.
+
 \begin{table}
 \centering
 \begin{tabular}{|c|c|}
@@ -74,6 +84,9 @@ has different implementations of hash() and checkAcademicName() methods to GOWHa
 \caption{The number of funded projects extracted from each source} \label{table:stats}
 \end{table}
 Figure ~\ref{table:stats} shows the number of funded projects extracted from each source. There are 1569 known candidates in the system.
+
+\subsubsection{Indexing}
+In Section~\ref{section:IRarchitecture}, indexing process is discussed. 
 
 \subsubsection{Retrieving Documents (Experts) with respect to a Query} \label{section:union}
 
@@ -93,13 +106,25 @@ First of all, the user query is transformed into publication query and project
 query. AcademTechQuerying Class then processes both queries to get results with respect to publication query and project query. The results of both
 queries are then unioned as shown in Figure ~\ref{fig:union}.
 
-\subsubsection{Producing a Learned Model}
+\subsubsection{Producing a Learned Model}\label{section:producelearnedmodel}
 Section ~\ref{section:learnedmodel} described general steps to produce a learned model. This section aims to discuss classes involved in producing a learned model.
 As section ~\ref{section:learnedmodel} suggested, the first step in producing a learned model is to generate a set of training queries. 
 Then all features described in Section ~\ref{section:goodexpert} for each document (expert) with respect to each training query are extracted and saved
-in a file. This file in learning to rank is called LETOR file.
-34 training queries~\ref{table:trainingqueries} are trained by the tool called RankLib~\ref{section:rankLib} to get a learned model. This process is done 
-only one time. Once a learned model is obtained, for every query, the model is applied to generate a final ranking.
+in a file. This file in learning to rank is called LETOR file. Figure~\ref{fig:sampleletorfile} is a sample LETOR file. The lines preceded by hash key are 
+ignored. They are just headers which describe features. There are 7 features as described section ~\ref{section:goodexpert}.
+The numbers after a hash key indicate features id. However, the lines not preceded by hash key are learned. They represent documents (experts) with scores
+of each feature attached to them. They are preceded by numbers. These numbers in learning to rank are labels which indicate the degree of relevancy.
+If the label is 0, it means the expert is irrelevant with respect to a query. If it is 1, the expert is relevant. However, the label needs not be binary.
+It could range from 0 to any positive number. The higher the number, the more relevant the expert is. In this project, labels range from 0 to 2 in order of 
+the degree of relevancy. To the left of the label is query id and scores of each feature associated to that expert. Again, within these lines, anything after hash key is ignored.
+\begin{figure}
+\centering
+\includegraphics[scale=0.3]{./figures/sampleletorfile.png}
+\caption{Sample LETOR file} \label{fig:sampleletorfile} 
+\end{figure}
+
+34 training queries~\ref{table:trainingqueries} are trained by the tool called RankLib~\ref{section:rankLib} to get a learned model. This process is performed 
+only one time.
 \begin{table}
 \centering
 \begin{tabular}{|c|l|c|l|}
@@ -141,12 +166,85 @@ Figure ~\ref{fig:learningmodel} shows a class diagram that is used to produce a 
  \item learnModel() is a method that produces a learned model using RankLib~\ref{section:rankLib}.
 \end{itemize}
 
-As stated in Section ~\ref{section:rankLib}, 
+As stated in Section ~\ref{section:rankLib}, learning to rank algorithms used in this project are AdaRank and Coordinate Ascent. The performance of each
+of them will be discussed in Evaluation Section. Figure~\ref{fig:samplemodel} shows a sample model. Similar to LETOR file, lines preceded by hash key are
+ignored. They are just headers which describe parameters used in the learning to rank algorithm. Knowing what each parameter does is out of the scopre of 
+this project. This model is obtained using Coordinate Ascent Algorithm. The numbers before colons are features id and after colons are scores of each 
+feature. Section~\ref{section:applyinglearnedmodel} will explain how learned model is applied to get optimal ranking.
 
+\begin{figure}
+\centering
+\includegraphics[scale=0.3]{./figures/samplemodel.png}
+\caption{Sample Model} \label{fig:samplemodel} 
+\end{figure}
 
-\subsubsection{Applying a Learned Model}
+\subsubsection{Applying a Learned Model}\label{section:applyinglearnedmodel}
+Now that a learned model has been generated, this learned model can be applied to produce optimal ranking. Given a query,
+scores of query dependent features are computed for each expert as shown in figure~\ref{fig:quering}. After that, scores of query independent feaures
+of experts obtained from querying are extracted. Then for each expert, the scores of each feature are multiplied by ones in the learned model and accumulated.
+Finally, the accumulated scores for each expert are sorted in descending order and experts with the high scores are ranked before those with low scores. 
+This was briefly explained in section~\ref{section:learnedmodel}.
 
+\subsubsection{Differences Between Old and New Systems}
+\begin{figure}[H]
+\centering
+\includegraphics[width=13cm,height=15cm,keepaspectratio]{./figures/oldsicsa.png}
+\caption{Home Page} \label{fig:oldsicsa} 
+\end{figure}
+\begin{figure}[H]
+\centering
+\includegraphics[width=13cm,height=15cm,keepaspectratio]{./figures/oldsearch.png}
+\caption{Experts In Response to ``information retrieval'' Query} \label{fig:resultspage} 
+\end{figure}
+\begin{figure}[H]
+\centering
+\includegraphics[width=13cm,height=15cm,keepaspectratio]{./figures/oldProfilePage.png}
+\caption{Old Expert's Profile Facet} \label{fig:profilepage} 
+\end{figure}
+Figures~\ref{fig:oldsicsa}~\ref{fig:resultspage}~\ref{fig:profilepage} are old interfaces of the system. 
 
+\begin{figure}
+\centering
+\includegraphics[width=13cm,height=15cm,keepaspectratio]{./figures/newsearch.png}
+\caption{New Facets : Experts In Response to ``information retrieval'' Query} \label{fig:newsearch} 
+\end{figure}
+Figure~\ref{fig:newsearch} shows a new facet in response to a query ``information retrieval''. Note that for each expert retrieved, the number of 
+projects the expert has been involved is displayed.
+\begin{figure}
+\centering
+\includegraphics[width=13cm,height=15cm,keepaspectratio]{./figures/newProfilePagePublication.png}
+\caption{New Expert's Profile Facet} \label{fig:newProfilePage} 
+\end{figure}
+Figure~\ref{fig:newProfilePage} shows a new facet of profile page. There are 2 tabs for publications and funded projects and a drop down box for selecting
+result filter modes. The number of projects and total funding are shown added.
+
+\begin{figure}
+\centering
+\includegraphics[width=13cm,height=15cm,keepaspectratio]{./figures/newPofilePageProject.png}
+\caption{Project Tab} \label{fig:newPofilePageProject} 
+\end{figure}
+Figure~\ref{fig:newPofilePageProject} shows a facet when a project tab is selected. The right hand side of the page shows the most project collaborators
+and other filter modes: filter projects by amount of funding and by the status of projects.
+
+\begin{figure}
+\centering
+\includegraphics[width=13cm,height=15cm,keepaspectratio]{./figures/newProfileSelectedProject.png}
+\caption{Project Page} \label{fig:newProfileSelectedProject} 
+\end{figure}
+
+Figure~\ref{fig:newProfileSelectedProject} shows a facet when user selects a project link. This shows descriptions of a selected project.
+The descriptions include:
+\begin{itemize}
+ \item Funder
+ \item Title
+ \item Funded Value
+ \item Funded Period
+ \item Status
+ \item Grant Category
+ \item People involved in the project
+ \item Abstract
+ \item Impact
+\end{itemize}
 
 
 

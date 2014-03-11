@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012/Debian) (format=pdflatex 2012.11.18)  10 MAR 2014 20:45
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012/Debian) (format=pdflatex 2012.11.18)  11 MAR 2014 23:44
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -441,99 +441,108 @@ G,.JBIG2,.JB2,.eps]
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
-(./abstract.tex) (./dissertation.toc [1
+(./abstract.tex)
+Overfull \hbox (2.38322pt too wide) in paragraph at lines 26--27
+[]\OT1/cmr/m/n/9 Thanks to Dr. Craig Mac-don-ald for his ad-vice and su-per-vi-
+sion through-
+ []
+
+(./dissertation.toc [1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}])
 \tf@toc=\write3
 \openout3 = `dissertation.toc'.
 
- (./introduction.tex
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 15.
 
-(/usr/share/texlive/texmf-dist/tex/latex/base/omscmr.fd
+(./introduction.tex
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 15.
+ (/usr/share/texlive/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 15.
- [2]) [3]
-(./background.tex
-<./figures/retrieval_process.png, id=20, 234.1247pt x 131.74219pt>
+
+[2]) [3] (./requirements.tex) (./background.tex [4]
+<./figures/retrieval_process.png, id=23, 234.1247pt x 131.74219pt>
 File: ./figures/retrieval_process.png Graphic file (type png)
 
 <use ./figures/retrieval_process.png>
-Package pdftex.def Info: ./figures/retrieval_process.png used on input line 15.
+Package pdftex.def Info: ./figures/retrieval_process.png used on input line 16.
 
 (pdftex.def)             Requested size: 234.12411pt x 131.74185pt.
- [4 <./figures/retrieval_process.png (PNG copy)>] <./figures/text.png, id=24, 5
-58.58687pt x 161.10187pt>
+
+<./figures/text.png, id=24, 558.58687pt x 161.10187pt>
 File: ./figures/text.png Graphic file (type png)
 
 <use ./figures/text.png>
-Package pdftex.def Info: ./figures/text.png used on input line 32.
+Package pdftex.def Info: ./figures/text.png used on input line 40.
 (pdftex.def)             Requested size: 279.29276pt x 80.55074pt.
- [5 <./figures/text.png (PNG copy)>]
-<./figures/invertedIndex.png, id=28, 433.62pt x 245.41687pt>
+ [5 <./figures/retrieval_process.png (PNG copy)>]
+[6 <./figures/text.png (PNG copy)>]
+<./figures/invertedIndex.png, id=31, 433.62pt x 245.41687pt>
 File: ./figures/invertedIndex.png Graphic file (type png)
 
 <use ./figures/invertedIndex.png>
-Package pdftex.def Info: ./figures/invertedIndex.png used on input line 121.
+Package pdftex.def Info: ./figures/invertedIndex.png used on input line 131.
 (pdftex.def)             Requested size: 216.80946pt x 122.70813pt.
- [6 <./figures/invertedIndex.png (PNG copy)>]
+
 <./figures/retrieval.png, id=32, 923.45pt x 618.31pt>
 File: ./figures/retrieval.png Graphic file (type png)
 
 <use ./figures/retrieval.png>
-Package pdftex.def Info: ./figures/retrieval.png used on input line 134.
+Package pdftex.def Info: ./figures/retrieval.png used on input line 144.
 (pdftex.def)             Requested size: 277.03712pt x 185.49443pt.
- [7 <./figures/retrieval.png (PNG copy)>]
-<./figures/precision.png, id=37, 450.68375pt x 45.16875pt>
+ [7] [8 <./figures/invertedIndex.png (PNG copy)> <./figures/retrieval.png (PNG 
+copy)>] [9]
+<./figures/precision.png, id=43, 450.68375pt x 45.16875pt>
 File: ./figures/precision.png Graphic file (type png)
 
 <use ./figures/precision.png>
-Package pdftex.def Info: ./figures/precision.png used on input line 186.
+Package pdftex.def Info: ./figures/precision.png used on input line 196.
 (pdftex.def)             Requested size: 225.34131pt x 22.5843pt.
 
-<./figures/recall.png, id=38, 429.605pt x 45.16875pt>
+<./figures/recall.png, id=44, 429.605pt x 45.16875pt>
 File: ./figures/recall.png Graphic file (type png)
 
 <use ./figures/recall.png>
-Package pdftex.def Info: ./figures/recall.png used on input line 191.
+Package pdftex.def Info: ./figures/recall.png used on input line 201.
 (pdftex.def)             Requested size: 214.80197pt x 22.5843pt.
- [8 <./figures/precision.png>]
-<./figures/pr_example.png, id=44, 616.3025pt x 376.40625pt>
+
+<./figures/pr_example.png, id=45, 616.3025pt x 376.40625pt>
 File: ./figures/pr_example.png Graphic file (type png)
 
 <use ./figures/pr_example.png>
-Package pdftex.def Info: ./figures/pr_example.png used on input line 201.
+Package pdftex.def Info: ./figures/pr_example.png used on input line 211.
 (pdftex.def)             Requested size: 308.1505pt x 188.20265pt.
 
-<./figures/map.png, id=45, 286.06876pt x 59.22125pt>
+<./figures/map.png, id=46, 286.06876pt x 59.22125pt>
 File: ./figures/map.png Graphic file (type png)
  <use ./figures/map.png>
-Package pdftex.def Info: ./figures/map.png used on input line 208.
+Package pdftex.def Info: ./figures/map.png used on input line 218.
 (pdftex.def)             Requested size: 143.03403pt x 29.61053pt.
 
-[9 <./figures/pr_example.png (PNG copy)> <./figures/recall.png> <./figures/map.
-png>] [10] <./figures/letor.png, id=54, 250.9375pt x 230.8625pt>
+[10 <./figures/precision.png> <./figures/recall.png> <./figures/map.png>]
+[11 <./figures/pr_example.png (PNG copy)>]
+<./figures/letor.png, id=57, 250.9375pt x 230.8625pt>
 File: ./figures/letor.png Graphic file (type png)
 
 <use ./figures/letor.png>
-Package pdftex.def Info: ./figures/letor.png used on input line 255.
+Package pdftex.def Info: ./figures/letor.png used on input line 265.
 (pdftex.def)             Requested size: 175.65504pt x 161.60263pt.
- [11 <./figures/letor.png>]
-<./figures/query.png, id=61, 1369.115pt x 719.68875pt>
+ [12 <./figures/letor.png>] [13]
+<./figures/query.png, id=68, 1369.115pt x 719.68875pt>
 File: ./figures/query.png Graphic file (type png)
 
 <use ./figures/query.png>
-Package pdftex.def Info: ./figures/query.png used on input line 309.
+Package pdftex.def Info: ./figures/query.png used on input line 319.
 (pdftex.def)             Requested size: 410.73767pt x 215.9083pt.
 
-Overfull \hbox (65.73767pt too wide) in paragraph at lines 309--310
+Overfull \hbox (65.73767pt too wide) in paragraph at lines 319--320
  [][] 
  []
 
-[12] [13 <./figures/query.png (PNG copy)>] [14]) (./design.tex
-<./figures/classDiagram1.png, id=77, 973.6375pt x 662.475pt>
+[14 <./figures/query.png (PNG copy)>] [15]) (./design.tex
+<./figures/classDiagram1.png, id=75, 973.6375pt x 662.475pt>
 File: ./figures/classDiagram1.png Graphic file (type png)
 
 <use ./figures/classDiagram1.png>
@@ -544,7 +553,7 @@ Overfull \hbox (44.44809pt too wide) in paragraph at lines 14--15
  [][] 
  []
 
-<./figures/AcademTechQuerying.png, id=78, 692.5875pt x 391.4625pt>
+<./figures/AcademTechQuerying.png, id=76, 692.5875pt x 391.4625pt>
 File: ./figures/AcademTechQuerying.png Graphic file (type png)
 
 <use ./figures/AcademTechQuerying.png>
@@ -557,8 +566,9 @@ Overfull \hbox (5.08385pt too wide) in paragraph at lines 27--30
 d Re-trieve-dResults.
  []
 
-[15 <./figures/classDiagram1.png (PNG copy)>]
-<./figures/projectsExtraction.png, id=82, 1124.2pt x 642.4pt>
+[16] [17 <./figures/classDiagram1.png (PNG copy)> <./figures/AcademTechQuerying
+.png (PNG copy)>]
+<./figures/projectsExtraction.png, id=88, 1124.2pt x 642.4pt>
 File: ./figures/projectsExtraction.png Graphic file (type png)
 
 <use ./figures/projectsExtraction.png>
@@ -570,81 +580,209 @@ Overfull \hbox (48.47589pt too wide) in paragraph at lines 48--49
  [][] 
  []
 
-[16 <./figures/AcademTechQuerying.png (PNG copy)>]
+[18 <./figures/projectsExtraction.png (PNG copy)>]
 Overfull \hbox (2.11787pt too wide) in paragraph at lines 62--63
  \OT1/cmr/bx/n/10 GtR-Pro-jectWrap-per[] \OT1/cmr/m/n/10 is a class used GOWHas
 hTable Class to ex-tract funded
  []
 
-<./figures/querying.png, id=86, 526.96875pt x 188.20313pt>
+<./figures/terrierindexing.png, id=92, 775.39688pt x 512.66531pt>
+File: ./figures/terrierindexing.png Graphic file (type png)
+
+<use ./figures/terrierindexing.png>
+Package pdftex.def Info: ./figures/terrierindexing.png used on input line 93.
+(pdftex.def)             Requested size: 310.15326pt x 205.06248pt.
+ [19]
+Overfull \hbox (2.7506pt too wide) in paragraph at lines 102--105
+\OT1/cmr/m/n/10 termpipelines=Stopwords,PorterStemmer, which re-moves terms fro
+m
+ []
+
+
+Overfull \hbox (0.43907pt too wide) in paragraph at lines 102--105
+\OT1/cmr/m/n/10 the doc-u-ment us-ing the \OT1/cmr/bx/n/10 Stop-words \OT1/cmr/
+m/n/10 ob-ject, and then ap-plies Porter's
+ []
+
+[20 <./figures/terrierindexing.png>]
+<./figures/querying.png, id=100, 526.96875pt x 188.20313pt>
 File: ./figures/querying.png Graphic file (type png)
 
 <use ./figures/querying.png>
-Package pdftex.def Info: ./figures/querying.png used on input line 82.
+Package pdftex.def Info: ./figures/querying.png used on input line 117.
 (pdftex.def)             Requested size: 368.8756pt x 131.74127pt.
 
-Overfull \hbox (23.8756pt too wide) in paragraph at lines 82--83
+Overfull \hbox (23.8756pt too wide) in paragraph at lines 117--118
  [][] 
  []
 
-<./figures/union.png, id=87, 143.03438pt x 153.57375pt>
+<./figures/union.png, id=101, 143.03438pt x 153.57375pt>
 File: ./figures/union.png Graphic file (type png)
 
 <use ./figures/union.png>
-Package pdftex.def Info: ./figures/union.png used on input line 88.
+Package pdftex.def Info: ./figures/union.png used on input line 123.
 (pdftex.def)             Requested size: 100.12337pt x 107.50089pt.
- [17 <./figures/projectsExtraction.png (PNG copy)>]
-Overfull \hbox (40.47284pt too wide) in paragraph at lines 105--126
+
+<./figures/sampleletorfile.png, id=102, 1287.81125pt x 654.445pt>
+File: ./figures/sampleletorfile.png Graphic file (type png)
+
+<use ./figures/sampleletorfile.png>
+Package pdftex.def Info: ./figures/sampleletorfile.png used on input line 144.
+(pdftex.def)             Requested size: 386.34636pt x 196.335pt.
+
+Overfull \hbox (41.34636pt too wide) in paragraph at lines 144--145
  [][] 
  []
 
-[18 <./figures/querying.png> <./figures/union.png (PNG copy)>]
-<./figures/learningModel.png, id=94, 511.9125pt x 401.5pt>
+[21 <./figures/querying.png> <./figures/union.png (PNG copy)>]
+Overfull \hbox (40.47284pt too wide) in paragraph at lines 152--173
+ [][] 
+ []
+
+<./figures/learningModel.png, id=106, 511.9125pt x 401.5pt>
 File: ./figures/learningModel.png Graphic file (type png)
 
 <use ./figures/learningModel.png>
-Package pdftex.def Info: ./figures/learningModel.png used on input line 131.
+Package pdftex.def Info: ./figures/learningModel.png used on input line 178.
 (pdftex.def)             Requested size: 358.3363pt x 281.04808pt.
 
-Overfull \hbox (13.3363pt too wide) in paragraph at lines 131--132
+Overfull \hbox (13.3363pt too wide) in paragraph at lines 178--179
  [][] 
  []
 
 
-Overfull \hbox (9.97292pt too wide) in paragraph at lines 141--142
+Overfull \hbox (9.97292pt too wide) in paragraph at lines 188--189
 []\OT1/cmr/m/n/10 learnModel() is a method that pro-duces a learned model us-in
-g RankLib 2.4.2[]. 
+g RankLib 3.4.2[]. 
  []
 
-) (./dissertation.bbl [19] [20 <./figures/learningModel.png (PNG copy)>])
-[21] (./dissertation.aux) ) 
+[22 <./figures/sampleletorfile.png (PNG copy)>] [23 <./figures/learningModel.pn
+g (PNG copy)>] <./figures/samplemodel.png, id=113, 1291.82625pt x 184.69pt>
+File: ./figures/samplemodel.png Graphic file (type png)
+
+<use ./figures/samplemodel.png>
+Package pdftex.def Info: ./figures/samplemodel.png used on input line 199.
+(pdftex.def)             Requested size: 387.55087pt x 55.40741pt.
+
+Overfull \hbox (42.55087pt too wide) in paragraph at lines 199--200
+ [][] 
+ []
+
+<./figures/oldsicsa.png, id=114, 1301.86375pt x 677.53125pt>
+File: ./figures/oldsicsa.png Graphic file (type png)
+
+<use ./figures/oldsicsa.png>
+Package pdftex.def Info: ./figures/oldsicsa.png used on input line 213.
+(pdftex.def)             Requested size: 369.88287pt x 192.49878pt.
+
+Overfull \hbox (24.88287pt too wide) in paragraph at lines 213--214
+ [][] 
+ []
+
+<./figures/oldsearch.png, id=115, 1321.93875pt x 686.565pt>
+File: ./figures/oldsearch.png Graphic file (type png)
+
+<use ./figures/oldsearch.png>
+Package pdftex.def Info: ./figures/oldsearch.png used on input line 218.
+(pdftex.def)             Requested size: 369.87811pt x 192.1007pt.
+
+Overfull \hbox (24.87811pt too wide) in paragraph at lines 218--219
+ [][] 
+ []
+
+<./figures/oldProfilePage.png, id=116, 904.37875pt x 681.54625pt>
+File: ./figures/oldProfilePage.png Graphic file (type png)
+
+<use ./figures/oldProfilePage.png>
+Package pdftex.def Info: ./figures/oldProfilePage.png used on input line 223.
+(pdftex.def)             Requested size: 369.87311pt x 278.739pt.
+
+Overfull \hbox (24.87311pt too wide) in paragraph at lines 223--224
+ [][] 
+ []
+
+<./figures/newsearch.png, id=117, 1291.82625pt x 686.565pt>
+File: ./figures/newsearch.png Graphic file (type png)
+
+<use ./figures/newsearch.png>
+Package pdftex.def Info: ./figures/newsearch.png used on input line 230.
+(pdftex.def)             Requested size: 369.8695pt x 196.574pt.
+
+Overfull \hbox (24.8695pt too wide) in paragraph at lines 230--231
+ [][] 
+ []
+
+<./figures/newProfilePagePublication.png, id=118, 881.2925pt x 684.5575pt>
+File: ./figures/newProfilePagePublication.png Graphic file (type png)
+
+<use ./figures/newProfilePagePublication.png>
+Package pdftex.def Info: ./figures/newProfilePagePublication.png used on input 
+line 237.
+(pdftex.def)             Requested size: 369.88483pt x 287.31372pt.
+
+Overfull \hbox (24.88483pt too wide) in paragraph at lines 237--238
+ [][] 
+ []
+
+<./figures/newPofilePageProject.png, id=119, 862.22125pt x 673.51625pt>
+File: ./figures/newPofilePageProject.png Graphic file (type png)
+
+<use ./figures/newPofilePageProject.png>
+Package pdftex.def Info: ./figures/newPofilePageProject.png used on input line 
+245.
+(pdftex.def)             Requested size: 369.8796pt x 288.92805pt.
+
+Overfull \hbox (24.8796pt too wide) in paragraph at lines 245--246
+ [][] 
+ []
+
+<./figures/newProfileSelectedProject.png, id=120, 853.1875pt x 681.54625pt>
+File: ./figures/newProfileSelectedProject.png Graphic file (type png)
+
+<use ./figures/newProfileSelectedProject.png>
+Package pdftex.def Info: ./figures/newProfileSelectedProject.png used on input 
+line 253.
+(pdftex.def)             Requested size: 369.8968pt x 295.48227pt.
+
+Overfull \hbox (24.8968pt too wide) in paragraph at lines 253--254
+ [][] 
+ []
+
+) [24 <./figures/samplemodel.png (PNG copy)>] [25] [26 <./figures/oldsicsa.png 
+(PNG copy)> <./figures/oldsearch.png (PNG copy)>] [27 <./figures/oldProfilePage
+.png (PNG copy)> <./figures/newsearch.png (PNG copy)>] [28 <./figures/newProfil
+ePagePublication.png (PNG copy)>] [29 <./figures/newPofilePageProject.png (PNG 
+copy)>] [30 <./figures/newProfileSelectedProject.png (PNG copy)>]
+(./dissertation.bbl) [31
+
+] (./dissertation.aux) ) 
 Here is how much of TeX's memory you used:
- 3058 strings out of 495059
- 42933 string characters out of 3182029
- 105502 words of memory out of 3000000
- 6163 multiletter control sequences out of 15000+200000
+ 3129 strings out of 495059
+ 44921 string characters out of 3182029
+ 106686 words of memory out of 3000000
+ 6221 multiletter control sequences out of 15000+200000
  10144 words of font info for 37 fonts, out of 3000000 for 9000
  14 hyphenation exceptions out of 8191
- 38i,8n,23p,245b,315s stack positions out of 5000i,500n,10000p,200000b,50000s
-</usr/share/texlive/texmf-dist/fonts/type1/public/am
-sfonts/cm/cmbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts
-/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cm
-bx9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pf
-b></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></us
-r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share
-/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texliv
-e/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf
--dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texlive/texmf-dist/f
-onts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/typ
-e1/public/amsfonts/cm/cmr9.pfb></usr/share/texlive/texmf-dist/fonts/type1/publi
-c/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsf
-onts/cm/cmsy7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm
-/cmti10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt1
-0.pfb>
-Output written on dissertation.pdf (21 pages, 677656 bytes).
+ 38i,8n,23p,251b,318s stack positions out of 5000i,500n,10000p,200000b,50000s
+</usr/share/texlive/texmf-dist/fonts/type1/public/amsfo
+nts/cm/cmbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm
+/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9
+.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><
+/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/s
+hare/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/te
+xlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/t
+exmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-di
+st/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texlive/texmf-dist/font
+s/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/
+public/amsfonts/cm/cmr9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/a
+msfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfont
+s/cm/cmsy7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cm
+ti10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.p
+fb>
+Output written on dissertation.pdf (31 pages, 1666176 bytes).
 PDF statistics:
- 153 PDF objects out of 1000 (max. 8388607)
- 94 compressed objects within 1 object stream
+ 196 PDF objects out of 1000 (max. 8388607)
+ 116 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
- 81 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 131 words of extra memory for PDF output out of 10000 (max. 10000000)
 
