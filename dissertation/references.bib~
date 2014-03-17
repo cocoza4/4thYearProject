@@ -18,6 +18,54 @@
   howpublished = "\url{http://en.wikipedia.org/wiki/Information_retrieval}"
 }
 
+@misc{IRlecture,
+  title = {Information Retrieval},
+  author = {Prof. Joemon M Jose},
+  year = {2013}
+}
+
+@misc{searchengine,
+  title = {Search Engine},
+  howpublished = "\url{http://en.wikipedia.org/wiki/Search_engine_(computing)}",
+  year = {2014}
+}
+
+@misc{ndcg,
+  howpublished = "\url{http://en.wikipedia.org/wiki/Discounted_cumulative_gain}",
+  title = {Discounted cumulative gain},
+  year = {2014}
+}
+
+@misc{websearchengine,
+  title = {Web Search Engine},
+  howpublished = "\url{http://en.wikipedia.org/wiki/Web_search_engine}",
+  year = {2014}
+}
+
+@misc{tfidf,
+  howpublished = "\url{http://en.wikipedia.org/wiki/Tf%E2%80%93idf}",
+  title = {Term Frequency–Inverse Document Frequency (tf-idf)},
+  year = {2014}
+}
+
+@misc{mrr,
+  howpublished = "\url{http://en.wikipedia.org/wiki/Mean_reciprocal_rank}",
+  title = {Mean Reciprocal Rank},
+  year = {2014}
+}
+
+@misc{introToIR,
+  title = {An Introduction to Information Retrieval}
+  author = {Christopher D. Manning, Prabhakar Raghavan, and Hinrich Schütze},
+  year = {2009}
+}
+
+@misc{probModel,
+  title = {Probabilistic Retrieval Model},
+  author = {Prof. Joemon M Jose},
+  year = {2013}
+}
+
 @misc{sicsasearch,
   howpublished = "\url{http://experts.sicsa.ac.uk/}",
   title = {The Scottish Informatics and Computer Science Alliance Expert Search System}
@@ -57,9 +105,21 @@
   title = {RankLib}
 }
 
-@article{eval,
+@misc{IRarchitecture,
+  title = {Architecture of Retrieval Systems},
+  author = {Prof. Joemon M Jose},
+  year = {2013}
+}
+
+@misc{tokenization,
+  title = {Tokenization},
+  howpublished = "\url{http://en.wikipedia.org/wiki/Tokenization}",
+  year = {2014}
+}
+
+@misc{eval,
   title = {Information Retrieval - Evaluation Methodology},
-  author = {Joemon M Jose},
+  author = {Prof. Joemon M Jose},
   year = {2013}
 }
 
@@ -85,7 +145,11 @@
   title = {Polymorphism},
   url = "\url{http://en.wikipedia.org/wiki/Polymorphism_(computer_science)}"
 }
-  
+ 
+@misc{terrierindexing,
+  title = {Indexing Process of Terrier},
+  url = "\url{http://terrier.org/docs/v3.5/basicComponents.html}"
+}
   
   
   

@@ -34,7 +34,7 @@
 \let\footnoterule\relax
 \let\footnote \thanks
 \vspace{1in}
-\includegraphics[trim=1.0cm 1.0cm 1.0cm 1.0cm]{images/CompSci_colour}
+\includegraphics[trim=1.0cm 1.0cm 1.0cm 1.0cm]{figures/CompSci_colour}
 \vspace{2cm}
   \Large
   \vskip 8em%

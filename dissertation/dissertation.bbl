@@ -8,6 +8,9 @@ Engineering and physical sciences research council (epsrc).
 Information retrieval.
 \newblock \url{http://en.wikipedia.org/wiki/Information_retrieval}.
 
+\bibitem{introToIR}
+An introduction to information retrieval.
+
 \bibitem{polymorphism}
 Polymorphism.
 
@@ -31,6 +34,10 @@ The scottish informatics and computer science alliance (sicsa).
 Terrier.
 \newblock \url{http://www.terrier.org/}.
 
+\bibitem{trec}
+Text retrieval conference.
+\newblock \url{http://trec.nist.gov/}.
+
 \bibitem{evalweb}
 Information retrieval system evaluation, 2009.
 
@@ -39,6 +46,30 @@ Inverted index, 2012.
 
 \bibitem{craig}
 Conversation of dr. craig macdonald, 2014.
+
+\bibitem{ndcg}
+Discounted cumulative gain.
+\newblock \url{http://en.wikipedia.org/wiki/Discounted_cumulative_gain}, 2014.
+
+\bibitem{mrr}
+Mean reciprocal rank.
+\newblock \url{http://en.wikipedia.org/wiki/Mean_reciprocal_rank}, 2014.
+
+\bibitem{searchengine}
+Search engine.
+\newblock \url{http://en.wikipedia.org/wiki/Search_engine_(computing)}, 2014.
+
+\bibitem{tfidf}
+Term frequency–inverse document frequency (tf-idf).
+\newblock \url{http://en.wikipedia.org/wiki/Tf%E2%80%93idf}, 2014.
+
+\bibitem{tokenization}
+Tokenization.
+\newblock \url{http://en.wikipedia.org/wiki/Tokenization}, 2014.
+
+\bibitem{websearchengine}
+Web search engine.
+\newblock \url{http://en.wikipedia.org/wiki/Web_search_engine}, 2014.
 
 \bibitem{expertsearch}
 Iadh~Ounis Craig~Macdonald.
@@ -51,10 +82,21 @@ Rdrygo~L.T. Craig~Macdonald and Iadh Ounis.
 \newblock About learning models with multiple query dependent features.
 \newblock 2012.
 
+\bibitem{IRarchitecture}
+Prof. Joemon~M Jose.
+\newblock Architecture of retrieval systems, 2013.
+
+\bibitem{IRlecture}
+Prof. Joemon~M Jose.
+\newblock Information retrieval, 2013.
+
 \bibitem{eval}
-Joemon~M Jose.
-\newblock Information retrieval - evaluation methodology.
-\newblock 2013.
+Prof. Joemon~M Jose.
+\newblock Information retrieval - evaluation methodology, 2013.
+
+\bibitem{probModel}
+Prof. Joemon~M Jose.
+\newblock Probabilistic retrieval model, 2013.
 
 \bibitem{letor}
 Afshin~Rostamizadeh Mehryar~Mohri and Ameet Talwalkar.

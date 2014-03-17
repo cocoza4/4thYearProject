@@ -1,5 +1,5 @@
-\documentclass[a4paper,10pt]{article}
-%\documentclass{l4proj}
+% \documentclass[a4paper,10pt]{article}
+\documentclass{l4proj}
 \usepackage[utf8]{inputenc}
 \usepackage{graphicx}
 \usepackage{url}
@@ -23,7 +23,7 @@
 
 \renewcommand{\abstractname}{Acknowledgements}
 \begin{abstract}
-Thanks to Prof. Craig Macdonald for his advice and supervision throughout this project. 
+Thanks to Dr. Craig Macdonald for his advice and supervision throughout this project. 
 \end{abstract}
 
 \tableofcontents
@@ -42,7 +42,7 @@ Thanks to Prof. Craig Macdonald for his advice and supervision throughout this p
 
 %==============================================================================
 
-\input{design}
+\input{implementation}
 
 %==============================================================================
 

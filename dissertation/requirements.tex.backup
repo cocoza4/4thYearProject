@@ -1,279 +1,93 @@
 
-\section{Requirements Specification}
-These requirements were decided on during the early stages of the project. The requirements have been split into several 
-sections depending on their necessity
+\section{I dont know}
 
-\subsection{Use Cases}
-The core use cases for the system are:
+\subsubsection{Current System}\label{sec:currentsystem}
+
+\begin{figure}
+ \centering
+\includegraphics[width=13cm,height=15cm,keepaspectratio]{./figures/oldsicsa.png}
+ \caption{Home Page} \label{fig:oldsicsa} 
+ \end{figure}
+ \begin{figure}
+ \centering
+ \includegraphics[width=13cm,height=15cm,keepaspectratio]{./figures/oldsearch.png}
+ \caption{Experts In Response to ``information retrieval'' Query} \label{fig:resultspage} 
+ \end{figure}
+ \begin{figure}
+ \centering
+ \includegraphics[width=13cm,height=15cm,keepaspectratio]{./figures/oldProfilePage.png}
+ \caption{Old Expert's Profile Facet} \label{fig:profilepage} 
+\end{figure}
+Figure ~\ref{fig:oldsicsa} is the home page of SICSA. It provides a set of sample queries categorised in 4 different categories on the right of the 
+search panel. The top panel shows links to differnet SICSA pages. The middle panel is the search panel. It is independent of other panels. 
+Experts (results) with respect to a query are independently shown in this panel without reloading other panels. Figure~\ref{fig:resultspage} shows
+the interface when experts with respect to a query, ``information retrieval'' are shown. Also, the system demonstrates 
+faceted search for academics by presenting refinement options using university, location and total publication range categories.
+Below the refinement options is popular tags (terms) appear in expert's profiles retrieved.
+Each result in the search panel includes expert's details: university, number of publications, publication period and total number of coauthors.
+
+Figure~\ref{fig:profilepage} illustrates a profile page of an expert. This page introduces most collaborated coauthors facet on the right of the page, a 
+facet that shows popular terms appearing in an expert's profile and publications and related academics facet.
+
+\subsubsection{Proposals}\label{section:goodexpert}
+In section~\ref{sec:presentingQueryResult}, it was obvious that some evidence could be used to convince users how reliable a document (link) is.
+In this secion, the evidence within
+the context of this project will be discussed. As discussed in ~\ref{section:aims}, this project makes use of publications and funded projects as 
+expertise evidence. Based on these evidence, what makes an expert a good expert? Well, it is common sense to propose that an expert is professional if 
 \begin{itemize}
- \item Administration
- \subitem Login
- \subitem Logout
- \subitem View Status
- \subitem View Queries Frequency
- \subitem Change the way system updates academics
- \subitem Generate a custom look for university
- \subitem View publications details and visits statistics
- 
- \item Common utility activities
- \subitem Search for experts with respect to a query
- \subitem View Academic Profile
- \subitem View relevant publications with respect to a query
- \subitem View relevant funded projects with respect to a query
+ \item he has published a lot of publications.
+ \item he has co-authored with a lot of other experts in publications.
+ \item he has co-authored with a lot of other experts in funded projects.
+ \item he has received a lot of funding.
+ \item he has involved in a lot of projects.
 \end{itemize}
 
-\subsubsection{Actors}
+It can be seen clearly that these assumptions or features in learning to rank are independent on the query a user submits. These features are query independent
+(section ~\ref{section:queryindependent}). However, query dependent features (section~\ref{section:querydependent}) should take into account as well. 
+In this project, there are 2 query dependent features: funded project and publication features. To sum up, a good expert should have high scores in
+both query dependent and independent features.
 
-\begin{figure}
-\centering
-\includegraphics[scale=0.4]{./figures/actors.jpg}
-\caption{Actors}
-\end{figure}
-
-\textbf{Figure 1} illustrates the relationships between actor roles in the system. A short summary of the actors is given below:
-
-\textbf{User} represents an actor in the system who is able to search for experts with respect to a query. The search can be done via SICSA look
-or university template look.
-
-\textbf{Admin} inherits from user and is able to modify look and feel, update academics and view queries infromation.
-
-\begin{figure}
-\centering
-\includegraphics[scale=0.4]{./figures/use_case.jpg}
-\caption{Administration Use Case Diagram}
-\end{figure}
-
-\textbf{Figure 2} illustrates the administration use case diagram of the system.
-
-\subsection{Function Requirements}
-
-\subsubsection{Administration}
-
-%==============================================================================
-% Logout
-
-\begin{tabular}{|l|p{8.5cm}|}
-\hline \textbf{Use Case} & Logout \\
-\hline \textbf{Description} & The logout use case changes a user's status to logged out. Logout is invoked by the user \\
-\hline \textbf{Rationale} & The logout use case allows a user to leave to system to prevent unauthorised use from an unattended terminal \\
-\hline \textbf{Priority} & Must Have \\ 
-\hline \textbf{Actors} & 
+\subsubsection{Requirements Specification}
+Due to the scope of the project it would be impossible to start without a clear vision of how
+the end product should function. These requirements were decided on during the early stages of the project. 
+The reasoning behind them comes primarily from a number of sources:
 \begin{itemize}
- \item Admin
-\end{itemize} \\
-\hline \textbf{Includes} & Login \\
-\hline \textbf{Conditions} & 
-\begin{itemize}
- \item \textbf{post} The user is logged in
-\end{itemize} \\ \hline
-\end{tabular}
-
-%==============================================================================
-% Login
-
-\begin{tabular}{|l|p{8.5cm}|}
-\hline \textbf{Use Case} & Login \\
-\hline \textbf{Description} & \raisebox{-\totalheight}{\includegraphics[scale=0.5]{./figures/login.jpg}} \\
-\hline \textbf{Rationale} & The login use case allows administrator to access to the system. The usename and password are provided by SICSA staff \\
-\hline \textbf{Priority} & Must Have \\ 
-\hline \textbf{Actors} & 
-\begin{itemize}
- \item Admin
-\end{itemize} \\
-\hline \textbf{Conditions} & \textbf{post} The user is logged in if correct credentials are provided \\  \hline
-\end{tabular}
-
-\vspace{10 mm}
-
-%==============================================================================
-% View Status
-
-\begin{tabular}{|l|p{8.5cm}|}
-\hline \textbf{Use Case} & View Status \\
-\hline \textbf{Description} & A user's status (institution, email) is displayed \\
-\hline \textbf{Rationale} & User needs to be able to view their status in the system \\
-\hline \textbf{Priority} & Should Have \\ 
-\hline \textbf{Actors} & 
-\begin{itemize}
- \item Admin
-\end{itemize} \\
-\hline \textbf{Includes} & Login \\
-\hline \textbf{Conditions} & 
-\begin{itemize}
- \item \textbf{pre} The user is logged in
-\end{itemize} \\ \hline
-\end{tabular}
-
-%==============================================================================
-% View queries frequency
-
-\begin{tabular}{|l|p{8.5cm}|}
-\hline \textbf{Use Case} & View Queries Frequency \\
-\hline \textbf{Description} & The submitted queries Frequency associated to user's institution is displayed \\
-\hline \textbf{Rationale} & User needs to be able to view queries frequency in order to determine the popularity of particular areas \\
-\hline \textbf{Priority} & Should Have \\ 
-\hline \textbf{Actors} & 
-\begin{itemize}
- \item Admin
-\end{itemize} \\
-\hline \textbf{Includes} & Login \\
-\hline \textbf{Conditions} & 
-\begin{itemize}
- \item \textbf{pre} The user is logged in
-\end{itemize} \\ \hline
-\end{tabular}
-
-%==============================================================================
-% Change the way system updates academics
-
-\begin{tabular}{|l|p{8.5cm}|}
-\hline \textbf{Use Case} & Change the way system updates academics \\
- \hline \textbf{Description} & Initially, the system scrapes the academics from user's webpage. Some users may prefer XML feeds from each university.
- There are currently 2 options: 
- \begin{itemize}
-  \item an XML feed hosted on user's website and accessed directly by the system
-  \item manual uploading of XML file to the system
- \end{itemize} \\
-\hline \textbf{Rationale} & Allows user to upload academics in different ways \\
-\hline \textbf{Priority} & Should Have \\ 
-\hline \textbf{Actors} & 
-\begin{itemize}
- \item Admin
-\end{itemize} \\
-\hline \textbf{Includes} & Login \\
-\hline \textbf{Conditions} & 
-\begin{itemize}
- \item \textbf{pre} The user is logged in
- \item \textbf{post} Change updated
-\end{itemize} \\ \hline
-\end{tabular}
-
-%==============================================================================
-% Generate custom look for university
-
-\begin{tabular}{|l|p{8.5cm}|}
-\hline \textbf{Use Case} & Generate a custom look for university \\
- \hline \textbf{Description} & User modifies look and feel of their university. This look and feel is displayed to other users visiting SICSA using 
- specific university look and feel \\
-\hline \textbf{Rationale} & Allows user to modify template of their university \\
-\hline \textbf{Priority} & Could Have \\ 
-\hline \textbf{Actors} & 
-\begin{itemize}
- \item Admin
-\end{itemize} \\
-\hline \textbf{Includes} & Login \\
-\hline \textbf{Conditions} & 
-\begin{itemize}
- \item \textbf{pre} The user is logged in
- \item \textbf{post} look and feel updated
-\end{itemize} \\ \hline
-\end{tabular}
-
-%==============================================================================
-% View publication details and visit statistics
-
-\begin{tabular}{|l|p{8.5cm}|}
-\hline \textbf{Use Case} & View publication details and visit statistics \\
- \hline \textbf{Description} & User is able to view all academics, number of visits and publications in their university \\
-\hline \textbf{Rationale} & Allows user to view publication details and visit statistics \\
-\hline \textbf{Priority} & Should Have \\ 
-\hline \textbf{Actors} & 
-\begin{itemize}
- \item Admin
-\end{itemize} \\
-\hline \textbf{Includes} & Login \\
-\hline \textbf{Conditions} & 
-\begin{itemize}
- \item \textbf{pre} The user is logged in
-\end{itemize} \\ \hline
-\end{tabular}
-
-
-\subsubsection{Common Utility Activities}
-
-\begin{figure}
-\centering
-\includegraphics[scale=0.4]{./figures/common_utility_activities.jpg}
-\caption{Common Utility Activities Use Case Diagram}
-\end{figure}
-
-\textbf{Figure 3} illustrates the common utility activities use case diagram of the system.
-
-%==============================================================================
-% Search for experts
-
-\begin{tabular}{|l|p{8.5cm}|}
-\hline \textbf{Use Case} & Search for Experts \\
-\hline \textbf{Description} & \raisebox{-\totalheight}{\includegraphics[scale=0.5]{./figures/search_for_experts.jpg}} 
-User is able to search for experts. By default, all experts retrieved are ones whose university is registered to SICSA\\
-\hline \textbf{Rationale} & Allows user to search for experts \\
-\hline \textbf{Priority} & Must Have \\ 
-\hline \textbf{Actors} & 
-\begin{itemize}
- \item User
-\end{itemize} \\ \hline
-\end{tabular}
-
-%==============================================================================
-% View Academic's Profile
-
-\begin{tabular}{|l|p{8.5cm}|}
-\hline \textbf{Use Case} & View Academic's Profile \\
-\hline \textbf{Description} & 
-
-\raisebox{-\totalheight}{\centerline{\includegraphics[scale=0.5]{./figures/view_academic_profile.jpg}}} 
-The academic's profile's page includes
-\begin{itemize}
- \item A list of publications most relevant to a query
- \item A list of funded projects most relevant to a query
- \item All publications of the academic
- \item All funded projects of the academic
- \item Most collaborated co-authors
- \item Most popular terms
- \item project's details (funding, funder, dates, academics)
-\end{itemize} \\
-\hline \textbf{Rationale} & Allows user to view academic's profile \\
-\hline \textbf{Priority} & Must Have \\ 
-\hline \textbf{Actors} & 
-\begin{itemize}
- \item User
-\end{itemize} \\
-\hline \textbf{Extensions} & 
-\begin{itemize}
- \item Search for experts
-\end{itemize} \\ \hline
-\end{tabular}
-
-\subsection{Function Requirements}
-There are two sections of non-functional requirements which are Must Haves and Should Haves.
+ \item Research into a previous attempt at old SICSA system (section~\ref{sec:currentsystem}).
+ \item Research into presenting query results (section~\ref{sec:presentingQueryResult)}.
+ \item Research into learning to rank techniques to enhancing the performance of the retrieval system by integrating different kinds of 
+ expertise evidence (section~\ref{sec:letor}.
+ \item Discussion with Dr. Craig Macdonald.
+\end{itemize}
+% However, developing an IR system is researched based. Utilizing learning to rank technique might not 
+% produce optimal ranking due to the lack of training dataset. Therefore, 
+The requirements have been split into several sections depending on their necessity.
 
 \subsubsection{Must Have}
+\begin{itemize}
+ \item Extracting funded projects from different 2 sources: Grant on the Web~\cite{gow} and Research Councils UK~\cite{gtr}.
+ \item Integrating publications and funded projects as expertise evidence.
+ \item Utilizing learning to rank techniques with an attempt to enhance the performance of the retrieval system.
+ %\item Indexing and Retrieving documents (experts) effectively.
+ \item Able to conclude that applying learning to rank techniques helps improve the performance of the retrieval system using evaluation matrices discussed
+ in section~\ref{sec:evaluation}. 
+\end{itemize}
 
-\begin{tabular}{|l|p{8.5cm}|}
-\hline \textbf{Effectiveness} & 
+\subsubsection{Should Have}
 \begin{itemize}
- \item Help user find relevant experts by using publications and funded projects as expertise evidence
- \item Learn those expertise evidences using Learning to Rank Algorithm for Information Retrieval
-\end{itemize} \\
-\hline \textbf{Availability} & 
+ \item providing refinement options for users to filter results by funded projects, publications and both.
+ \item providing refinement options for users to filter funded projects and publications of each expert.
+\end{itemize}
+
+\subsubsection{Could Have}
 \begin{itemize}
- \item Functional 24 hours a day
-\end{itemize} \\
-\hline \textbf{Security} & 
+ \item 
+\end{itemize}
+
+\subsubsection{Would Like to Have}
 \begin{itemize}
- \item Username and Password required for administrators
- \item Inactivity timeouts - 30 minutes
-\end{itemize} \\
-\hline \textbf{Performance} & 
-\begin{itemize}
- \item Take less than a second to search for experts
- \item Take less than 3 seconds to visit academic's profile page
-\end{itemize} \\ 
-\hline \textbf{Actors} & 
-\begin{itemize}
- \item User
-\end{itemize} \\ \hline
-\end{tabular}
+ \item 
+\end{itemize}
 
 
+I will discuss with u about this section tomorrow
 

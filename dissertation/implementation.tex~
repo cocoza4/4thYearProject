@@ -1,9 +1,7 @@
 
-
-
 \section{Design and Implementation}\label{section:designandimplementation}
 
-\subsubsection{Overview of Important Class Diagrams}
+\subsection{Overview of Important Class Diagrams}
 
 As stated in section ~\ref{section:aims}, this project extends from SICSA project which uses only publications as expertise evidence.
 The aim of this project is to integrate funded projects with publications to improve the performance of the retrieval.
@@ -42,7 +40,7 @@ The RetrievedResults Class has 3 attributes as follows:
  \item scores, an array of Double, which is the scores of each document retrieved by the system.
 \end{itemize}
 
-\subsubsection{Data Extraction}
+\subsection{Data Extraction}
 \begin{figure}
 \centering
 \includegraphics[scale=0.35]{./figures/projectsExtraction.png}
@@ -110,7 +108,7 @@ steps towards indexing using Terrier~\cite{terrier} are discussed.
 
 I will discuss with u about this section today.
 
-\subsubsection{Retrieving Documents (Experts) with respect to a Query} \label{section:union}
+\subsection{Retrieving Documents (Experts) with respect to a Query} \label{section:union}
 
 \begin{figure}
 \centering
@@ -128,7 +126,7 @@ First of all, the user query is transformed into publication query and project
 query. AcademTechQuerying Class then processes both queries to get results with respect to publication query and project query. The results of both
 queries are then unioned as shown in Figure ~\ref{fig:union}.
 
-\subsubsection{Producing a Learned Model}\label{section:producelearnedmodel}
+\subsection{Producing a Learned Model}\label{section:producelearnedmodel}
 Section ~\ref{section:learnedmodel} described general steps to producing a learned model. This section aims to discuss classes involved in producing a learned model.
 As section ~\ref{section:learnedmodel} suggested, the first step in producing a learned model is to generate a set of training queries. 
 Then all features described in Section ~\ref{section:goodexpert} for each document (expert) with respect to each training query are extracted and saved
@@ -200,73 +198,58 @@ feature. Section~\ref{section:applyinglearnedmodel} will explain how learned mod
 \caption{Sample Model} \label{fig:samplemodel} 
 \end{figure}
 
-\subsubsection{Applying a Learned Model}\label{section:applyinglearnedmodel}
+\subsection{Applying a Learned Model}\label{section:applyinglearnedmodel}
 Now that a learned model has been generated, this learned model can be applied to produce optimal ranking. Given a query,
 scores of query dependent features are computed for each expert as shown in figure~\ref{fig:quering}. After that, scores of query independent feaures
 of experts obtained from querying are extracted. Then for each expert, the scores of each feature are multiplied by ones in the learned model and accumulated.
 Finally, the accumulated scores for each expert are sorted in descending order and experts with the high scores are ranked before those with low scores. 
 This was briefly explained in section~\ref{section:learnedmodel}.
 
-\subsubsection{Differences Between Old and New Systems}
-\begin{figure}[H]
-\centering
-\includegraphics[width=13cm,height=15cm,keepaspectratio]{./figures/oldsicsa.png}
-\caption{Home Page} \label{fig:oldsicsa} 
-\end{figure}
-\begin{figure}[H]
-\centering
-\includegraphics[width=13cm,height=15cm,keepaspectratio]{./figures/oldsearch.png}
-\caption{Experts In Response to ``information retrieval'' Query} \label{fig:resultspage} 
-\end{figure}
-\begin{figure}[H]
-\centering
-\includegraphics[width=13cm,height=15cm,keepaspectratio]{./figures/oldProfilePage.png}
-\caption{Old Expert's Profile Facet} \label{fig:profilepage} 
-\end{figure}
-Figures~\ref{fig:oldsicsa}~\ref{fig:resultspage}~\ref{fig:profilepage} are old interfaces of the system. 
+% \subsection{Differences Between Old and New Systems}
 
-\begin{figure}
-\centering
-\includegraphics[width=13cm,height=15cm,keepaspectratio]{./figures/newsearch.png}
-\caption{New Facets : Experts In Response to ``information retrieval'' Query} \label{fig:newsearch} 
-\end{figure}
-Figure~\ref{fig:newsearch} shows a new facet in response to a query ``information retrieval''. Note that for each expert retrieved, the number of 
-projects the expert has been involved is displayed.
-\begin{figure}
-\centering
-\includegraphics[width=13cm,height=15cm,keepaspectratio]{./figures/newProfilePagePublication.png}
-\caption{New Expert's Profile Facet} \label{fig:newProfilePage} 
-\end{figure}
-Figure~\ref{fig:newProfilePage} shows a new facet of profile page. There are 2 tabs for publications and funded projects and a drop down box for selecting
-result filter modes. The number of projects and total funding are shown added.
 
-\begin{figure}
-\centering
-\includegraphics[width=13cm,height=15cm,keepaspectratio]{./figures/newPofilePageProject.png}
-\caption{Project Tab} \label{fig:newPofilePageProject} 
-\end{figure}
-Figure~\ref{fig:newPofilePageProject} shows a facet when a project tab is selected. The right hand side of the page shows the most project collaborators
-and other filter modes: filter projects by amount of funding and by the status of projects.
-
-\begin{figure}
-\centering
-\includegraphics[width=13cm,height=15cm,keepaspectratio]{./figures/newProfileSelectedProject.png}
-\caption{Project Page} \label{fig:newProfileSelectedProject} 
-\end{figure}
-
-Figure~\ref{fig:newProfileSelectedProject} shows a facet when user selects a project link. This shows descriptions of a selected project.
-The descriptions include:
-\begin{itemize}
- \item Funder
- \item Title
- \item Funded Value
- \item Funded Period
- \item Status
- \item Grant Category
- \item People involved in the project
- \item Abstract
- \item Impact
-\end{itemize}
+% \begin{figure}
+% \centering
+% \includegraphics[width=13cm,height=15cm,keepaspectratio]{./figures/newsearch.png}
+% \caption{New Facets : Experts In Response to ``information retrieval'' Query} \label{fig:newsearch} 
+% \end{figure}
+% Figure~\ref{fig:newsearch} shows a new facet in response to a query ``information retrieval''. Note that for each expert retrieved, the number of 
+% projects the expert has been involved is displayed.
+% \begin{figure}
+% \centering
+% \includegraphics[width=13cm,height=15cm,keepaspectratio]{./figures/newProfilePagePublication.png}
+% \caption{New Expert's Profile Facet} \label{fig:newProfilePage} 
+% \end{figure}
+% Figure~\ref{fig:newProfilePage} shows a new facet of profile page. There are 2 tabs for publications and funded projects and a drop down box for selecting
+% result filter modes. The number of projects and total funding are shown added.
+% 
+% \begin{figure}
+% \centering
+% \includegraphics[width=13cm,height=15cm,keepaspectratio]{./figures/newPofilePageProject.png}
+% \caption{Project Tab} \label{fig:newPofilePageProject} 
+% \end{figure}
+% Figure~\ref{fig:newPofilePageProject} shows a facet when a project tab is selected. The right hand side of the page shows the most project collaborators
+% and other filter modes: filter projects by amount of funding and by the status of projects.
+% 
+% \begin{figure}
+% \centering
+% \includegraphics[width=13cm,height=15cm,keepaspectratio]{./figures/newProfileSelectedProject.png}
+% \caption{Project Page} \label{fig:newProfileSelectedProject} 
+% \end{figure}
+% 
+% Figure~\ref{fig:newProfileSelectedProject} shows a facet when user selects a project link. This shows descriptions of a selected project.
+% The descriptions include:
+% \begin{itemize}
+%  \item Funder
+%  \item Title
+%  \item Funded Value
+%  \item Funded Period
+%  \item Status
+%  \item Grant Category
+%  \item People involved in the project
+%  \item Abstract
+%  \item Impact
+% \end{itemize}
 
 
 

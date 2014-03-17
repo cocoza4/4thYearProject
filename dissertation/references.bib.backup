@@ -5,7 +5,7 @@
   title = {Voting for Candidates: Adapting Data Fusion Techniques for an Expert Search Task},
   author = {Craig Macdonald, Iadh Ounis},
   year = {2006},
-  pages = {387, 388}
+  pages = {387, 388, 389}
 }
 
 @misc{sicsa,
@@ -16,6 +16,30 @@
 @misc{IR,
   title = {Information Retrieval},
   howpublished = "\url{http://en.wikipedia.org/wiki/Information_retrieval}"
+}
+
+@misc{IRlecture,
+  title = {Information Retrieval},
+  author = {Prof. Joemon M Jose},
+  year = {2013}
+}
+
+@misc{tfidf,
+  howpublished = "\url{http://en.wikipedia.org/wiki/Tf%E2%80%93idf}",
+  title = {Term Frequency–Inverse Document Frequency (tf-idf)},
+  year = {2014}
+}
+
+@misc{introToIR,
+  title = {An Introduction to Information Retrieval}
+  author = {Christopher D. Manning, Prabhakar Raghavan, and Hinrich Schütze},
+  year = {2009}
+}
+
+@misc{probModel,
+  title = {Probabilistic Retrieval Model},
+  author = {Prof. Joemon M Jose},
+  year = {2013}
 }
 
 @misc{sicsasearch,
@@ -45,8 +69,63 @@
   author = {Mehryar Mohri, Afshin Rostamizadeh, and Ameet Talwalkar},
   isbn = {9780262018258}
 }
+
+@article{learningmodel,
+  title = {About Learning Models with Multiple Query Dependent Features},
+  author = {Craig Macdonald, Rdrygo L.T. and Iadh Ounis},
+  year = {2012}
+}
+
+@misc{ranklib,
+  howpublished = "\url{http://sourceforge.net/p/lemur/wiki/RankLib/}",
+  title = {RankLib}
+}
+
+@misc{IRarchitecture,
+  title = {Architecture of Retrieval Systems},
+  author = {Prof. Joemon M Jose},
+  year = {2013}
+}
+
+@misc{tokenization,
+  title = {Tokenization},
+  howpublished = "\url{http://en.wikipedia.org/wiki/Tokenization}",
+  year = {2014}
+}
+
+@misc{eval,
+  title = {Information Retrieval - Evaluation Methodology},
+  author = {Prof. Joemon M Jose},
+  year = {2013}
+}
+
+@misc{evalweb,
+  url = "\url{http://nlp.stanford.edu/IR-book/html/htmledition/information-retrieval-system-evaluation-1.html}",
+  year = {2009},
+  title = {Information retrieval system evaluation},
+  publisher = {Cambridge University Press}
+}
   
-  
+@misc{invertedindex,
+  url = "\url{http://en.wikipedia.org/wiki/Inverted_index}",
+  title = {Inverted Index},
+  year = {2012}
+}
+
+@misc{craig,
+  title = {Conversation of Dr. Craig Macdonald},
+  year = {2014}
+}
+ 
+@misc{polymorphism,
+  title = {Polymorphism},
+  url = "\url{http://en.wikipedia.org/wiki/Polymorphism_(computer_science)}"
+}
+ 
+@misc{terrierindexing,
+  title = {Indexing Process of Terrier},
+  url = "\url{http://terrier.org/docs/v3.5/basicComponents.html}"
+}
   
   
   

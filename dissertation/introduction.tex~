@@ -55,5 +55,5 @@ I have access to funded projects data in the UK. This data is integrated with ex
 In this dissertation, Section~\ref{section:requirements} discusses about Requirements Specification which is grouped into functional and non-functional requirements. 
 Section~\ref{section:background} aims to explain the backgrounds of the project to readers. This section is necessary for readers to understand subsequent sections. 
 Section~\ref{section:designandimplementation} discusses about Designs and Implementations of the system which also references to deployed SICSA search system~\cite{sicsasearch}. 
-Section 5 provides results and analysis of the techiques used. This section can be seen as the most important part of the whole project since it 
+Section 5 provides results and analysis of the techiques used. This section can be viewed as the most important part of the whole project since it 
 analyses adding expertise evidence improves the relevance of the search or not. The last section is the conclusion of the project.
