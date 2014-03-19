@@ -108,24 +108,6 @@ steps towards indexing using Terrier~\cite{terrier} are discussed.
 
 I will discuss with u about this section today.
 
-\subsection{Retrieving Documents (Experts) with respect to a Query} \label{section:union}
-
-\begin{figure}
-\centering
-\includegraphics[scale=0.7]{./figures/querying.png}
-\caption{Querying} \label{fig:quering} 
-\end{figure}
-\quad
-\begin{figure}
-\centering
-\includegraphics[scale=0.7]{./figures/union.png}
-\caption{Results After Union} \label{fig:union} 
-\end{figure}
-Figure ~\ref{fig:quering} shows the process of obtaining documents (experts) with respect to a query. 
-First of all, the user query is transformed into publication query and project
-query. AcademTechQuerying Class then processes both queries to get results with respect to publication query and project query. The results of both
-queries are then unioned as shown in Figure ~\ref{fig:union}.
-
 \subsection{Producing a Learned Model}\label{section:producelearnedmodel}
 Section ~\ref{section:learnedmodel} described general steps to producing a learned model. This section aims to discuss classes involved in producing a learned model.
 As section ~\ref{section:learnedmodel} suggested, the first step in producing a learned model is to generate a set of training queries. 
@@ -143,33 +125,7 @@ the degree of relevancy. To the left of the label is query id and scores of each
 \caption{Sample LETOR file} \label{fig:sampleletorfile} 
 \end{figure}
 
-34 training queries~\ref{table:trainingqueries} are trained by the tool called RankLib~\ref{section:rankLib} to get a learned model. This process is performed 
-only one time.
-\begin{table}
-\centering
-\begin{tabular}{|c|l|c|l|}
-\hline \textbf{\#} & \textbf{Query} & \textbf{\#} & \textbf{Query} \\
-\hline 1 & language modelling & 18 & game theory\\
-\hline 2 & manets & 19 & stable marriage \\
-\hline 3  & match & 20 & quantum computation\\ 
-\hline 4  & multimodal & 21 & constraint modelling\\ 
-\hline 5  & music as navigation cues & 22 & home networks\\ 
-\hline 6  & networking security & 23 & wireless sensor networks\\ 
-\hline 7  & neural network & 24 & distributed systems\\ 
-\hline 8  & older adults use of computers & 25 & operating system\\ 
-\hline 9  & parallel logic programming & 26 & terrier\\ 
-\hline 10  & query expansion & 27 & text searching\\ 
-\hline 11  & road traffic accident statistics & 28 & trec collection class\\ 
-\hline 12  & shoogle & 29 & usability\\ 
-\hline 13  & skill-based behavior & 30 & utf support terrier\\ 
-\hline 14  & sound in multimedia human-computer interfaces & 31 & visual impairment\\ 
-\hline 15  & statistical inference & 32 & wafer fab cost \\ 
-\hline 16  & suffix tree & 33 & database\\ 
-\hline 17  & mobile hci & 34 & programming languages\\ 
-\hline
-\end{tabular}
-\caption{Training Queries} \label{table:trainingqueries}
-\end{table}
+
 
 \begin{figure}
 \centering
@@ -205,53 +161,27 @@ of experts obtained from querying are extracted. Then for each expert, the score
 Finally, the accumulated scores for each expert are sorted in descending order and experts with the high scores are ranked before those with low scores. 
 This was briefly explained in section~\ref{section:learnedmodel}.
 
-% \subsection{Differences Between Old and New Systems}
 
 
-% \begin{figure}
-% \centering
-% \includegraphics[width=13cm,height=15cm,keepaspectratio]{./figures/newsearch.png}
-% \caption{New Facets : Experts In Response to ``information retrieval'' Query} \label{fig:newsearch} 
-% \end{figure}
-% Figure~\ref{fig:newsearch} shows a new facet in response to a query ``information retrieval''. Note that for each expert retrieved, the number of 
-% projects the expert has been involved is displayed.
-% \begin{figure}
-% \centering
-% \includegraphics[width=13cm,height=15cm,keepaspectratio]{./figures/newProfilePagePublication.png}
-% \caption{New Expert's Profile Facet} \label{fig:newProfilePage} 
-% \end{figure}
-% Figure~\ref{fig:newProfilePage} shows a new facet of profile page. There are 2 tabs for publications and funded projects and a drop down box for selecting
-% result filter modes. The number of projects and total funding are shown added.
-% 
-% \begin{figure}
-% \centering
-% \includegraphics[width=13cm,height=15cm,keepaspectratio]{./figures/newPofilePageProject.png}
-% \caption{Project Tab} \label{fig:newPofilePageProject} 
-% \end{figure}
-% Figure~\ref{fig:newPofilePageProject} shows a facet when a project tab is selected. The right hand side of the page shows the most project collaborators
-% and other filter modes: filter projects by amount of funding and by the status of projects.
-% 
-% \begin{figure}
-% \centering
-% \includegraphics[width=13cm,height=15cm,keepaspectratio]{./figures/newProfileSelectedProject.png}
-% \caption{Project Page} \label{fig:newProfileSelectedProject} 
-% \end{figure}
-% 
-% Figure~\ref{fig:newProfileSelectedProject} shows a facet when user selects a project link. This shows descriptions of a selected project.
-% The descriptions include:
-% \begin{itemize}
-%  \item Funder
-%  \item Title
-%  \item Funded Value
-%  \item Funded Period
-%  \item Status
-%  \item Grant Category
-%  \item People involved in the project
-%  \item Abstract
-%  \item Impact
-% \end{itemize}
+\begin{figure}
+\centering
+\includegraphics[scale=0.5]{./figures/searchsequence.png}
+\caption{Sequence Diagram of Querying} \label{fig:searchsequence} 
+\end{figure}
 
+Figure~\ref{fig:searchsequence} illustrates a sequence diagram of querying. This sequence diagram only shows important processes to retrieve
+relevant results. Given a query submitted by a user, Search servlet processes parameters sent via GET request by calling processParam() method. This is
+followed by invoking processQuery() method which takes one parameter, ``type''. This parameter is used for filter mode. The method processQuery() 
+performs tasks discussed in section~\ref{section:union}. There are 2 classes introduced in this section: \textbf{CandidateScores} and 
+\textbf{CandidateSorting}. The former is used for computing scores of candidates based on a learned model. The latter
+sorts scores of candidates obtained after applying a learned model in descending score as discussed in section~\ref{sec:learnedmodel}.
+Figure~\ref{fig:scoreandsorting} shows class diagrams of CandidateScores and CandidateSorting. Important attributes and methods are only provided.
 
+\begin{figure}
+\centering
+\includegraphics[scale=0.5]{./figures/score&sorting.png}
+\caption{Class Diagrams of CandidateScores and CandidateSorting} \label{fig:scoreandsorting} 
+\end{figure}
 
 
 

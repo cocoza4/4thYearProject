@@ -3,7 +3,7 @@ Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: dissertation.aux
 The style file: plain.bst
 Database file #1: references.bib
-I was expecting a `,' or a `}'---line 64 of file references.bib
+I was expecting a `,' or a `}'---line 79 of file references.bib
  :   
  :   author = {Christopher D. Manning, Prabhakar Raghavan, and Hinrich Schütze},
 (Error may have been on previous line)
@@ -27,51 +27,54 @@ while executing---line 1049 of file plain.bst
 Warning--to sort, need author or key in terrier
 Warning--to sort, need author or key in trec
 Warning--to sort, need author or key in ranklib
+Warning--to sort, need author or key in qrels
+Warning--to sort, need author or key in qrelsformat
+Warning--to sort, need author or key in resultfileformat
 Warning--to sort, need author or key in craig
 Warning--to sort, need author or key in polymorphism
 Warning--empty journal in expertsearch
 Warning--empty journal in learningmodel
 Name 1 in "Mehryar Mohri, Afshin Rostamizadeh, and Ameet Talwalkar" has a comma at the end for entry letor
 while executing---line 1090 of file plain.bst
-You've used 26 entries,
+You've used 29 entries,
             2118 wiz_defined-function locations,
-            579 strings with 5937 characters,
-and the built_in function-call counts, 4736 in all, are:
-= -- 436
-> -- 80
+            588 strings with 6218 characters,
+and the built_in function-call counts, 5213 in all, are:
+= -- 481
+> -- 83
 < -- 1
-+ -- 47
++ -- 50
 - -- 18
-* -- 178
-:= -- 603
-add.period$ -- 50
-call.type$ -- 26
-change.case$ -- 86
+* -- 193
+:= -- 654
+add.period$ -- 56
+call.type$ -- 29
+change.case$ -- 95
 chr.to.int$ -- 0
-cite$ -- 47
-duplicate$ -- 203
-empty$ -- 603
+cite$ -- 53
+duplicate$ -- 224
+empty$ -- 672
 format.name$ -- 18
-if$ -- 1126
+if$ -- 1246
 int.to.chr$ -- 0
-int.to.str$ -- 26
+int.to.str$ -- 29
 missing$ -- 4
-newline$ -- 105
+newline$ -- 117
 num.names$ -- 14
-pop$ -- 214
+pop$ -- 238
 preamble$ -- 1
-purify$ -- 61
+purify$ -- 67
 quote$ -- 0
-skip$ -- 214
+skip$ -- 238
 stack$ -- 0
-substring$ -- 179
-swap$ -- 33
+substring$ -- 194
+swap$ -- 36
 text.length$ -- 1
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 102
-warning$ -- 21
+type$ -- 114
+warning$ -- 24
 while$ -- 16
-width$ -- 28
-write$ -- 195
+width$ -- 31
+write$ -- 216
 (There were 3 error messages)

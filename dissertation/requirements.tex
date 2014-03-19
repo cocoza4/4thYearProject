@@ -1,7 +1,20 @@
 
-\section{I dont know}
+\section{Current System and Proposals to the new System}
 
 \subsubsection{Current System}\label{sec:currentsystem}
+This section is intended to give some statistics and briefly discuss design of the current system. Table~\ref{table:currentstats} gives statistics 
+of current system.
+\begin{table}
+\centering
+\begin{tabular}{|c|c|}
+\hline Number of experts & 1569 \\
+\hline Number of publications UK & 22225 \\
+\hline Number of all documents   & 24823 \\ 
+\hline Number of tokens (terms) & 6876832 \\
+\hline
+\end{tabular}
+\caption{Statistics of Current System} \label{table:currentstats}
+\end{table}
 
 \begin{figure}
  \centering
@@ -28,6 +41,16 @@ Each result in the search panel includes expert's details: university, number of
 
 Figure~\ref{fig:profilepage} illustrates a profile page of an expert. This page introduces most collaborated coauthors facet on the right of the page, a 
 facet that shows popular terms appearing in an expert's profile and publications and related academics facet.
+
+\paragraph{Design and Architecture of Current System}
+
+ \begin{figure}
+ \centering
+ \includegraphics[scale=0.5,keepaspectratio]{./figures/currentSystemDesign.jpg}
+ \caption{Design of Current System} \label{fig:currentDesign} 
+\end{figure}
+Figure~\ref{fig:currentDesign} shows design of current system. It makes use of publication as expertise. From the figure, after a user submits a query
+to the system, the system sends a query to Terrier and finally Terrier returns relevant experts to the user.
 
 \subsubsection{Proposals}\label{section:goodexpert}
 In section~\ref{sec:presentingQueryResult}, it was obvious that some evidence could be used to convince users how reliable a document (link) is.
@@ -98,5 +121,36 @@ several sections depending on their necessity.
  \item Fully functional for the purpose of the final demonstration.
 \end{itemize}
 
-\subsubsection{Design and Architecture}
+\subsubsection{Design and Architecture of New System} \label{section:union}
+Figure~\ref{fig:newDesign} shows design of new system. It makes use of learning to rank (LETOR) technique to integrate 
+both publication and funded projects as expertise evidence. From the figure, the design is quite similar except that query results (experts) are
+applied with learning to rank technique to obtain optimal ranking.
 
+ \begin{figure}
+ \centering
+ \includegraphics[scale=0.5,keepaspectratio]{./figures/newSystemDesign.png}
+ \caption{Design of Current System} \label{fig:newDesign} 
+\end{figure}
+
+\paragraph{Retrieving Documents (Experts) with respect to a Query} 
+
+\begin{figure}
+\centering
+\includegraphics[scale=0.7]{./figures/querying.png}
+\caption{Querying} \label{fig:quering} 
+\end{figure}
+\quad
+\begin{figure}
+\centering
+\includegraphics[scale=0.7]{./figures/union.png}
+\caption{Results After Union} \label{fig:union} 
+\end{figure}
+Last section, we gave a broad view of the new system retrieval scheme. In this section, we will be more specific on how we are going to 
+obtain results from user query and apply them to learning to rank technique to obtain optimal ranking.
+Figure ~\ref{fig:quering} shows the process of obtaining documents (experts) with respect to a query. 
+First of all, the user query is transformed into publication query, using only publications as expertise evidence and project
+query, using only funded projects as expertise evidence. 
+AcademTechQuerying Class then processes both queries to get results with respect to publication query and project query. The results of both
+queries are then unioned as shown in Figure ~\ref{fig:union}. The results obtained are based on query dependent features as discussed in section 
+~\ref{section:querydependent}. Finally, unioned results are applied to a learned model to generate optimal ranking. Next section will discuss more in
+details.

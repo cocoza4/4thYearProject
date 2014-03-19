@@ -214,7 +214,7 @@ These quantities can be visualised in table~\ref{table:bim}.
 \begin{table}
  \centering
 \begin{tabular}{|c|c|c|c|}
-\hline  & \textbf{Document} & \textbf{Relevant (R)} & \textbf{Irrelevant (NR)} \\
+\hline  & \textbf{Document} & \textbf{Relevant (R)} & \textbf{Non-relevant (NR)} \\
 \hline Term present & $x_t = 1$ & $p_t$ & $u_t$\\
 \hline Term absent & $x_t = 0$ & $1 - p_t$ & $1 - u_t$ \\ 
 \hline
@@ -234,10 +234,41 @@ that is, if $q_t$ = 0 then $p_t$ = $u_t$. We now end up with the equation as fol
 \frac{P(R|x)}{P(NR|x)} = \prod_{t:x_t=1}^M\frac{p_t(1-u_t)}{u_t(1-p_t)}
 \end{equation}
 
-From equation ~\ref{eq:RVS}, we can apply logarithm to avoid zero product and the resulting quantity used for ranking is
-called the Retrieval Status Value (RSV).
+From equation~\ref{eq:RVS}, we can apply logarithm to avoid zero product and the resulting quantity used for ranking is
+called the Retrieval Status Value (RSV) as shown in equation~\ref{eq:logRVS}.
+\begin{equation}~\label{eq:logRVS}
+\frac{P(R|x)}{P(NR|x)} = \sum_{t:x_t=1}^M log \frac{p_t(1-u_t)}{u_t(1-p_t)}
+\end{equation}
 
-Not done
+\begin{table}
+ \centering
+\begin{tabular}{|cc|c|c|c|c|}
+\hline  & \textbf{Document} & \textbf{Relevant (R)} & \textbf{Non-relevant (NR)} & \textbf{Total} \\
+\hline Term present & $x_t = 1$ & $r_t$ & $u_t - r_t$ & $n_t$\\
+ Term absent & $x_t = 0$ & $R - r_t$ & $N - n_t - R + r_t$ & $N - n_t$ \\ 
+\hline & Total & $R$ & $N - R$ & $N$ \\
+\hline
+\end{tabular}
+\label{table:bimTable}
+\end{table}
+
+From Binary Independence Model theory, we can estimate $p_t$ and $u_t$ based on quantities from table~\ref{bimTable} as follows:
+\[
+ p_t \approx \frac{r_t}{R},  u_t \approx \frac{n - r_t}{N - R}
+\]
+
+Substituting $p_t$ and $u_t$ to equation~\ref{eq:logRVS}, we have
+\begin{equation}~\label{eq:newlogRVS}
+\sum_{t \in \vec{q}} log(c_t) = \sum_{t:x_t=1}^M log \frac{r_t/(R - r_t)}{(n_t - r_t)/(N - n_t - R + r_t)}
+\end{equation}
+
+From equation~\ref{eq:newlogRVS}, we can formulate BM25 formula:
+\begin{equation}~\label{eq:BM25}
+\sum_{t \in \vec{q}}^M log \frac{r_t/(R - r_t)}{(n_t - r_t)/(N - n_t - R + r_t)} \frac{(k_1 + 1)tf_{td}}{K + tf_{td}} \frac{k_2 + 1)tf_{tq}}{k_2 + tf_{tq}}
+\end{equation}
+where $K$ = $k_t((1 - b) + b\frac{dl}{avdl})$, $tf_tq$ and $tf_td$ are the frequency of term $t$ in the query and document respectively,
+$\vec{q}$ and $b$, $dl$ and $avdl$ are paraameters set empirically. The proof of BM25 is beyond the scope of the project.
+
 
 \subsubsection{Retrieval Process in Information Retrieval}\label{section:retrieving}
 \begin{figure}
@@ -342,8 +373,8 @@ probability of correctness~\cite{mrr}. The equation below is a formula for MRR.
 \end{center}
 where $rank_i$ is the position of the correct result and $|Q|$ is the number of queries.
 
-\paragraph{Normalized Discounted Cumulative Gain (nDCG)}
-To understand nDCG, first of all, we have to \textbf{understand Cumulative Gain (CG)} and and \textbf{Discounted Cumulative Gain (DCG)}. 
+\paragraph{Normalized Discounted Cumulative Gain (NDCG)}
+To understand NDCG, first of all, we have to \textbf{understand Cumulative Gain (CG)} and and \textbf{Discounted Cumulative Gain (DCG)}. 
 CG is the predecessor of DCG and it is the sum of the graded relevance values of all results in a search result list~\cite{ndcg}. The CG at a particular 
 rank position $p$ is defined as:
 
@@ -351,7 +382,7 @@ NOT DONE..
 
 is a measure for ranking quality and the usefulness (gain) of an item based on its relevance and position in the provided list.
 
-\subsection{Learning to Rank}\label{sec:letor}
+\subsection{Learning to Rank (LETOR)}\label{sec:letor}
 Learning to rank or machine-learned ranking (MLR) is a type of supervised or semi-supervised machine learning problem in which the goal is 
 to automatically construct a ranking model from training data~\cite{letor}.
 Employing learning to rank techniques to learn the ranking function is viewed as
@@ -360,17 +391,17 @@ a promising approach to information retrieval~\cite{letor}. In particular, many 
 producing the final ranking of documents for a query~\cite[P. 3]{learningmodel}. In learning to rank, a feature is a binary or numberical indicator 
 representing the quality of a document, or its relation to the query~\cite[P. 4]{learningmodel}. This will be discussed in more details in later section.
 
-\subsubsection{Query Dependent Feature}\label{section:querydependent}
+\subsubsection*{Query Dependent Feature}\label{section:querydependent}
 Figure~\ref{fig:retrieval_process} shows a simple search process in IR. After a user submits a query into an IR system. The system ranks the results 
 with respect to the query and returns a result set to the user. It can be clearly seen that the results obtained with respect to the query depends on the 
 query the user submitted. In other words, document A can have 2 different degrees of relevancy if a user changes a query.
 In learning to rank, this is called query dependent feature.
 
-\subsubsection{Query Independent Feature}\label{section:queryindependent}
+\subsubsection*{Query Independent Feature}\label{section:queryindependent}
 In contrast to Query Dependent Feature, a feature that does not depend on a user query is called query independent feature. This feature is fixed for each
 document. For now, it is better to not dig into great details about this because this will be focused in later section.
 
-\subsubsection{Obtaining and Deploying a Learned Model} \label{section:learnedmodel}
+\subsubsection*{Obtaining and Deploying a Learned Model} \label{sec:learnedmodel}
 The general steps for obtaining a learned model using a learning to rank technique are the following~\cite[P. 4]{learningmodel}:
 
 \begin{quote}
@@ -397,6 +428,7 @@ Figure~\ref{fig:letor} illustrates an architecture of a machine-learned IR syste
 Implementation Section.
 
 \subsection{Tools}
+
 \subsubsection{Terrier}\label{section:terrier}
 Every IR system requires programs that handle indexing, retrieving, ranking, etc. To build everything from scratch, it would be impossible within
 the 1 year duration. However, there are a number of search engine platforms that deal with IR functionalities effectively.
@@ -424,10 +456,25 @@ This library was chosen because it is easy to use, written in Java which can be 
 it implements 8 different learning to rank algorithms which makes it possible for users to try different algorithms.
 However, AdaRank and Coordinate Ascent were only used in the project because other algorithms are too complex and not part of the scope of this project.
 
-\subsubsection{trec\_eval}
+\subsubsection{trec\_eval}\label{sec:treceval}
 trec\_eval is the standard tool used by the TREC community~\cite{trec} for evaluating a retrieval run, given the results file and a
 standard set of judged results. trec\_eval was chosen because the data used in this project uses TREC format. 
-It is easy to use and written in C which makes the tool efficient.
+It is easy to use and written in C which makes the tool efficient. To use trec\_eval, 2 files are required: qrels and result file in TREC format.
+\textit{qrels} is a file that stores relevant results for queries stored in a queries file~\cite{qrels}. It has the following format~\cite{qrelsformat}:
+\begin{quotation}
+ \textit{TOPIC ITERATION DOCUMENT\# RELEVANCY}
+\end{quotation}
+where \textit{TOPIC} is the query, \textit{ITERATION} is the feedback iteration (almost always zero and not used),
+\textit{DOCUMENT\#} is the official document number that corresponds to the "docno" field in the documents (in this project, expert's id), and
+\textit{RELEVANCY} is a number indicating a degree of relevancy. In this project, 3 numbers: 0, 1, and 2 indicating non-relevant, relevant and perfectly
+relevant respectively, are used. The result file is the file that contains the following~\cite{resultfileformat}:
+\begin{quotation}
+ \textit{TOPIC ITERATION DOCUMENT\# RANK SIM RUN\_ID}
+\end{quotation}
+where \textit{RANK} is the position of the corresponding document\# in a ranking, \textit{SIM} is a float value indicating a score and \textit{RUN\_ID}
+is a string which gets printed out with the output.
+
+
 
 \subsection{Expert Search}
 In section~\ref{sec:expertsearch}, we discussed about the definition of Expert Search. This section will give 5 scenarios proposed by Yimam-Seid \& Kobsa
@@ -437,7 +484,8 @@ why expert search is needed~\cite[P. 387]{expertsearch}.
   \item \textit{2. Specification need - the user is unable to formulate a plan to solve a problem, and resorts to seeking experts to assist them in formulating a plan.}
   \item \textit{3. Leveraging on another's expertise (group efficiency) - e.g. finding a piece of information that a relevant expert would know/find with
   less effort than the seeker.}
-  \item \textit{4. Socialisation need - the user may prefer that the human dimension be involved, as opposed to interacting with documents and computers.}
+  \item \textit{4. Interpretation need - e.g. deriving the implications of, or understanding, a piece of information.}
+  \item \textit{5. Socialisation need - the user may prefer that the human dimension be involved, as opposed to interacting with documents and computers.}
 \end{quotation}
 
 \subsubsection{Presenting Query Results}\label{sec:presentingQueryResult}
@@ -511,7 +559,7 @@ ranking of candidates to this query could be \{C1, C2, C3\}. However, in this pr
 \[
 candScore(C,Q) = |R(Q) \cap profile(C)| \sum_{d \in R(Q) \cap profile(C)} exp(score_d)
 \]
-where \[|R(Q) \cap profile(C)|\] is the number of documents from the profile of candidate C that are in the ranking R(Q).
+where $|R(Q) \cap profile(C)|$ is the number of documents from the profile of candidate C that are in the ranking R(Q).
 
 
 

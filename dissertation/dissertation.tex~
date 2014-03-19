@@ -4,6 +4,19 @@
 \usepackage{graphicx}
 \usepackage{url}
 \usepackage{mathtools}
+\usepackage{multirow}
+% \usepackage{enumitem}
+
+\renewcommand\thesection{\arabic{section}}
+\renewcommand\thesubsection{\arabic{section}.\arabic{subsection}}
+\renewcommand\thesubsubsection{\arabic{section}.\arabic{subsection}}
+\setcounter{secnumdepth}{4}
+\setcounter{tocdepth}{4}
+
+
+\makeatletter
+\renewcommand\p@subsection{\thesection.}
+\makeatother
 
 %\usepackage{natbib}
 %%\usepackage{cite}
@@ -34,11 +47,11 @@ Thanks to Dr. Craig Macdonald for his advice and supervision throughout this pro
 
 %==============================================================================
 
-\input{requirements}
+\input{background}
 
 %==============================================================================
 
-\input{background}
+\input{requirements}
 
 %==============================================================================
 
@@ -46,6 +59,7 @@ Thanks to Dr. Craig Macdonald for his advice and supervision throughout this pro
 
 %==============================================================================
 
+\input{evaluation}
 
 %==============================================================================
 \clearpage

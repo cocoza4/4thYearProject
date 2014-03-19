@@ -14,9 +14,18 @@ An introduction to information retrieval.
 \bibitem{polymorphism}
 Polymorphism.
 
+\bibitem{qrels}
+qrels file.
+\newblock
+  \url{http://www.mpi-inf.mpg.de/~dfischer/manual/manual_qrelformat.html}.
+
 \bibitem{ranklib}
 Ranklib.
 \newblock \url{http://sourceforge.net/p/lemur/wiki/RankLib/}.
+
+\bibitem{qrelsformat}
+Relevance judgement file list.
+\newblock \url{http://trec.nist.gov/data/qrels_eng/}.
 
 \bibitem{gtr}
 Research councils uk - gateway to research.
@@ -37,6 +46,11 @@ Terrier.
 \bibitem{trec}
 Text retrieval conference.
 \newblock \url{http://trec.nist.gov/}.
+
+\bibitem{resultfileformat}
+Trec result file format.
+\newblock
+  \url{http://ir.iit.edu/~dagr/cs529/files/project_files/trec_eval_desc.htm}.
 
 \bibitem{evalweb}
 Information retrieval system evaluation, 2009.

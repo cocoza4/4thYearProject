@@ -125,7 +125,33 @@ the degree of relevancy. To the left of the label is query id and scores of each
 \caption{Sample LETOR file} \label{fig:sampleletorfile} 
 \end{figure}
 
-
+34 training queries~\ref{table:trainingqueries} are trained by the tool called RankLib~\ref{section:rankLib} to get a learned model. This process is performed 
+only one time.
+\begin{table}
+\centering
+\begin{tabular}{|c|l|c|l|}
+\hline \textbf{\#} & \textbf{Query} & \textbf{\#} & \textbf{Query} \\
+\hline 1 & language modelling & 18 & game theory\\
+\hline 2 & manets & 19 & stable marriage \\
+\hline 3  & match & 20 & quantum computation\\ 
+\hline 4  & multimodal & 21 & constraint modelling\\ 
+\hline 5  & music as navigation cues & 22 & home networks\\ 
+\hline 6  & networking security & 23 & wireless sensor networks\\ 
+\hline 7  & neural network & 24 & distributed systems\\ 
+\hline 8  & older adults use of computers & 25 & operating system\\ 
+\hline 9  & parallel logic programming & 26 & terrier\\ 
+\hline 10  & query expansion & 27 & text searching\\ 
+\hline 11  & road traffic accident statistics & 28 & trec collection class\\ 
+\hline 12  & shoogle & 29 & usability\\ 
+\hline 13  & skill-based behavior & 30 & utf support terrier\\ 
+\hline 14  & sound in multimedia human-computer interfaces & 31 & visual impairment\\ 
+\hline 15  & statistical inference & 32 & wafer fab cost \\ 
+\hline 16  & suffix tree & 33 & database\\ 
+\hline 17  & mobile hci & 34 & programming languages\\ 
+\hline
+\end{tabular}
+\caption{Training Queries} \label{table:trainingqueries}
+\end{table}
 
 \begin{figure}
 \centering
@@ -170,18 +196,9 @@ This was briefly explained in section~\ref{section:learnedmodel}.
 \end{figure}
 
 Figure~\ref{fig:searchsequence} illustrates a sequence diagram of querying. This sequence diagram only shows important processes to retrieve
-relevant results. Given a query submitted by a user, Search servlet processes parameters sent via GET request by calling processParam() method. This is
+relevant results. Given a query submitted by a user, Search servlet processes parameters sent by GET request by calling processParam() method. This is
 followed by invoking processQuery() method which takes one parameter, ``type''. This parameter is used for filter mode. The method processQuery() 
-performs tasks discussed in section~\ref{section:union}. There are 2 classes introduced in this section: \textbf{CandidateScores} and 
-\textbf{CandidateSorting}. The former is used for computing scores of candidates based on a learned model. The latter
-sorts scores of candidates obtained after applying a learned model in descending score as discussed in section~\ref{sec:learnedmodel}.
-Figure~\ref{fig:scoreandsorting} shows class diagrams of CandidateScores and CandidateSorting. Important attributes and methods are only provided.
-
-\begin{figure}
-\centering
-\includegraphics[scale=0.5]{./figures/score&sorting.png}
-\caption{Class Diagrams of CandidateScores and CandidateSorting} \label{fig:scoreandsorting} 
-\end{figure}
+performs tasks discussed in section~\ref{section:union}.
 
 
 

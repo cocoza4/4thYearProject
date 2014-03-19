@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012/Debian) (format=pdflatex 2012.11.18)  17 MAR 2014 00:14
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012/Debian) (format=pdflatex 2012.11.18)  19 MAR 2014 02:46
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -410,19 +410,19 @@ LaTeX Info: Redefining \] on input line 2667.
 (./dissertation.aux)
 \openout1 = `dissertation.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 15.
-LaTeX Font Info:    ... okay on input line 15.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 15.
-LaTeX Font Info:    ... okay on input line 15.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 15.
-LaTeX Font Info:    ... okay on input line 15.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 15.
-LaTeX Font Info:    ... okay on input line 15.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 15.
-LaTeX Font Info:    ... okay on input line 15.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 15.
-LaTeX Font Info:    ... okay on input line 15.
-LaTeX Font Info:    Try loading font information for OT1+ptm on input line 15.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 28.
+LaTeX Font Info:    ... okay on input line 28.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 28.
+LaTeX Font Info:    ... okay on input line 28.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 28.
+LaTeX Font Info:    ... okay on input line 28.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 28.
+LaTeX Font Info:    ... okay on input line 28.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 28.
+LaTeX Font Info:    ... okay on input line 28.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 28.
+LaTeX Font Info:    ... okay on input line 28.
+LaTeX Font Info:    Try loading font information for OT1+ptm on input line 28.
  (/usr/share/texlive/texmf-dist/tex/latex/psnfss/ot1ptm.fd
 File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
 ) (/usr/share/texlive/texmf-dist/tex/context/base/supp-pdf.mkii
@@ -525,17 +525,17 @@ f>
 (epstopdf)                    size: 28096 bytes
 (epstopdf)             Command: <repstopdf --outfile=figures/CompSci_colour-eps
 -converted-to.pdf figures/CompSci_colour.eps>
-(epstopdf)             \includegraphics on input line 17.
+(epstopdf)             \includegraphics on input line 30.
 Package epstopdf Info: Output file is already uptodate.
 <figures/CompSci_colour-eps-converted-to.pdf, id=1, 340.27126pt x 49.18375pt>
 File: figures/CompSci_colour-eps-converted-to.pdf Graphic file (type pdf)
 
 <use figures/CompSci_colour-eps-converted-to.pdf>
 Package pdftex.def Info: figures/CompSci_colour-eps-converted-to.pdf used on in
-put line 17.
+put line 30.
 (pdftex.def)             Requested size: 283.36508pt x -7.72174pt.
 
-Overfull \hbox (0.2754pt too wide) in paragraph at lines 17--17
+Overfull \hbox (0.2754pt too wide) in paragraph at lines 30--30
 \OT1/ptm/m/n/17.28 Mining Aca-demic Ex-per-tise from Funded Re-search (Ex-pert 
 Search Sys-
  []
@@ -545,18 +545,100 @@ Search Sys-
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map} <./figures/CompSci_colour-e
 ps-converted-to.pdf>]
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10.95> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 19.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 32.
  (./abstract.tex) [1] [1]
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <24.88> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 29.
- (./dissertation.toc
-Overfull \hbox (3.10944pt too wide) detected at line 56
- \OT1/ptm/m/n/10.95 xxiii
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 42.
+ (./dissertation.toc [1
+
+]
+Overfull \hbox (3.10944pt too wide) detected at line 31
+ \OT1/ptm/m/n/10.95 xviii
+ []
+
+
+Overfull \hbox (3.10944pt too wide) detected at line 32
+ \OT1/ptm/m/n/10.95 xviii
+ []
+
+
+Overfull \hbox (3.10944pt too wide) detected at line 33
+ \OT1/ptm/m/n/10.95 xviii
+ []
+
+
+Overfull \hbox (2.22269pt too wide) detected at line 44
+ \OT1/ptm/m/n/10.95 xxiv
+ []
+
+
+Overfull \hbox (2.22269pt too wide) detected at line 45
+ \OT1/ptm/m/n/10.95 xxiv
+ []
+
+
+Overfull \hbox (2.49644pt too wide) detected at line 47
+ \OT1/ptm/m/n/10.95 xxvi
+ []
+
+
+Overfull \hbox (2.49644pt too wide) detected at line 48
+ \OT1/ptm/m/n/10.95 xxvi
+ []
+
+
+Overfull \hbox (2.49644pt too wide) detected at line 49
+ \OT1/ptm/m/n/10.95 xxvi
+ []
+
+
+Overfull \hbox (2.49644pt too wide) detected at line 50
+ \OT1/ptm/m/n/10.95 xxvi
+ []
+
+
+Overfull \hbox (2.49644pt too wide) detected at line 51
+ \OT1/ptm/m/n/10.95 xxvi
+ []
+
+
+Overfull \hbox (2.49644pt too wide) detected at line 52
+ \OT1/ptm/m/n/10.95 xxvi
+ []
+
+[2]
+Overfull \hbox (5.54044pt too wide) detected at line 53
+ \OT1/ptm/m/n/10.95 xxvii
+ []
+
+
+Overfull \hbox (5.54044pt too wide) detected at line 54
+ \OT1/ptm/m/n/10.95 xxvii
  []
 
 
 Overfull \hbox (2.49644pt too wide) detected at line 57
- \OT1/ptm/m/n/10.95 xxvi
+ \OT1/ptm/m/n/10.95 xxxi
+ []
+
+
+Overfull \hbox (5.54044pt too wide) detected at line 58
+ \OT1/ptm/m/n/10.95 xxxii
+ []
+
+
+Overfull \hbox (5.54044pt too wide) detected at line 59
+ \OT1/ptm/m/n/10.95 xxxii
+ []
+
+
+Overfull \hbox (5.54044pt too wide) detected at line 60
+ \OT1/ptm/m/n/10.95 xxxii
+ []
+
+
+Overfull \hbox (5.54044pt too wide) detected at line 61
+ \OT1/ptm/m/n/10.95 xxxii
  []
 
 )
@@ -568,166 +650,184 @@ LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <14.4> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 4.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <12> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 6.
- [1
-
-]
 LaTeX Font Info:    Try loading font information for OMS+ptm on input line 15.
-
-(/usr/share/texlive/texmf-dist/tex/latex/psnfss/omsptm.fd
+ (/usr/share/texlive/texmf-dist/tex/latex/psnfss/omsptm.fd
 File: omsptm.fd 
 )
 LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <10.95> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 15.
- [2]
+ [3]
 
-LaTeX Warning: Reference `section:requirements' on page iii undefined on input 
-line 55.
+LaTeX Warning: Reference `section:requirements' on page iv undefined on input l
+ine 55.
 
-) (./background.tex
-<./figures/retrieval_process.png, id=25, 234.1247pt x 131.74219pt>
+) (./background.tex [4]
+<./figures/retrieval_process.png, id=32, 234.1247pt x 131.74219pt>
 File: ./figures/retrieval_process.png Graphic file (type png)
 
 <use ./figures/retrieval_process.png>
 Package pdftex.def Info: ./figures/retrieval_process.png used on input line 21.
 
 (pdftex.def)             Requested size: 234.12411pt x 131.74185pt.
- [3]
-<./figures/text.png, id=29, 558.58687pt x 161.10187pt>
+ [5 <./figures/retrieval_process.png (PNG copy)>] <./figures/text.png, id=36, 5
+58.58687pt x 161.10187pt>
 File: ./figures/text.png Graphic file (type png)
 
 <use ./figures/text.png>
 Package pdftex.def Info: ./figures/text.png used on input line 45.
 (pdftex.def)             Requested size: 279.29276pt x 80.55074pt.
- [4 <./figures/retrieval_process.png (PNG copy)> <./figures/text.png (PNG copy)
->] [5]
-<./figures/invertedIndex.png, id=37, 433.62pt x 245.41687pt>
+ [6 <./figures/text.png (PNG copy)>]
+<./figures/invertedIndex.png, id=40, 433.62pt x 245.41687pt>
 File: ./figures/invertedIndex.png Graphic file (type png)
 
 <use ./figures/invertedIndex.png>
 Package pdftex.def Info: ./figures/invertedIndex.png used on input line 134.
 (pdftex.def)             Requested size: 216.80946pt x 122.70813pt.
- [6 <./figures/invertedIndex.png (PNG copy)>]
-[7] <./figures/retrieval.png, id=52, 923.45pt x 618.31pt>
+ [7 <./figures/invertedIndex.png (PNG copy)>]
+[8]
+
+LaTeX Warning: Reference `bimTable' on page ix undefined on input line 255.
+
+[9] <./figures/retrieval.png, id=58, 923.45pt x 618.31pt>
 File: ./figures/retrieval.png Graphic file (type png)
 
 <use ./figures/retrieval.png>
-Package pdftex.def Info: ./figures/retrieval.png used on input line 245.
+Package pdftex.def Info: ./figures/retrieval.png used on input line 276.
 (pdftex.def)             Requested size: 277.03712pt x 185.49443pt.
- [8 <./figures/retrieval.png (PNG copy)>]
-<./figures/precision.png, id=56, 450.68375pt x 45.16875pt>
+ [10 <./figures/retrieval.png (PNG copy)>]
+<./figures/precision.png, id=63, 450.68375pt x 45.16875pt>
 File: ./figures/precision.png Graphic file (type png)
 
 <use ./figures/precision.png>
-Package pdftex.def Info: ./figures/precision.png used on input line 306.
+Package pdftex.def Info: ./figures/precision.png used on input line 337.
 (pdftex.def)             Requested size: 225.34131pt x 22.5843pt.
- [9]
-<./figures/recall.png, id=60, 429.605pt x 45.16875pt>
+
+<./figures/recall.png, id=64, 429.605pt x 45.16875pt>
 File: ./figures/recall.png Graphic file (type png)
 
 <use ./figures/recall.png>
-Package pdftex.def Info: ./figures/recall.png used on input line 311.
+Package pdftex.def Info: ./figures/recall.png used on input line 342.
 (pdftex.def)             Requested size: 214.80197pt x 22.5843pt.
-
-<./figures/pr_example.png, id=61, 616.3025pt x 376.40625pt>
+ [11 <./figures/precision.png>]
+<./figures/pr_example.png, id=69, 616.3025pt x 376.40625pt>
 File: ./figures/pr_example.png Graphic file (type png)
 
 <use ./figures/pr_example.png>
-Package pdftex.def Info: ./figures/pr_example.png used on input line 321.
+Package pdftex.def Info: ./figures/pr_example.png used on input line 352.
 (pdftex.def)             Requested size: 308.1505pt x 188.20265pt.
 
-<./figures/map.png, id=62, 196.735pt x 53.19875pt>
+<./figures/map.png, id=70, 196.735pt x 53.19875pt>
 File: ./figures/map.png Graphic file (type png)
  <use ./figures/map.png>
-Package pdftex.def Info: ./figures/map.png used on input line 333.
+Package pdftex.def Info: ./figures/map.png used on input line 364.
 (pdftex.def)             Requested size: 98.36725pt x 26.5993pt.
 
-<./figures/mrr.png, id=63, 191.71625pt x 62.2325pt>
+<./figures/mrr.png, id=71, 191.71625pt x 62.2325pt>
 File: ./figures/mrr.png Graphic file (type png)
  <use ./figures/mrr.png>
-Package pdftex.def Info: ./figures/mrr.png used on input line 341.
+Package pdftex.def Info: ./figures/mrr.png used on input line 372.
 (pdftex.def)             Requested size: 95.85788pt x 31.11617pt.
 
-[10 <./figures/pr_example.png (PNG copy)> <./figures/precision.png> <./figures/
-recall.png> <./figures/map.png>] [11 <./figures/mrr.png>]
-<./figures/letor.png, id=75, 250.9375pt x 230.8625pt>
+[12 <./figures/pr_example.png (PNG copy)> <./figures/recall.png> <./figures/map
+.png> <./figures/mrr.png>] [13]
+<./figures/letor.png, id=81, 250.9375pt x 230.8625pt>
 File: ./figures/letor.png Graphic file (type png)
 
 <use ./figures/letor.png>
-Package pdftex.def Info: ./figures/letor.png used on input line 393.
+Package pdftex.def Info: ./figures/letor.png used on input line 424.
 (pdftex.def)             Requested size: 175.65504pt x 161.60263pt.
-LaTeX Font Info:    Try loading font information for OT1+pcr on input line 394.
+LaTeX Font Info:    Try loading font information for OT1+pcr on input line 425.
 
 
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/ot1pcr.fd
 File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
-) [12 <./figures/letor.png>] [13] <./figures/query.png, id=85, 1369.115pt x 719
+) [14 <./figures/letor.png>] [15] <./figures/query.png, id=91, 1369.115pt x 719
 .68875pt>
 File: ./figures/query.png Graphic file (type png)
 
 <use ./figures/query.png>
-Package pdftex.def Info: ./figures/query.png used on input line 461.
+Package pdftex.def Info: ./figures/query.png used on input line 509.
 (pdftex.def)             Requested size: 410.73767pt x 215.9083pt.
- [14 <./figures/query.png (PNG copy)>])
+ [16] [17 <./figures/query.png (PNG copy)>])
 (./requirements.tex
-<./figures/oldsicsa.png, id=89, 1301.86375pt x 677.53125pt>
+<./figures/oldsicsa.png, id=99, 1301.86375pt x 677.53125pt>
 File: ./figures/oldsicsa.png Graphic file (type png)
 
 <use ./figures/oldsicsa.png>
-Package pdftex.def Info: ./figures/oldsicsa.png used on input line 8.
+Package pdftex.def Info: ./figures/oldsicsa.png used on input line 21.
 (pdftex.def)             Requested size: 369.88287pt x 192.49878pt.
- [15]
-<./figures/oldsearch.png, id=93, 1321.93875pt x 686.565pt>
+
+<./figures/oldsearch.png, id=100, 1321.93875pt x 686.565pt>
 File: ./figures/oldsearch.png Graphic file (type png)
 
 <use ./figures/oldsearch.png>
-Package pdftex.def Info: ./figures/oldsearch.png used on input line 13.
+Package pdftex.def Info: ./figures/oldsearch.png used on input line 26.
 (pdftex.def)             Requested size: 369.87811pt x 192.1007pt.
 
-<./figures/oldProfilePage.png, id=94, 904.37875pt x 681.54625pt>
+<./figures/oldProfilePage.png, id=101, 904.37875pt x 681.54625pt>
 File: ./figures/oldProfilePage.png Graphic file (type png)
 
 <use ./figures/oldProfilePage.png>
-Package pdftex.def Info: ./figures/oldProfilePage.png used on input line 18.
+Package pdftex.def Info: ./figures/oldProfilePage.png used on input line 31.
 (pdftex.def)             Requested size: 369.87311pt x 278.739pt.
- [16 <./figures/oldsicsa.png (PNG copy)> <./figures/oldsearch.png (PNG copy)>] 
-[17 <./figures/oldProfilePage.png (PNG copy)>]) (./implementation.tex
-<./figures/classDiagram1.png, id=102, 973.6375pt x 662.475pt>
+
+<./figures/currentSystemDesign.jpg, id=102, 496.85625pt x 334.24875pt>
+File: ./figures/currentSystemDesign.jpg Graphic file (type jpg)
+
+<use ./figures/currentSystemDesign.jpg>
+Package pdftex.def Info: ./figures/currentSystemDesign.jpg used on input line 4
+9.
+(pdftex.def)             Requested size: 248.4275pt x 167.12396pt.
+ [18] [19 <./figures/oldsicsa.png (PNG copy)> <./figures/oldsearch.png (PNG cop
+y)>] [20 <./figures/oldProfilePage.png (PNG copy)> <./figures/currentSystemDesi
+gn.jpg>] [21]
+<./figures/newSystemDesign.png, id=115, 469.755pt x 429.10312pt>
+File: ./figures/newSystemDesign.png Graphic file (type png)
+
+<use ./figures/newSystemDesign.png>
+Package pdftex.def Info: ./figures/newSystemDesign.png used on input line 131.
+(pdftex.def)             Requested size: 234.87692pt x 214.55103pt.
+
+<./figures/querying.png, id=116, 526.96875pt x 188.20313pt>
+File: ./figures/querying.png Graphic file (type png)
+
+<use ./figures/querying.png>
+Package pdftex.def Info: ./figures/querying.png used on input line 139.
+(pdftex.def)             Requested size: 368.8756pt x 131.74127pt.
+
+<./figures/union.png, id=117, 143.03438pt x 153.57375pt>
+File: ./figures/union.png Graphic file (type png)
+
+<use ./figures/union.png>
+Package pdftex.def Info: ./figures/union.png used on input line 145.
+(pdftex.def)             Requested size: 100.12337pt x 107.50089pt.
+) (./implementation.tex
+<./figures/classDiagram1.png, id=118, 973.6375pt x 662.475pt>
 File: ./figures/classDiagram1.png Graphic file (type png)
 
 <use ./figures/classDiagram1.png>
 Package pdftex.def Info: ./figures/classDiagram1.png used on input line 12.
 (pdftex.def)             Requested size: 389.44809pt x 264.9853pt.
- [18]
-<./figures/AcademTechQuerying.png, id=106, 692.5875pt x 431.6125pt>
+ [22] [23 <./figures/newSystemDesign.png> <./figures/querying.png> <./figures/u
+nion.png (PNG copy)>]
+<./figures/AcademTechQuerying.png, id=126, 692.5875pt x 431.6125pt>
 File: ./figures/AcademTechQuerying.png Graphic file (type png)
 
 <use ./figures/AcademTechQuerying.png>
 Package pdftex.def Info: ./figures/AcademTechQuerying.png used on input line 21
 .
 (pdftex.def)             Requested size: 277.03009pt x 172.64194pt.
- [19 <./figures/classDiagram1.png (PNG copy)>] <./figures/projectsExtraction.pn
-g, id=110, 1124.2pt x 642.4pt>
+ [24 <./figures/classDiagram1.png (PNG copy)>] <./figures/projectsExtraction.pn
+g, id=130, 1124.2pt x 642.4pt>
 File: ./figures/projectsExtraction.png Graphic file (type png)
 
 <use ./figures/projectsExtraction.png>
 Package pdftex.def Info: ./figures/projectsExtraction.png used on input line 46
 .
 (pdftex.def)             Requested size: 393.47589pt x 224.84337pt.
- [20 <./figures/AcademTechQuerying.png (PNG copy)> <./figures/projectsExtractio
+ [25 <./figures/AcademTechQuerying.png (PNG copy)> <./figures/projectsExtractio
 n.png (PNG copy)>]
-Overfull \hbox (76.47134pt too wide) in paragraph at lines 52--55
- \OT1/ptm/b/n/10.95 Aca-demic-sHashTable[] \OT1/ptm/m/n/10.95 is an ab-stract c
-lass which makes use of HashMap data struc-ture, Map<Character, LinkedList<Cand
-idate>>,
- []
-
-
-Overfull \hbox (28.70837pt too wide) in paragraph at lines 57--59
-\OT1/ptm/m/n/10.95 sHashTable Class but has dif-fer-ent im-ple-men-ta-tions of 
-hash() and check-A-ca-demic-Name() meth-ods to GOWHashTable's
- []
-
-<./figures/terrierindexing.png, id=114, 775.39688pt x 512.66531pt>
+<./figures/terrierindexing.png, id=134, 775.39688pt x 512.66531pt>
 File: ./figures/terrierindexing.png Graphic file (type png)
 
 <use ./figures/terrierindexing.png>
@@ -735,60 +835,111 @@ Package pdftex.def Info: ./figures/terrierindexing.png used on input line 91.
 (pdftex.def)             Requested size: 310.15326pt x 205.06248pt.
 
 Underfull \hbox (badness 10000) in paragraph at lines 92--92
-[]\OT1/ptm/m/n/10.95 Figure 14: In-dex-ing Ar-chi-tec-ture of Ter-rier from $\O
+[]\OT1/ptm/m/n/10.95 Figure 18: In-dex-ing Ar-chi-tec-ture of Ter-rier from $\O
 T1/pcr/m/n/10.95 http : / / terrier . org / docs / v3 . 5 /
  []
 
-[21] <./figures/querying.png, id=118, 526.96875pt x 188.20313pt>
-File: ./figures/querying.png Graphic file (type png)
+[26]
 
-<use ./figures/querying.png>
-Package pdftex.def Info: ./figures/querying.png used on input line 115.
-(pdftex.def)             Requested size: 368.8756pt x 131.74127pt.
+LaTeX Warning: Reference `section:learnedmodel' on page xxvii undefined on inpu
+t line 112.
 
-<./figures/union.png, id=119, 143.03438pt x 153.57375pt>
-File: ./figures/union.png Graphic file (type png)
 
-<use ./figures/union.png>
-Package pdftex.def Info: ./figures/union.png used on input line 121.
-(pdftex.def)             Requested size: 100.12337pt x 107.50089pt.
- [22 <./figures/terrierindexing.png>]
-<./figures/sampleletorfile.png, id=124, 1287.81125pt x 654.445pt>
+LaTeX Warning: Reference `section:learnedmodel' on page xxvii undefined on inpu
+t line 113.
+
+<./figures/sampleletorfile.png, id=138, 1287.81125pt x 654.445pt>
 File: ./figures/sampleletorfile.png Graphic file (type png)
 
 <use ./figures/sampleletorfile.png>
-Package pdftex.def Info: ./figures/sampleletorfile.png used on input line 142.
+Package pdftex.def Info: ./figures/sampleletorfile.png used on input line 124.
 (pdftex.def)             Requested size: 386.34636pt x 196.335pt.
-
-<./figures/learningModel.png, id=125, 511.9125pt x 401.5pt>
+ [27 <./figures/terrierindexing.png>]
+<./figures/learningModel.png, id=142, 511.9125pt x 401.5pt>
 File: ./figures/learningModel.png Graphic file (type png)
 
 <use ./figures/learningModel.png>
-Package pdftex.def Info: ./figures/learningModel.png used on input line 176.
+Package pdftex.def Info: ./figures/learningModel.png used on input line 132.
 (pdftex.def)             Requested size: 358.3363pt x 281.04808pt.
- [23 <./figures/querying.png> <./figures/union.png (PNG copy)>] [24 <./figures/
-sampleletorfile.png (PNG copy)>]
-<./figures/samplemodel.png, id=132, 1291.82625pt x 184.69pt>
+
+<./figures/samplemodel.png, id=143, 1291.82625pt x 184.69pt>
 File: ./figures/samplemodel.png Graphic file (type png)
 
 <use ./figures/samplemodel.png>
-Package pdftex.def Info: ./figures/samplemodel.png used on input line 197.
+Package pdftex.def Info: ./figures/samplemodel.png used on input line 153.
 (pdftex.def)             Requested size: 387.55087pt x 55.40741pt.
- [25 <./figures/learningModel.png (PNG copy)> <./figures/samplemodel.png (PNG c
-opy)>]) [26] (./dissertation.bbl [27
 
 
-]) [28]
-(./dissertation.aux)
+LaTeX Warning: Reference `section:learnedmodel' on page xxviii undefined on inp
+ut line 162.
+
+[28 <./figures/sampleletorfile.png (PNG copy)>] [29 <./figures/learningModel.pn
+g (PNG copy)> <./figures/samplemodel.png (PNG copy)>]
+<./figures/searchsequence.png, id=151, 820.06375pt x 505.89pt>
+File: ./figures/searchsequence.png Graphic file (type png)
+
+<use ./figures/searchsequence.png>
+Package pdftex.def Info: ./figures/searchsequence.png used on input line 168.
+(pdftex.def)             Requested size: 410.03087pt x 252.94437pt.
+
+<./figures/score&sorting.png, id=152, 682.55pt x 501.875pt>
+File: ./figures/score&sorting.png Graphic file (type png)
+
+<use ./figures/score&sorting.png>
+Package pdftex.def Info: ./figures/score&sorting.png used on input line 182.
+(pdftex.def)             Requested size: 341.27417pt x 250.93687pt.
+) (./evaluation.tex [30 <./figures/searchsequence.png (PNG copy)>] [31 <./figur
+es/score&sorting.png (PNG copy)>]
+<./figures/newsearch.png, id=159, 1170.3725pt x 678.535pt>
+File: ./figures/newsearch.png Graphic file (type png)
+
+<use ./figures/newsearch.png>
+Package pdftex.def Info: ./figures/newsearch.png used on input line 157.
+(pdftex.def)             Requested size: 369.88367pt x 214.4437pt.
+
+<./figures/newProfilePagePublication.png, id=160, 1171.37625pt x 677.53125pt>
+File: ./figures/newProfilePagePublication.png Graphic file (type png)
+
+<use ./figures/newProfilePagePublication.png>
+Package pdftex.def Info: ./figures/newProfilePagePublication.png used on input 
+line 166.
+(pdftex.def)             Requested size: 369.87917pt x 213.94038pt.
+ [32] [33 <./figures/newsearch.png>] [34] <./figures/newPofilePageProject.png, 
+id=171, 822.07124pt x 670.505pt>
+File: ./figures/newPofilePageProject.png Graphic file (type png)
+
+<use ./figures/newPofilePageProject.png>
+Package pdftex.def Info: ./figures/newPofilePageProject.png used on input line 
+174.
+(pdftex.def)             Requested size: 369.87846pt x 301.68353pt.
+
+<./figures/newProfileSelectedProject.png, id=172, 833.1125pt x 681.54625pt>
+File: ./figures/newProfileSelectedProject.png Graphic file (type png)
+
+<use ./figures/newProfileSelectedProject.png>
+Package pdftex.def Info: ./figures/newProfileSelectedProject.png used on input 
+line 182.
+(pdftex.def)             Requested size: 369.88853pt x 302.59555pt.
+) [35 <./figures/newProfilePagePublication.png>] [36 <./figures/newPofilePagePr
+oject.png> <./figures/newProfileSelectedProject.png>] (./dissertation.bbl
+Underfull \hbox (badness 2753) in paragraph at lines 18--21
+[]\OT1/ptm/m/n/10.95 qrels file.  $\OT1/pcr/m/n/10.95 http : / / www . mpi-[]in
+f . mpg . de / []dfischer / manual / manual _ qrelformat .
+ []
+
+[37
+
+
+]) [38] (./dissertation.aux)
 
 LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 3830 strings out of 495059
- 54657 string characters out of 3182029
- 123214 words of memory out of 3000000
- 6877 multiletter control sequences out of 15000+200000
+ 3895 strings out of 495059
+ 56425 string characters out of 3182029
+ 146467 words of memory out of 3000000
+ 6931 multiletter control sequences out of 15000+200000
  23740 words of font info for 51 fonts, out of 3000000 for 9000
  14 hyphenation exceptions out of 8191
  38i,8n,23p,257b,318s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -804,10 +955,10 @@ y8.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/
 share/texlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texlive/t
 exmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts
 /type1/urw/times/utmri8a.pfb>
-Output written on dissertation.pdf (31 pages, 1233361 bytes).
+Output written on dissertation.pdf (41 pages, 1809114 bytes).
 PDF statistics:
- 187 PDF objects out of 1000 (max. 8388607)
- 111 compressed objects within 2 object streams
+ 228 PDF objects out of 1000 (max. 8388607)
+ 134 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
- 121 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 161 words of extra memory for PDF output out of 10000 (max. 10000000)
 
