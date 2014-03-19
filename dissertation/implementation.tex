@@ -84,29 +84,19 @@ Therefore, university is used as part of the matching as well.
 Figure ~\ref{table:stats} shows the number of funded projects extracted from each source. There are 1569 known candidates in the system.
 
 \subsubsection{Indexing}
-In Section~\ref{section:IRarchitecture}, indexing process is discussed. This process makes the retrieval process much more efficiently. In this section, 
-steps towards indexing using Terrier~\cite{terrier} are discussed.
-\begin{figure}
+\begin{table}
 \centering
-\includegraphics[scale=0.4]{./figures/terrierindexing.png}
-\caption{Indexing Architecture of Terrier from \protect\url{http://terrier.org/docs/v3.5/basicComponents.html}} \label{fig:terrierindexing} 
-\end{figure}
+\begin{tabular}{|c|c|}
+\hline Number of experts & 1569 \\
+\hline Number of publications UK & 22225 \\
+\hline Number of all documents   & 25311 \\ 
+\hline Number of tokens (terms) & 6976895 \\
+\hline
+\end{tabular}
+\caption{Statistics of New System} \label{table:newtstats}
+\end{table}
+Table~\ref{table:newtstats} shows statistics of new system after indexing.
 
-\begin{quotation}
- \item 1. A corpus will be represented in the form of a \textbf{Collection} object. Raw text data will be represented in the form of a \textbf{Document} object. 
- Document implementations usually are provided with an instance of a \textbf{Tokeniser} class that breaks pieces of text into single indexing tokens.
- \item 2. The indexer is responsible for managing the indexing process. It iterates through the documents of the collection and sends each found 
- term through a \textbf{TermPipeline} component.
- \item 3. A TermPipeline can transform terms or remove terms that should not be indexed. An example for a TermPipeline chain is 
- termpipelines=Stopwords,PorterStemmer, which removes terms from the document using the \textbf{Stopwords} object, and then applies Porter's Stemming algorithm 
- for English to the terms.
- \item 4. Once terms have been processed through the TermPipeline, they are aggregated and the following data structures are created by their corresponding 
- DocumentBuilders: DirectIndex, DocumentIndex, Lexicon, and InvertedIndex.
- \item 5. For single-pass indexing, the structures are written in a different order. Inverted file postings are built in memory, and committed to 'runs' 
- when memory is exhausted. Once the collection had been indexed, all runs are merged to form the inverted index and the lexicon.
-\end{quotation}
-
-I will discuss with u about this section today.
 
 \subsection{Producing a Learned Model}\label{section:producelearnedmodel}
 Section ~\ref{section:learnedmodel} described general steps to producing a learned model. This section aims to discuss classes involved in producing a learned model.
@@ -175,7 +165,7 @@ followed by invoking processQuery() method which takes one parameter, ``type''. 
 performs tasks discussed in section~\ref{section:union}. There are 2 classes introduced in this section: \textbf{CandidateScores} and 
 \textbf{CandidateSorting}. The former is used for computing scores of candidates based on a learned model. The latter
 sorts scores of candidates obtained after applying a learned model in descending score as discussed in section~\ref{sec:learnedmodel}.
-Figure~\ref{fig:scoreandsorting} shows class diagrams of CandidateScores and CandidateSorting. Important attributes and methods are only provided.
+Figure~\ref{fig:scoreandsorting} shows class diagrams of CandidateScores and CandidateSorting. Important attributes and methods are only shown.
 
 \begin{figure}
 \centering

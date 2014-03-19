@@ -269,6 +269,9 @@ From equation~\ref{eq:newlogRVS}, we can formulate BM25 formula:
 where $K$ = $k_t((1 - b) + b\frac{dl}{avdl})$, $tf_tq$ and $tf_td$ are the frequency of term $t$ in the query $\vec{q}$ and document $d$ respectively,
 and $b$, $dl$ and $avdl$ are paraameters set empirically. The proof of BM25 is beyond the scope of the project.
 
+\paragraph{PL2} PL2 is a model from the divergence from randomness framework, based on a poisson distribution~\cite{craig}. This project uses PL2 weight model to 
+calculate score. This model is also probabilistic approach. The proof and explanation are out of the scope of the project.
+
 
 \subsubsection{Retrieval Process in Information Retrieval}\label{section:retrieving}
 \begin{figure}
@@ -290,14 +293,9 @@ online and offline phases. The offline phase is the phase that all documents in 
 On the other hand, online phase begins after a user submits a query into the system. After that, tokenisation, stopwords removal and stemming processes 
 are performed as same as the offline phase.
 Features can also be extracted from query terms as well. At this point, it comes to the process of matching and assigning scores to documents.
-This process makes use of retrieval model explained in section~\ref{section:retrievalmodel}.
-
-
-... Not done... 
-
-
-In this project, special model is used for expert search system. It will be discussed
-in section ~\ref{section:voting}. Once scores have been assigned to relevant documents, the system rank all documents in order of decreasing scores and 
+This process can make use of one of the retrieval models explained in section~\ref{section:retrievalmodel}. In this project, PL2 weighting model and voting
+technique which will be explained in section~\ref{section:voting} are used to compute score.
+Once scores have been assigned to relevant documents, the system ranks all documents in order of decreasing scores and 
 show to the user. Figure~\ref{fig:retrieval} gives a graphical representation of retrieval process.
 
 \subsubsection{Evaluation}\label{sec:evaluation}
@@ -373,14 +371,22 @@ probability of correctness~\cite{mrr}. The equation below is a formula for MRR.
 \end{center}
 where $rank_i$ is the position of the correct result and $|Q|$ is the number of queries.
 
-\paragraph{Normalized Discounted Cumulative Gain (NDCG)}
-To understand NDCG, first of all, we have to \textbf{understand Cumulative Gain (CG)} and and \textbf{Discounted Cumulative Gain (DCG)}. 
-CG is the predecessor of DCG and it is the sum of the graded relevance values of all results in a search result list~\cite{ndcg}. The CG at a particular 
-rank position $p$ is defined as:
+\paragraph{Normalized Discounted Cumulative Gain (NDCG or nDCG)}
+To understand NDCG, first of all, we have to understand \textbf{Discounted Cumulative Gain (DCG)}. 
+The premise of DCG is that highly relevant documents appearing in lower position in a search result list should be penalized as the graded relevance value is 
+reduced logarithmically proportional to the position of the result.~\cite{ndcg}. The discounted CG accumulated at a particular rank position
+$p$ is defined as:
 
-NOT DONE..
+\begin{center}
+\raisebox{-\totalheight}{\includegraphics[scale=0.5]{./figures/dcg.png}}
+\end{center}
 
-is a measure for ranking quality and the usefulness (gain) of an item based on its relevance and position in the provided list.
+From DCG, we can formulate NDCG as follows:
+\begin{center}
+\raisebox{-\totalheight}{\includegraphics[scale=0.5]{./figures/ndcg.png}}
+\end{center}
+where $IDCG_p$ is the maximum possible (ideal) DCG for a given set of queries, documents, and relevances.
+
 
 \subsection{Learning to Rank (LETOR)}\label{sec:letor}
 Learning to rank or machine-learned ranking (MLR) is a type of supervised or semi-supervised machine learning problem in which the goal is 
@@ -437,6 +443,29 @@ It is a comprehensive, and flexible platform for research and experimentation in
 carried out on standard TREC collection~\cite{trec}. 
 Using Terrier, this project can easily extend from the existing search engine as it used Terrier as a search engine platform and it is written in Java
 which is the same programming language used in this project.
+
+\paragraph{Terrier Indexing}
+\begin{figure}
+\centering
+\includegraphics[scale=0.4]{./figures/terrierindexing.png}
+\caption{Indexing Architecture of Terrier from \protect\url{http://terrier.org/docs/v3.5/basicComponents.html}} \label{fig:terrierindexing} 
+\end{figure}
+
+Figure~\ref{fig:terrierindexing} gives an overview of the interaction of the main components involved in the indexing process of Terrier.
+
+\begin{quotation}
+ \item 1. A corpus will be represented in the form of a \textbf{Collection} object. Raw text data will be represented in the form of a \textbf{Document} object. 
+ Document implementations usually are provided with an instance of a \textbf{Tokeniser} class that breaks pieces of text into single indexing tokens.
+ \item 2. The indexer is responsible for managing the indexing process. It iterates through the documents of the collection and sends each found 
+ term through a \textbf{TermPipeline} component.
+ \item 3. A TermPipeline can transform terms or remove terms that should not be indexed. An example for a TermPipeline chain is 
+ termpipelines=Stopwords,PorterStemmer, which removes terms from the document using the \textbf{Stopwords} object, and then applies Porter's Stemming algorithm 
+ for English to the terms.
+ \item 4. Once terms have been processed through the TermPipeline, they are aggregated and the following data structures are created by their corresponding 
+ DocumentBuilders: DirectIndex, DocumentIndex, Lexicon, and InvertedIndex.
+ \item 5. For single-pass indexing, the structures are written in a different order. Inverted file postings are built in memory, and committed to 'runs' 
+ when memory is exhausted. Once the collection had been indexed, all runs are merged to form the inverted index and the lexicon.
+\end{quotation}
 
 \subsubsection{RankLib}\label{section:rankLib}
 RankLib~\cite{ranklib} is an open source library of learning to rank algorithms. It also implements many retrieval metrics as well as provides many ways to carry out evaluation.

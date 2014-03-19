@@ -29,7 +29,7 @@ and perform step (5) and (6).
 
 After a learned model has been generated using training queries~\ref{section:producelearnedmodel},
 \subsubsection{Training Queries}
-34 queries shown in table ~\ref{table:trainingqueries} are used for training. They are trained by the tool called RankLib~\ref{section:rankLib} to get a learned model. 
+34 queries shown in table ~\ref{table:trainingqueries} are used for training. They are trained by the tool called RankLib (section~\ref{section:rankLib}) to get a learned model. 
 This process is performed only one time.
 \begin{table}
 \centering

@@ -14,44 +14,46 @@
 \contentsline {subsubsection}{\numberline {2.1}Retrieval Models}{viii}
 \contentsline {paragraph}{\numberline {2.1.1}Term Frequency\IeC {\textendash }Inverse Document Frequency (tf-idf)}{viii}
 \contentsline {paragraph}{\numberline {2.1.2}BM25}{viii}
+\contentsline {paragraph}{\numberline {2.1.3}PL2}{x}
 \contentsline {subsubsection}{\numberline {2.1}Retrieval Process in Information Retrieval}{x}
 \contentsline {subsubsection}{\numberline {2.1}Evaluation}{xi}
 \contentsline {subsubsection}{\numberline {2.1}Precision and Recall}{xi}
 \contentsline {paragraph}{\numberline {2.1.1}Mean Average Precision (MAP)}{xii}
 \contentsline {paragraph}{\numberline {2.1.2}Mean Reciprocal Rank (MRR)}{xii}
-\contentsline {paragraph}{\numberline {2.1.3}Normalized Discounted Cumulative Gain (NDCG)}{xiii}
+\contentsline {paragraph}{\numberline {2.1.3}Normalized Discounted Cumulative Gain (NDCG or nDCG)}{xiii}
 \contentsline {subsection}{\numberline {2.2}Learning to Rank (LETOR)}{xiii}
-\contentsline {subsection}{\numberline {2.3}Tools}{xiv}
-\contentsline {subsubsection}{\numberline {2.3}Terrier}{xiv}
-\contentsline {subsubsection}{\numberline {2.3}RankLib}{xv}
-\contentsline {subsubsection}{\numberline {2.3}trec\_eval}{xv}
-\contentsline {subsection}{\numberline {2.4}Expert Search}{xvi}
-\contentsline {subsubsection}{\numberline {2.4}Presenting Query Results}{xvi}
-\contentsline {subsubsection}{\numberline {2.4}Voting Technique}{xvii}
-\contentsline {section}{\numberline {3}Current System and Proposals to the new System}{xviii}
-\contentsline {subsubsection}{\numberline {3.0}Current System}{xviii}
-\contentsline {paragraph}{\numberline {3.0.1}Design and Architecture of Current System}{xviii}
-\contentsline {subsubsection}{\numberline {3.0}Proposals}{xxi}
-\contentsline {subsubsection}{\numberline {3.0}Requirements Specification}{xxi}
-\contentsline {paragraph}{\numberline {3.0.1}Functional Requirements}{xxi}
-\contentsline {subsubsection}{\numberline {3.0}Must Have}{xxi}
-\contentsline {subsubsection}{\numberline {3.0}Should Have}{xxii}
-\contentsline {subsubsection}{\numberline {3.0}Could Have}{xxii}
-\contentsline {subsubsection}{\numberline {3.0}Would Like to Have}{xxii}
-\contentsline {paragraph}{\numberline {3.0.1}Non-functional Requirements}{xxii}
-\contentsline {subsubsection}{\numberline {3.0}Design and Architecture of New System}{xxii}
-\contentsline {paragraph}{\numberline {3.0.1}Retrieving Documents (Experts) with respect to a Query}{xxii}
-\contentsline {section}{\numberline {4}Implementation}{xxiv}
-\contentsline {subsection}{\numberline {4.1}Overview of Important Class Diagrams}{xxiv}
-\contentsline {subsection}{\numberline {4.2}Data Extraction}{xxv}
-\contentsline {paragraph}{\numberline {4.2.2}AcademicsHashTable}{xxvi}
-\contentsline {paragraph}{\numberline {4.2.3}GtRHashTable}{xxvi}
-\contentsline {paragraph}{\numberline {4.2.4}GOWHashTable}{xxvi}
-\contentsline {paragraph}{\numberline {4.2.5}SSProjectsExtractor}{xxvi}
-\contentsline {paragraph}{\numberline {4.2.6}GtRProjectWrapper}{xxvi}
-\contentsline {paragraph}{\numberline {4.2.7}ProjectExtractor}{xxvi}
-\contentsline {subsubsection}{\numberline {4.2}Indexing}{xxvii}
-\contentsline {subsection}{\numberline {4.3}Producing a Learned Model}{xxvii}
+\contentsline {subsection}{\numberline {2.3}Tools}{xv}
+\contentsline {subsubsection}{\numberline {2.3}Terrier}{xv}
+\contentsline {paragraph}{\numberline {2.3.1}Terrier Indexing}{xv}
+\contentsline {subsubsection}{\numberline {2.3}RankLib}{xvi}
+\contentsline {subsubsection}{\numberline {2.3}trec\_eval}{xvi}
+\contentsline {subsection}{\numberline {2.4}Expert Search}{xvii}
+\contentsline {subsubsection}{\numberline {2.4}Presenting Query Results}{xvii}
+\contentsline {subsubsection}{\numberline {2.4}Voting Technique}{xviii}
+\contentsline {section}{\numberline {3}Current System and Proposals to the new System}{xix}
+\contentsline {subsubsection}{\numberline {3.0}Current System}{xix}
+\contentsline {paragraph}{\numberline {3.0.1}Design and Architecture of Current System}{xix}
+\contentsline {subsubsection}{\numberline {3.0}Proposals}{xxii}
+\contentsline {subsubsection}{\numberline {3.0}Requirements Specification}{xxii}
+\contentsline {paragraph}{\numberline {3.0.1}Functional Requirements}{xxii}
+\contentsline {subsubsection}{\numberline {3.0}Must Have}{xxii}
+\contentsline {subsubsection}{\numberline {3.0}Should Have}{xxiii}
+\contentsline {subsubsection}{\numberline {3.0}Could Have}{xxiii}
+\contentsline {subsubsection}{\numberline {3.0}Would Like to Have}{xxiii}
+\contentsline {paragraph}{\numberline {3.0.1}Non-functional Requirements}{xxiii}
+\contentsline {subsubsection}{\numberline {3.0}Design and Architecture of New System}{xxiii}
+\contentsline {paragraph}{\numberline {3.0.1}Retrieving Documents (Experts) with respect to a Query}{xxiii}
+\contentsline {section}{\numberline {4}Implementation}{xxv}
+\contentsline {subsection}{\numberline {4.1}Overview of Important Class Diagrams}{xxv}
+\contentsline {subsection}{\numberline {4.2}Data Extraction}{xxvi}
+\contentsline {paragraph}{\numberline {4.2.2}AcademicsHashTable}{xxvii}
+\contentsline {paragraph}{\numberline {4.2.3}GtRHashTable}{xxvii}
+\contentsline {paragraph}{\numberline {4.2.4}GOWHashTable}{xxvii}
+\contentsline {paragraph}{\numberline {4.2.5}SSProjectsExtractor}{xxvii}
+\contentsline {paragraph}{\numberline {4.2.6}GtRProjectWrapper}{xxvii}
+\contentsline {paragraph}{\numberline {4.2.7}ProjectExtractor}{xxvii}
+\contentsline {subsubsection}{\numberline {4.2}Indexing}{xxviii}
+\contentsline {subsection}{\numberline {4.3}Producing a Learned Model}{xxviii}
 \contentsline {subsection}{\numberline {4.4}Applying a Learned Model}{xxx}
 \contentsline {section}{\numberline {5}Evaluation}{xxx}
 \contentsline {subsection}{\numberline {5.1}Experimental Setting}{xxxi}

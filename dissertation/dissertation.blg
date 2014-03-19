@@ -19,6 +19,7 @@ Warning--to sort, need author or key in tokenization
 Warning--to sort, need author or key in invertedindex
 Warning--to sort, need author or key in tfidf
 Warning--to sort, need author or key in introToIR
+Warning--to sort, need author or key in craig
 Warning--to sort, need author or key in evalweb
 Warning--to sort, need author or key in mrr
 Warning--to sort, need author or key in ndcg
@@ -30,7 +31,6 @@ Warning--to sort, need author or key in ranklib
 Warning--to sort, need author or key in qrels
 Warning--to sort, need author or key in qrelsformat
 Warning--to sort, need author or key in resultfileformat
-Warning--to sort, need author or key in craig
 Warning--to sort, need author or key in polymorphism
 Warning--empty journal in expertsearch
 Warning--empty journal in learningmodel
