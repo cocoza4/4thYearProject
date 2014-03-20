@@ -1,11 +1,11 @@
 
-\section{Implementation}\label{section:designandimplementation}
+\chapter{Implementation}\label{section:implementation}
 
-\subsection{Overview of Important Class Diagrams}
+\section{Overview of Important Class Diagrams}
 
-As stated in section ~\ref{section:aims}, this project extends from SICSA project which uses only publications as expertise evidence.
-The aim of this project is to integrate funded projects with publications to improve the performance of the retrieval.
-Figure ~\ref{fig:classDiagram1} shows the relationship between Candidate, Project, Publication and University classes. Each component in the figure
+As stated in section~\ref{section:aims}, this project extends from SICSA project which uses only publications as expertise evidence.
+The aim of this project is to integrate funded projects with publications to improve the performance of the retrieval system.
+Figure~\ref{fig:classDiagram1} shows the relationship between Candidate (Expert), Project, Publication and University classes. Each component in the figure
 shows only important attributes and methods. The Candidate class represents an expert who lectures at a university and has a set of publications and projects.
 \begin{figure}
 \centering
@@ -22,14 +22,14 @@ AcademTechQuerying Class and RetrievedResults Class which are components used in
 \caption{AcademTechQuerying Class and RetrievedResults Class} \label{fig:AcademTechQuerying} 
 \end{figure}
 
-Figure ~\ref{fig:AcademTechQuerying} shows class diagrams of AcademTechQuerying and RetrievedResults. As stated in section ~\ref{section:terrier},
-the search engine platform used in this project is Terrier. It handles indexing and retrieval processes discussed in section ~\ref{section:IRarchitecture}.
+Figure~\ref{fig:AcademTechQuerying} shows class diagrams of AcademTechQuerying and RetrievedResults. As stated in section~\ref{section:terrier},
+the search engine platform used in this project is Terrier. It handles indexing and retrieval processes discussed in section~\ref{section:IRarchitecture}.
 The AcademTechQuerying Class makes use of 2 Terrier components as follows:  
 \begin{itemize}
- \item queryingManager of type Manager, responsible for handling/co-ordinating the main high-level operations of a query.
- \item srq of type SearchRequest, responsible for retrieving search result from Manager.
+ \item \textit{queryingManager} of type Manager, responsible for handling/co-ordinating the main high-level operations of a query.
+ \item \textit{srq} of type SearchRequest, responsible for retrieving search result from Manager.
 \end{itemize}
-The important method of AcademTechQuerying is processQuery(). It returns RetrievedResults. This method takes a query string, supportDocs and candId as arguments. The first argument tells
+The most important method of AcademTechQuerying is processQuery(). It returns RetrievedResults component. This method takes a query string, supportDocs and candId as arguments. The first argument tells
 the system that a query is used to retrieve the result, the second and third arguments are used in case the system wants documents associated to a candidate 
 with respect to a query.
 
@@ -40,20 +40,20 @@ The RetrievedResults Class has 3 attributes as follows:
  \item scores, an array of Double, which is the scores of each document retrieved by the system.
 \end{itemize}
 
-\subsection{Data Extraction}
+\section{Data Extraction}
 \begin{figure}
 \centering
 \includegraphics[scale=0.35]{./figures/projectsExtraction.png}
 \caption{Projects Extraction Class Diagrams} \label{fig:projectsExtraction} 
 \end{figure}
-In section ~\ref{section:aims}, it was stated that funded project information are obtained from Grant on the Web~\cite{gow} and Research Councils UK~\cite{gtr}.
-This section shows classes used to extract funded projects from each source and gives statistics regarding the number of total funded projects from each source.
-Figure ~\ref{fig:projectsExtraction} shows class diagram related to projects extraction.
+In section~\ref{section:aims}, it was stated that funded projects are obtained from Grant on the Web~\cite{gow} and Research Councils UK~\cite{gtr}.
+This section shows classes used to extract funded projects from each source and gives statistics regarding the number of funded projects from each source.
+Figure~\ref{fig:projectsExtraction} shows class diagram related to projects extraction task.
 \paragraph{AcademicsHashTable} is an abstract class which makes use of HashMap data structure, Map<Character, LinkedList<Candidate>>, for efficient look up when matching candidate to our
 known candidates. It is keyed by the first character of candidate's name. There are 2 abstract methods in this class: has() and checkAcademicName() methods.
-Both of them are used together to check if the candidate from a source is matched to our known candidates.
+Both of them are used together to check if the candidate is matched to our known candidates.
 \paragraph{GtRHashTable} extends from the abstract class AcademicsHashTable. The purpose of this class is the same as AcademicsHashTable Class but
-implements has() and checkAcademicName() methods which are suitable for data in Research Councils UK~\cite{gtr}.
+implements has() and checkAcademicName() methods which are used for Research Councils UK~\cite{gtr} data source.
 \paragraph{GOWHashTable} extends from the abstract class AcademicsHashTable. Its purpose is similar to AcademicsHashTable Class but
 has different implementations of hash() and checkAcademicName() methods to GOWHashTable's which is suitable for Grant on the Web~\cite{gow} spreadsheet.
 \paragraph{SSProjectsExtractor} is a class that makes use of GOWHashTable Class to extract funded projects from Grant on the Web~\cite{gow} spreadsheet.
@@ -83,32 +83,22 @@ Therefore, university is used as part of the matching as well.
 \end{table}
 Figure ~\ref{table:stats} shows the number of funded projects extracted from each source. There are 1569 known candidates in the system.
 
-\subsubsection{Indexing}
-In Section~\ref{section:IRarchitecture}, indexing process is discussed. This process makes the retrieval process much more efficiently. In this section, 
-steps towards indexing using Terrier~\cite{terrier} are discussed.
-\begin{figure}
+\section{Indexing}
+\begin{table}
 \centering
-\includegraphics[scale=0.4]{./figures/terrierindexing.png}
-\caption{Indexing Architecture of Terrier from \protect\url{http://terrier.org/docs/v3.5/basicComponents.html}} \label{fig:terrierindexing} 
-\end{figure}
+\begin{tabular}{|c|c|}
+\hline Number of experts & 1569 \\
+\hline Number of publications UK & 22225 \\
+\hline Number of all documents   & 25311 \\ 
+\hline Number of tokens (terms) & 6976895 \\
+\hline
+\end{tabular}
+\caption{Statistics of New System} \label{table:newtstats}
+\end{table}
+Table~\ref{table:newtstats} shows statistics of new system after indexing.
 
-\begin{quotation}
- \item 1. A corpus will be represented in the form of a \textbf{Collection} object. Raw text data will be represented in the form of a \textbf{Document} object. 
- Document implementations usually are provided with an instance of a \textbf{Tokeniser} class that breaks pieces of text into single indexing tokens.
- \item 2. The indexer is responsible for managing the indexing process. It iterates through the documents of the collection and sends each found 
- term through a \textbf{TermPipeline} component.
- \item 3. A TermPipeline can transform terms or remove terms that should not be indexed. An example for a TermPipeline chain is 
- termpipelines=Stopwords,PorterStemmer, which removes terms from the document using the \textbf{Stopwords} object, and then applies Porter's Stemming algorithm 
- for English to the terms.
- \item 4. Once terms have been processed through the TermPipeline, they are aggregated and the following data structures are created by their corresponding 
- DocumentBuilders: DirectIndex, DocumentIndex, Lexicon, and InvertedIndex.
- \item 5. For single-pass indexing, the structures are written in a different order. Inverted file postings are built in memory, and committed to 'runs' 
- when memory is exhausted. Once the collection had been indexed, all runs are merged to form the inverted index and the lexicon.
-\end{quotation}
 
-I will discuss with u about this section today.
-
-\subsection{Producing a Learned Model}\label{section:producelearnedmodel}
+\section{Producing a Learned Model}\label{section:producelearnedmodel}
 Section ~\ref{section:learnedmodel} described general steps to producing a learned model. This section aims to discuss classes involved in producing a learned model.
 As section ~\ref{section:learnedmodel} suggested, the first step in producing a learned model is to generate a set of training queries. 
 Then all features described in Section ~\ref{section:goodexpert} for each document (expert) with respect to each training query are extracted and saved
@@ -125,33 +115,7 @@ the degree of relevancy. To the left of the label is query id and scores of each
 \caption{Sample LETOR file} \label{fig:sampleletorfile} 
 \end{figure}
 
-34 training queries~\ref{table:trainingqueries} are trained by the tool called RankLib~\ref{section:rankLib} to get a learned model. This process is performed 
-only one time.
-\begin{table}
-\centering
-\begin{tabular}{|c|l|c|l|}
-\hline \textbf{\#} & \textbf{Query} & \textbf{\#} & \textbf{Query} \\
-\hline 1 & language modelling & 18 & game theory\\
-\hline 2 & manets & 19 & stable marriage \\
-\hline 3  & match & 20 & quantum computation\\ 
-\hline 4  & multimodal & 21 & constraint modelling\\ 
-\hline 5  & music as navigation cues & 22 & home networks\\ 
-\hline 6  & networking security & 23 & wireless sensor networks\\ 
-\hline 7  & neural network & 24 & distributed systems\\ 
-\hline 8  & older adults use of computers & 25 & operating system\\ 
-\hline 9  & parallel logic programming & 26 & terrier\\ 
-\hline 10  & query expansion & 27 & text searching\\ 
-\hline 11  & road traffic accident statistics & 28 & trec collection class\\ 
-\hline 12  & shoogle & 29 & usability\\ 
-\hline 13  & skill-based behavior & 30 & utf support terrier\\ 
-\hline 14  & sound in multimedia human-computer interfaces & 31 & visual impairment\\ 
-\hline 15  & statistical inference & 32 & wafer fab cost \\ 
-\hline 16  & suffix tree & 33 & database\\ 
-\hline 17  & mobile hci & 34 & programming languages\\ 
-\hline
-\end{tabular}
-\caption{Training Queries} \label{table:trainingqueries}
-\end{table}
+
 
 \begin{figure}
 \centering
@@ -180,7 +144,7 @@ feature. Section~\ref{section:applyinglearnedmodel} will explain how learned mod
 \caption{Sample Model} \label{fig:samplemodel} 
 \end{figure}
 
-\subsection{Applying a Learned Model}\label{section:applyinglearnedmodel}
+\section{Applying a Learned Model}\label{section:applyinglearnedmodel}
 Now that a learned model has been generated, this learned model can be applied to produce optimal ranking. Given a query,
 scores of query dependent features are computed for each expert as shown in figure~\ref{fig:quering}. After that, scores of query independent feaures
 of experts obtained from querying are extracted. Then for each expert, the scores of each feature are multiplied by ones in the learned model and accumulated.
@@ -196,67 +160,18 @@ This was briefly explained in section~\ref{section:learnedmodel}.
 \end{figure}
 
 Figure~\ref{fig:searchsequence} illustrates a sequence diagram of querying. This sequence diagram only shows important processes to retrieve
-relevant results. Given a query submitted by a user, Search servlet processes parameters sent by GET request by calling processParam() method. This is
+relevant results. Given a query submitted by a user, Search servlet processes parameters sent via GET request by calling processParam() method. This is
 followed by invoking processQuery() method which takes one parameter, ``type''. This parameter is used for filter mode. The method processQuery() 
-performs tasks discussed in section~\ref{section:union}.
+performs tasks discussed in section~\ref{section:union}. There are 2 classes introduced in this section: \textbf{CandidateScores} and 
+\textbf{CandidateSorting}. The former is used for computing scores of candidates based on a learned model. The latter
+sorts scores of candidates obtained after applying a learned model in descending score as discussed in section~\ref{sec:learnedmodel}.
+Figure~\ref{fig:scoreandsorting} shows class diagrams of CandidateScores and CandidateSorting. Important attributes and methods are only shown.
 
-
-
-
-
-
-
-
-
-
-
-% \subsection{Differences Between Old and New Systems}
-
-
-% \begin{figure}
-% \centering
-% \includegraphics[width=13cm,height=15cm,keepaspectratio]{./figures/newsearch.png}
-% \caption{New Facets : Experts In Response to ``information retrieval'' Query} \label{fig:newsearch} 
-% \end{figure}
-% Figure~\ref{fig:newsearch} shows a new facet in response to a query ``information retrieval''. Note that for each expert retrieved, the number of 
-% projects the expert has been involved is displayed.
-% \begin{figure}
-% \centering
-% \includegraphics[width=13cm,height=15cm,keepaspectratio]{./figures/newProfilePagePublication.png}
-% \caption{New Expert's Profile Facet} \label{fig:newProfilePage} 
-% \end{figure}
-% Figure~\ref{fig:newProfilePage} shows a new facet of profile page. There are 2 tabs for publications and funded projects and a drop down box for selecting
-% result filter modes. The number of projects and total funding are shown added.
-% 
-% \begin{figure}
-% \centering
-% \includegraphics[width=13cm,height=15cm,keepaspectratio]{./figures/newPofilePageProject.png}
-% \caption{Project Tab} \label{fig:newPofilePageProject} 
-% \end{figure}
-% Figure~\ref{fig:newPofilePageProject} shows a facet when a project tab is selected. The right hand side of the page shows the most project collaborators
-% and other filter modes: filter projects by amount of funding and by the status of projects.
-% 
-% \begin{figure}
-% \centering
-% \includegraphics[width=13cm,height=15cm,keepaspectratio]{./figures/newProfileSelectedProject.png}
-% \caption{Project Page} \label{fig:newProfileSelectedProject} 
-% \end{figure}
-% 
-% Figure~\ref{fig:newProfileSelectedProject} shows a facet when user selects a project link. This shows descriptions of a selected project.
-% The descriptions include:
-% \begin{itemize}
-%  \item Funder
-%  \item Title
-%  \item Funded Value
-%  \item Funded Period
-%  \item Status
-%  \item Grant Category
-%  \item People involved in the project
-%  \item Abstract
-%  \item Impact
-% \end{itemize}
-
-
+\begin{figure}
+\centering
+\includegraphics[scale=0.5]{./figures/score&sorting.png}
+\caption{Class Diagrams of CandidateScores and CandidateSorting} \label{fig:scoreandsorting} 
+\end{figure}
 
 
 

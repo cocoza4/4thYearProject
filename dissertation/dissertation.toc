@@ -1,63 +1,66 @@
-\contentsline {section}{\numberline {1}Introduction}{iii}
-\contentsline {subsection}{\numberline {1.1}The Scottish Informatics and Computer Science Alliance(SICSA)}{iii}
-\contentsline {subsection}{\numberline {1.2}What is Expert Search?}{iv}
-\contentsline {subsection}{\numberline {1.3}Definition of Mining Academic Expertise from Funded Research and Aims}{iv}
-\contentsline {subsection}{\numberline {1.4}Context}{iv}
-\contentsline {subsection}{\numberline {1.5}Overview}{iv}
-\contentsline {section}{\numberline {2}Background}{v}
-\contentsline {subsection}{\numberline {2.1}Information Retrieval (IR) and Search Engine}{v}
-\contentsline {subsubsection}{\numberline {2.1}Brief Overview of Information Retrieval System Architecture}{v}
-\contentsline {paragraph}{\numberline {2.1.1}Tokenisation}{vi}
-\contentsline {paragraph}{\numberline {2.1.2}Stopwords Removal}{vii}
-\contentsline {paragraph}{\numberline {2.1.3}Stemming}{vii}
-\contentsline {paragraph}{\numberline {2.1.4}Inverted Index Structure Creation}{viii}
-\contentsline {subsubsection}{\numberline {2.1}Retrieval Models}{viii}
-\contentsline {paragraph}{\numberline {2.1.1}Term Frequency\IeC {\textendash }Inverse Document Frequency (tf-idf)}{viii}
-\contentsline {paragraph}{\numberline {2.1.2}BM25}{viii}
-\contentsline {paragraph}{\numberline {2.1.3}PL2}{x}
-\contentsline {subsubsection}{\numberline {2.1}Retrieval Process in Information Retrieval}{x}
-\contentsline {subsubsection}{\numberline {2.1}Evaluation}{xi}
-\contentsline {subsubsection}{\numberline {2.1}Precision and Recall}{xi}
-\contentsline {paragraph}{\numberline {2.1.1}Mean Average Precision (MAP)}{xii}
-\contentsline {paragraph}{\numberline {2.1.2}Mean Reciprocal Rank (MRR)}{xii}
-\contentsline {paragraph}{\numberline {2.1.3}Normalized Discounted Cumulative Gain (NDCG or nDCG)}{xiii}
-\contentsline {subsection}{\numberline {2.2}Learning to Rank (LETOR)}{xiii}
-\contentsline {subsection}{\numberline {2.3}Tools}{xv}
-\contentsline {subsubsection}{\numberline {2.3}Terrier}{xv}
-\contentsline {paragraph}{\numberline {2.3.1}Terrier Indexing}{xv}
-\contentsline {subsubsection}{\numberline {2.3}RankLib}{xvi}
-\contentsline {subsubsection}{\numberline {2.3}trec\_eval}{xvi}
-\contentsline {subsection}{\numberline {2.4}Expert Search}{xvii}
-\contentsline {subsubsection}{\numberline {2.4}Presenting Query Results}{xvii}
-\contentsline {subsubsection}{\numberline {2.4}Voting Technique}{xviii}
-\contentsline {section}{\numberline {3}Current System and Proposals to the new System}{xix}
-\contentsline {subsubsection}{\numberline {3.0}Current System}{xix}
-\contentsline {paragraph}{\numberline {3.0.1}Design and Architecture of Current System}{xix}
-\contentsline {subsubsection}{\numberline {3.0}Proposals}{xxii}
-\contentsline {subsubsection}{\numberline {3.0}Requirements Specification}{xxii}
-\contentsline {paragraph}{\numberline {3.0.1}Functional Requirements}{xxii}
-\contentsline {subsubsection}{\numberline {3.0}Must Have}{xxii}
-\contentsline {subsubsection}{\numberline {3.0}Should Have}{xxiii}
-\contentsline {subsubsection}{\numberline {3.0}Could Have}{xxiii}
-\contentsline {subsubsection}{\numberline {3.0}Would Like to Have}{xxiii}
-\contentsline {paragraph}{\numberline {3.0.1}Non-functional Requirements}{xxiii}
-\contentsline {subsubsection}{\numberline {3.0}Design and Architecture of New System}{xxiii}
-\contentsline {paragraph}{\numberline {3.0.1}Retrieving Documents (Experts) with respect to a Query}{xxiii}
-\contentsline {section}{\numberline {4}Implementation}{xxv}
-\contentsline {subsection}{\numberline {4.1}Overview of Important Class Diagrams}{xxv}
-\contentsline {subsection}{\numberline {4.2}Data Extraction}{xxvi}
-\contentsline {paragraph}{\numberline {4.2.2}AcademicsHashTable}{xxvii}
-\contentsline {paragraph}{\numberline {4.2.3}GtRHashTable}{xxvii}
-\contentsline {paragraph}{\numberline {4.2.4}GOWHashTable}{xxvii}
-\contentsline {paragraph}{\numberline {4.2.5}SSProjectsExtractor}{xxvii}
-\contentsline {paragraph}{\numberline {4.2.6}GtRProjectWrapper}{xxvii}
-\contentsline {paragraph}{\numberline {4.2.7}ProjectExtractor}{xxvii}
-\contentsline {subsubsection}{\numberline {4.2}Indexing}{xxviii}
-\contentsline {subsection}{\numberline {4.3}Producing a Learned Model}{xxviii}
-\contentsline {subsection}{\numberline {4.4}Applying a Learned Model}{xxx}
-\contentsline {section}{\numberline {5}Evaluation}{xxx}
-\contentsline {subsection}{\numberline {5.1}Experimental Setting}{xxxi}
-\contentsline {subsubsection}{\numberline {5.1}Training Queries}{xxxii}
-\contentsline {subsubsection}{\numberline {5.1}Testing Queries}{xxxii}
-\contentsline {subsection}{\numberline {5.2}Experimental Results}{xxxii}
-\contentsline {subsection}{\numberline {5.3}User Interface of New System}{xxxii}
+\contentsline {chapter}{\numberline {1}Introduction}{iii}
+\contentsline {section}{\numberline {1.1}The Scottish Informatics and Computer Science Alliance(SICSA)}{iii}
+\contentsline {section}{\numberline {1.2}What is Expert Search?}{iv}
+\contentsline {section}{\numberline {1.3}Definition of Mining Academic Expertise from Funded Research and Aims}{iv}
+\contentsline {section}{\numberline {1.4}Context}{iv}
+\contentsline {section}{\numberline {1.5}Overview}{iv}
+\contentsline {chapter}{\numberline {2}Background}{v}
+\contentsline {section}{\numberline {2.1}Information Retrieval (IR) and Search Engine}{v}
+\contentsline {subsection}{\numberline {2.1.1}Brief Overview of Information Retrieval System Architecture}{vi}
+\contentsline {paragraph}{Tokenisation}{vi}
+\contentsline {paragraph}{Stopwords Removal}{vi}
+\contentsline {paragraph}{Stemming}{viii}
+\contentsline {paragraph}{Inverted Index Structure Creation}{viii}
+\contentsline {subsection}{\numberline {2.1.2}Retrieval Models}{viii}
+\contentsline {paragraph}{Term Frequency\IeC {\textendash }Inverse Document Frequency (tf-idf)}{viii}
+\contentsline {paragraph}{BM25}{ix}
+\contentsline {paragraph}{PL2}{ix}
+\contentsline {subsection}{\numberline {2.1.3}Retrieval Process in Information Retrieval}{ix}
+\contentsline {subsection}{\numberline {2.1.4}Evaluation}{x}
+\contentsline {subsubsection}{Precision and Recall}{x}
+\contentsline {paragraph}{Mean Average Precision (MAP)}{xi}
+\contentsline {paragraph}{Mean Reciprocal Rank (MRR)}{xii}
+\contentsline {paragraph}{Normalized Discounted Cumulative Gain (NDCG or nDCG)}{xii}
+\contentsline {section}{\numberline {2.2}Learning to Rank (LETOR)}{xii}
+\contentsline {subsection}{\numberline {2.2.1}Query Dependent Feature}{xii}
+\contentsline {subsection}{\numberline {2.2.2}Query Independent Feature}{xiii}
+\contentsline {subsection}{\numberline {2.2.3}Obtaining and Deploying a Learned Model}{xiii}
+\contentsline {section}{\numberline {2.3}Tools}{xiv}
+\contentsline {subsection}{\numberline {2.3.1}Terrier}{xiv}
+\contentsline {paragraph}{Terrier Indexing}{xiv}
+\contentsline {subsection}{\numberline {2.3.2}RankLib}{xv}
+\contentsline {subsection}{\numberline {2.3.3}trec\_eval}{xv}
+\contentsline {section}{\numberline {2.4}Expert Search}{xvi}
+\contentsline {subsection}{\numberline {2.4.1}Presenting Query Results}{xvi}
+\contentsline {subsection}{\numberline {2.4.2}Voting Technique}{xvii}
+\contentsline {chapter}{\numberline {3}Current System and Proposals, Requirements and Design of New System}{xix}
+\contentsline {section}{\numberline {3.1}Current System}{xix}
+\contentsline {paragraph}{Design and Architecture of Current System}{xix}
+\contentsline {section}{\numberline {3.2}Expert Search Indicators of New System}{xxii}
+\contentsline {subsection}{\numberline {3.2.1}Requirements Specification}{xxii}
+\contentsline {paragraph}{Functional Requirements}{xxii}
+\contentsline {subsubsection}{Must Have}{xxiii}
+\contentsline {subsubsection}{Should Have}{xxiii}
+\contentsline {subsubsection}{Could Have}{xxiii}
+\contentsline {subsubsection}{Would Like to Have}{xxiii}
+\contentsline {paragraph}{Non-functional Requirements}{xxiii}
+\contentsline {subsection}{\numberline {3.2.2}Design and Architecture of New System}{xxiii}
+\contentsline {paragraph}{Retrieving Documents (Experts) with Respect to a Query}{xxiii}
+\contentsline {chapter}{\numberline {4}Implementation}{xxvi}
+\contentsline {section}{\numberline {4.1}Overview of Important Class Diagrams}{xxvi}
+\contentsline {section}{\numberline {4.2}Data Extraction}{xxviii}
+\contentsline {paragraph}{AcademicsHashTable}{xxviii}
+\contentsline {paragraph}{GtRHashTable}{xxviii}
+\contentsline {paragraph}{GOWHashTable}{xxviii}
+\contentsline {paragraph}{SSProjectsExtractor}{xxviii}
+\contentsline {paragraph}{GtRProjectWrapper}{xxviii}
+\contentsline {paragraph}{ProjectExtractor}{xxix}
+\contentsline {section}{\numberline {4.3}Indexing}{xxix}
+\contentsline {section}{\numberline {4.4}Producing a Learned Model}{xxix}
+\contentsline {section}{\numberline {4.5}Applying a Learned Model}{xxx}
+\contentsline {section}{\numberline {4.6}Evaluation}{xxxii}
+\contentsline {subsection}{\numberline {4.6.1}Experimental Setting}{xxxiii}
+\contentsline {subsubsection}{Training Queries}{xxxiii}
+\contentsline {subsubsection}{Testing Queries}{xxxiv}
+\contentsline {subsection}{\numberline {4.6.2}Experimental Results}{xxxiv}
+\contentsline {subsection}{\numberline {4.6.3}User Interface of New System}{xxxiv}

@@ -1,11 +1,11 @@
 
-\section{Implementation}\label{section:designandimplementation}
+\chapter{Implementation}\label{section:implementation}
 
-\subsection{Overview of Important Class Diagrams}
+\section{Overview of Important Class Diagrams}
 
-As stated in section ~\ref{section:aims}, this project extends from SICSA project which uses only publications as expertise evidence.
-The aim of this project is to integrate funded projects with publications to improve the performance of the retrieval.
-Figure ~\ref{fig:classDiagram1} shows the relationship between Candidate, Project, Publication and University classes. Each component in the figure
+As stated in section~\ref{section:aims}, this project extends from SICSA project which uses only publications as expertise evidence.
+The aim of this project is to integrate funded projects with publications to improve the performance of the retrieval system.
+Figure~\ref{fig:classDiagram1} shows the relationship between Candidate (Expert), Project, Publication and University classes. Each component in the figure
 shows only important attributes and methods. The Candidate class represents an expert who lectures at a university and has a set of publications and projects.
 \begin{figure}
 \centering
@@ -22,14 +22,14 @@ AcademTechQuerying Class and RetrievedResults Class which are components used in
 \caption{AcademTechQuerying Class and RetrievedResults Class} \label{fig:AcademTechQuerying} 
 \end{figure}
 
-Figure ~\ref{fig:AcademTechQuerying} shows class diagrams of AcademTechQuerying and RetrievedResults. As stated in section ~\ref{section:terrier},
-the search engine platform used in this project is Terrier. It handles indexing and retrieval processes discussed in section ~\ref{section:IRarchitecture}.
+Figure~\ref{fig:AcademTechQuerying} shows class diagrams of AcademTechQuerying and RetrievedResults. As stated in section~\ref{section:terrier},
+the search engine platform used in this project is Terrier. It handles indexing and retrieval processes discussed in section~\ref{section:IRarchitecture}.
 The AcademTechQuerying Class makes use of 2 Terrier components as follows:  
 \begin{itemize}
- \item queryingManager of type Manager, responsible for handling/co-ordinating the main high-level operations of a query.
- \item srq of type SearchRequest, responsible for retrieving search result from Manager.
+ \item \textit{queryingManager} of type Manager, responsible for handling/co-ordinating the main high-level operations of a query.
+ \item \textit{srq} of type SearchRequest, responsible for retrieving search result from Manager.
 \end{itemize}
-The important method of AcademTechQuerying is processQuery(). It returns RetrievedResults. This method takes a query string, supportDocs and candId as arguments. The first argument tells
+The most important method of AcademTechQuerying is processQuery(). It returns RetrievedResults component. This method takes a query string, supportDocs and candId as arguments. The first argument tells
 the system that a query is used to retrieve the result, the second and third arguments are used in case the system wants documents associated to a candidate 
 with respect to a query.
 
@@ -40,22 +40,22 @@ The RetrievedResults Class has 3 attributes as follows:
  \item scores, an array of Double, which is the scores of each document retrieved by the system.
 \end{itemize}
 
-\subsection{Data Extraction}
+\section{Data Extraction}
 \begin{figure}
 \centering
 \includegraphics[scale=0.35]{./figures/projectsExtraction.png}
 \caption{Projects Extraction Class Diagrams} \label{fig:projectsExtraction} 
 \end{figure}
-In section ~\ref{section:aims}, it was stated that funded project information are obtained from Grant on the Web~\cite{gow} and Research Councils UK~\cite{gtr}.
-This section shows classes used to extract funded projects from each source and gives statistics regarding the number of total funded projects from each source.
-Figure ~\ref{fig:projectsExtraction} shows class diagram related to projects extraction.
+In section~\ref{section:aims}, it was stated that funded projects are obtained from Grant on the Web~\cite{gow} and Research Councils UK~\cite{gtr}.
+This section shows classes used to extract funded projects from each source and gives statistics regarding the number of funded projects from each source.
+Figure~\ref{fig:projectsExtraction} shows class diagram related to projects extraction task.
 \paragraph{AcademicsHashTable} is an abstract class which makes use of HashMap data structure, Map<Character, LinkedList<Candidate>>, for efficient look up when matching candidate to our
 known candidates. It is keyed by the first character of candidate's name. There are 2 abstract methods in this class: has() and checkAcademicName() methods.
-Both of them are used together to check if the candidate from a source is matched to our known candidates.
+Both of them are used together to check if the candidate is matched to our known candidates.
 \paragraph{GtRHashTable} extends from the abstract class AcademicsHashTable. The purpose of this class is the same as AcademicsHashTable Class but
-implements has() and checkAcademicName() methods which are suitable for data in Research Councils UK~\cite{gtr}.
+implements has() and checkAcademicName() methods which are applicable in Research Councils UK~\cite{gtr} data source.
 \paragraph{GOWHashTable} extends from the abstract class AcademicsHashTable. Its purpose is similar to AcademicsHashTable Class but
-has different implementations of hash() and checkAcademicName() methods to GOWHashTable's which is suitable for Grant on the Web~\cite{gow} spreadsheet.
+has different implementations of hash() and checkAcademicName() methods to GOWHashTable's which are applicable in Grant on the Web~\cite{gow} spreadsheet data source.
 \paragraph{SSProjectsExtractor} is a class that makes use of GOWHashTable Class to extract funded projects from Grant on the Web~\cite{gow} spreadsheet.
 \paragraph{GtRProjectWrapper} is a class used GOWHashTable Class to extract funded projects from Research Councils UK~\cite{gtr}.
 \paragraph{ProjectExtractor} is a class that makes use of SSProjectsExtractor and GtRProjectWrapper Classes to extract funded projects from both sources.
@@ -67,7 +67,7 @@ expert's names in Grant on the Web~\cite{gow} spreadsheet is still impossible as
 [lastname], [role] [the first letter of name] such as Jose, Professor JM. The problem occurs with experts, Dr. Craig Macdonald lecturing at
 University of Glasgow and Prof. Catriona Macdonald lecturing at Glasgow Caledonian University
 as the source records Macdonald, Dr C for the former and Macdonald, Professor C for the latter. Although, role might be used to distinguish between them but
-for some expert the role is not known and there might be the situation that the role is also the same. 
+for some experts the role is not known and there might be the situation that the role is also the same. 
 Therefore, university is used as part of the matching as well.
 
 \begin{table}
@@ -83,8 +83,9 @@ Therefore, university is used as part of the matching as well.
 \end{table}
 Figure ~\ref{table:stats} shows the number of funded projects extracted from each source. There are 1569 known candidates in the system.
 
-\subsubsection{Indexing}
+\section{Indexing}
 \begin{table}
+\centering
 \begin{tabular}{|c|c|}
 \hline Number of experts & 1569 \\
 \hline Number of publications UK & 22225 \\
@@ -97,9 +98,9 @@ Figure ~\ref{table:stats} shows the number of funded projects extracted from eac
 Table~\ref{table:newtstats} shows statistics of new system after indexing.
 
 
-\subsection{Producing a Learned Model}\label{section:producelearnedmodel}
+\section{Producing a Learned Model}\label{section:producelearnedmodel}
 Section ~\ref{section:learnedmodel} described general steps to producing a learned model. This section aims to discuss classes involved in producing a learned model.
-As section ~\ref{section:learnedmodel} suggested, the first step in producing a learned model is to generate a set of training queries. 
+As section~\ref{section:learnedmodel} suggested, the first step in producing a learned model is to generate a set of training queries. 
 Then all features described in Section ~\ref{section:goodexpert} for each document (expert) with respect to each training query are extracted and saved
 in a file. This file in learning to rank is called LETOR file. Figure~\ref{fig:sampleletorfile} is a sample LETOR file. The lines preceded by hash key are 
 ignored. They are just headers which describe features. There are 7 features as described section ~\ref{section:goodexpert}.
@@ -143,7 +144,7 @@ feature. Section~\ref{section:applyinglearnedmodel} will explain how learned mod
 \caption{Sample Model} \label{fig:samplemodel} 
 \end{figure}
 
-\subsection{Applying a Learned Model}\label{section:applyinglearnedmodel}
+\section{Applying a Learned Model}\label{section:applyinglearnedmodel}
 Now that a learned model has been generated, this learned model can be applied to produce optimal ranking. Given a query,
 scores of query dependent features are computed for each expert as shown in figure~\ref{fig:quering}. After that, scores of query independent feaures
 of experts obtained from querying are extracted. Then for each expert, the scores of each feature are multiplied by ones in the learned model and accumulated.

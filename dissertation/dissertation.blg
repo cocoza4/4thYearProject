@@ -18,7 +18,6 @@ Warning--to sort, need author or key in websearchengine
 Warning--to sort, need author or key in tokenization
 Warning--to sort, need author or key in invertedindex
 Warning--to sort, need author or key in tfidf
-Warning--to sort, need author or key in introToIR
 Warning--to sort, need author or key in craig
 Warning--to sort, need author or key in evalweb
 Warning--to sort, need author or key in mrr
@@ -36,45 +35,45 @@ Warning--empty journal in expertsearch
 Warning--empty journal in learningmodel
 Name 1 in "Mehryar Mohri, Afshin Rostamizadeh, and Ameet Talwalkar" has a comma at the end for entry letor
 while executing---line 1090 of file plain.bst
-You've used 29 entries,
+You've used 28 entries,
             2118 wiz_defined-function locations,
-            588 strings with 6218 characters,
-and the built_in function-call counts, 5213 in all, are:
-= -- 481
-> -- 83
+            585 strings with 6160 characters,
+and the built_in function-call counts, 5063 in all, are:
+= -- 469
+> -- 82
 < -- 1
-+ -- 50
++ -- 48
 - -- 18
-* -- 193
-:= -- 654
-add.period$ -- 56
-call.type$ -- 29
-change.case$ -- 95
+* -- 188
+:= -- 640
+add.period$ -- 55
+call.type$ -- 28
+change.case$ -- 92
 chr.to.int$ -- 0
-cite$ -- 53
-duplicate$ -- 224
-empty$ -- 672
+cite$ -- 51
+duplicate$ -- 217
+empty$ -- 649
 format.name$ -- 18
-if$ -- 1246
+if$ -- 1209
 int.to.chr$ -- 0
-int.to.str$ -- 29
+int.to.str$ -- 28
 missing$ -- 4
-newline$ -- 117
+newline$ -- 114
 num.names$ -- 14
-pop$ -- 238
+pop$ -- 230
 preamble$ -- 1
-purify$ -- 67
+purify$ -- 65
 quote$ -- 0
-skip$ -- 238
+skip$ -- 228
 stack$ -- 0
-substring$ -- 194
-swap$ -- 36
+substring$ -- 188
+swap$ -- 35
 text.length$ -- 1
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 114
-warning$ -- 24
+type$ -- 110
+warning$ -- 23
 while$ -- 16
-width$ -- 31
-write$ -- 216
+width$ -- 30
+write$ -- 211
 (There were 3 error messages)

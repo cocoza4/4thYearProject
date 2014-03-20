@@ -27,7 +27,7 @@ we refer them as training and testing queries. The following is a list of steps 
 To evaluate without using LETOR (using only publications as expertise evidence), we can set other features apart from publication query feature to 0
 and perform step (5) and (6).
 
-After a learned model has been generated using training queries~\ref{section:producelearnedmodel},
+%After a learned model has been generated using training queries~\ref{section:producelearnedmodel},
 \subsubsection{Training Queries}
 34 queries shown in table ~\ref{table:trainingqueries} are used for training. They are trained by the tool called RankLib (section~\ref{section:rankLib}) to get a learned model. 
 This process is performed only one time.
