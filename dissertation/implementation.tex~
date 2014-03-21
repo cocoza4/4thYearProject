@@ -22,6 +22,26 @@ AcademTechQuerying Class and RetrievedResults Class which are components used in
 \caption{AcademTechQuerying Class and RetrievedResults Class} \label{fig:AcademTechQuerying} 
 \end{figure}
 
+\begin{figure}
+\centering
+\includegraphics[scale=0.4]{./figures/tablefactory.png}
+\caption{TableFactory Class Diagram} \label{fig:tableFactory} 
+\end{figure}
+
+Figure~\ref{fig:tableFactory} shows class diagrams of \textit{TableFactory}, and \textit{Search}. The responsibility of each class is given below:
+\begin{itemize}
+ \item \textit{Search} extends Java Servlet which handles search request submitted by a user.
+ \item \textit{TableFactory} loads Experts, Publications, and Projects stored in a file and send them to Search Servlet.
+\end{itemize}
+
+\textit{Search} contains 4 important methods as follows: 
+\begin{itemize}
+ \item \textit{doInit()} loads AcademTechQuerying component for querying.
+ \item \textit{processQuery()} processes a query obtained by a user. More details are given in section~\ref{section:applyinglearnedmodel}.
+ \item \textit{logQuery()} saves a query to a log file.
+ \item \textit{doGet()} handles a GET request when user submits a query. It also generates HTML page of the query results.
+\end{itemize}
+
 Figure~\ref{fig:AcademTechQuerying} shows class diagrams of AcademTechQuerying and RetrievedResults. As stated in section~\ref{section:terrier},
 the search engine platform used in this project is Terrier. It handles indexing and retrieval processes discussed in section~\ref{section:IRarchitecture}.
 The AcademTechQuerying Class makes use of 2 Terrier components as follows:  
@@ -35,9 +55,9 @@ with respect to a query.
 
 The RetrievedResults Class has 3 attributes as follows:
 \begin{itemize}
- \item ids, an array of String, which is the ids of the documents(in this case, ids of experts) retrieved by the system.
- \item tdocids, an array of Integer, which is the ids used by Terrier
- \item scores, an array of Double, which is the scores of each document retrieved by the system.
+ \item \textit{ids}, an array of String, which is the ids of the documents(in this case, ids of experts) retrieved by the system.
+ \item \textit{tdocids}, an array of Integer, which is the ids used by Terrier
+ \item \textit{scores}, an array of Double, which is the scores of each document retrieved by the system.
 \end{itemize}
 
 \section{Data Extraction}
@@ -49,16 +69,20 @@ The RetrievedResults Class has 3 attributes as follows:
 In section~\ref{section:aims}, it was stated that funded projects are obtained from Grant on the Web~\cite{gow} and Research Councils UK~\cite{gtr}.
 This section shows classes used to extract funded projects from each source and gives statistics regarding the number of funded projects from each source.
 Figure~\ref{fig:projectsExtraction} shows class diagram related to projects extraction task.
-\paragraph{AcademicsHashTable} is an abstract class which makes use of HashMap data structure, Map<Character, LinkedList<Candidate>>, for efficient look up when matching candidate to our
+
+\begin{itemize}
+ \item \textbf{AcademicsHashTable} is an abstract class which makes use of HashMap data structure, \\ 
+ $Map<Character, LinkedList<Candidate>>$, for efficient look up when matching candidate to our
 known candidates. It is keyed by the first character of candidate's name. There are 2 abstract methods in this class: has() and checkAcademicName() methods.
 Both of them are used together to check if the candidate is matched to our known candidates.
-\paragraph{GtRHashTable} extends from the abstract class AcademicsHashTable. The purpose of this class is the same as AcademicsHashTable Class but
+\item \textbf{GtRHashTable} extends from the abstract class AcademicsHashTable. The purpose of this class is the same as AcademicsHashTable Class but
 implements has() and checkAcademicName() methods which are applicable in Research Councils UK~\cite{gtr} data source.
-\paragraph{GOWHashTable} extends from the abstract class AcademicsHashTable. Its purpose is similar to AcademicsHashTable Class but
+\item \textbf{GOWHashTable} extends from the abstract class AcademicsHashTable. Its purpose is similar to AcademicsHashTable Class but
 has different implementations of hash() and checkAcademicName() methods to GOWHashTable's which are applicable in Grant on the Web~\cite{gow} spreadsheet data source.
-\paragraph{SSProjectsExtractor} is a class that makes use of GOWHashTable Class to extract funded projects from Grant on the Web~\cite{gow} spreadsheet.
-\paragraph{GtRProjectWrapper} is a class used GOWHashTable Class to extract funded projects from Research Councils UK~\cite{gtr}.
-\paragraph{ProjectExtractor} is a class that makes use of SSProjectsExtractor and GtRProjectWrapper Classes to extract funded projects from both sources.
+\item \textbf{SSProjectsExtractor} is a class that makes use of GOWHashTable Class to extract funded projects from Grant on the Web~\cite{gow} spreadsheet.
+\item \textbf{GtRProjectWrapper} is a class used GOWHashTable Class to extract funded projects from Research Councils UK~\cite{gtr}.
+\item \textbf{ProjectExtractor} is a class that makes use of SSProjectsExtractor and GtRProjectWrapper Classes to extract funded projects from both sources.
+\end{itemize}
 
 The most difficult part in extracting projects is to match the known expert's names with the expert's names in each source. This is because each source
 records expert's name in different formats. For example, Prof. Joemon Jose may be recorded Jose JM in one source and Jose J in another. This is why Polymorphism~\cite{polymorphism} 
@@ -84,38 +108,130 @@ Therefore, university is used as part of the matching as well.
 Figure ~\ref{table:stats} shows the number of funded projects extracted from each source. There are 1569 known candidates in the system.
 
 \section{Indexing}
+
+Before indexing process begins, the system has to generate data in TREC format and an association file between TREC file. \textbf{FileGenerator} class
+handles this. It includes only 1 method main(). The list below is files generated by the class:
+\begin{itemize}
+ \item ContactsList.trec.gz
+ \item Homepages.trec.gz
+ \item Projects.trec.gz
+ \item Publications.trec.gz
+ \item association.txt
+\end{itemize}
+
+\paragraph{ContactsList.trec.gz} \hspace{0pt} \\
+This file compressed in gz format stores a list of experts in TREC format. Each expert's data is recorded in the following format:
+\begin{verbatim}
+<DOC>
+	<DOCNO>expert's id</DOCNO>
+	<name>expert's name</name>
+	<snippets>description of expert</snippets>
+	<keyTerms></keyTerms>
+	<uni>expert's university</uni>
+	<uniId>university's id</uniId>
+	<location>location of the university</location>
+	<role>role of the expert</role>
+	<pubGroup>group of publication</pubGroup>
+	<conference>conference's name involved</conference>
+	<journal>type of journal</journal>
+	<coauthorGroup>group of coauthor</coauthorGroup>
+</DOC>
+\end{verbatim}
+
+\paragraph{Homepages.trec.gz} \hspace{0pt} \\
+This file compressed in gz format stores a list of home pages in TREC format. Each home page assiciated to one expert is recorded in the following format:
+\begin{verbatim}
+ <DOC>
+        <DOCNO>homepage's id</DOCNO>
+        <candidate>expert's id</candidate>
+        <content>content of the home page</content>
+</DOC>
+\end{verbatim}
+
+
+\paragraph{Projects.trec.gz} \hspace{0pt} \\
+This file compressed in gz format stores a list of funded projects in TREC format. Each funded project is recorded in the following format:
+\begin{verbatim}
+<DOC>
+	<DOCNO>funded project's id</DOCNO>
+	<type>type of evidence</type>
+	<title>title of the project</title>
+	<grantCategory>type of grant</grantCategory>
+	<start>start date</start>
+	<end>end date</end>
+	<abstract>abstract of the project</abstract>
+	<impact>impact of the project</impact>
+	<people>
+		<person>expert's name</person>
+	</people>
+</DOC>
+
+\end{verbatim}
+where \textit{$<$type$>$} tag's value is always \textit{proj} which tells Terrier that this document is of type \textit{proj}. This tag is very useful when 
+the system transforms the query to retrieve documents using only funded projects as expertise evidence (see section~\ref{section:union}).
+
+\paragraph{Publications.trec.gz} \hspace{0pt} \\
+This file compressed in gz format stores a list of publications in TREC format. Each publication is recorded in the following format:
+\begin{verbatim}
+ <DOC>
+        <DOCNO>publication's id</DOCNO>
+        <TYPE>type of evidence</TYPE>
+        <type>inproceedings</type>
+        <pubtitle>title</pubtitle>
+        <author>author's name 1</author>
+        <author>author's name 2</author>
+        <conference>conference's name involved</conference>
+        <year>year</year>
+        <snippets>description of the publication</snippets>
+        <keyTerms></keyTerms>
+        <citationContexts></citationContexts>
+        <uni>university's name</uni>
+        <uniId>university's id</uniId>
+        <location>location of the university</location>
+        <role>role of the project</role>
+        <pubGroup>group of the publication</pubGroup>
+        <journal>type of journal</journal>
+        <coauthorGroup>group of coauthor</coauthorGroup>
+</DOC>
+\end{verbatim}
+There are 2 \textit{$<$type$>$} tags whose values are always set to \textit{pub} and \textit{inproceedings}. The idea is similar one's in 
+funded project which is for filter modes in Terrier.
+
+\paragraph{association.txt} \hspace{0pt} \\
+This file tells Terrier about the associations between experts, publications, and funded projects. It is stored in the following format:
+\begin{verbatim}
+ expert_id expert_homepage pub_id1 pub_id2 ... pub_idn proj_id1 
+ proj_id2 ... proj_idn expert_homepage_id
+\end{verbatim}
+where one line in the file corresponds to only one expert.
+
+Once all the files have been generated, Terrier indexes those files. Table~\ref{table:newtstats} shows statistics of new system after indexing.
+
 \begin{table}
 \centering
 \begin{tabular}{|c|c|}
 \hline Number of experts & 1569 \\
-\hline Number of publications UK & 22225 \\
 \hline Number of all documents   & 25311 \\ 
 \hline Number of tokens (terms) & 6976895 \\
 \hline
 \end{tabular}
-\caption{Statistics of New System} \label{table:newtstats}
+\caption{Statistics of New System After Indexing Process} \label{table:newtstats}
 \end{table}
-Table~\ref{table:newtstats} shows statistics of new system after indexing.
+
 
 
 \section{Producing a Learned Model}\label{section:producelearnedmodel}
-Section ~\ref{section:learnedmodel} described general steps to producing a learned model. This section aims to discuss classes involved in producing a learned model.
-As section~\ref{section:learnedmodel} suggested, the first step in producing a learned model is to generate a set of training queries. 
-Then all features described in Section ~\ref{section:goodexpert} for each document (expert) with respect to each training query are extracted and saved
-in a file. This file in learning to rank is called LETOR file. Figure~\ref{fig:sampleletorfile} is a sample LETOR file. The lines preceded by hash key are 
-ignored. They are just headers which describe features. There are 7 features as described section ~\ref{section:goodexpert}.
-The numbers after a hash key indicate features id. However, the lines not preceded by hash key are learned. They represent documents (experts) with scores
-of each feature attached to them. They are preceded by numbers. These numbers in learning to rank are labels which indicate the degree of relevancy.
-If the label is 0, it means the expert is irrelevant with respect to a query. If it is 1, the expert is relevant. However, the label needs not be binary.
-It could range from 0 to any positive number. The higher the number, the more relevant the expert is. In this project, labels range from 0 to 2 in order of 
-the degree of relevancy. To the left of the label is query id and scores of each feature associated to that expert. Again, within these lines, anything after hash key is ignored.
+Section ~\ref{sec:learnedmodel} described general steps in producing a learned model. This section aims to discuss classes involved in producing a learned model.
+As section~\ref{sec:learnedmodel} suggested, the first step in producing a learned model is to generate a set of training queries. 
+Then all features described in Section~\ref{section:goodexpert} for each document (expert) with respect to each training query are extracted and saved
+in a file. This file in learning to rank is called LETOR file (see section~\ref{sec:letorFile}).
+Figure~\ref{fig:sampleletorfile} is a LETOR file. There are 7 features as described section~\ref{section:goodexpert}.
+
 \begin{figure}
 \centering
 \includegraphics[scale=0.3]{./figures/sampleletorfile.png}
-\caption{Sample LETOR file} \label{fig:sampleletorfile} 
+\caption{LETOR file of Training Queries} \label{fig:sampleletorfile} 
 \end{figure}
-
-
 
 \begin{figure}
 \centering
@@ -125,33 +241,34 @@ the degree of relevancy. To the left of the label is query id and scores of each
 
 Figure ~\ref{fig:learningmodel} shows a class diagram that is used to produce a learned model. There are 5 important methods as follows
 \begin{itemize}
- \item loadQueries() is a method that loads all training queries from a file.
- \item processQuery() is a method that retrieve documents (experts) with respect to publication query and project query.
- \item setScores() is a method that performs a union between results with respect to publication query and project query as discussed in Section ~\ref{section:union}
- \item setFeatures() is a method that extracts features for each document (expert) and write into a LETOR file.
- \item learnModel() is a method that produces a learned model using RankLib~\ref{section:rankLib}.
+ \item \textit{loadQueries()} is a method that loads all training queries from a file.
+ \item \textit{processQuery()} is a method that retrieve documents (experts) with respect to publication query and project query.
+ \item \textit{setScores()} is a method that performs a union between results with respect to publication query and project query as discussed in Section ~\ref{section:union}
+ \item \textit{setFeatures()} is a method that extracts features for each document (expert) and write into a LETOR file.
+ \item \textit{learnModel()} is a method that produces a learned model using RankLib.
 \end{itemize}
 
-As stated in Section ~\ref{section:rankLib}, learning to rank algorithms used in this project are AdaRank and Coordinate Ascent. The performance of each
-of them will be discussed in Evaluation Section. Figure~\ref{fig:samplemodel} shows a sample model. Similar to LETOR file, lines preceded by hash key are
-ignored. They are just headers which describe parameters used in the learning to rank algorithm. Knowing what each parameter does is out of the scopre of 
-this project. This model is obtained using Coordinate Ascent Algorithm. The numbers before colons are features id and after colons are scores of each 
-feature. Section~\ref{section:applyinglearnedmodel} will explain how learned model is applied to get optimal ranking.
+As stated in Section~\ref{section:rankLib}, learning to rank algorithms used in this project are AdaRank and Coordinate Ascent. The performance of each
+of them will be discussed in Evaluation Section. Figure~\ref{fig:samplemodel} shows a learned model using \textit{Coordinate Ascent}.
+Section~\ref{section:applyinglearnedmodel} will explain a component used to apply a learned model.
 
 \begin{figure}
 \centering
 \includegraphics[scale=0.3]{./figures/samplemodel.png}
-\caption{Sample Model} \label{fig:samplemodel} 
+\caption{Learned Model Using Coordinate Ascent Algorithm} \label{fig:samplemodel} 
 \end{figure}
 
 \section{Applying a Learned Model}\label{section:applyinglearnedmodel}
-Now that a learned model has been generated, this learned model can be applied to produce optimal ranking. Given a query,
-scores of query dependent features are computed for each expert as shown in figure~\ref{fig:quering}. After that, scores of query independent feaures
-of experts obtained from querying are extracted. Then for each expert, the scores of each feature are multiplied by ones in the learned model and accumulated.
-Finally, the accumulated scores for each expert are sorted in descending order and experts with the high scores are ranked before those with low scores. 
-This was briefly explained in section~\ref{section:learnedmodel}.
+In section~\ref{sec:background_applyLearnedModel}, we explained the process of applying a learned model. This section aims to describe components
+that handle this task. The class \textit{CandidateScores} has a method called, getTotalScore() taking a learnedModel component as a parameter. 
+This method applies a learned model as descriped in section~\ref{sec:background_applyLearnedModel} and return a score. Figure~\ref{fig:scoreandsorting}
+shows class diagrams of \textit{Candidatescores} and \textit{LearnedModel}.
 
-
+\begin{figure}
+\centering
+\includegraphics[scale=0.5]{./figures/score&sorting.png}
+\caption{Class Diagrams of CandidateScores and CandidateSorting} \label{fig:scoreandsorting} 
+\end{figure}
 
 \begin{figure}
 \centering
@@ -162,16 +279,60 @@ This was briefly explained in section~\ref{section:learnedmodel}.
 Figure~\ref{fig:searchsequence} illustrates a sequence diagram of querying. This sequence diagram only shows important processes to retrieve
 relevant results. Given a query submitted by a user, Search servlet processes parameters sent via GET request by calling processParam() method. This is
 followed by invoking processQuery() method which takes one parameter, ``type''. This parameter is used for filter mode. The method processQuery() 
-performs tasks discussed in section~\ref{section:union}. There are 2 classes introduced in this section: \textbf{CandidateScores} and 
-\textbf{CandidateSorting}. The former is used for computing scores of candidates based on a learned model. The latter
+performs tasks discussed in section~\ref{section:union}.
+The \textbf{CandidateScores} is used for computing scores of candidates based on a learned model. The \textbf{CandidateSorting}
 sorts scores of candidates obtained after applying a learned model in descending score as discussed in section~\ref{sec:learnedmodel}.
-Figure~\ref{fig:scoreandsorting} shows class diagrams of CandidateScores and CandidateSorting. Important attributes and methods are only shown.
+Figure~\ref{fig:scoreandsorting} shows class diagrams of \textit{CandidateScores}, \textit{LearnedModel} and \textit{CandidateSorting}.
+Important attributes and methods are only shown.
+
+
+\section{User Interface of New System}
 
 \begin{figure}
-\centering
-\includegraphics[scale=0.5]{./figures/score&sorting.png}
-\caption{Class Diagrams of CandidateScores and CandidateSorting} \label{fig:scoreandsorting} 
-\end{figure}
+ \centering
+ \includegraphics[width=13cm,height=15cm,keepaspectratio]{./figures/newsearch.png}
+ \caption{New Facets : Experts In Response to ``information retrieval'' Query} \label{fig:newsearch} 
+ \end{figure}
+ Figure~\ref{fig:newsearch} shows a new facet in response to a query ``information retrieval''. The number of 
+projects experts have been involved in is displayed. In addition to the current system filter modes, filter options by using projects, publications and both
+expertise evidence, and by projects' total funding are added on the right panel of the page.
+
+ \begin{figure}
+ \centering
+ \includegraphics[width=13cm,height=15cm,keepaspectratio]{./figures/newProfilePagePublication.png}
+ \caption{New Expert's Profile Facet} \label{fig:newProfilePage} 
+ \end{figure}
+ Figure~\ref{fig:newProfilePage} shows a new facet of profile page. There are 2 tabs for publications and funded projects and a drop down box for selecting
+ result filter modes. The number of projects, project collaborators, project period and total funding are shown.
+ 
+ \begin{figure}
+ \centering
+ \includegraphics[width=13cm,height=15cm,keepaspectratio]{./figures/newPofilePageProject.png}
+ \caption{Project Tab} \label{fig:newPofilePageProject} 
+ \end{figure}
+ Figure~\ref{fig:newPofilePageProject} shows a facet when a project tab is selected. The right hand side of the page shows the most project collaborators
+ and other filter modes: filter projects by amount of funding and by the status of projects.
+ 
+ \begin{figure}
+ \centering
+ \includegraphics[width=13cm,height=15cm,keepaspectratio]{./figures/newProfileSelectedProject.png}
+ \caption{Project Page} \label{fig:newProfileSelectedProject} 
+ \end{figure}
+ 
+ Figure~\ref{fig:newProfileSelectedProject} shows a facet when user selects a project link. This shows descriptions of a selected project.
+ The descriptions include:
+ \begin{itemize}
+  \item Funder
+  \item Title
+  \item Funded Value
+  \item Funded Period
+  \item Status
+  \item Grant Category
+  \item People involved in the project
+  \item Abstract
+  \item Impact
+ \end{itemize}
+ Some projects descriptions are not shown if they are missing.
 
 
 

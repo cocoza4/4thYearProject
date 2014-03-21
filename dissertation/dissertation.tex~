@@ -1,12 +1,12 @@
-% \documentclass[a4paper,10pt]{article}
 \documentclass{l4proj}
 \usepackage[utf8]{inputenc}
 \usepackage{graphicx}
 \usepackage{url}
 \usepackage{mathtools}
+\usepackage{color}
 
-\renewcommand\thesection{\arabic{section}}
-\renewcommand\thesubsection{\arabic{section}.\arabic{subsection}}
+% \renewcommand\thesection{\arabic{section}}
+% \renewcommand\thesubsection{\arabic{section}.\arabic{subsection}}
 % \renewcommand\thesubsubsection{\arabic{section}.\arabic{subsection}}
 % \setcounter{secnumdepth}{5}
 % \setcounter{tocdepth}{4}

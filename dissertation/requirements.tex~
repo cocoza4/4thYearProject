@@ -1,14 +1,14 @@
 
 \chapter{Current System and Proposals, Requirements and Design of New System}\label{sec:currentsystemandproposals}
 
-\section{Current System}
+\section{Current System}\label{sec:currentsystem}
 This section is intended to give some statistics and briefly discuss design of the current system. Table~\ref{table:currentstats} gives statistics 
 of current system.
 \begin{table}
 \centering
 \begin{tabular}{|c|c|}
 \hline Number of experts & 1569 \\
-\hline Number of publications UK & 22225 \\
+\hline Number of publications & 22225 \\
 \hline Number of all documents   & 24823 \\ 
 \hline Number of tokens (terms) & 6876832 \\
 \hline
@@ -136,7 +136,7 @@ applied with learning to rank technique to obtain optimal ranking.
  \caption{Design of Current System} \label{fig:newDesign} 
 \end{figure}
 
-\paragraph{Retrieving Documents (Experts) with Respect to a Query} 
+\paragraph{Retrieving Documents (Experts) with Respect to a Query} \hspace{0pt} \\
 
 \begin{figure}
 \centering
@@ -153,7 +153,7 @@ In the previous section, we gave a broad view of the new system retrieval scheme
 obtain results from user query and apply them to learning to rank technique to obtain optimal ranking.
 Figure~\ref{fig:quering} shows the process of obtaining documents (experts) with respect to a query. 
 
-Given a query $Q$, it is transformed into publication query $Q_{pub}$, using only publications as expertise evidence and project
+Given a query $\vec{q}$, it is transformed into publication query $Q_{pub}$, using only publications as expertise evidence and project
 query $Q_{proj}$, using only funded projects as expertise evidence. 
 AcademTechQuerying Class then processes both $Q_{pub}$ and $Q_{proj}$. The results of both
 queries are then unioned, denoted $R_{pub,proj}(Q)$ as shown in Figure ~\ref{fig:union}. The results obtained are based on query dependent features as discussed in section 

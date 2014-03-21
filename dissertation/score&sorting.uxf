@@ -4,8 +4,8 @@
   <element>
     <type>com.umlet.element.Class</type>
     <coordinates>
-      <x>150</x>
-      <y>30</y>
+      <x>20</x>
+      <y>310</y>
       <w>640</w>
       <h>250</h>
     </coordinates>
@@ -32,10 +32,10 @@ _cands:Hashtable&lt;String, Candidate&gt;, lm:LearnedModel) : Map&lt;String, Dou
   <element>
     <type>com.umlet.element.Class</type>
     <coordinates>
-      <x>270</x>
-      <y>340</y>
+      <x>580</x>
+      <y>30</y>
       <w>410</w>
-      <h>150</h>
+      <h>160</h>
     </coordinates>
     <panel_attributes>CandidateSorting
 --
@@ -49,5 +49,39 @@ _cands:Hashtable&lt;String, Candidate&gt;, lm:LearnedModel) : Map&lt;String, Dou
 - merge(i : int, j : int, k : int) : void
 </panel_attributes>
     <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>50</x>
+      <y>30</y>
+      <w>500</w>
+      <h>190</h>
+    </coordinates>
+    <panel_attributes>LearnedModel
+--
+- pubScore : double
+- projScore : double
+- projFundingScore : double
+- pubCoauthorScore : double
+- projCoauthorScore : double
+- numberOfProjScore : double
+- numberOfPubScore : double
+--
++ LearnedModel(pub : double, proj : double, projFunding : double,
+pubCo : double, projCo : double, numProj : double, numPub : double)
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>260</x>
+      <y>200</y>
+      <w>50</w>
+      <h>130</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.</panel_attributes>
+    <additional_attributes>30;30;30;110</additional_attributes>
   </element>
 </diagram>

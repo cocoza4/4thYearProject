@@ -177,15 +177,26 @@ seems to be the most natural way to quantify uncertainty~\cite[P. 7]{probModel}.
 
 %Let $x$ be a document in the collection, $R_{d\vec{q}}$ represent the \textit{relevance} of a document $d$ with respect to query $\vec{q}$. 
 
-\begin{equation}~\label{eq:BM25}
-\sum_{t \in \vec{q}} log \frac{r_t/(R - r_t)}{(n_t - r_t)/(N - n_t - R + r_t)} \frac{(k_1 + 1)tf_{td}}{K + tf_{td}} \frac{k_2 + 1)tf_{tq}}{k_2 + tf_{tq}}
+\begin{equation}\label{eq:BM25}
+\sum_{t \in \vec{q}} log_2 \frac{r_t/(R - r_t)}{(n_t - r_t)/(N - n_t - R + r_t)} \frac{(k_1 + 1)\cdot tf_{td}}{K + tf_{td}} \frac{k_2 + 1)\cdot tf_{tq}}{k_2 + tf_{tq}}
 \end{equation}
 where $K$ = $k_t((1 - b) + b\frac{dl}{avdl})$, $tf_tq$ and $tf_td$ are the frequency of term $t$ in the query $\vec{q}$ and document $d$ respectively,
 and $b$, $dl$ and $avdl$ are paraameters set empirically. The proof of BM25 is beyond the scope of the project.
 
 \paragraph{PL2} \hspace{0pt} \\
 PL2 is a model from the divergence from randomness framework, based on a poisson distribution~\cite{craig}. This project uses PL2 weight model to 
-calculate score. This model is also probabilistic approach. The proof and explanation are out of the scope of the project.
+calculate document scores. This model is also a probabilistic approach. Given a document $d$ and a query $\vec{q}$, the formula of PL2~\cite[P. 23-24]{craigthesis} is given below:
+
+\begin{equation}\label{eq:pl2}
+ score(d, \vec{q}) = \sum_{t \in \vec{q}} qtw\cdot \frac{1}{tfn + 1}(tfn\cdot log_2\frac{tfn}{\lambda} + 
+ (\lambda - tfn)\cdot log_2e + 0.5\cdot log_2(2\pi \cdot tfn))
+\end{equation}
+where $\lambda$ is the mean and variance of a Poisson distribution, and the query weight term $qtw$ is given by $qtf/qtf_{max}$.
+$qtf$ is the query term frequency. $qtf_{max}$ is the maximum query term frequency among the query terms. From equation~\ref{eq:pl2}, 
+\[tfn = tf\cdot log_2(1 + c\cdot \frac{avgl}{l}), c > 0\]
+where $tf$ is the actual term frequency of the term $t$ in document $d$ and $l$ is the length of thedocument in tokens. $avgl$ is the average document length in the whole collection.
+$c$ is the hyper-parameter that controls the normalisation applied to the term frequencywith respect to the document length.
+The proof and explanation are out of the scope of the project.
 
 
 \subsection{Retrieval Process in Information Retrieval}\label{section:retrieving}
@@ -322,6 +333,45 @@ In learning to rank, this is called query dependent feature~\cite{craig}.
 In contrast to Query Dependent Feature, a feature that does not depend on a user query is called query independent feature~\cite{craig}. This feature is fixed for each
 document. For now, it is better to not dig into great details about this because this will be focused in later section.
 
+\subsection{Learning to Rank (LETOR) File Format}\label{sec:letorFile}
+From the previous 2 sections, we now know what query dependent and query independent features are. In this section, we will talk about how these features
+are formatted in a file called \textbf{LETOR file}. The LETOR file is then learned to obtain a model file (see next section).
+The following is the format of LETOR file:
+
+\begin{quotation}
+\noindent\#feature\_num1:feature\_name1 \\
+\#feature\_num2:feature\_name2 \\
+graded\_relevance\_value qid:query feature\_num1:feature\_name1\_score feature\_num2:feature\_name2\_score \#docno = document\_id
+\end{quotation}
+
+In this LETOR file, there are 2 features, \textit{feature\_name1} and \textit{feature\_name2}. In LETOR file, items after a hash key are ignored.
+The lines not preceded by hash key are learned. They represent documents with scores
+of each feature. \textit{graded\_relevance\_value} is a label which indicates the degree of relevancy (see last section).
+If the label is 0, it means the document is irrelevant with respect to a query. If it is 1, the document is relevant. 
+In this project, \textit{graded\_relevance\_value} range from 0 to 2 in order of 
+the degree of relevancy. To the left of the label is a \textit{query} preceded by \textit{$qid:$} and scores of each feature associated to a document.
+There can be any number of documents in the LETOR file.
+
+\subsection{Learning to Rank (LETOR) Model File Format}
+After a LETOR file is learned, we obtain a \textit{Learned Model}. This section aims to show some learned model file formats.
+\begin{quotation}
+\noindent \#\# Coordinate Ascent \\
+\#\# Restart = 2 \\
+\#\# MaxIteration = 25 \\
+\#\# StepBase = 0.05 \\
+\#\# StepScale = 2.0 \\
+\#\# Tolerance = 0.001 \\
+\#\# Regularized = false \\
+\#\# Slack = 0.001 \\
+1:0.64 2:4.34 3:4.3 4:2.0 5:1.2 6:9.1 7:3.3
+\end{quotation}
+The lines preceded are ignored. The above learned model applies \textit{Coordinate Ascent} LETOR technique. Knowing what parameters preceded by a hash key
+mean is out of the scope of the project. We only take lines not preceded by a hash key into account. According to the above learned model, there are
+7 features (1 to 7). The floating values associated to each feature indicate a score of the feature. However, some LETOR algorithms might produce
+duplicate features such as \textit{1:0.64 2:4.34 3:4.3 4:2.0 5:1.2 6:9.1 7:3.3 1:1.2 5:3.2}. In this case, we sum up values corresponding
+to the feature, giving \textit{1:1.84 2:4.34 3:4.3 4:2.0 5:4.4 6:9.1 7:3.3}.
+
+
 \subsection{Obtaining and Deploying a Learned Model} \label{sec:learnedmodel}
 The general steps for obtaining a learned model using a learning to rank technique are the following~\cite[P. 4]{learningmodel}:
 
@@ -348,10 +398,16 @@ Once a learned model has been obtained from the above learning steps, it can be 
 Figure~\ref{fig:letor} illustrates an architecture of a machine-learned IR system. How this architecture links to our approach will be discussed in
 section~\ref{section:implementation}.
 
+\subsection{Applying a Learned Model}\label{sec:background_applyLearnedModel}
+Once a learned model has been generated, then for each document, the scores of each feature are multiplied by ones in the learned model and accumulated.
+Finally, the accumulated scores for each document are sorted in descending order and documents with the high scores are ranked above
+those with low scores.
+
+
 \section{Tools}
 This section will discussed tools used in this project. They are search engine platform Terrier, learning to rank library RankLib and evaluation tool,
 trec\_eval.
-\subsection{Terrier}\label{section:terrier}
+\subsection{Terrier}\label{section:terrier} \hspace{0pt} \\
 Every IR system requires programs that handle indexing, retrieving, ranking, etc. To build everything from scratch, it would be impossible within
 the 1 year duration. However, there are a number of search engine platforms that deal with IR functionalities effectively.
 Terrier~\cite{terrier} was chosen because it is a highly flexible, efficient, and effective open source search engine.

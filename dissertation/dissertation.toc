@@ -17,50 +17,52 @@
 \contentsline {paragraph}{PL2}{ix}
 \contentsline {subsection}{\numberline {2.1.3}Retrieval Process in Information Retrieval}{ix}
 \contentsline {subsection}{\numberline {2.1.4}Evaluation}{x}
-\contentsline {subsubsection}{Precision and Recall}{x}
-\contentsline {paragraph}{Mean Average Precision (MAP)}{xi}
+\contentsline {subsubsection}{Precision and Recall}{xi}
+\contentsline {paragraph}{Mean Average Precision (MAP)}{xii}
 \contentsline {paragraph}{Mean Reciprocal Rank (MRR)}{xii}
 \contentsline {paragraph}{Normalized Discounted Cumulative Gain (NDCG or nDCG)}{xii}
 \contentsline {section}{\numberline {2.2}Learning to Rank (LETOR)}{xii}
-\contentsline {subsection}{\numberline {2.2.1}Query Dependent Feature}{xii}
+\contentsline {subsection}{\numberline {2.2.1}Query Dependent Feature}{xiii}
 \contentsline {subsection}{\numberline {2.2.2}Query Independent Feature}{xiii}
-\contentsline {subsection}{\numberline {2.2.3}Obtaining and Deploying a Learned Model}{xiii}
+\contentsline {subsection}{\numberline {2.2.3}Learning to Rank (LETOR) File Format}{xiii}
+\contentsline {subsection}{\numberline {2.2.4}Learning to Rank (LETOR) Model File Format}{xiii}
+\contentsline {subsection}{\numberline {2.2.5}Obtaining and Deploying a Learned Model}{xiv}
+\contentsline {subsection}{\numberline {2.2.6}Applying a Learned Model}{xiv}
 \contentsline {section}{\numberline {2.3}Tools}{xiv}
-\contentsline {subsection}{\numberline {2.3.1}Terrier}{xiv}
-\contentsline {paragraph}{Terrier Indexing}{xiv}
-\contentsline {subsection}{\numberline {2.3.2}RankLib}{xv}
-\contentsline {subsection}{\numberline {2.3.3}trec\_eval}{xv}
-\contentsline {section}{\numberline {2.4}Expert Search}{xvi}
-\contentsline {subsection}{\numberline {2.4.1}Presenting Query Results}{xvi}
-\contentsline {subsection}{\numberline {2.4.2}Voting Technique}{xvii}
-\contentsline {chapter}{\numberline {3}Current System and Proposals, Requirements and Design of New System}{xix}
-\contentsline {section}{\numberline {3.1}Current System}{xix}
-\contentsline {paragraph}{Design and Architecture of Current System}{xix}
-\contentsline {section}{\numberline {3.2}Expert Search Indicators of New System}{xxii}
-\contentsline {subsection}{\numberline {3.2.1}Requirements Specification}{xxii}
-\contentsline {paragraph}{Functional Requirements}{xxii}
-\contentsline {subsubsection}{Must Have}{xxiii}
-\contentsline {subsubsection}{Should Have}{xxiii}
-\contentsline {subsubsection}{Could Have}{xxiii}
-\contentsline {subsubsection}{Would Like to Have}{xxiii}
-\contentsline {paragraph}{Non-functional Requirements}{xxiii}
-\contentsline {subsection}{\numberline {3.2.2}Design and Architecture of New System}{xxiii}
-\contentsline {paragraph}{Retrieving Documents (Experts) with Respect to a Query}{xxiii}
-\contentsline {chapter}{\numberline {4}Implementation}{xxvi}
-\contentsline {section}{\numberline {4.1}Overview of Important Class Diagrams}{xxvi}
-\contentsline {section}{\numberline {4.2}Data Extraction}{xxviii}
-\contentsline {paragraph}{AcademicsHashTable}{xxviii}
-\contentsline {paragraph}{GtRHashTable}{xxviii}
-\contentsline {paragraph}{GOWHashTable}{xxviii}
-\contentsline {paragraph}{SSProjectsExtractor}{xxviii}
-\contentsline {paragraph}{GtRProjectWrapper}{xxviii}
-\contentsline {paragraph}{ProjectExtractor}{xxix}
-\contentsline {section}{\numberline {4.3}Indexing}{xxix}
-\contentsline {section}{\numberline {4.4}Producing a Learned Model}{xxix}
-\contentsline {section}{\numberline {4.5}Applying a Learned Model}{xxx}
-\contentsline {section}{\numberline {4.6}Evaluation}{xxxii}
-\contentsline {subsection}{\numberline {4.6.1}Experimental Setting}{xxxiii}
-\contentsline {subsubsection}{Training Queries}{xxxiii}
-\contentsline {subsubsection}{Testing Queries}{xxxiv}
-\contentsline {subsection}{\numberline {4.6.2}Experimental Results}{xxxiv}
-\contentsline {subsection}{\numberline {4.6.3}User Interface of New System}{xxxiv}
+\contentsline {subsection}{\numberline {2.3.1}Terrier}{xv}
+\contentsline {paragraph}{Terrier Indexing}{xv}
+\contentsline {subsection}{\numberline {2.3.2}RankLib}{xvi}
+\contentsline {subsection}{\numberline {2.3.3}trec\_eval}{xvi}
+\contentsline {section}{\numberline {2.4}Expert Search}{xvii}
+\contentsline {subsection}{\numberline {2.4.1}Presenting Query Results}{xvii}
+\contentsline {subsection}{\numberline {2.4.2}Voting Technique}{xviii}
+\contentsline {chapter}{\numberline {3}Current System and Proposals, Requirements and Design of New System}{xx}
+\contentsline {section}{\numberline {3.1}Current System}{xx}
+\contentsline {paragraph}{Design and Architecture of Current System}{xx}
+\contentsline {section}{\numberline {3.2}Expert Search Indicators of New System}{xxiii}
+\contentsline {subsection}{\numberline {3.2.1}Requirements Specification}{xxiii}
+\contentsline {paragraph}{Functional Requirements}{xxiii}
+\contentsline {subsubsection}{Must Have}{xxiv}
+\contentsline {subsubsection}{Should Have}{xxiv}
+\contentsline {subsubsection}{Could Have}{xxiv}
+\contentsline {subsubsection}{Would Like to Have}{xxiv}
+\contentsline {paragraph}{Non-functional Requirements}{xxiv}
+\contentsline {subsection}{\numberline {3.2.2}Design and Architecture of New System}{xxiv}
+\contentsline {paragraph}{Retrieving Documents (Experts) with Respect to a Query}{xxiv}
+\contentsline {chapter}{\numberline {4}Implementation}{xxvii}
+\contentsline {section}{\numberline {4.1}Overview of Important Class Diagrams}{xxvii}
+\contentsline {section}{\numberline {4.2}Data Extraction}{xxix}
+\contentsline {section}{\numberline {4.3}Indexing}{xxxi}
+\contentsline {paragraph}{ContactsList.trec.gz}{xxxi}
+\contentsline {paragraph}{Homepages.trec.gz}{xxxi}
+\contentsline {paragraph}{Projects.trec.gz}{xxxii}
+\contentsline {paragraph}{Publications.trec.gz}{xxxii}
+\contentsline {paragraph}{association.txt}{xxxiii}
+\contentsline {section}{\numberline {4.4}Producing a Learned Model}{xxxiii}
+\contentsline {section}{\numberline {4.5}Applying a Learned Model}{xxxiv}
+\contentsline {section}{\numberline {4.6}User Interface of New System}{xxxvi}
+\contentsline {chapter}{\numberline {5}Evaluation}{xxxix}
+\contentsline {section}{\numberline {5.1}Experimental Setting}{xxxix}
+\contentsline {subsection}{\numberline {5.1.1}Training Queries}{xl}
+\contentsline {subsection}{\numberline {5.1.2}Testing Queries}{xl}
+\contentsline {section}{\numberline {5.2}Experimental Results}{xl}

@@ -1,63 +1,63 @@
 
-\section{Evaluation}\label{sec:evaluation}
+\chapter{Evaluation}\label{sec:evaluation}
 
-Before we discuss evaluation, we should have some goals set up. This is necessary because evaluation results can be compared against the goals in order to
-conclude whether all goals are met or not. As stated in section~\ref{section:aims}, our goal is to integrate new kind of expertise evidence, funded projects,
-with existing expertise evidence, publications to enhance the performance of the retrieval system. At the end of this section, we have to be able to 
-answer the following questions:
+Before we discuss evaluation, we should have some goals set up. This is necessary because the evaluation results can be compared against the goals in order to
+conclude whether all goals are achieved or not. As stated in section~\ref{section:aims}, our goal is to integrate new kind of expertise evidence, funded projects,
+with existing expertise evidence, publications, to enhance the performance of the retrieval system. At the end of this section, we have to be able to 
+answer the following question:
 
-\begin{itemize}
- \item Does integrating funded projects with publications using learning to rank technique (LETOR) help improve the performance of the retrieval system?
-\end{itemize}
+\begin{quotation}
+ \textit{Does integrating funded projects with publications using learning to rank technique (LETOR) help improve the performance of the retrieval system?}
+\end{quotation}
 
 
-\subsection{Experimental Setting}
+\section{Experimental Setting}
 This section is aimed to demonstrate that applying LETOR techinque improves the performance of the retrieval system. To evaluate this, we use LETOR
 technique proposed in section~\ref{sec:letor}. Basically, there are 2 datasets: training and testing datasets. In IR, 
 we refer them as training and testing queries. The following is a list of steps in running an evaluation:
 \begin{enumerate}
  \item generate a LETOR file for testing queries.
  \item from the LETOR file obtained from (1), generate a qrels file as discussed in section~\ref{sec:treceval}.
- \item generate 2 learned models~\ref{section:producelearnedmodel} from training queries using AdaRank, and Coordinate Ascent algorithms.
+ \item generate 2 learned models (see section~\ref{section:producelearnedmodel}) from training queries using AdaRank, and Coordinate Ascent algorithms.
  \item apply each learned model to all testing queries.
- \item for each test in (4), generate a score file of each test using RankLib~\ref{section:rankLib} and generate a result file in TREC format~\ref{sec:treceval}
- \item evaluate each test using trec\_eval~\ref{sec:treceval}
+ \item for each test in (4), generate a scores file of each test using RankLib and generate a result file in TREC format~\ref{sec:treceval}
+ \item evaluate the result file in TREC format with the qrels file for each test using trec\_eval~\ref{sec:treceval}.
 \end{enumerate}
 
 To evaluate without using LETOR (using only publications as expertise evidence), we can set other features apart from publication query feature to 0
 and perform step (5) and (6).
 
-%After a learned model has been generated using training queries~\ref{section:producelearnedmodel},
-\subsubsection{Training Queries}
-34 queries shown in table ~\ref{table:trainingqueries} are used for training. They are trained by the tool called RankLib (section~\ref{section:rankLib}) to get a learned model. 
-This process is performed only one time.
+\subsection{Training Queries}
+34 queries shown in table~\ref{table:trainingqueries} are used for training. Some of them are given by Dr. Craig Macdonald. The relevant experts of each
+traning query is obtained manually by using current system. We also visit experts' homepage to ensure that his expertise is matched to the query.
+The training queries annotated by * denote queries whose relevant experts are only from University of Glasgow. 
 \begin{table}
 \centering
 \begin{tabular}{|c|l|c|l|}
 \hline \textbf{\#} & \textbf{Query} & \textbf{\#} & \textbf{Query} \\
-\hline 1 & language modelling & 18 & game theory\\
-\hline 2 & manets & 19 & stable marriage \\
-\hline 3  & match & 20 & quantum computation\\ 
-\hline 4  & multimodal & 21 & constraint modelling\\ 
-\hline 5  & music as navigation cues & 22 & home networks\\ 
+\hline 1 & *language modelling & 18 & game theory\\
+\hline 2 & *manets & 19 & stable marriage \\
+\hline 3  & *match & 20 & quantum computation\\ 
+\hline 4  & *multimodal & 21 & constraint modelling\\ 
+\hline 5  & *music as navigation cues & 22 & home networks\\ 
 \hline 6  & networking security & 23 & wireless sensor networks\\ 
 \hline 7  & neural network & 24 & distributed systems\\ 
-\hline 8  & older adults use of computers & 25 & operating system\\ 
-\hline 9  & parallel logic programming & 26 & terrier\\ 
-\hline 10  & query expansion & 27 & text searching\\ 
-\hline 11  & road traffic accident statistics & 28 & trec collection class\\ 
-\hline 12  & shoogle & 29 & usability\\ 
-\hline 13  & skill-based behavior & 30 & utf support terrier\\ 
-\hline 14  & sound in multimedia human-computer interfaces & 31 & visual impairment\\ 
-\hline 15  & statistical inference & 32 & wafer fab cost \\ 
-\hline 16  & suffix tree & 33 & database\\ 
+\hline 8  & *older adults use of computers & 25 & operating system\\ 
+\hline 9  & *parallel logic programming & 26 & *terrier\\ 
+\hline 10  & *query expansion & 27 & *text searching\\ 
+\hline 11  & *road traffic accident statistics & 28 & *trec collection class\\ 
+\hline 12  & *shoogle & 29 & *usability\\ 
+\hline 13  & *skill-based behavior & 30 & *utf support terrier\\ 
+\hline 14  & *sound in multimedia human-computer interfaces & 31 & *visual impairment\\ 
+\hline 15  & statistical inference & 32 & *wafer fab cost \\ 
+\hline 16  & *suffix tree & 33 & database\\ 
 \hline 17  & mobile hci & 34 & programming languages\\ 
 \hline
 \end{tabular}
 \caption{Training Queries} \label{table:trainingqueries}
 \end{table}
 
-\subsubsection{Testing Queries}
+\subsection{Testing Queries}
 33 queries are used for testing as shown in table~\ref{table:testingqueries}.
 \begin{table}
 \centering
@@ -85,7 +85,7 @@ This process is performed only one time.
 \caption{Testing Queries} \label{table:testingqueries}
 \end{table}
 
-\subsection{Experimental Results}
+\section{Experimental Results}
 
 \begin{table}
 \centering
@@ -126,74 +126,37 @@ performance. Therefore, the answer to question is NO, using LETOR technique does
 \hline eurosys 2008 & 0.0055 & 0.0055 & 1.0000 & 1.0000 & 1.0000 & 1.0000 \\
 \hline expert search & 0.0107 & 0.0075 & 0.5037 & 1.0000 & 0.5227 & 1.0000 \\
 \hline facial reconstruction & 0.0039 & 0.0039 & 0.0021 & 0.0021 & 0.2000 & 0.2000 \\
-\hline force feedback & 0.0073 & 0.0050 & 0.6429 & 1.0000 & 0.6250 & 1.0000 \\
+\hline force feedback & 0.0073 & 0.0050 & \textcolor{ForestGreen}{0.6429} & 1.0000 & 0.6250 & 1.0000 \\
 \hline functional programming & 0.0244 & 0.0112 & 0.1687 & 0.2000 & 0.2038 & 0.1429 \\
 \hline glasgow haskell compiler & 0.0101 & 0.0101 & 0.3333 & 0.3333 & 0.5000 & 0.5000 \\
 \hline grid computing & 0.0123 & 0.0083 & 0.3095 & 0.3333 & 0.3333 & 0.3333 \\
 \hline group response systems & 0.0054 & 0.0054 & 0.5000 & 0.5000 & 0.5000 & 0.5000 \\
 \hline handwriting pin & 0.0054 & 0.0038 & 1.0000 & 1.0000 & 1.0000 & 1.0000 \\
-\hline haptic visualisation & 0.0224 & 0.0102 & 0.6111 & 1.0000 & 0.5861 & 1.0000 \\
+\hline haptic visualisation & 0.0224 & 0.0102 & \textcolor{ForestGreen}{0.6111} & 1.0000 & 0.5861 & 1.0000 \\
 \hline haptics & 0.0407 & 0.0133 & 0.4929 & 0.5000 & 0.5819 & 0.5000 \\
 \hline hci issues in mobile devices & 0.0268 & 0.0091 & 0.5821 & 1.0000 & 0.6160 & 1.0000 \\
-\hline human error health care & 0.0064 & 0.0064 & 0.5821 & 1.0000 & 0.3333 & 0.3333 \\
-\hline information extraction & 0.0069 & 0.0050 & 0.3333 & 0.3333 & 0.2500 & 0.2500 \\
-\hline information retrieval & 0.0308 & 0.0102 & 0.7496 & 1.0000 & 0.7468 & 1.0000 \\
+\hline human error health care & 0.0064 & 0.0064 & \textcolor{ForestGreen}{0.5821} & \textcolor{ForestGreen}{1.0000} & 0.3333 & 0.3333 \\
+\hline information extraction & 0.0069 & 0.0050 & \textcolor{ForestGreen}{0.3333} & \textcolor{ForestGreen}{0.3333} & 0.2500 & 0.2500 \\
+\hline information retrieval & 0.0308 & 0.0102 & \textcolor{ForestGreen}{0.7496} & 1.0000 & 0.7468 & 1.0000 \\
 \hline information security & 0.0163 & 0.0120 & 0.7333 & 1.0000 & 0.7333 & 1.0000 \\
 \hline machine translation & 0.0117 & 0.0118 & 1.0000 & 1.0000 & 1.0000 & 1.0000 \\
-\hline robotics & 0.0404 & 0.1111 & 0.5565 & 1.0000 & 0.5523 & 1.0000\\
+\hline robotics & 0.0404 & 0.1111 & \textcolor{ForestGreen}{0.5565} & 1.0000 & 0.5523 & 1.0000\\
 \hline
 
 \end{tabular}
 \caption{Evaluation Results of Each Testing Query} \label{table:eachqueryevaluationresult}
 \end{table}
 
-Table~\ref{table:eachqueryevaluationresult} shows the evaluation results of each testing query. It has shown that similar to Table~\ref{table:evaluationresult},
-without LETOR technique is better than using LETOR technique.
+Table~\ref{table:eachqueryevaluationresult} shows the evaluation results of each testing query. Numbers hilighted in \textcolor{ForestGreen}{green}
+are numbers higher than ones without LETOR. It has shown that applying LETOR technique using
+Coordinate Ascent algorithm to the testing queries given below outperformed ones without LETOR technique considering MAP values:
+\begin{itemize}
+ \item force feedback
+ \item haptic visualisation
+ \item human error heath care
+ \item information extraction
+ \item information retrieval
+ \item robotics
+\end{itemize}
 
-\subsection{User Interface of New System}
 
-\begin{figure}
- \centering
- \includegraphics[width=13cm,height=15cm,keepaspectratio]{./figures/newsearch.png}
- \caption{New Facets : Experts In Response to ``information retrieval'' Query} \label{fig:newsearch} 
- \end{figure}
- Figure~\ref{fig:newsearch} shows a new facet in response to a query ``information retrieval''. The number of 
-projects experts have been involved in is displayed. In addition to the current system filter modes, filter options by using projects, publications and both
-expertise evidence, and by projects' total funding are added on the right panel of the page.
-
- \begin{figure}
- \centering
- \includegraphics[width=13cm,height=15cm,keepaspectratio]{./figures/newProfilePagePublication.png}
- \caption{New Expert's Profile Facet} \label{fig:newProfilePage} 
- \end{figure}
- Figure~\ref{fig:newProfilePage} shows a new facet of profile page. There are 2 tabs for publications and funded projects and a drop down box for selecting
- result filter modes. The number of projects, project collaborators, project period and total funding are shown.
- 
- \begin{figure}
- \centering
- \includegraphics[width=13cm,height=15cm,keepaspectratio]{./figures/newPofilePageProject.png}
- \caption{Project Tab} \label{fig:newPofilePageProject} 
- \end{figure}
- Figure~\ref{fig:newPofilePageProject} shows a facet when a project tab is selected. The right hand side of the page shows the most project collaborators
- and other filter modes: filter projects by amount of funding and by the status of projects.
- 
- \begin{figure}
- \centering
- \includegraphics[width=13cm,height=15cm,keepaspectratio]{./figures/newProfileSelectedProject.png}
- \caption{Project Page} \label{fig:newProfileSelectedProject} 
- \end{figure}
- 
- Figure~\ref{fig:newProfileSelectedProject} shows a facet when user selects a project link. This shows descriptions of a selected project.
- The descriptions include:
- \begin{itemize}
-  \item Funder
-  \item Title
-  \item Funded Value
-  \item Funded Period
-  \item Status
-  \item Grant Category
-  \item People involved in the project
-  \item Abstract
-  \item Impact
- \end{itemize}
- Some projects descriptions are not shown if they are missing.

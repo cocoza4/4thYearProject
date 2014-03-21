@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="11.5">
+  <zoom_level>10</zoom_level>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>450</x>
+      <y>320</y>
+      <w>400</w>
+      <h>110</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;abstract&gt;&gt;
+TableFactory
+--
+_+ getLearnedModel() : LearnedModel_
+_+ getProjects() : Hashtable&lt;String, Project&gt;_
+_+ getCandidates() : Hashtable&lt;String, Candidate&gt;_
+_+ getPublications() : Hashtable&lt;String, Publication&gt;_
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>350</x>
+      <y>40</y>
+      <w>580</w>
+      <h>190</h>
+    </coordinates>
+    <panel_attributes>Search
+--
+_- candidates : Hashtable&lt;String, Candidate&gt;_
+_- publications : Hashtable&lt;String, Publication&gt;_
+_- projects : Hashtable&lt;String, Project&gt;_
+_- learnedModel : learnedModel_
+_- candidateIds : String[]_
+--
+- doInit() : void
+- processQuery() : void
+- logQuery(query : String, sessionId : String, look : String, numResults : int) : void
+# doGet(request : HttpServletRequest, response : HttpServletResponse) : void
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>20</x>
+      <y>80</y>
+      <w>230</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;abstract&gt;&gt;
+javax.servlet.http.HttpServlet
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>230</x>
+      <y>70</y>
+      <w>130</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>30;30;110;30</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>620</x>
+      <y>210</y>
+      <w>50</w>
+      <h>120</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.</panel_attributes>
+    <additional_attributes>30;100;30;30</additional_attributes>
+  </element>
+</diagram>

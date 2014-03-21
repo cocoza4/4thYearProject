@@ -18,6 +18,11 @@
   howpublished = "\url{http://trec.nist.gov/data/qrels_eng/}"
 }
 
+@misc{resultfileformat,
+  title = {TREC Result File Format},
+  howpublished = "\url{http://ir.iit.edu/~dagr/cs529/files/project_files/trec_eval_desc.htm}"
+}
+
 @misc{sicsa,
   title = {The Scottish Informatics and Computer Science Alliance (SICSA)},
   howpublished = "\url{http://www.sicsa.ac.uk/home/}"
@@ -155,6 +160,13 @@
   title = {Conversation of Dr. Craig Macdonald},
   year = {2014}
 }
+
+@phdthesis{craigthesis,
+  title = {The Voting Model for PeopleSearch},
+  year = {2009},
+  author = {Craig Macdonald}
+}
+  
  
 @misc{polymorphism,
   title = {Polymorphism},
