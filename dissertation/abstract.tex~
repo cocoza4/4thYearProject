@@ -1,5 +1,5 @@
-This project is concerned with development of mining academic expertise in Scottish universities from funded research.
-This system can be used to find experts in particular areas in Scottish universities. 
+This project is concerned with development of mining academic expertise in Scottish Universities from funded research.
+This system can be used to extract, analyse and find experts in particular areas in Scottish Universities. 
 http://experts.sicsa.ac.uk/ is an existing academic search engine 
 that assists in identifying the relevant experts within Scottish Universities, based on their recent publication output. 
 The aim of this project is to develop mining tools for the data, and research ways to integrate it with existing deployed academic search engines 

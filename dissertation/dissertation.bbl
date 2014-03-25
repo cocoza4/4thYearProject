@@ -8,8 +8,22 @@ Engineering and physical sciences research council (epsrc).
 Information retrieval.
 \newblock \url{http://en.wikipedia.org/wiki/Information_retrieval}.
 
+\bibitem{kfoldcv}
+K-fold cross-validation.
+\newblock
+  \url{http://en.wikipedia.org/wiki/Cross-validation_(statistics)#K-fold_cross-validation}.
+
+\bibitem{letorWiki}
+Learning to rank.
+\newblock \url{http://en.wikipedia.org/wiki/Learning_to_rank}.
+
+\bibitem{mergesort}
+Merge sort.
+\newblock \url{http://en.wikipedia.org/wiki/Merge_sort}.
+
 \bibitem{polymorphism}
 Polymorphism.
+\newblock \url{http://en.wikipedia.org/wiki/Polymorphism_(computer_science)}.
 
 \bibitem{qrels}
 qrels file.
@@ -41,8 +55,8 @@ Terrier.
 \newblock \url{http://www.terrier.org/}.
 
 \bibitem{trec}
-Text retrieval conference.
-\newblock \url{http://trec.nist.gov/}.
+The text retrieval conference (trec).
+\newblock \url{http://trec.nist.gov/overview.html}.
 
 \bibitem{resultfileformat}
 Trec result file format.
@@ -50,10 +64,14 @@ Trec result file format.
   \url{http://ir.iit.edu/~dagr/cs529/files/project_files/trec_eval_desc.htm}.
 
 \bibitem{evalweb}
-Information retrieval system evaluation, 2009.
+Information retrieval system evaluation.
+\newblock
+  \url{http://nlp.stanford.edu/IR-book/html/htmledition/information-retrieval-system-evaluation-1.html},
+  2009.
 
 \bibitem{invertedindex}
-Inverted index, 2012.
+Inverted index.
+\newblock \url{http://en.wikipedia.org/wiki/Inverted_index}, 2012.
 
 \bibitem{craig}
 Conversation of dr. craig macdonald, 2014.
@@ -109,6 +127,16 @@ Prof. Joemon~M Jose.
 Prof. Joemon~M Jose.
 \newblock Probabilistic retrieval model, 2013.
 
+\bibitem{jjtextclassification}
+Professor~Joemon Jose.
+\newblock Text classification, 2013.
+
+\bibitem{letorBook}
+Hang Li.
+\newblock {\em Learning to Rank for Information Retrieval and Natural Language
+  Processing}.
+\newblock 2011.
+
 \bibitem{craigthesis}
 Craig Macdonald.
 \newblock {\em The Voting Model for People Search}.
@@ -119,5 +147,15 @@ Craig Macdonald.
 Afshin~Rostamizadeh Mehryar~Mohri and Ameet Talwalkar.
 \newblock {\em Foundations of Machine Learning}.
 \newblock The MIT Press, 2012.
+
+\bibitem{yahooLETOR}
+Yi~Chang Olivier~Chapelle.
+\newblock Yahoo! learning to rank challenge overview.
+\newblock 2011.
+
+\bibitem{mlSimon}
+Mark~Girolami Simon~Rogers.
+\newblock {\em A First Course in Machine Learning}.
+\newblock 2011.
 
 \end{thebibliography}

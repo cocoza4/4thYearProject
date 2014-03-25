@@ -3,7 +3,7 @@
 \usepackage{graphicx}
 \usepackage{url}
 \usepackage{mathtools}
-\usepackage{color}
+\usepackage[usenames,dvipsnames]{color}
 
 % \renewcommand\thesection{\arabic{section}}
 % \renewcommand\thesubsection{\arabic{section}.\arabic{subsection}}
@@ -15,7 +15,7 @@
 \makeatletter
 \renewcommand\p@subsection{\thesection.}
 \makeatother
-
+\pagenumbering{arabic}
 %\usepackage{natbib}
 %%\usepackage{cite}
 

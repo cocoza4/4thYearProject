@@ -13,23 +13,14 @@ shows only important attributes and methods. The Candidate class represents an e
 \caption{Class Diagram} \label{fig:classDiagram1} 
 \end{figure}
 
-As stated in section ~\ref{section:goodexpert}, the features extracted from funded projects and publications of each expert will be used in Learning to Rank
-to improve the retrieval performance of the system. But before we get to Learning to Rank, first of all, we need to understand
-AcademTechQuerying Class and RetrievedResults Class which are components used in retrieving results with respect to a query. 
-\begin{figure}
-\centering
-\includegraphics[scale=0.4]{./figures/AcademTechQuerying.png}
-\caption{AcademTechQuerying Class and RetrievedResults Class} \label{fig:AcademTechQuerying} 
-\end{figure}
-
 \begin{figure}
 \centering
 \includegraphics[scale=0.4]{./figures/tablefactory.png}
 \caption{TableFactory Class Diagram} \label{fig:tableFactory} 
 \end{figure}
 
-Figure~\ref{fig:tableFactory} shows class diagrams of \textit{TableFactory}, and \textit{Search}. Only important methods and attributes are shown.
-The responsibility of each class is given below:
+Figure~\ref{fig:tableFactory} shows class diagrams of \textit{TableFactory}, and \textit{Search}. These two components can also be viewed as the core
+part of the system. The responsibility of each class is given below:
 \begin{itemize}
  \item \textit{Search} extends Java Servlet which handles search request submitted by a user.
  \item \textit{TableFactory} loads Experts, Publications, and Projects stored in a file and send them to Search Servlet.
@@ -42,6 +33,17 @@ The responsibility of each class is given below:
  \item \textit{logQuery()} saves a query to a log file.
  \item \textit{doGet()} handles a GET request when user submits a query. It also generates HTML page of the query results.
 \end{itemize}
+
+As stated in section ~\ref{section:goodexpert}, the features extracted from funded projects and publications of each expert will be used in Learning to Rank
+to improve the retrieval performance of the system. But before we get to Learning to Rank, first of all, we need to understand
+AcademTechQuerying Class and RetrievedResults Class which are components used in retrieving results with respect to a query. 
+\begin{figure}
+\centering
+\includegraphics[scale=0.4]{./figures/AcademTechQuerying.png}
+\caption{AcademTechQuerying Class and RetrievedResults Class} \label{fig:AcademTechQuerying} 
+\end{figure}
+
+
 
 Figure~\ref{fig:AcademTechQuerying} shows class diagrams of AcademTechQuerying and RetrievedResults. As stated in section~\ref{section:terrier},
 the search engine platform used in this project is Terrier. It handles indexing and retrieval processes discussed in section~\ref{section:IRarchitecture}.
@@ -61,7 +63,7 @@ The RetrievedResults Class has 3 attributes as follows:
  \item \textit{scores}, an array of Double, which is the scores of each document retrieved by the system.
 \end{itemize}
 
-\section{Data Extraction}
+\section{Data Extraction}\label{sec:dataextraction}
 \begin{figure}
 \centering
 \includegraphics[scale=0.35]{./figures/projectsExtraction.png}
@@ -79,17 +81,17 @@ Both of them are used together to check if the candidate is matched to our known
 \item \textbf{GtRHashTable} extends from the abstract class AcademicsHashTable. The purpose of this class is the same as AcademicsHashTable Class but
 implements has() and checkAcademicName() methods which are applicable in Research Councils UK~\cite{gtr} data source.
 \item \textbf{GOWHashTable} extends from the abstract class AcademicsHashTable. Its purpose is similar to AcademicsHashTable Class but
-has different implementations of hash() and checkAcademicName() methods to GOWHashTable's which are applicable in Grant on the Web~\cite{gow} spreadsheet data source.
+has different implementations of has() and checkAcademicName() methods to GOWHashTable's which are applicable in Grant on the Web~\cite{gow} spreadsheet data source.
 \item \textbf{SSProjectsExtractor} is a class that makes use of GOWHashTable Class to extract funded projects from Grant on the Web~\cite{gow} spreadsheet.
 \item \textbf{GtRProjectWrapper} is a class used GOWHashTable Class to extract funded projects from Research Councils UK~\cite{gtr}.
 \item \textbf{ProjectExtractor} is a class that makes use of SSProjectsExtractor and GtRProjectWrapper Classes to extract funded projects from both sources.
 \end{itemize}
 
-The most difficult part in extracting projects is to match the known expert's names with the expert's names in each source. This is because each source
-records expert's name in different formats. For example, Prof. Joemon Jose may be recorded Jose JM in one source and Jose J in another. This is why Polymorphism~\cite{polymorphism} 
-(different implementations of has() and checkAcademicName() methods between GtRHashTable and GOWHashTable) is required. However, pattern matching between
+Since each source records expert's name in different formats. For example, Prof. Joemon Jose may be recorded Jose JM in one source and Jose J in another,
+Polymorphism~\cite{polymorphism} (in this case, different implementations of has() and checkAcademicName() methods between GtRHashTable and GOWHashTable) is required.
+However, pattern matching between
 expert's names in Grant on the Web~\cite{gow} spreadsheet is still impossible as this source records in the following format: 
-[lastname], [role] [the first letter of name] such as Jose, Professor JM. The problem occurs with experts, Dr. Craig Macdonald lecturing at
+[lastname], [role] [the first and/or second letter of name] such as Rogers, Dr. Simon. The problem occurs with experts, Dr. Craig Macdonald lecturing at
 University of Glasgow and Prof. Catriona Macdonald lecturing at Glasgow Caledonian University
 as the source records Macdonald, Dr C for the former and Macdonald, Professor C for the latter. Although, role might be used to distinguish between them but
 for some experts the role is not known and there might be the situation that the role is also the same. 
@@ -110,7 +112,7 @@ Figure ~\ref{table:stats} shows the number of funded projects extracted from eac
 
 \section{Indexing}
 
-Before indexing process begins, the system has to generate data in TREC format and an association file between TREC file. \textbf{FileGenerator} class
+Before indexing process begins, the system has to generate data in TREC format and an association file between TREC files. \textbf{FileGenerator} class
 handles this. It includes only 1 method main(). The list below is files generated by the class:
 \begin{itemize}
  \item ContactsList.trec.gz
@@ -140,7 +142,7 @@ This file compressed in gz format stores a list of experts in TREC format. Each 
 \end{verbatim}
 
 \paragraph{Homepages.trec.gz} \hspace{0pt} \\
-This file compressed in gz format stores a list of home pages in TREC format. Each home page assiciated to one expert is recorded in the following format:
+This file compressed in gz format stores a list of home pages in TREC format. Each home page associated to one expert is recorded in the following format:
 \begin{verbatim}
  <DOC>
         <DOCNO>homepage's id</DOCNO>
@@ -250,7 +252,8 @@ Figure ~\ref{fig:learningmodel} shows a class diagram that is used to produce a 
 \end{itemize}
 
 As stated in Section~\ref{section:rankLib}, learning to rank algorithms used in this project are AdaRank and Coordinate Ascent. The performance of each
-of them will be discussed in Evaluation Section. Figure~\ref{fig:samplemodel} shows a learned model using \textit{Coordinate Ascent}.
+of them will be discussed in Evaluation Section. Figures~\ref{fig:samplemodel} and~\ref{fig:adarankModel} show learned models 
+using \textit{Coordinate Ascent} and \textit{AdaRank} Algorithms.
 Section~\ref{section:applyinglearnedmodel} will explain a component used to apply a learned model.
 
 \begin{figure}
@@ -259,11 +262,17 @@ Section~\ref{section:applyinglearnedmodel} will explain a component used to appl
 \caption{Learned Model Using Coordinate Ascent Algorithm} \label{fig:samplemodel} 
 \end{figure}
 
+\begin{figure}
+\centering
+\includegraphics[scale=0.3]{./figures/adarankModel.png}
+\caption{Learned Model Using AdaRank Algorithm} \label{fig:adarankModel} 
+\end{figure}
+
 \section{Applying a Learned Model}\label{section:applyinglearnedmodel}
 In section~\ref{sec:background_applyLearnedModel}, we explained the process of applying a learned model. This section aims to describe components
 that handle this task. The class \textit{CandidateScores} has a method called, getTotalScore() taking a learnedModel component as a parameter. 
-This method applies a learned model as descriped in section~\ref{sec:background_applyLearnedModel} and return a score. Figure~\ref{fig:scoreandsorting}
-shows class diagrams of \textit{Candidatescores} and \textit{LearnedModel}.
+This method applies a learned model as described in section~\ref{sec:background_applyLearnedModel} and returns a score associated with an expert.
+Figure~\ref{fig:scoreandsorting} shows class diagrams of \textit{Candidatescores} and \textit{LearnedModel}.
 
 \begin{figure}
 \centering
@@ -281,8 +290,10 @@ Figure~\ref{fig:searchsequence} illustrates a sequence diagram of querying. This
 relevant results. Given a query submitted by a user, Search servlet processes parameters sent via GET request by calling processParam() method. This is
 followed by invoking processQuery() method which takes one parameter, ``type''. This parameter is used for filter mode. The method processQuery() 
 performs tasks discussed in section~\ref{section:union}.
-The \textbf{CandidateScores} is used for computing scores of candidates based on a learned model. The \textbf{CandidateSorting}
+The \textit{CandidateScores} is used for computing scores of candidates based on a learned model. The \textit{CandidateSorting}
 sorts scores of candidates obtained after applying a learned model in descending score as discussed in section~\ref{sec:learnedmodel}.
+The sorting algorithm applied in this class is \textbf{merge sort}~\cite{mergesort}, giving time complexity of $O(n\cdot log\, n)$ where $n$ is the 
+number of documents (experts) to be sorted.
 Figure~\ref{fig:scoreandsorting} shows class diagrams of \textit{CandidateScores}, \textit{LearnedModel} and \textit{CandidateSorting}.
 Important attributes and methods are only shown.
 
@@ -294,7 +305,7 @@ Important attributes and methods are only shown.
  \includegraphics[width=13cm,height=15cm,keepaspectratio]{./figures/newsearch.png}
  \caption{New Facets : Experts In Response to ``information retrieval'' Query} \label{fig:newsearch} 
  \end{figure}
- Figure~\ref{fig:newsearch} shows a new facet in response to a query ``information retrieval''. The number of 
+ Figure~\ref{fig:newsearch} shows a new search facet in response to a query ``information retrieval''. The number of 
 projects experts have been involved in is displayed. In addition to the current system filter modes, filter options by using projects, publications and both
 expertise evidence, and by projects' total funding are added on the right panel of the page.
 

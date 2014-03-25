@@ -9,7 +9,7 @@ submitted query may not give the satisfying results for the user. In this case, 
 search process. As information resources were not originally intended for access (Retrieval of unstructured data)[P. 7]~\cite{IRlecture}, 
 it is impossible for a user query to uniquely identify a single object in the collection. Instead, several objects may match the query, 
 with different degrees of relevancy. In IR field, there are various types of retrieval models used to compute the degree of relevancy. This will
-be discussed in more details in section~\ref{section:retrieving}.
+be discussed in more details in section~\ref{section:retrievalmodel}.
 
 A search engine is an information retrieval system designed to help find information stored on a computer system~\cite{searchengine}. The search results are usually 
 presented in a list ordered by the degree of relevancy and are commonly called hits. 
@@ -26,7 +26,7 @@ Bing, and Yahoo.
 
 \subsection{Brief Overview of Information Retrieval System Architecture}\label{section:IRarchitecture}
 In IR systems, two main objectives have to be met~\cite{IRarchitecture} - first, the results must satisfy user - this means retrieving information to meet user's
-information need. Second, retrieving process must be fast. This section is devoted to a brief overiew of the architecture of IR systems 
+information need. Second, retrieving process must be fast. This section is devoted to a brief overview of the architecture of IR systems 
 which is very important to meet IR main objectives. It also explains readers
 how documents are retrieved and the data structure used in IR systems. To understand how retrieval process works, we must understand 
 indexing process first. This process is performed offline and only one time. 
@@ -85,7 +85,7 @@ document which occur too frequently. These words are not good discriminators. Th
 articles, prepositions, and conjunctions etc.
 
 \paragraph{Tokenisation}
-is the process of breaking a stream of text into words called tokens(terms)~\cite{tokenization}. The stream of text will be used by other indexing processes.
+is the process of breaking a stream of text into words called tokens(terms)~\cite{tokenization}. The stream of text will be used by other indexing steps.
 
 \paragraph{Stopwords Removal}
 is the process of removing stopwords in order to reduce the size of the indexing structure~\cite[P. 15]{IRarchitecture}.
@@ -146,7 +146,7 @@ The purpose of this data structure is to allow a full text searches. In IR, a va
 structures used in practice. However, the index used in most IR systems and in this project is inverted index.
 Figure \ref{fig:invertedIndex} shows a simple inverted index. Given a query (a set of terms), it is now possible to efficiently search for
 documents containing those terms. However, each posting may contain additional information or features
-about a document such as the freqency of the term etc.
+about a document such as the frequency of the term etc.
 
 \subsection{Retrieval Models}\label{section:retrievalmodel}
 In the previous section, basic indexing process was briefly explained. In this section, we will give a brief introduction to a few retrieval models including one
@@ -159,7 +159,7 @@ of 2 parts: term frequency (tf) and inverse document frequency (idf). Term frequ
 Inverse document frequency (idf) is a measure of whether the term is common or rare across all documents~\cite{tfidf}.
 This component is very important for instance, if a query term appears in most of the documents in the corpus, it is not appropriate to give a 
 document containing that term a high score because that term is not a very good discriminator. On the other hand, it is appropriate to give high scores to 
-documents containing terms rarely apprear in the corpus.
+documents containing terms rarely appear in the corpus.
 The following is the formula of \textbf{tf-idf} weighting model:
 \begin{equation}
 W_{fk} = f_{fd}log \frac{N + 1}{D_k + 1}
@@ -167,24 +167,22 @@ W_{fk} = f_{fd}log \frac{N + 1}{D_k + 1}
 where $N$ is the number of documents in the collection, $f_{fd}$ is tf of ${k^{th}}$ keyword in document $d$ (term frequency),
 and $D_k$ is the number of documents containing ${k^{th}}$ keyword. The $log \frac{N + 1}{D_k + 1}$ is the idf of the model.
 The numerator and denominator are added by 1 to prevent possibility of zero.
-This model is a non-probabiltic approach and is one of the easiest to implement models in IR.
+This model is a non-probabilistic approach and is one of the easiest to implement models in IR.
 
 \paragraph{BM25} \hspace{0pt} \\
-BM25 is a very popular probabiltic retrieval model in IR. Why use probabilities? 
+BM25 is a very popular probabilistic retrieval model in IR. Why use probabilities? 
 In section~\ref{section:IR}, we explained that IR deals with uncertain and unstructured information. In other words, we do not know specifically
 what the documents are really about. As a consequence, a query does not uniquely identify a single object in the collection. Therefore, probability theory
 seems to be the most natural way to quantify uncertainty~\cite[P. 7]{probModel}.
 
-%Let $x$ be a document in the collection, $R_{d\vec{q}}$ represent the \textit{relevance} of a document $d$ with respect to query $\vec{q}$. 
-
 \begin{equation}\label{eq:BM25}
-\sum_{t \in \vec{q}} log_2 \frac{r_t/(R - r_t)}{(n_t - r_t)/(N - n_t - R + r_t)} \frac{(k_1 + 1)\cdot tf_{td}}{K + tf_{td}} \frac{k_2 + 1)\cdot tf_{tq}}{k_2 + tf_{tq}}
+score(d, \vec{q}) = \sum_{t \in \vec{q}} log_2 \frac{r_t/(R - r_t)}{(n_t - r_t)/(N - n_t - R + r_t)} \frac{(k_1 + 1)\cdot tf_{td}}{K + tf_{td}} \frac{k_2 + 1)\cdot tf_{tq}}{k_2 + tf_{tq}}
 \end{equation}
-where $K$ = $k_t((1 - b) + b\frac{dl}{avdl})$, $tf_tq$ and $tf_td$ are the frequency of term $t$ in the query $\vec{q}$ and document $d$ respectively,
-and $b$, $dl$ and $avdl$ are paraameters set empirically. The proof of BM25 is beyond the scope of the project.
+where $K$ = $k_t((1 - b) + b\frac{dl}{avdl})$, $tf_{tq}$ and $tf_{td}$ are the frequency of term $t$ in the query $\vec{q}$ and document $d$ respectively,
+and $b$, $dl$ and $avdl$ are parameters set empirically. The proof of BM25 is beyond the scope of the project.
 
 \paragraph{PL2} \hspace{0pt} \\
-PL2 is a model from the divergence from randomness framework, based on a poisson distribution~\cite{craig}. This project uses PL2 weight model to 
+PL2 is a model from the divergence from randomness framework, based on a poisson distribution~\cite{craig}. This project uses PL2 weighting model to 
 calculate document scores. This model is also a probabilistic approach. Given a document $d$ and a query $\vec{q}$, the formula of PL2~\cite[P. 23-24]{craigthesis} is given below:
 
 \begin{equation}\label{eq:pl2}
@@ -194,9 +192,10 @@ calculate document scores. This model is also a probabilistic approach. Given a 
 where $\lambda$ is the mean and variance of a Poisson distribution, and the query weight term $qtw$ is given by $qtf/qtf_{max}$.
 $qtf$ is the query term frequency. $qtf_{max}$ is the maximum query term frequency among the query terms. From equation~\ref{eq:pl2}, 
 \[tfn = tf\cdot log_2(1 + c\cdot \frac{avgl}{l}), c > 0\]
-where $tf$ is the actual term frequency of the term $t$ in document $d$ and $l$ is the length of the
+where $tf$ is the actual term frequency of the term $t$ in document $d$ and $l$ is the length of the
 document in tokens. $avgl$ is the average document length in the whole collection.
-$c$ is the hyper-parameter that controls the normalisation applied to the term frequencywith respect to the document length.
+$c$ is the hyper-parameter that controls the normalisation applied to the term frequency
+with respect to the document length.
 The proof and explanation are out of the scope of the project.
 
 
@@ -210,12 +209,8 @@ Section~\ref{section:IRarchitecture} and Section~\ref{section:retrievalmodel} ex
 In this section, we will see how documents are retrieved. Figure ~\ref{fig:retrieval} shows
 retrieval process of IR system. In IR, there are 2 phases in general:
 online and offline phases. The offline phase is the phase that all documents in the corpus are indexed, all features are extracted 
-(section~\ref{section:IRarchitecture}) and index structure is built. 
+and index structure is built (section~\ref{section:IRarchitecture}). 
 
-%Then for each document, features are extracted. The feature extracting
-%process is not mandatory and application dependent. One most extracted feature is the frequency of the terms occured in a document.
-%This feature can be applied to both tf-idf and BM25 explained in section~\ref{section:retrievalmodel}.
-%Subsequently, inverted index is built.
 
 On the other hand, online phase begins after a user submits a query into the system. After that, tokenisation, stopwords removal and stemming processes 
 are performed as same as the offline phase.
@@ -246,7 +241,9 @@ To measure information retrieval effectiveness in the standard way, a test colle
 The standard approach to information retrieval system evaluation revolves around the notion of relevant and nonrelevant documents. With respect 
 to a user's information need, a document in the test collection is given a binary classification as either relevant or nonrelevant~\cite{evalweb}. However,
 this can be extended by using numbers as an indicator of the degree of relevancy called \textbf{graded relevance value}. For example, documents labelled 2 is more relevant than documents
-labelled 1, and documents labelled 0 is not relevant. There are a number of test collection stardards. In this project, Text Retrieval Conference (TREC)
+labelled 1, and documents labelled 0 is not relevant. In IR, a binary classification as either relevant or nonrelevant and graded relevance value are
+called \textbf{relevance judgement}.
+There are a number of test collection standards. In this project, Text Retrieval Conference (TREC)~\cite{trec}
 is used since it is widely used in the field of IR.
 
 %\paragraph{Precision and Recall}
@@ -309,6 +306,8 @@ $p$ is defined as:
 \raisebox{-\totalheight}{\includegraphics[scale=0.5]{./figures/dcg.png}}
 \end{center}
 
+where $rel_{i}$ is the graded relevance value of the result at position $i$.
+
 From DCG, we can formulate NDCG as follows:
 \begin{center}
 \raisebox{-\totalheight}{\includegraphics[scale=0.5]{./figures/ndcg.png}}
@@ -316,13 +315,21 @@ From DCG, we can formulate NDCG as follows:
 where $IDCG_p$ is the maximum possible (ideal) DCG for a given set of queries, documents, and relevances.
 
 
-\section{Learning to Rank (LETOR)}\label{sec:letor}
+\section{Learning to Rank (LETOR) In Information Retrieval}\label{sec:letor}
 Learning to rank or machine-learned ranking (MLR) is a type of supervised or semi-supervised machine learning problem in which the goal is 
 to automatically construct a ranking model from training data~\cite{letor}.
 Employing learning to rank techniques to learn the ranking function is important as it is viewed as
-a promising approach to information retrieval~\cite{letor}. In particular, many learning to rank aproaches attempt to learn a combination of features
+a promising approach to information retrieval~\cite{letor}. In particular, many learning to rank approaches attempt to learn a combination of features
 (called the learned model)~\cite[P. 3]{learningmodel}. The resulting learned model is applied to a vector of features for each document, to determine the final scores for 
-producing the final ranking of documents for a query~\cite[P. 3]{learningmodel}.
+producing the final ranking of documents for a query~\cite[P. 3]{learningmodel}. In LETOR, there are typically 2 types of dataset: training and testing dataset.
+They both consist of queries and documents matching them together with relevance degree of each match~\cite{letorWiki} and are typically
+prepared manually by human assessors, who check results for some queries and determine relevance of each result or 
+derived automatically by analyzing clickthrough logs (i.e. search results which got clicks from users). However, they differ in the purpose of usage.
+\begin{itemize}
+ \item \textit{Training data} is used by a learning algorithm to produce a ranking model or learned model which then computes relevance of documents 
+ for actual queries~\cite{letorWiki}. This will discuss in more details in section~\ref{sec:learnedmodel}
+ \item \textit{Testing data} is used to evaluate the performance of an obtained learned model~\cite{craig}.
+\end{itemize}
 
 \subsection{Query Dependent Feature}\label{section:querydependent}
 Figure~\ref{fig:retrieval_process} shows a simple search process in IR. After a user submits a query into an IR system. The system ranks the results 
@@ -334,7 +341,7 @@ In learning to rank, this is called query dependent feature~\cite{craig}.
 In contrast to Query Dependent Feature, a feature that does not depend on a user query is called query independent feature~\cite{craig}. This feature is fixed for each
 document. For now, it is better to not dig into great details about this because this will be focused in later section.
 
-\subsection{Learning to Rank (LETOR) File Format}\label{sec:letorFile}
+\subsection{Learning to Rank File Format}\label{sec:letorFile}
 From the previous 2 sections, we now know what query dependent and query independent features are. In this section, we will talk about how these features
 are formatted in a file called \textbf{LETOR file}. The LETOR file is then learned to obtain a model file (see next section).
 The following is the format of LETOR file:
@@ -353,7 +360,7 @@ In this project, \textit{graded\_relevance\_value} range from 0 to 2 in order of
 the degree of relevancy. To the left of the label is a \textit{query} preceded by \textit{$qid:$} and scores of each feature associated to a document.
 There can be any number of documents in the LETOR file.
 
-\subsection{Learning to Rank (LETOR) Model File Format}
+\subsection{Learning to Rank Model File Format}
 After a LETOR file is learned, we obtain a \textit{Learned Model}. This section aims to show some learned model file formats.
 \begin{quotation}
 \noindent \#\# Coordinate Ascent \\
@@ -366,7 +373,7 @@ After a LETOR file is learned, we obtain a \textit{Learned Model}. This section 
 \#\# Slack = 0.001 \\
 1:0.64 2:4.34 3:4.3 4:2.0 5:1.2 6:9.1 7:3.3
 \end{quotation}
-The lines preceded are ignored. The above learned model applies \textit{Coordinate Ascent} LETOR technique. Knowing what parameters preceded by a hash key
+The lines preceded by hash keys are ignored. The above learned model applies \textit{Coordinate Ascent} LETOR technique. Knowing what parameters preceded by a hash key
 mean is out of the scope of the project. We only take lines not preceded by a hash key into account. According to the above learned model, there are
 7 features (1 to 7). The floating values associated to each feature indicate a score of the feature. However, some LETOR algorithms might produce
 duplicate features such as \textit{1:0.64 2:4.34 3:4.3 4:2.0 5:1.2 6:9.1 7:3.3 1:1.2 5:3.2}. In this case, we sum up values corresponding
@@ -400,13 +407,40 @@ Figure~\ref{fig:letor} illustrates an architecture of a machine-learned IR syste
 section~\ref{section:implementation}.
 
 \subsection{Applying a Learned Model}\label{sec:background_applyLearnedModel}
-Once a learned model has been generated, then for each document, the scores of each feature are multiplied by ones in the learned model and accumulated.
-Finally, the accumulated scores for each document are sorted in descending order and documents with the high scores are ranked above
+Once a learned model has been generated, then for each document retrieved after retrieval, 
+the scores of each feature are multiplied by ones in the learned model and accumulated.
+Finally, the accumulated scores for each document are sorted in descending order and documents with the high scores are ranked before
 those with low scores.
 
+\subsection{Learning to Rank Algorithms}
+In this project, we use only 2 LETOR algorithms which are \textit{AdaRank} and \textit{Coordinate Ascent}. Full detailed explanations of the algorithms 
+are out of the scope of this project. The algorithms are chosen because of its simplicity and its effectiveness.
+
+\subsubsection{AdaRank}
+AdaRank is a linear model~\cite[P. 1-4]{mlSimon} based LETOR algorithm.
+It repeats the process of reweighting the training data, creating a weak ranker, and assigning a weight to the weak ranker, to minimise the loss 
+function~\cite[P. 60]{letorBook}. Then AdaRank linearly combines the weak rankers as the ranking model. One advantage of AdaRank is its simplicity, and it is one of the simplest
+learning to rank algorithms~\cite[P. 60]{letorBook}.
+
+\subsubsection{Coordinate Ascent}
+not yet
+
+\subsection{K-fold Cross-validation}\label{sec:kfold}
+In sections~\ref{sec:letor} and~\ref{sec:learnedmodel}, we talked about 2 mandatory types ofdata: training and testing data. If our learned model is based too much on 
+training data (pays too much attentions on training data), the predictions for testing data are very poor. This is often the case, when our training dataset
+is very small~\cite{mlSimon}. In machine learning, we call 
+it \textit{over-fitting}~\cite[P. 28]{mlSimon}. Determining the optimal model such that it is able to generalise well without over-fitting is very challenging.
+This is why we need \textit{validation data}. A validation data is typically provided separately or removed from original dataset~\cite{craig}.
+K-fold cross-validation splits the original dataset into K equally sized blocks or folds~\cite{mlSimon}. Each fold takes its turn as a validation data for a
+training data comprised of the other K - 1 folds~\cite{mlSimon}. Figure~\ref{fig:crossvalidation} describes K-fold Cross-validation graphically.
+\begin{figure}
+\centering
+\includegraphics[scale=0.4]{./figures/validation.png}
+\caption{K-fold Cross-validation from Machine Learning Lecture 3 - Linear Modelling By Simon Rogers}\label{fig:crossvalidation} 
+\end{figure}
 
 \section{Tools}
-This section will discussed tools used in this project. They are search engine platform Terrier, learning to rank library RankLib and evaluation tool,
+This section will discussed tools used in this project. They include search engine platform Terrier, learning to rank library RankLib and evaluation tool,
 trec\_eval.
 \subsection{Terrier}\label{section:terrier} \hspace{0pt} \\
 Every IR system requires programs that handle indexing, retrieving, ranking, etc. To build everything from scratch, it would be impossible within
@@ -417,7 +451,7 @@ carried out on standard TREC collection~\cite{trec}.
 Using Terrier, this project can easily extend from the existing search engine as it used Terrier as a search engine platform and it is written in Java
 which is the same programming language used in this project.
 
-\paragraph{Terrier Indexing}
+\paragraph{Terrier Indexing} \hspace{0pt} \\
 \begin{figure}
 \centering
 \includegraphics[scale=0.4]{./figures/terrierindexing.png}
@@ -441,8 +475,8 @@ Figure~\ref{fig:terrierindexing} gives an overview of the interaction of the mai
 \end{quotation}
 
 \subsection{RankLib}\label{section:rankLib}
-RankLib~\cite{ranklib} is an open source library of learning to rank algorithms. It also implements many retrieval metrics to facilitate evaluation.
-Currently eight popular algorithms have been implemented:
+RankLib~\cite{ranklib} is an open source library of learning to rank algorithms. It provides various retrieval metrics to facilitate evaluation.
+Currently 8 popular algorithms have been implemented:
 \begin{itemize}
  \item MART (Multiple Additive Regression Trees, a.k.a. Gradient boosted regression tree)
  \item RankNet
@@ -457,6 +491,8 @@ Currently eight popular algorithms have been implemented:
 This library was chosen because it is easy to use, written in Java which can be easily combined with this system as it is also developed using Java, and
 it implements 8 different learning to rank algorithms which makes it possible for users to try different algorithms.
 However, AdaRank and Coordinate Ascent were only used in the project because other algorithms are too complex and not part of the scope of this project.
+RankLib provides k-fold cross validation functionally given only training dataset. This saves us time to split data for validation, training and 
+testing as described in section~\ref{sec:letor}.
 
 \subsection{trec\_eval}\label{sec:treceval}
 trec\_eval is the standard tool used by the TREC community~\cite{trec} for evaluating a retrieval run, given the results file and a
@@ -480,7 +516,7 @@ is a string which gets printed out with the output.
 
 \section{Expert Search}
 In section~\ref{sec:expertsearch}, we discussed about the definition of Expert Search. This section will give 5 scenarios proposed by Yimam-Seid \& Kobsa
-why expert search is needed~\cite[P. 387]{expertsearch}.
+why expert search is needed~\cite[P. 387]{expertsearch} and outline several ways to present query results.
 \begin{quotation}
   \item \textit{1. Access to non-documented information - e.g. in an organisation where not all relevant information is documented.}
   \item \textit{2. Specification need - the user is unable to formulate a plan to solve a problem, and resorts to seeking experts to assist them in formulating a plan.}
@@ -493,7 +529,7 @@ why expert search is needed~\cite[P. 387]{expertsearch}.
 \subsection{Presenting Query Results}\label{sec:presentingQueryResult}
 Figure~\ref{fig:retrieval_process} illustrates the process of search. From this figure, the process will start again if a user is not satisfied with 
 the results. In this section, the focus is on how to convince user that a query result is good. Suppose a user who is currently studying software engineering
-would like to know ``how to normalize database tables'', first of all, he needs to interpret his information need into a query which is ``database normalization''.
+would like to know ``how to normalise database tables'', first of all, he needs to interpret his information need into a query which is ``database normalisation''.
 He then types his query into his preferred search engine. After he submits the query, the search engine gives him a list of results ranked by the degree
 of relevancy. The question is how does he determine which result is what he is looking for?. Well, he could assume that the ranking provided by the search 
 engine is correct. That is, the first result is what he is looking for. However, this is not always the case. He then explores each result and sees if 
@@ -502,7 +538,7 @@ Perhaps, there has to be some evidence to convince him by just looking at the re
 \begin{itemize}
  \item URL
  \item Photo
- \item Author
+ \item Author's Name
  \item keywords of the article name
 \end{itemize}
 If a result in response to a query have all or some of these evidence, it has more credits than ones with no evidence at all. 
@@ -511,14 +547,17 @@ If a result in response to a query have all or some of these evidence, it has mo
 \includegraphics[scale=0.3]{./figures/query.png}
 \caption{Sample Query} \label{fig:query}
 \end{figure}
-Figure \ref{fig:query} shows the results of the query ``database normalization''. It is obvious that from the top 4 results, all of the article names
+Figure \ref{fig:query} shows the results of the query ``database normalisation''. It is obvious that from the top 4 results, all of the article names
 include the keywords a user submitted, and the third result does not have query keywords included in the URL. Among all of which, the second result has more 
-evidence than others. It has an author's name, a photo of an author that other results do not.
+evidence than others. It has an author's name, a photo of an author that other results do not. In this project, these evidence of credits also take into account.
+However, we are unable to take URL, and photo into account because the datasource (section~\ref{section:aims})
+does not provide photos of experts and URL is not used because it's not an web search engine. To compute a degree of relevancy, author's
+name and keywords of the article name are both used.
 
 \subsection{Voting Technique}\label{section:voting}
 In section ~\ref{section:retrieving}, we very briefly talked about weighting models or retrieval models. In other words, how documents are assigned scores. In this section,
 it aims to give an overview of voting technique used in this project. To understand this section, readers must understand what data fusion technique is. 
-``Data fustion techniques also known as metasearch techniques, are used to combine separate rankings of documents into a single ranking,
+``Data fusion techniques also known as metasearch techniques, are used to combine separate rankings of documents into a single ranking,
 with the aim of improving over the performance of any constituent ranking''~\cite[P. 388]{expertsearch}. Within the context of this project, 
 expert search is seen as a voting problem. The profile of each candidate is a set of documents associated to him to represent their expertise.
 When each document associated to a candidate's profile get retrieved by the IR system, implicit vote for that candidate occurs~\cite[P. 389]{expertsearch}.

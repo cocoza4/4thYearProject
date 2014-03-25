@@ -3,7 +3,11 @@ Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: dissertation.aux
 The style file: plain.bst
 Database file #1: references.bib
-I was expecting a `,' or a `}'---line 79 of file references.bib
+Repeated entry---line 59 of file references.bib
+ : @misc{trec
+ :           ,
+I'm skipping whatever remains of this entry
+I was expecting a `,' or a `}'---line 84 of file references.bib
  :   
  :   author = {Christopher D. Manning, Prabhakar Raghavan, and Hinrich Schütze},
 (Error may have been on previous line)
@@ -20,60 +24,66 @@ Warning--to sort, need author or key in invertedindex
 Warning--to sort, need author or key in tfidf
 Warning--to sort, need author or key in craig
 Warning--to sort, need author or key in evalweb
+Warning--to sort, need author or key in trec
 Warning--to sort, need author or key in mrr
 Warning--to sort, need author or key in ndcg
 Name 1 in "Mehryar Mohri, Afshin Rostamizadeh, and Ameet Talwalkar" has a comma at the end for entry letor
 while executing---line 1049 of file plain.bst
+Warning--to sort, need author or key in letorWiki
 Warning--to sort, need author or key in terrier
-Warning--to sort, need author or key in trec
 Warning--to sort, need author or key in ranklib
 Warning--to sort, need author or key in qrels
 Warning--to sort, need author or key in qrelsformat
 Warning--to sort, need author or key in resultfileformat
 Warning--to sort, need author or key in polymorphism
+Warning--to sort, need author or key in mergesort
+Warning--to sort, need author or key in kfoldcv
 Warning--empty journal in expertsearch
 Warning--empty journal in learningmodel
+Warning--empty publisher in letorBook
 Name 1 in "Mehryar Mohri, Afshin Rostamizadeh, and Ameet Talwalkar" has a comma at the end for entry letor
 while executing---line 1090 of file plain.bst
-You've used 29 entries,
+Warning--empty journal in yahooLETOR
+Warning--empty publisher in mlSimon
+You've used 36 entries,
             2118 wiz_defined-function locations,
-            589 strings with 6324 characters,
-and the built_in function-call counts, 5262 in all, are:
-= -- 490
-> -- 89
+            618 strings with 7157 characters,
+and the built_in function-call counts, 6608 in all, are:
+= -- 616
+> -- 120
 < -- 1
-+ -- 52
-- -- 20
-* -- 197
-:= -- 680
-add.period$ -- 58
-call.type$ -- 29
-change.case$ -- 95
++ -- 69
+- -- 28
+* -- 246
+:= -- 884
+add.period$ -- 78
+call.type$ -- 36
+change.case$ -- 118
 chr.to.int$ -- 0
-cite$ -- 52
-duplicate$ -- 226
-empty$ -- 663
-format.name$ -- 20
-if$ -- 1247
+cite$ -- 65
+duplicate$ -- 288
+empty$ -- 815
+format.name$ -- 28
+if$ -- 1549
 int.to.chr$ -- 0
-int.to.str$ -- 29
-missing$ -- 4
-newline$ -- 119
-num.names$ -- 16
-pop$ -- 233
+int.to.str$ -- 36
+missing$ -- 9
+newline$ -- 153
+num.names$ -- 24
+pop$ -- 288
 preamble$ -- 1
-purify$ -- 68
+purify$ -- 86
 quote$ -- 0
-skip$ -- 234
+skip$ -- 281
 stack$ -- 0
-substring$ -- 194
-swap$ -- 36
+substring$ -- 231
+swap$ -- 42
 text.length$ -- 1
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 114
-warning$ -- 23
-while$ -- 18
-width$ -- 31
-write$ -- 222
-(There were 3 error messages)
+type$ -- 138
+warning$ -- 29
+while$ -- 26
+width$ -- 38
+write$ -- 284
+(There were 4 error messages)

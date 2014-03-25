@@ -42,19 +42,19 @@ Each result in the search panel includes expert's details: university, number of
 Figure~\ref{fig:profilepage} illustrates a profile page of an expert. This page introduces most collaborated coauthors facet on the right of the page, a 
 facet that shows popular terms appearing in an expert's profile and publications and related academics facet.
 
-\paragraph{Design and Architecture of Current System}
+\paragraph{Design and Architecture of Current System} \hspace{0pt} \\
 
  \begin{figure}
  \centering
  \includegraphics[scale=0.5,keepaspectratio]{./figures/currentSystemDesign.jpg}
  \caption{Design of Current System} \label{fig:currentDesign} 
 \end{figure}
-Figure~\ref{fig:currentDesign} shows design of current system. It makes use of publication as expertise. From the figure, after a user submits a query
+Figure~\ref{fig:currentDesign} shows design and architecture of current system. It makes use of publication as expertise. From the figure, after a user submits a query
 to the system, the system sends a query to Terrier and finally Terrier returns relevant experts to the user.
 
 \section{Expert Search Indicators of New System}\label{section:goodexpert}
 In section~\ref{sec:presentingQueryResult}, it was obvious that some evidence could be used to convince users how reliable a document (link) is.
-In this secion, the evidence within
+In this section, the evidence within
 the context of this project will be discussed. As discussed in section~\ref{section:aims}, this project makes use of publications and funded projects as 
 expertise evidence. Based on these evidence, what makes an expert a good expert? we propose several intuitions about a relevant expert as follows 
 \begin{itemize}
@@ -75,7 +75,7 @@ In this project, there are 2 query dependent features:
 
 To sum up, a good expert should have high scores in both query dependent and independent features.
 
-\subsection{Requirements Specification}
+\subsection{Requirements Specification}\label{sec:requirements}
 Due to the scope of the project it would be impossible to start without a clear vision of how
 the end product should function. These requirements were decided on during the early stages of the project. 
 The reasoning behind them comes primarily from a number of sources:
@@ -90,34 +90,33 @@ The reasoning behind them comes primarily from a number of sources:
 % produce optimal ranking due to the lack of training dataset. Therefore, 
 The requirements have been split into 2 sections depending on their necessity: functional requirements and non-functional requirements
 
-\paragraph{Functional Requirements}
-\subsubsection{Must Have}
+\subsubsection{Functional Requirements}
+\paragraph{Must Have} \hspace{0pt} \\
 \begin{itemize}
  \item Extracting funded projects from 2 different sources: Grant on the Web~\cite{gow} and Research Councils UK~\cite{gtr}.
  \item Integrating publications and funded projects as expertise evidence.
- \item Utilizing learning to rank techniques with an attempt to enhance the performance of the retrieval system.
- %\item Indexing and Retrieving documents (experts) effectively.
- \item Able to conclude that applying learning to rank techniques helps improve the performance of the retrieval system using evaluation matrics discussed
+ \item Utilizing learning to rank techniques with an attempt to enhance the performance of the retrieval system using AdaRank and Coordinate Ascent algorithms.
+ \item Conclusions that applying learning to rank techniques helps improve the performance of the retrieval system using evaluation metrics discussed
  in section~\ref{sec:evaluation}. 
 \end{itemize}
 
-\subsubsection{Should Have}
+\paragraph{Should Have} \hspace{0pt} \\
 \begin{itemize}
- \item providing refinement options for users to filter results by funded projects, publications and both.
- \item providing refinement options for users to filter funded projects and publications of each expert.
+ \item Refinement options for users to filter results by funded projects, publications and both.
+ \item Refinement options for users to filter funded projects and publications of each expert.
 \end{itemize}
 
-\subsubsection{Could Have}
+\paragraph{Could Have} \hspace{0pt} \\
 \begin{itemize}
- \item not yet
+ \item Applications of more LETOR algorithms such as LambdaMART, Random Forests etc.
 \end{itemize}
 
-\subsubsection{Would Like to Have}
+\paragraph{Would Like to Have} \hspace{0pt} \\
 \begin{itemize}
  \item Ability to upload funded projects manually by members of the system.
 \end{itemize}
 
-\paragraph{Non-functional Requirements}
+\subsubsection{Non-functional Requirements}
 \begin{itemize}
  \item Functional 24 hours a day.
  \item Update data regularly.
@@ -153,9 +152,8 @@ In the previous section, we gave a broad view of the new system retrieval scheme
 obtain results from user query and apply them to learning to rank technique to obtain optimal ranking.
 Figure~\ref{fig:quering} shows the process of obtaining documents (experts) with respect to a query. 
 
-Given a query $\vec{q}$, it is transformed into publication query $Q_{pub}$, using only publications as expertise evidence and project
-query $Q_{proj}$, using only funded projects as expertise evidence. 
-AcademTechQuerying Class then processes both $Q_{pub}$ and $Q_{proj}$. The results of both
-queries are then unioned, denoted $R_{pub,proj}(Q)$ as shown in Figure ~\ref{fig:union}. The results obtained are based on query dependent features as discussed in section 
-~\ref{section:querydependent}. Finally, unioned results are applied to a learned model to generate optimal ranking. Next section will discuss more in
-details.
+Given a query $\vec{q}$, it is transformed into publication query $\vec{q}_{pub}$, using only publications as expertise evidence and project
+query $\vec{q}_{proj}$, using only funded projects as expertise evidence. 
+AcademTechQuerying Class then processes both $\vec{q}_{pub}$ and $\vec{q}_{proj}$. The results of both
+queries are then unioned, denoted $R_{pub,proj}(\vec{q})$ as shown in Figure ~\ref{fig:union}. The results obtained are based on query dependent features as discussed in section 
+~\ref{section:querydependent}.
