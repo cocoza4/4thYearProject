@@ -84,7 +84,9 @@ does not improve the performance
 of the system. This might not be true however, if the system applies other LETOR algorithms provided by RankLib since each algorithm has its own behaviours.
 In addition, good training/validation datasets and feature selections play the main roles to the performance of the system~\cite{craig}. I strongly believe that the intuitions (features)
 proposed in chapter~\ref{section:goodexpert} are very useful but the main reason why LETOR fails is due to small training dataset. 
-We had 34 training queries which is very small. 
+We had 34 training queries which is very small. Each testing query can be analysed to determine why applying a learned model gives better or worse
+performance compared to not applying LETOR. This can be done by for example, analysing the number of all terms,
+the number of funded projects terms and of publications terms relevant to each testing query.
 
 Moreover, for IR systems to get better performance, not only LETOR technique is contributed to the success of the retrieval system, but also 
 other aspects in IR such as tokenisation technique, stemming technique and retrieval models.

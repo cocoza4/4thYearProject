@@ -115,7 +115,7 @@ and perform step (5) and (6).
 \caption{Evaluation Results} \label{table:evaluationresult}
 \end{table}
 
-Table~\ref{table:evaluationresult} shows the retrieval performance of the proposed LETOR techniques and without LETOR techinque. It can be clearly seen
+Table~\ref{table:evaluationresult} shows the retrieval performance of the proposed LETOR techniques and without LETOR technique. It can be clearly seen
 that overall without LETOR gives better performance compared to using LETOR considering MAP, NDCG and MRR evaluating metrics. Coordinate Ascent gives second best 
 performance. Therefore, the answer to the question is NO, using LETOR technique (without K-fold Cross-validation) does not enhance the performance of the retrieval system.
 
@@ -180,12 +180,15 @@ Coordinate Ascent algorithm to the testing queries given below outperformed ones
 In the previous section, the evaluation results have shown that applying LETOR makes the retrieval system perform poorer than not applying LETOR. 
 This section aims to evaluate the performance of the system by applying K-fold Cross-validation
 technique described in section~\ref{sec:kfold}. We decided to choose $K = 5$. This is fairly normal for learning to rank~\cite{craig}.
-Higher K is possible, but that infers that the LETOR needs more training.
+Higher K is possible, but that infers that the LETOR needs more training. RankLib provides K-fold Cross-validation functionality. However, we will not
+use this functionality because some of our datasets results were considered only experts in University of Glasgow. For this reason, the datasets should
+be split into training, validation and testing queries manually to avoid one of them having only results from University of Glasgow~\cite{craig}.
 
 % \subsection{K-fold Cross-validation Using RankLib}
 % As discussed in section~\ref{section:rankLib}, not yet
 
 \subsection{Experimental Setting}
+
 As discussed earlier, we decided to choose $K = 5$ for K-fold Cross-validation. Each of the 5 folds has all of the queries: 60\% for training, 
 20\% for validation and 20\% for testing~\cite{kfoldcv}. Across the 5 folds, each query will appear 3 times in training, once in validation and 
 once in testing queries. For each fold, training queries and validation queries are trained to obtain a learned model.
@@ -683,6 +686,9 @@ It has shown in the last section that applying LETOR technique fails. The follow
 \begin{itemize}
  \item The size of training/validation dataset is not big enough.
  \item Selected LETOR Features are not very useful.
+ \item The number of publications and funded projects is not balanced. We have 22225 publications but only 369 funded projects. This results in 
+ features related to publications outweighing funded project features in both query dependent and independent features.
 \end{itemize}
+For AdaRank, the performance is poorer than Coordinate Ascent because AdaRank requires a large set of validation data to avoid overfitting~\cite{craig}.
 Therefore, we decided to apply K-fold Cross-validation technique as it gave better performance compared to not applying K-fold Cross-validation technique
 (see last section).

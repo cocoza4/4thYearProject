@@ -15,9 +15,9 @@
 % \setcounter{tocdepth}{4}
 
 
-\makeatletter
-\renewcommand\p@subsection{\thesection.}
-\makeatother
+% \makeatletter
+% \renewcommand\p@subsection{\thesection.}
+% \makeatother
 \pagenumbering{arabic}
 %\usepackage{natbib}
 %%\usepackage{cite}

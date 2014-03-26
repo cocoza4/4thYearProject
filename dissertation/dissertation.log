@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012/Debian) (format=pdflatex 2012.11.18)  26 MAR 2014 03:51
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012/Debian) (format=pdflatex 2012.11.18)  26 MAR 2014 21:24
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -632,112 +632,114 @@ Chapter 1.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <20.74> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 4.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <14.4> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 6.
-LaTeX Font Info:    Try loading font information for OMS+ptm on input line 15.
-(/usr/share/texlive/texmf-dist/tex/latex/psnfss/omsptm.fd
-File: omsptm.fd 
-)
-LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <10.95> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 15.
- [4
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 9.
+[4
 
-])
-(./background.tex [5]
+]) (./background.tex [5]
 Chapter 2.
-<./figures/retrieval_process.png, id=36, 234.1247pt x 131.74219pt>
+<./figures/retrieval_process.png, id=35, 234.1247pt x 131.74219pt>
 File: ./figures/retrieval_process.png Graphic file (type png)
 
 <use ./figures/retrieval_process.png>
-Package pdftex.def Info: ./figures/retrieval_process.png used on input line 23.
+Package pdftex.def Info: ./figures/retrieval_process.png used on input line 27.
 
 (pdftex.def)             Requested size: 234.12411pt x 131.74185pt.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <12> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 27.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 31.
  [6
 
- <./figures/retrieval_process.png (PNG copy)>] <./figures/text.png, id=40, 558.
-58687pt x 161.10187pt>
+]
+<./figures/text.png, id=39, 558.58687pt x 161.10187pt>
 File: ./figures/text.png Graphic file (type png)
 
 <use ./figures/text.png>
-Package pdftex.def Info: ./figures/text.png used on input line 50.
+Package pdftex.def Info: ./figures/text.png used on input line 54.
 (pdftex.def)             Requested size: 279.29276pt x 80.55074pt.
- [7 <./figures/text.png (PNG copy)>]
-<./figures/invertedIndex.png, id=44, 433.62pt x 245.41687pt>
+ [7 <./figures/retrieval_process.png (PNG copy)> <./figures/text.png (PNG copy)
+>]
+<./figures/invertedIndex.png, id=43, 433.62pt x 245.41687pt>
 File: ./figures/invertedIndex.png Graphic file (type png)
 
 <use ./figures/invertedIndex.png>
-Package pdftex.def Info: ./figures/invertedIndex.png used on input line 143.
+Package pdftex.def Info: ./figures/invertedIndex.png used on input line 147.
 (pdftex.def)             Requested size: 216.80946pt x 122.70813pt.
  [8 <./figures/invertedIndex.png (PNG copy)>]
-Overfull \hbox (1.88pt too wide) in paragraph at lines 195--198
+[9]
+Overfull \hbox (1.88pt too wide) in paragraph at lines 200--203
 \OT1/ptm/m/n/10.95 where $\OML/cmm/m/it/10.95 ^^U$ \OT1/ptm/m/n/10.95 is the me
 an and vari-ance of a Pois-son dis-tri-bu-tion, and the query weight term $\OML
 /cmm/m/it/10.95 qtw$ \OT1/ptm/m/n/10.95 is given by $\OML/cmm/m/it/10.95 qtf=qt
 f[]$\OT1/ptm/m/n/10.95 .
  []
 
-[9] <./figures/retrieval.png, id=58, 923.45pt x 618.31pt>
+<./figures/retrieval.png, id=58, 923.45pt x 618.31pt>
 File: ./figures/retrieval.png Graphic file (type png)
 
 <use ./figures/retrieval.png>
-Package pdftex.def Info: ./figures/retrieval.png used on input line 209.
+Package pdftex.def Info: ./figures/retrieval.png used on input line 214.
 (pdftex.def)             Requested size: 277.03712pt x 185.49443pt.
  [10 <./figures/retrieval.png (PNG copy)>]
+LaTeX Font Info:    Try loading font information for OMS+ptm on input line 262.
+
+
+(/usr/share/texlive/texmf-dist/tex/latex/psnfss/omsptm.fd
+File: omsptm.fd 
+)
+LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <10.95> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 262.
+
 <./figures/precision.png, id=63, 450.68375pt x 45.16875pt>
 File: ./figures/precision.png Graphic file (type png)
 
 <use ./figures/precision.png>
-Package pdftex.def Info: ./figures/precision.png used on input line 263.
+Package pdftex.def Info: ./figures/precision.png used on input line 268.
 (pdftex.def)             Requested size: 225.34131pt x 22.5843pt.
 
 <./figures/recall.png, id=64, 429.605pt x 45.16875pt>
 File: ./figures/recall.png Graphic file (type png)
 
 <use ./figures/recall.png>
-Package pdftex.def Info: ./figures/recall.png used on input line 268.
+Package pdftex.def Info: ./figures/recall.png used on input line 273.
 (pdftex.def)             Requested size: 214.80197pt x 22.5843pt.
-
-<./figures/pr_example.png, id=65, 616.3025pt x 376.40625pt>
+ [11 <./figures/precision.png>]
+<./figures/pr_example.png, id=69, 616.3025pt x 376.40625pt>
 File: ./figures/pr_example.png Graphic file (type png)
 
 <use ./figures/pr_example.png>
-Package pdftex.def Info: ./figures/pr_example.png used on input line 278.
+Package pdftex.def Info: ./figures/pr_example.png used on input line 283.
 (pdftex.def)             Requested size: 308.1505pt x 188.20265pt.
- [11 <./figures/precision.png> <./figures/recall.png>] <./figures/map.png, id=7
-1, 196.735pt x 53.19875pt>
+
+<./figures/map.png, id=70, 196.735pt x 53.19875pt>
 File: ./figures/map.png Graphic file (type png)
-
-<use ./figures/map.png>
-Package pdftex.def Info: ./figures/map.png used on input line 290.
+ <use ./figures/map.png>
+Package pdftex.def Info: ./figures/map.png used on input line 295.
 (pdftex.def)             Requested size: 98.36725pt x 26.5993pt.
- <./figures/mrr.png, id=72, 191.71625pt x 62.2325pt>
-File: ./figures/mrr.png Graphic file (type png)
 
-<use ./figures/mrr.png>
-Package pdftex.def Info: ./figures/mrr.png used on input line 298.
+<./figures/mrr.png, id=71, 191.71625pt x 62.2325pt>
+File: ./figures/mrr.png Graphic file (type png)
+ <use ./figures/mrr.png>
+Package pdftex.def Info: ./figures/mrr.png used on input line 303.
 (pdftex.def)             Requested size: 95.85788pt x 31.11617pt.
-LaTeX Font Info:    Try loading font information for OT1+phv on input line 300.
+LaTeX Font Info:    Try loading font information for OT1+phv on input line 305.
 
 
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/ot1phv.fd
 File: ot1phv.fd 2001/06/04 scalable font definitions for OT1/phv.
-) [12 <./figures/pr_example.png (PNG copy)> <./figures/map.png> <./figures/mrr.
-png>]
-<./figures/dcg.png, id=79, 202.7575pt x 56.21pt>
+) [12 <./figures/pr_example.png (PNG copy)> <./figures/recall.png> <./figures/m
+ap.png> <./figures/mrr.png>] <./figures/dcg.png, id=78, 202.7575pt x 56.21pt>
 File: ./figures/dcg.png Graphic file (type png)
- <use ./figures/dcg.png>
-Package pdftex.def Info: ./figures/dcg.png used on input line 310.
+
+<use ./figures/dcg.png>
+Package pdftex.def Info: ./figures/dcg.png used on input line 315.
 (pdftex.def)             Requested size: 101.3785pt x 28.10492pt.
-
-<./figures/ndcg.png, id=80, 158.5925pt x 47.17625pt>
+ <./figures/ndcg.png, id=79, 158.5925pt x 47.17625pt>
 File: ./figures/ndcg.png Graphic file (type png)
- <use ./figures/ndcg.png>
-Package pdftex.def Info: ./figures/ndcg.png used on input line 317.
-(pdftex.def)             Requested size: 79.29604pt x 23.58806pt.
 
-[13 <./figures/dcg.png> <./figures/ndcg.png>]
-Overfull \hbox (20.77069pt too wide) in paragraph at lines 354--357
+<use ./figures/ndcg.png>
+Package pdftex.def Info: ./figures/ndcg.png used on input line 322.
+(pdftex.def)             Requested size: 79.29604pt x 23.58806pt.
+ [13 <./figures/dcg.png> <./figures/ndcg.png>]
+Overfull \hbox (20.77069pt too wide) in paragraph at lines 373--376
 \OT1/ptm/m/n/10.95 graded[]relevance[]value qid:query fea-ture[]num1:feature[]n
 ame1[]score fea-ture[]num2:feature[]name2[]score
  []
@@ -746,217 +748,213 @@ ame1[]score fea-ture[]num2:feature[]name2[]score
 File: ./figures/letor.png Graphic file (type png)
 
 <use ./figures/letor.png>
-Package pdftex.def Info: ./figures/letor.png used on input line 407.
+Package pdftex.def Info: ./figures/letor.png used on input line 435.
 (pdftex.def)             Requested size: 175.65504pt x 161.60263pt.
-LaTeX Font Info:    Try loading font information for OT1+pcr on input line 408.
+LaTeX Font Info:    Try loading font information for OT1+pcr on input line 436.
 
 
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/ot1pcr.fd
 File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
-) [15 <./figures/letor.png>] <./figures/validation.png, id=96, 388.45125pt x 33
-3.245pt>
+) [15] [16 <./figures/letor.png>] <./figures/validation.png, id=100, 388.45125p
+t x 333.245pt>
 File: ./figures/validation.png Graphic file (type png)
 
 <use ./figures/validation.png>
-Package pdftex.def Info: ./figures/validation.png used on input line 477.
+Package pdftex.def Info: ./figures/validation.png used on input line 501.
 (pdftex.def)             Requested size: 155.37773pt x 133.29562pt.
- [16]
-<./figures/terrierindexing.png, id=102, 775.39688pt x 512.66531pt>
+ [17]
+<./figures/terrierindexing.png, id=105, 775.39688pt x 512.66531pt>
 File: ./figures/terrierindexing.png Graphic file (type png)
 
 <use ./figures/terrierindexing.png>
-Package pdftex.def Info: ./figures/terrierindexing.png used on input line 496.
+Package pdftex.def Info: ./figures/terrierindexing.png used on input line 520.
 (pdftex.def)             Requested size: 232.62085pt x 153.80077pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 497--497
+Underfull \hbox (badness 10000) in paragraph at lines 521--521
 []\OT1/ptm/m/n/10.95 Figure 2.9: In-dex-ing Ar-chi-tec-ture of Ter-rier from $\
 OT1/pcr/m/n/10.95 http : / / terrier . org / docs / v3 . 5 /
  []
 
-[17 <./figures/validation.png>] [18 <./figures/terrierindexing.png>] [19]
-<./figures/query.png, id=113, 1369.115pt x 719.68875pt>
+LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <10.95> not available
+(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 528.
+[18 <./figures/validation.png> <./figures/terrierindexing.png>] [19] [20]
+<./figures/query.png, id=117, 1369.115pt x 719.68875pt>
 File: ./figures/query.png Graphic file (type png)
 
 <use ./figures/query.png>
-Package pdftex.def Info: ./figures/query.png used on input line 586.
+Package pdftex.def Info: ./figures/query.png used on input line 613.
 (pdftex.def)             Requested size: 410.73767pt x 215.9083pt.
- [20 <./figures/query.png (PNG copy)>])
-(./requirements.tex [21]
+ [21 <./figures/query.png (PNG copy)>])
+(./requirements.tex [22]
 Chapter 3.
-<./figures/oldsicsa.png, id=120, 1301.86375pt x 677.53125pt>
+<./figures/oldsicsa.png, id=125, 1301.86375pt x 677.53125pt>
 File: ./figures/oldsicsa.png Graphic file (type png)
 
 <use ./figures/oldsicsa.png>
-Package pdftex.def Info: ./figures/oldsicsa.png used on input line 22.
+Package pdftex.def Info: ./figures/oldsicsa.png used on input line 24.
 (pdftex.def)             Requested size: 369.88287pt x 192.49878pt.
 
-<./figures/oldsearch.png, id=121, 1321.93875pt x 686.565pt>
+<./figures/oldsearch.png, id=126, 1321.93875pt x 686.565pt>
 File: ./figures/oldsearch.png Graphic file (type png)
 
 <use ./figures/oldsearch.png>
-Package pdftex.def Info: ./figures/oldsearch.png used on input line 27.
+Package pdftex.def Info: ./figures/oldsearch.png used on input line 29.
 (pdftex.def)             Requested size: 369.87811pt x 192.1007pt.
 
-<./figures/oldProfilePage.png, id=122, 904.37875pt x 681.54625pt>
+<./figures/oldProfilePage.png, id=127, 904.37875pt x 681.54625pt>
 File: ./figures/oldProfilePage.png Graphic file (type png)
 
 <use ./figures/oldProfilePage.png>
-Package pdftex.def Info: ./figures/oldProfilePage.png used on input line 32.
+Package pdftex.def Info: ./figures/oldProfilePage.png used on input line 34.
 (pdftex.def)             Requested size: 369.87311pt x 278.739pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 46--47
+Underfull \hbox (badness 10000) in paragraph at lines 48--49
 
  []
 
-<./figures/currentSystemDesign.jpg, id=123, 496.85625pt x 334.24875pt>
+<./figures/currentSystemDesign.jpg, id=128, 496.85625pt x 334.24875pt>
 File: ./figures/currentSystemDesign.jpg Graphic file (type jpg)
 
 <use ./figures/currentSystemDesign.jpg>
 Package pdftex.def Info: ./figures/currentSystemDesign.jpg used on input line 5
-0.
+2.
 (pdftex.def)             Requested size: 248.4275pt x 167.12396pt.
- [22
+ [23
 
-] [23 <./figures/oldsicsa.png (PNG copy)> <./figures/oldsearch.png (PNG copy)>]
- [24 <./figures/oldProfilePage.png (PNG copy)> <./figures/currentSystemDesign.j
+] [24 <./figures/oldsicsa.png (PNG copy)> <./figures/oldsearch.png (PNG copy)>]
+ [25 <./figures/oldProfilePage.png (PNG copy)> <./figures/currentSystemDesign.j
 pg>]
-Underfull \hbox (badness 10000) in paragraph at lines 95--96
+Underfull \hbox (badness 10000) in paragraph at lines 97--98
 
  []
 
-[25]
-Underfull \hbox (badness 10000) in paragraph at lines 104--105
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 110--111
+[26]
+Underfull \hbox (badness 10000) in paragraph at lines 106--107
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 115--116
+Underfull \hbox (badness 10000) in paragraph at lines 112--113
 
  []
 
-<./figures/newSystemDesign.png, id=137, 469.755pt x 429.10312pt>
+
+Underfull \hbox (badness 10000) in paragraph at lines 117--118
+
+ []
+
+<./figures/newSystemDesign.png, id=141, 469.755pt x 429.10312pt>
 File: ./figures/newSystemDesign.png Graphic file (type png)
 
 <use ./figures/newSystemDesign.png>
-Package pdftex.def Info: ./figures/newSystemDesign.png used on input line 135.
+Package pdftex.def Info: ./figures/newSystemDesign.png used on input line 137.
 (pdftex.def)             Requested size: 187.89867pt x 171.6382pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 139--140
+Underfull \hbox (badness 10000) in paragraph at lines 141--142
 
  []
 
-<./figures/querying.png, id=138, 501.37312pt x 191.21437pt>
+<./figures/querying.png, id=142, 501.37312pt x 191.21437pt>
 File: ./figures/querying.png Graphic file (type png)
 
 <use ./figures/querying.png>
-Package pdftex.def Info: ./figures/querying.png used on input line 143.
+Package pdftex.def Info: ./figures/querying.png used on input line 145.
 (pdftex.def)             Requested size: 200.54568pt x 76.48439pt.
- [26]
-<./figures/union.png, id=142, 143.03438pt x 153.57375pt>
+ [27]
+<./figures/union.png, id=146, 143.03438pt x 153.57375pt>
 File: ./figures/union.png Graphic file (type png)
 
 <use ./figures/union.png>
-Package pdftex.def Info: ./figures/union.png used on input line 149.
+Package pdftex.def Info: ./figures/union.png used on input line 151.
 (pdftex.def)             Requested size: 100.12337pt x 107.50089pt.
-) (./implementation.tex [27 <./figures/newSystemDesign.png> <./figures/querying
+) (./implementation.tex [28 <./figures/newSystemDesign.png> <./figures/querying
 .png (PNG copy)> <./figures/union.png (PNG copy)>]
 Chapter 4.
-<./figures/classDiagram1.png, id=146, 973.6375pt x 662.475pt>
+<./figures/classDiagram1.png, id=151, 973.6375pt x 662.475pt>
 File: ./figures/classDiagram1.png Graphic file (type png)
 
 <use ./figures/classDiagram1.png>
 Package pdftex.def Info: ./figures/classDiagram1.png used on input line 12.
 (pdftex.def)             Requested size: 389.44809pt x 264.9853pt.
 
-<./figures/tablefactory.png, id=147, 953.5625pt x 431.6125pt>
+<./figures/tablefactory.png, id=152, 953.5625pt x 431.6125pt>
 File: ./figures/tablefactory.png Graphic file (type png)
 
 <use ./figures/tablefactory.png>
 Package pdftex.def Info: ./figures/tablefactory.png used on input line 18.
 (pdftex.def)             Requested size: 381.41824pt x 172.64194pt.
 
-<./figures/AcademTechQuerying.png, id=148, 692.5875pt x 431.6125pt>
+<./figures/AcademTechQuerying.png, id=153, 692.5875pt x 431.6125pt>
 File: ./figures/AcademTechQuerying.png Graphic file (type png)
 
 <use ./figures/AcademTechQuerying.png>
 Package pdftex.def Info: ./figures/AcademTechQuerying.png used on input line 42
 .
 (pdftex.def)             Requested size: 207.77785pt x 129.48474pt.
+ [29
 
-Overfull \hbox (4.75613pt too wide) in paragraph at lines 48--51
-[]\OT1/ptm/m/n/10.95 Figure 4.3[] shows class di-a-grams of AcademTech-Query-in
-g and Re-trieve-dResults. As stated in sec-tion 2.3.2.3.1[],
- []
-
-[28
-
-] [29 <./figures/classDiagram1.png (PNG copy)> <./figures/tablefactory.png (PNG
+] [30 <./figures/classDiagram1.png (PNG copy)> <./figures/tablefactory.png (PNG
  copy)> <./figures/AcademTechQuerying.png (PNG copy)>]
-<./figures/projectsExtraction.png, id=156, 1124.2pt x 642.4pt>
+<./figures/projectsExtraction.png, id=160, 1124.2pt x 642.4pt>
 File: ./figures/projectsExtraction.png Graphic file (type png)
 
 <use ./figures/projectsExtraction.png>
 Package pdftex.def Info: ./figures/projectsExtraction.png used on input line 69
 .
 (pdftex.def)             Requested size: 393.47589pt x 224.84337pt.
- [30 <./figures/projectsExtraction.png (PNG copy)>] [31] [32] [33]
-<./figures/sampleletorfile.png, id=169, 1323.94624pt x 652.4375pt>
+ [31 <./figures/projectsExtraction.png (PNG copy)>] [32] [33] [34]
+<./figures/sampleletorfile.png, id=174, 1323.94624pt x 652.4375pt>
 File: ./figures/sampleletorfile.png Graphic file (type png)
 
 <use ./figures/sampleletorfile.png>
 Package pdftex.def Info: ./figures/sampleletorfile.png used on input line 237.
 (pdftex.def)             Requested size: 397.18694pt x 195.73276pt.
 
-<./figures/learningModel.png, id=170, 511.9125pt x 401.5pt>
+<./figures/learningModel.png, id=175, 511.9125pt x 401.5pt>
 File: ./figures/learningModel.png Graphic file (type png)
 
 <use ./figures/learningModel.png>
 Package pdftex.def Info: ./figures/learningModel.png used on input line 243.
 (pdftex.def)             Requested size: 358.3363pt x 281.04808pt.
 
-<./figures/samplemodel.png, id=171, 1291.82625pt x 184.69pt>
+<./figures/samplemodel.png, id=176, 1291.82625pt x 184.69pt>
 File: ./figures/samplemodel.png Graphic file (type png)
 
 <use ./figures/samplemodel.png>
 Package pdftex.def Info: ./figures/samplemodel.png used on input line 263.
 (pdftex.def)             Requested size: 387.55087pt x 55.40741pt.
 
-<./figures/adarankModel.png, id=172, 1277.77374pt x 659.46375pt>
+<./figures/adarankModel.png, id=177, 1277.77374pt x 659.46375pt>
 File: ./figures/adarankModel.png Graphic file (type png)
 
 <use ./figures/adarankModel.png>
 Package pdftex.def Info: ./figures/adarankModel.png used on input line 269.
 (pdftex.def)             Requested size: 383.33508pt x 197.84064pt.
- [34 <./figures/sampleletorfile.png>] [35 <./figures/learningModel.png (PNG cop
-y)> <./figures/samplemodel.png (PNG copy)> <./figures/adarankModel.png>]
-<./figures/score&sorting.png, id=180, 1013.7875pt x 572.1375pt>
+
+<./figures/score&sorting.png, id=178, 1013.7875pt x 572.1375pt>
 File: ./figures/score&sorting.png Graphic file (type png)
 
 <use ./figures/score&sorting.png>
 Package pdftex.def Info: ./figures/score&sorting.png used on input line 281.
 (pdftex.def)             Requested size: 304.1386pt x 171.64256pt.
-
-<./figures/searchsequence.png, id=181, 820.06375pt x 505.89pt>
+ [35 <./figures/sampleletorfile.png>] [36 <./figures/learningModel.png (PNG cop
+y)> <./figures/samplemodel.png (PNG copy)> <./figures/adarankModel.png>]
+<./figures/searchsequence.png, id=185, 820.06375pt x 505.89pt>
 File: ./figures/searchsequence.png Graphic file (type png)
 
 <use ./figures/searchsequence.png>
 Package pdftex.def Info: ./figures/searchsequence.png used on input line 287.
 (pdftex.def)             Requested size: 328.01968pt x 202.3524pt.
 
-<./figures/newsearch.png, id=182, 1170.3725pt x 678.535pt>
+<./figures/newsearch.png, id=186, 1170.3725pt x 678.535pt>
 File: ./figures/newsearch.png Graphic file (type png)
 
 <use ./figures/newsearch.png>
 Package pdftex.def Info: ./figures/newsearch.png used on input line 307.
 (pdftex.def)             Requested size: 369.88367pt x 214.4437pt.
- [36 <./figures/score&sorting.png (PNG copy)> <./figures/searchsequence.png (PN
+ [37 <./figures/score&sorting.png (PNG copy)> <./figures/searchsequence.png (PN
 G copy)>]
-<./figures/newProfilePagePublication.png, id=186, 1171.37625pt x 677.53125pt>
+<./figures/newProfilePagePublication.png, id=190, 1171.37625pt x 677.53125pt>
 File: ./figures/newProfilePagePublication.png Graphic file (type png)
 
 <use ./figures/newProfilePagePublication.png>
@@ -964,7 +962,7 @@ Package pdftex.def Info: ./figures/newProfilePagePublication.png used on input
 line 316.
 (pdftex.def)             Requested size: 369.87917pt x 213.94038pt.
 
-<./figures/newPofilePageProject.png, id=187, 822.07124pt x 670.505pt>
+<./figures/newPofilePageProject.png, id=191, 822.07124pt x 670.505pt>
 File: ./figures/newPofilePageProject.png Graphic file (type png)
 
 <use ./figures/newPofilePageProject.png>
@@ -972,53 +970,53 @@ Package pdftex.def Info: ./figures/newPofilePageProject.png used on input line
 324.
 (pdftex.def)             Requested size: 369.87846pt x 301.68353pt.
 
-<./figures/newProfileSelectedProject.png, id=188, 833.1125pt x 681.54625pt>
+<./figures/newProfileSelectedProject.png, id=192, 833.1125pt x 681.54625pt>
 File: ./figures/newProfileSelectedProject.png Graphic file (type png)
 
 <use ./figures/newProfileSelectedProject.png>
 Package pdftex.def Info: ./figures/newProfileSelectedProject.png used on input 
 line 332.
 (pdftex.def)             Requested size: 369.88853pt x 302.59555pt.
-) (./evaluation.tex [37 <./figures/newsearch.png>] [38 <./figures/newProfilePag
-ePublication.png> <./figures/newPofilePageProject.png>] [39 <./figures/newProfi
+) (./evaluation.tex [38 <./figures/newsearch.png>] [39 <./figures/newProfilePag
+ePublication.png> <./figures/newPofilePageProject.png>] [40 <./figures/newProfi
 leSelectedProject.png>]
 Chapter 5.
-[40
+[41
 
-] [41] [42] [43] [44] [45] [46] [47]) (./conclusions.tex [48]
+] [42] [43] [44] [45] [46] [47] [48]) (./conclusions.tex [49]
 Chapter 6.
-[49
+[50
 
-] [50]) [51] (./dissertation.bbl
+] [51]) [52] (./dissertation.bbl
 Underfull \hbox (badness 10000) in paragraph at lines 12--15
 []\OT1/ptm/m/n/10.95 K-fold cross-validation.  $\OT1/pcr/m/n/10.95 http : / / e
 n . wikipedia . org / wiki / Cross-[]validation _
  []
 
 
-Underfull \hbox (badness 2753) in paragraph at lines 29--32
+Underfull \hbox (badness 2753) in paragraph at lines 33--36
 []\OT1/ptm/m/n/10.95 qrels file.  $\OT1/pcr/m/n/10.95 http : / / www . mpi-[]in
 f . mpg . de / []dfischer / manual / manual _ qrelformat .
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 67--71
+Underfull \hbox (badness 10000) in paragraph at lines 71--75
 []\OT1/ptm/m/n/10.95 Information re-trieval sys-tem eval-u-a-tion.  $\OT1/pcr/m
 /n/10.95 http : / / nlp . stanford . edu / IR-[]book / html /
  []
 
-[52
+[53
 
 
-]) [53] (./dissertation.aux) ) 
+]) [54] (./dissertation.aux) ) 
 Here is how much of TeX's memory you used:
- 4602 strings out of 495059
- 65356 string characters out of 3182029
- 162728 words of memory out of 3000000
- 7608 multiletter control sequences out of 15000+200000
- 30978 words of font info for 68 fonts, out of 3000000 for 9000
+ 4612 strings out of 495059
+ 65505 string characters out of 3182029
+ 162712 words of memory out of 3000000
+ 7616 multiletter control sequences out of 15000+200000
+ 32607 words of font info for 70 fonts, out of 3000000 for 9000
  14 hyphenation exceptions out of 8191
- 38i,11n,24p,284b,326s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 38i,11n,24p,309b,326s stack positions out of 5000i,500n,10000p,200000b,50000s
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/ba
 se/8r.enc}</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.
 pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></
@@ -1031,12 +1029,13 @@ type1/public/amsfonts/cm/cmsy6.pfb></usr/share/texlive/texmf-dist/fonts/type1/p
 ublic/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/cour
 ier/ucrr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.p
 fb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/
-texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-d
-ist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on dissertation.pdf (56 pages, 2060894 bytes).
+texlive/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb></usr/share/texlive/texmf-
+dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type
+1/urw/times/utmri8a.pfb>
+Output written on dissertation.pdf (57 pages, 2077976 bytes).
 PDF statistics:
- 292 PDF objects out of 1000 (max. 8388607)
- 173 compressed objects within 2 object streams
+ 299 PDF objects out of 1000 (max. 8388607)
+ 178 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
  186 words of extra memory for PDF output out of 10000 (max. 10000000)
 

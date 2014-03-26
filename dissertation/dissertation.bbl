@@ -21,6 +21,10 @@ Learning to rank.
 Merge sort.
 \newblock \url{http://en.wikipedia.org/wiki/Merge_sort}.
 
+\bibitem{pagerank}
+Pagerank.
+\newblock \url{http://en.wikipedia.org/wiki/PageRank}.
+
 \bibitem{polymorphism}
 Polymorphism.
 \newblock \url{http://en.wikipedia.org/wiki/Polymorphism_(computer_science)}.

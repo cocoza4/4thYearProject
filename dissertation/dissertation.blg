@@ -30,6 +30,7 @@ Warning--to sort, need author or key in ndcg
 Name 1 in "Mehryar Mohri, Afshin Rostamizadeh, and Ameet Talwalkar" has a comma at the end for entry letor
 while executing---line 1049 of file plain.bst
 Warning--to sort, need author or key in letorWiki
+Warning--to sort, need author or key in pagerank
 Warning--to sort, need author or key in terrier
 Warning--to sort, need author or key in ranklib
 Warning--to sort, need author or key in qrels
@@ -47,45 +48,45 @@ Warning--empty journal in caAlg
 Warning--empty year in caAlg
 Warning--empty journal in yahooLETOR
 Warning--empty publisher in mlSimon
-You've used 37 entries,
+You've used 38 entries,
             2118 wiz_defined-function locations,
-            622 strings with 7267 characters,
-and the built_in function-call counts, 6807 in all, are:
-= -- 633
-> -- 127
+            625 strings with 7326 characters,
+and the built_in function-call counts, 6966 in all, are:
+= -- 648
+> -- 128
 < -- 1
-+ -- 72
++ -- 73
 - -- 30
-* -- 257
-:= -- 920
-add.period$ -- 80
-call.type$ -- 37
-change.case$ -- 122
+* -- 262
+:= -- 937
+add.period$ -- 82
+call.type$ -- 38
+change.case$ -- 125
 chr.to.int$ -- 0
-cite$ -- 68
-duplicate$ -- 298
-empty$ -- 832
+cite$ -- 70
+duplicate$ -- 305
+empty$ -- 855
 format.name$ -- 30
-if$ -- 1587
+if$ -- 1627
 int.to.chr$ -- 0
-int.to.str$ -- 37
+int.to.str$ -- 38
 missing$ -- 10
-newline$ -- 157
+newline$ -- 161
 num.names$ -- 26
-pop$ -- 296
+pop$ -- 304
 preamble$ -- 1
-purify$ -- 89
+purify$ -- 91
 quote$ -- 0
-skip$ -- 287
+skip$ -- 295
 stack$ -- 0
-substring$ -- 236
-swap$ -- 42
+substring$ -- 241
+swap$ -- 43
 text.length$ -- 1
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 142
-warning$ -- 31
+type$ -- 146
+warning$ -- 32
 while$ -- 28
-width$ -- 39
-write$ -- 291
+width$ -- 40
+write$ -- 298
 (There were 4 error messages)

@@ -1,5 +1,7 @@
 
 \chapter{Current System and Proposals, Requirements and Design of New System}\label{sec:currentsystemandproposals}
+In this chapter, Section~\ref{sec:currentsystem} is aimed to discuss the design/architecture and user interface of the current system and 
+Section~\ref{section:goodexpert} is aimed to introduce expert search indicators of the new system and its design/architecture.
 
 \section{Current System}\label{sec:currentsystem}
 This section is intended to give some statistics and briefly discuss design of the current system. Table~\ref{table:currentstats} gives statistics 
@@ -146,7 +148,7 @@ applied with learning to rank technique to obtain optimal ranking.
 \quad
 \begin{figure}
 \centering
-\includegraphics[scale=0.4]{./figures/union.png}
+\includegraphics[scale=0.7]{./figures/union.png}
 \caption{Results After Union} \label{fig:union} 
 \end{figure}
 In the previous section, we gave a broad view of the new system retrieval scheme. In this section, we will be more specific on how we are going to 

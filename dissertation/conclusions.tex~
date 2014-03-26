@@ -50,7 +50,7 @@ Still, we have problems regarding pattern matching between expert's names from G
 he is currently a professor in computing science at Glasgow University. Grant on the Web records his name as Jose, Professor JM.
 This makes it impossible to accurately pattern match the name with our known candidates if there are experts named Professor Joemon Jose and 
 Professor Jasmine Jose because Grant on the Web will record their names in the same format: Jose, Professor JM. Although we could solve the problem by taking 
-the university they are lecturering into account, the problem still exists if they are from the same university.
+the university they are lecturing into account, the problem still exists if they are from the same university.
 
 \subsection{Lack of LETOR Algorithms Explanation}
 Clear explanations of the Coordinate Ascent and AdaRank LETOR algorithms are difficult to find. Trying to understand the nature of 
@@ -84,7 +84,9 @@ does not improve the performance
 of the system. This might not be true however, if the system applies other LETOR algorithms provided by RankLib since each algorithm has its own behaviours.
 In addition, good training/validation datasets and feature selections play the main roles to the performance of the system~\cite{craig}. I strongly believe that the intuitions (features)
 proposed in chapter~\ref{section:goodexpert} are very useful but the main reason why LETOR fails is due to small training dataset. 
-We had 34 training queries which is very small. 
+We had 34 training queries which is very small. Each testing query can be analysed to determine why applying a learned model gives better or worse
+performance compared to not applying LETOR. This can be done by for example, analysing the number of all terms,
+the number of terms from funded projects and of terms from publications relevant to each testing query.
 
 Moreover, for IR systems to get better performance, not only LETOR technique is contributed to the success of the retrieval system, but also 
 other aspects in IR such as tokenisation technique, stemming technique and retrieval models.

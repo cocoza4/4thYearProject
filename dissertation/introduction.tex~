@@ -3,30 +3,38 @@
 
 \chapter{Introduction}
 
+This chapter is about the introduction of the project. It will give an overview of The Scottish Informatics and Computer Science Alliance (SICSA), 
+the existing search engine, definition of the project and aims. It will also outline the structure of the project.
+
 \section{The Scottish Informatics and Computer Science Alliance (SICSA)}
 
 ``The Scottish Informatics and Computer Science Alliance (SICSA) is a collaboration of Scottish Universities whose goal is to develop 
 and extend Scotland's position as a world leader in Informatics and Computer Science research and education''~\cite{sicsa}. 
 SICSA achieves this by working cooperatively rather than competitively, by providing support and sharing facilities, by working closely 
 with industry and government and by appointing and retaining world-class staff and research students in Scottish Universities.
-A list of members of SICSA is given below.
-
-\begin{itemize}
- \item University of Aberdeen
- \item University of Abertay
- \item University of Dundee
- \item University of Edinburgh
- \item Edinburgh Napier University
- \item University of Glasgow
- \item Glasgow Caledonian University
- \item Heriot-Watt University
- \item Robert Gordon University
- \item University of St Andrews
- \item University of Stirling
- \item University of Strathclyde
- \item University of the West of Scotland
-\end{itemize}
-
+A list of members of SICSA is given in table~\ref{table:sicsaUni}.
+\begin{table}
+\centering
+\scalebox{0.5}{ \begin{tabular}{|l|}
+\hline \multicolumn{1}{|c|}{\textbf{University}} \\
+\hline University of Aberdeen \\
+\hline University of Abertay \\
+\hline University of Dundee \\ 
+\hline University of Edinburgh \\
+\hline Edinburgh Napier University \\
+\hline University of Glasgow \\
+\hline Glasgow Caledonian University \\
+\hline Heriot-Watt University \\
+\hline Robert Gordon University \\
+\hline University of St Andrews \\
+\hline University of Stirling \\
+\hline University of Strathclyde \\
+\hline University of the West of Scotland \\
+\hline
+\end{tabular}
+} 
+\caption{A list of members of SICSA} \label{table:sicsaUni}
+\end{table}
 \section{What is Expert Search?}\label{sec:expertsearch}
 With the enormous in the number of information and documents and the need to access information in large enterprise organisations,
 ``collaborative users regularly have the need to find not only documents, but also people with whom they share common interests, 
@@ -49,8 +57,8 @@ To integrate academic funded projects and publications together, Learning to Ran
 
 \section{Context}
 This project was initially developed by an undergraduate student a few years ago. It used academic's publications as an expertise evidence to find experts.
-I have access to funded projects data in the UK. This data is integrated with existing data to improve the performance of http://experts.sicsa.ac.uk/ ~\cite{sicsasearch}
-The name of the project is \textit{AcademTech}. Some chapters might use this name.
+I have access to funded projects data in the UK. This data is integrated with existing data to improve the effectiveness of http://experts.sicsa.ac.uk/ ~\cite{sicsasearch}
+at answering expert search queries. The internal name of the codebase is \textit{AcademTech}. Some chapters might use this name.
 
 \section{Overview}
 In this dissertation, section~\ref{section:background} aims to explain the backgrounds of the project to readers. 
@@ -60,4 +68,4 @@ Section~\ref{section:implementation} discusses about implementations of the syst
 Section~\ref{sec:evaluation} provides results and analysis of the techniques used. 
 This section can be viewed as the most important part of the whole project since it 
 analyses whether applying a learning to rank technique improves the performance of the system or not. 
-The last section is the conclusion of the project.
+The last section is the conclusions of the project.
