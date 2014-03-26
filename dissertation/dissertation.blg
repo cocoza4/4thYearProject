@@ -43,47 +43,49 @@ Warning--empty journal in learningmodel
 Warning--empty publisher in letorBook
 Name 1 in "Mehryar Mohri, Afshin Rostamizadeh, and Ameet Talwalkar" has a comma at the end for entry letor
 while executing---line 1090 of file plain.bst
+Warning--empty journal in caAlg
+Warning--empty year in caAlg
 Warning--empty journal in yahooLETOR
 Warning--empty publisher in mlSimon
-You've used 36 entries,
+You've used 37 entries,
             2118 wiz_defined-function locations,
-            618 strings with 7157 characters,
-and the built_in function-call counts, 6608 in all, are:
-= -- 616
-> -- 120
+            622 strings with 7267 characters,
+and the built_in function-call counts, 6807 in all, are:
+= -- 633
+> -- 127
 < -- 1
-+ -- 69
-- -- 28
-* -- 246
-:= -- 884
-add.period$ -- 78
-call.type$ -- 36
-change.case$ -- 118
++ -- 72
+- -- 30
+* -- 257
+:= -- 920
+add.period$ -- 80
+call.type$ -- 37
+change.case$ -- 122
 chr.to.int$ -- 0
-cite$ -- 65
-duplicate$ -- 288
-empty$ -- 815
-format.name$ -- 28
-if$ -- 1549
+cite$ -- 68
+duplicate$ -- 298
+empty$ -- 832
+format.name$ -- 30
+if$ -- 1587
 int.to.chr$ -- 0
-int.to.str$ -- 36
-missing$ -- 9
-newline$ -- 153
-num.names$ -- 24
-pop$ -- 288
+int.to.str$ -- 37
+missing$ -- 10
+newline$ -- 157
+num.names$ -- 26
+pop$ -- 296
 preamble$ -- 1
-purify$ -- 86
+purify$ -- 89
 quote$ -- 0
-skip$ -- 281
+skip$ -- 287
 stack$ -- 0
-substring$ -- 231
+substring$ -- 236
 swap$ -- 42
 text.length$ -- 1
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 138
-warning$ -- 29
-while$ -- 26
-width$ -- 38
-write$ -- 284
+type$ -- 142
+warning$ -- 31
+while$ -- 28
+width$ -- 39
+write$ -- 291
 (There were 4 error messages)

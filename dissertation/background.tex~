@@ -53,7 +53,8 @@ Given a document containing Albert Einstein's quote about life, it can be illust
 
 \begin{table}
 \centering
-\begin{tabular}{|c|c|}
+% \small
+\scalebox{0.5}{\begin{tabular}{|c|c|}
 
 \hline \textbf{Term} & \textbf{frequency} \\
 \hline there & 1 \\
@@ -77,6 +78,7 @@ Given a document containing Albert Einstein's quote about life, it can be illust
 \hline everything & 1 \\  
 \hline
 \end{tabular}
+}
 \caption{Terms and Frequency} \label{table:termsandfrequency}
 \end{table}
 
@@ -93,7 +95,7 @@ Table \ref{table:stopwordsremoval} shows all the terms and frequency of each ter
 
 \begin{table}
 \centering
-\begin{tabular}{|c|c|}
+\scalebox{0.5}{\begin{tabular}{|c|c|}
 \hline \textbf{Term} & \textbf{frequency} \\
 \hline two & 1 \\
 \hline ways & 1 \\
@@ -105,6 +107,7 @@ Table \ref{table:stopwordsremoval} shows all the terms and frequency of each ter
 \hline everything & 1 \\  
 \hline
 \end{tabular}
+}
 \caption{Terms and Frequency After Stopwords Removal} \label{table:stopwordsremoval}
 \end{table}
 %Now, the table representing the document has shorter size and contains only meaningful words.
@@ -116,7 +119,7 @@ This process makes the size of the data shorter. There are various stemming algo
 
 \begin{table}
 \centering
-\begin{tabular}{|c|c|}
+\scalebox{0.5}{\begin{tabular}{|c|c|}
 \hline \textbf{Term} & \textbf{frequency} \\
 \hline two & 1 \\
 \hline way & 1 \\
@@ -128,6 +131,7 @@ This process makes the size of the data shorter. There are various stemming algo
 \hline everything & 1 \\  
 \hline
 \end{tabular}
+}
 \caption{Terms and Frequency After Stemming} \label{table:stemming}
 \end{table}
 After stemming, all terms in the table are in its root forms. If a document is large in size, this process can reduce the size of the data considerably. However, 
@@ -220,7 +224,7 @@ technique which will be explained in section~\ref{section:voting} are used to co
 Once scores have been assigned to relevant documents, the system ranks all documents in order of decreasing scores and 
 show to the user. Figure~\ref{fig:retrieval} gives a graphical representation of retrieval process.
 
-\subsection{Evaluation}\label{sec:evaluation}
+\subsection{Evaluation}\label{sec:background_evaluation}
 This section is devoted to backgrounds of evaluation of IR systems. It is very important as it is a background for Evaluation Section. 
 Since IR is research-based, understanding how evaluation is carried out will enable readers to determine whether 
 this project is achieved or not. There are 3 main reasons for evaluating IR systems~\cite[P. 3]{eval}: 
@@ -423,10 +427,45 @@ function~\cite[P. 60]{letorBook}. Then AdaRank linearly combines the weak ranker
 learning to rank algorithms~\cite[P. 60]{letorBook}.
 
 \subsubsection{Coordinate Ascent}
-not yet
+Coordinate Ascent Algorithm is an adaptation of Automatic Feature Selection Algorithm~\cite{caAlg}. It is also a linear model~\cite[P. 1-4]{mlSimon} 
+based LETOR algorithm as same as AdaRank.
+
+Let $M_t$ denote the model learned after iteration $t$. Features are denoted by $f$ and the weight (parameter) associated with feature $f$ is 
+denoted by $\lambda_f$. The candidate set of features is denoted by $F$. A model is represented as set of pairs of feature/weight. We assume that
+$SCORE(M)$ returns the goodness of model $M$ with respect to some training data.
+\begin{figure}
+\begin{program}
+\BEGIN \\
+  t:= 0
+  M_t:= $\{\}$
+  \WHILE SCORE(M_t) - SCORE(M_{t-1}) > \in \DO
+    \FOR f \in F \DO
+      \hat{\lambda} := arg max_{\lambda_f} SCORE(M \cup \{(f, \lambda_f)\}) \rcomment{AFS is used to obtain $\lambda_f$}
+      SCORE_f := SCORE(M \cup \{(f, \hat{\lambda_f})\})
+    \END
+  f^* := arg max_f SCORE_f
+  M := M \cup \{(f^*, \hat{\lambda_{f^*}})\}
+  F := F - \{f^*\}
+  t := t + 1
+  \END
+\END
+\end{program}
+\caption{Pseudocode of Coordinate Ascent}\label{fig:caAlg}
+\end{figure}
+
+% coordinate ascent comes from the algorithm used to obtain the best $\lambda_f$ in line 5. of algorithm 1. When I implemented the algorithm, 
+% I actually used a different "hill climbing" algorithm, namely simulated annealing (you got a run called AFS, implemented this way).
+
+The algorithm shown in Figure~\ref{fig:caAlg} starts with an empty model $M_t$. The feature $f$ is added to the model. AFS is used to 
+obtain the best $\lambda_f$. The utility of feature $f$ ($SCORE_f$) is defined to be the maximum utility obtained during training. This process 
+is repeated for every $f \in F$. The feature with maximum utility is then added to the model and removed from $F$. 
+The entire
+process is then repeated until the change
+in utility between consecutive iterations drops below some
+threshold.
 
 \subsection{K-fold Cross-validation}\label{sec:kfold}
-In sections~\ref{sec:letor} and~\ref{sec:learnedmodel}, we talked about 2 mandatory types ofdata: training and testing data. If our learned model is based too much on 
+In sections~\ref{sec:letor} and~\ref{sec:learnedmodel}, we talked about 2 mandatory types of data: training and testing data. If our learned model is based too much on 
 training data (pays too much attentions on training data), the predictions for testing data are very poor. This is often the case, when our training dataset
 is very small~\cite{mlSimon}. In machine learning, we call 
 it \textit{over-fitting}~\cite[P. 28]{mlSimon}. Determining the optimal model such that it is able to generalise well without over-fitting is very challenging.
@@ -454,7 +493,7 @@ which is the same programming language used in this project.
 \paragraph{Terrier Indexing} \hspace{0pt} \\
 \begin{figure}
 \centering
-\includegraphics[scale=0.4]{./figures/terrierindexing.png}
+\includegraphics[scale=0.2]{./figures/terrierindexing.png}
 \caption{Indexing Architecture of Terrier from \protect\url{http://terrier.org/docs/v3.5/basicComponents.html}} \label{fig:terrierindexing} 
 \end{figure}
 
@@ -551,8 +590,7 @@ Figure \ref{fig:query} shows the results of the query ``database normalisation''
 include the keywords a user submitted, and the third result does not have query keywords included in the URL. Among all of which, the second result has more 
 evidence than others. It has an author's name, a photo of an author that other results do not. In this project, these evidence of credits also take into account.
 However, we are unable to take URL, and photo into account because the datasource (section~\ref{section:aims})
-does not provide photos of experts and URL is not used because it's not an web search engine. To compute a degree of relevancy, author's
-name and keywords of the article name are both used.
+does not provide photos of experts and URL is not used because it's not an web search engine.
 
 \subsection{Voting Technique}\label{section:voting}
 In section ~\ref{section:retrieving}, we very briefly talked about weighting models or retrieval models. In other words, how documents are assigned scores. In this section,
@@ -573,7 +611,7 @@ ranking of candidates to this query could be \{$C1, C2, C3$\}. In this project, 
 
 \begin{table}
 \centering
-\begin{tabular}{|c|c|c|}
+\scalebox{0.5}{\begin{tabular}{|c|c|c|}
 \hline \textbf{Rank} & \textbf{Docs} & \textbf{Scores}\\
 \hline 1 & D1 & 5.4 \\
 \hline 2 & D2 & 4.2\\
@@ -581,12 +619,13 @@ ranking of candidates to this query could be \{$C1, C2, C3$\}. In this project, 
 \hline 4 & D4 & 2.0 \\  
 \hline
 \end{tabular}
+}
 \caption{R(Q)} \label{table:ranking}
 \end{table}
 \quad
 \begin{table}
 \centering
-\begin{tabular}{|c|l|}
+\scalebox{0.5}{\begin{tabular}{|c|l|}
 \hline \textbf{Profiles} & \textbf{Docs}\\
 \hline C1 & D3, D4, D2 \\
 \hline C2 & D1, D2 \\
@@ -594,13 +633,15 @@ ranking of candidates to this query could be \{$C1, C2, C3$\}. In this project, 
 \hline C4 & D5, D6 \\  
 \hline
 \end{tabular}
+}
 \caption{Profiles} \label{table:profiles}
 \end{table}
 
-\[
-candScore(C,Q) = |R(Q) \cap profile(C)| \sum_{d \in R(Q) \cap profile(C)} exp(score_d)
-\]
-where $|R(Q) \cap profile(C)|$ is the number of documents from the profile of candidate $C$ that are in the ranking $R(Q)$ and $score_d$ is the score
+\begin{equation}
+ candScore(C,Q) = \|R(Q) \cap profile(C)\| \sum_{d \in R(Q) \cap profile(C)} exp(score_d)
+\end{equation}
+
+where $\|R(Q) \cap profile(C)\|$ is the number of documents from the profile of candidate $C$ that are in the ranking $R(Q)$ and $score_d$ is the score
 obtained using retrieval model of candidate $C$.
 
 

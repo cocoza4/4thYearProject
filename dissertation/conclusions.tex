@@ -10,20 +10,20 @@ However, AdaRank and Coordinate Ascent algorithms are chosen due to its simplici
 
 \noindent The reasons behind LETOR failure can be found in the previous chapter.
 
-\section{Requirements Acheived}
+\section{Requirements Achieved}
 The following is a summary of the requirements (see chapter~\ref{sec:requirements}) that have been achieved.
 \begin{itemize}
  \item All of the system's Must Have requirements.
  \item All of the system's Should Have requirements.
  \item All of the non-functional Requirements.
 \end{itemize}
-The system's Would like to Have and Could Have requirements could not be acheived because of time constraint.
+The system's Would like to Have and Could Have requirements could not be achieved because of time constraint.
 The Could Have requirements can be difficult for 4th year students~\cite{craig} as they are too complex and require full understanding of the 
 behaviours of the technique used~\cite{craig}.
 However, the aim of the project is to experiment 2 LETOR algorithms: AdaRank and Coordinate, and apply the one performing better.
 
 \section{Challenges}\label{sec:challenges}
-During the development of the project, we have encountered various challenges. This section will discuss challenges that I have encountered.
+During the development of the project, we have encountered various challenges. This section will discuss challenges encountered.
 
 \subsection{LETOR}
 Learning to rank is a relatively new
@@ -42,15 +42,15 @@ the system~\cite{craig}.
 
 \section{Problems Encountered}\label{sec:problems}
 During the development of the project, we have encountered various problems. Some of them can be addressed and some can not. In this section, we 
-list a number of problems encountered delelopment life cycle.
+list a number of problems encountered during development life cycle.
 
-\subsection{Expert's Name Pattern Maching}
-In chapter~\ref{sec:dataextraction}, we discussed approaches used to handle differences between expert's name formats in each source. 
+\subsection{Expert's Name Pattern Matching}
+In chapter~\ref{sec:dataextraction}, we discussed approaches used to handle differences between expert's name formats in each funded projects datasource. 
 Still, we have problems regarding pattern matching between expert's names from Grant on the Web~\cite{gow}. Consider Professor Joemon Jose,
 he is currently a professor in computing science at Glasgow University. Grant on the Web records his name as Jose, Professor JM.
 This makes it impossible to accurately pattern match the name with our known candidates if there are experts named Professor Joemon Jose and 
 Professor Jasmine Jose because Grant on the Web will record their names in the same format: Jose, Professor JM. Although we could solve the problem by taking 
-the university they are lecturering into account, the problem still exists if they are from the same university.
+the university they are lecturing into account, the problem still exists if they are from the same university.
 
 \subsection{Lack of LETOR Algorithms Explanation}
 Clear explanations of the Coordinate Ascent and AdaRank LETOR algorithms are difficult to find. Trying to understand the nature of 
@@ -60,7 +60,7 @@ the algorithms is not an easy task for 4th year student as it is based on mathem
 In chapter~\ref{sec:evaluation}, we talked about the problems we encountered when constructing relevance judgements. That is,
 we managed to construct training queries whose results (relevant experts) are only from University of Glasgow (see last chapter). 
 The reason behind this is that it is difficult to judge experts not in University of Glasgow because we do not know them.
-As a consequence of poor relevance judgement, the dataset used for evaluation becomes poor~\cite{craig}.
+As a consequence of poor relevance judgements, the dataset used for training and evaluation becomes poor~\cite{craig}.
 
 
 \section{How would I have done differently?}
@@ -69,8 +69,8 @@ However, these issues could be minimised or eliminated if
 \begin{itemize}
  \item The behaviours of LETOR algorithms is well understood at the early stage of the development - this means that we could experiment only 
  suitable algorithms whose behaviour is applicable to the task.
- \item Various funded projects datasources should be used to increase the number of expertise evidence - this means that we would have more training/validation
- data.
+ \item Various funded projects datasources should be used to increase the number of expertise evidence - this means that we would have more training, 
+ validation and testing datasets.
  \item Relevance Judgements are prepared by experienced persons - this means that the performance of LETOR techniques could be enhanced as relevance judgements
  are used to produce training and validation datasets.
  \item Tools used in this project are familiarised at the early stage of the development - this means that we could focus more on other aspects of the 
@@ -83,7 +83,7 @@ In the previous chapter, the experimental results have shown that applying LETOR
 does not improve the performance
 of the system. This might not be true however, if the system applies other LETOR algorithms provided by RankLib since each algorithm has its own behaviours.
 In addition, good training/validation datasets and feature selections play the main roles to the performance of the system~\cite{craig}. I strongly believe that the intuitions (features)
-proposed in section~\ref{section:goodexpert} are very useful but the main reason why LETOR fails is due to small training dataset. 
+proposed in chapter~\ref{section:goodexpert} are very useful but the main reason why LETOR fails is due to small training dataset. 
 We had 34 training queries which is very small. 
 
 Moreover, for IR systems to get better performance, not only LETOR technique is contributed to the success of the retrieval system, but also 

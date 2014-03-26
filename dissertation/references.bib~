@@ -52,6 +52,11 @@
 }
 
 @misc{trec,
+  howpublished = "\url{http://trec.nist.gov/overview.html}",
+  title = {The Text REtrieval Conference (TREC)}
+}
+
+@misc{trec,
   title = {Text REtrieval Conference},
   howpublished = "\url{http://trec.nist.gov/}"
 }
@@ -213,6 +218,11 @@ University of Glasgow}
   title = {Text Classification},
   year = {2013},
   author = {Professor Joemon Jose}
+}
+
+@article{caAlg,
+  title = {Automatic Feature Selection in the Markov Random FieldModel for Information Retrieval},
+  author = {Donald Metzler}
 }
   
 @article{yahooLETOR,

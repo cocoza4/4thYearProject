@@ -148,6 +148,11 @@ Afshin~Rostamizadeh Mehryar~Mohri and Ameet Talwalkar.
 \newblock {\em Foundations of Machine Learning}.
 \newblock The MIT Press, 2012.
 
+\bibitem{caAlg}
+Donald Metzler.
+\newblock Automatic feature selection in the markov random field model for
+  information retrieval.
+
 \bibitem{yahooLETOR}
 Yi~Chang Olivier~Chapelle.
 \newblock Yahoo! learning to rank challenge overview.

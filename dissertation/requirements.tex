@@ -6,13 +6,14 @@ This section is intended to give some statistics and briefly discuss design of t
 of current system.
 \begin{table}
 \centering
-\begin{tabular}{|c|c|}
+\scalebox{0.5}{\begin{tabular}{|c|c|}
 \hline Number of experts & 1569 \\
 \hline Number of publications & 22225 \\
 \hline Number of all documents   & 24823 \\ 
 \hline Number of tokens (terms) & 6876832 \\
 \hline
 \end{tabular}
+}
 \caption{Statistics of Current System} \label{table:currentstats}
 \end{table}
 
@@ -97,7 +98,7 @@ The requirements have been split into 2 sections depending on their necessity: f
  \item Integrating publications and funded projects as expertise evidence.
  \item Utilizing learning to rank techniques with an attempt to enhance the performance of the retrieval system using AdaRank and Coordinate Ascent algorithms.
  \item Conclusions that applying learning to rank techniques helps improve the performance of the retrieval system using evaluation metrics discussed
- in section~\ref{sec:evaluation}. 
+ in section~\ref{sec:background_evaluation}. 
 \end{itemize}
 
 \paragraph{Should Have} \hspace{0pt} \\
@@ -131,7 +132,7 @@ applied with learning to rank technique to obtain optimal ranking.
 
  \begin{figure}
  \centering
- \includegraphics[scale=0.5,keepaspectratio]{./figures/newSystemDesign.png}
+ \includegraphics[scale=0.4,keepaspectratio]{./figures/newSystemDesign.png}
  \caption{Design of Current System} \label{fig:newDesign} 
 \end{figure}
 
@@ -139,7 +140,7 @@ applied with learning to rank technique to obtain optimal ranking.
 
 \begin{figure}
 \centering
-\includegraphics[scale=0.7]{./figures/querying.png}
+\includegraphics[scale=0.4]{./figures/querying.png}
 \caption{Querying} \label{fig:quering} 
 \end{figure}
 \quad

@@ -241,7 +241,9 @@ To measure information retrieval effectiveness in the standard way, a test colle
 The standard approach to information retrieval system evaluation revolves around the notion of relevant and nonrelevant documents. With respect 
 to a user's information need, a document in the test collection is given a binary classification as either relevant or nonrelevant~\cite{evalweb}. However,
 this can be extended by using numbers as an indicator of the degree of relevancy called \textbf{graded relevance value}. For example, documents labelled 2 is more relevant than documents
-labelled 1, and documents labelled 0 is not relevant. There are a number of test collection standards. In this project, Text Retrieval Conference (TREC)
+labelled 1, and documents labelled 0 is not relevant. In IR, a binary classification as either relevant or nonrelevant and graded relevance value are
+called \textbf{relevance judgement}.
+There are a number of test collection standards. In this project, Text Retrieval Conference (TREC)~\cite{trec}
 is used since it is widely used in the field of IR.
 
 %\paragraph{Precision and Recall}
@@ -421,17 +423,35 @@ function~\cite[P. 60]{letorBook}. Then AdaRank linearly combines the weak ranker
 learning to rank algorithms~\cite[P. 60]{letorBook}.
 
 \subsubsection{Coordinate Ascent}
-not yet
+
+\begin{figure}
+\begin{program}
+\BEGIN \\
+  t:= 0
+  M_t:= $\{\}$
+  \WHILE SCORE(M_t) - SCORE(M_t) > \in \DO
+    \FOR f \in F \DO
+      \hat{\lambda} := arg max_{\lambda_f} SCORE(M \cup \{(f, \lambda_f)\})
+      SCORE_f := SCORE(M \cup \{(f, \hat{\lambda_f})\})
+    \END
+  f^* := arg max_f SCORE_f
+  M := M \cup \{(f^*, \hat{\lambda_{f^*}})\}
+  F := F - \{f^*\}
+  t := f + 1
+  \END
+\END
+\end{program}
+\caption{Pseudocode of Coordinate Ascent}\label{fig:caAlg}
+\end{figure}
 
 \subsection{K-fold Cross-validation}\label{sec:kfold}
-In sections~\ref{sec:letor} and~\ref{sec:learnedmodel}, we talked about training and testing data. If our learned model is based too much on 
+In sections~\ref{sec:letor} and~\ref{sec:learnedmodel}, we talked about 2 mandatory types of data: training and testing data. If our learned model is based too much on 
 training data (pays too much attentions on training data), the predictions for testing data are very poor. This is often the case, when our training dataset
 is very small~\cite{mlSimon}. In machine learning, we call 
 it \textit{over-fitting}~\cite[P. 28]{mlSimon}. Determining the optimal model such that it is able to generalise well without over-fitting is very challenging.
 This is why we need \textit{validation data}. A validation data is typically provided separately or removed from original dataset~\cite{craig}.
 K-fold cross-validation splits the original dataset into K equally sized blocks or folds~\cite{mlSimon}. Each fold takes its turn as a validation data for a
-training data comprised of the other K - 1 folds~\cite{mlSimon}. Feature values of all learned models obtained in each run are averaged to produce
-final learned model. Figure~\ref{fig:crossvalidation} describes K-fold Cross-validation graphically.
+training data comprised of the other K - 1 folds~\cite{mlSimon}. Figure~\ref{fig:crossvalidation} describes K-fold Cross-validation graphically.
 \begin{figure}
 \centering
 \includegraphics[scale=0.4]{./figures/validation.png}
@@ -490,7 +510,8 @@ Currently 8 popular algorithms have been implemented:
 This library was chosen because it is easy to use, written in Java which can be easily combined with this system as it is also developed using Java, and
 it implements 8 different learning to rank algorithms which makes it possible for users to try different algorithms.
 However, AdaRank and Coordinate Ascent were only used in the project because other algorithms are too complex and not part of the scope of this project.
-RankLib provides k-fold cross validation functionally given only training dataset. 
+RankLib provides k-fold cross validation functionally given only training dataset. This saves us time to split data for validation, training and 
+testing as described in section~\ref{sec:letor}.
 
 \subsection{trec\_eval}\label{sec:treceval}
 trec\_eval is the standard tool used by the TREC community~\cite{trec} for evaluating a retrieval run, given the results file and a
@@ -549,8 +570,7 @@ Figure \ref{fig:query} shows the results of the query ``database normalisation''
 include the keywords a user submitted, and the third result does not have query keywords included in the URL. Among all of which, the second result has more 
 evidence than others. It has an author's name, a photo of an author that other results do not. In this project, these evidence of credits also take into account.
 However, we are unable to take URL, and photo into account because the datasource (section~\ref{section:aims})
-does not provide photos of experts and URL is not used because it's not an web search engine. To compute a degree of relevancy, author's
-name and keywords of the article name are both used.
+does not provide photos of experts and URL is not used because it's not an web search engine.
 
 \subsection{Voting Technique}\label{section:voting}
 In section ~\ref{section:retrieving}, we very briefly talked about weighting models or retrieval models. In other words, how documents are assigned scores. In this section,
@@ -595,10 +615,11 @@ ranking of candidates to this query could be \{$C1, C2, C3$\}. In this project, 
 \caption{Profiles} \label{table:profiles}
 \end{table}
 
-\[
-candScore(C,Q) = |R(Q) \cap profile(C)| \sum_{d \in R(Q) \cap profile(C)} exp(score_d)
-\]
-where $|R(Q) \cap profile(C)|$ is the number of documents from the profile of candidate $C$ that are in the ranking $R(Q)$ and $score_d$ is the score
+\begin{equation}
+ candScore(C,Q) = \|R(Q) \cap profile(C)\| \sum_{d \in R(Q) \cap profile(C)} exp(score_d)
+\end{equation}
+
+where $\|R(Q) \cap profile(C)\|$ is the number of documents from the profile of candidate $C$ that are in the ranking $R(Q)$ and $score_d$ is the score
 obtained using retrieval model of candidate $C$.
 
 

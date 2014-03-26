@@ -7,31 +7,31 @@
 \contentsline {chapter}{\numberline {2}Background}{6}
 \contentsline {section}{\numberline {2.1}Information Retrieval (IR) and Search Engine}{6}
 \contentsline {subsection}{\numberline {2.1.1}Brief Overview of Information Retrieval System Architecture}{7}
-\contentsline {paragraph}{Tokenisation}{7}
-\contentsline {paragraph}{Stopwords Removal}{7}
-\contentsline {paragraph}{Stemming}{9}
-\contentsline {paragraph}{Inverted Index Structure Creation}{9}
+\contentsline {paragraph}{Tokenisation}{8}
+\contentsline {paragraph}{Stopwords Removal}{8}
+\contentsline {paragraph}{Stemming}{8}
+\contentsline {paragraph}{Inverted Index Structure Creation}{8}
 \contentsline {subsection}{\numberline {2.1.2}Retrieval Models}{9}
 \contentsline {paragraph}{Term Frequency\IeC {\textendash }Inverse Document Frequency (tf-idf)}{9}
-\contentsline {paragraph}{BM25}{10}
-\contentsline {paragraph}{PL2}{10}
+\contentsline {paragraph}{BM25}{9}
+\contentsline {paragraph}{PL2}{9}
 \contentsline {subsection}{\numberline {2.1.3}Retrieval Process in Information Retrieval}{10}
-\contentsline {subsection}{\numberline {2.1.4}Evaluation}{11}
-\contentsline {subsubsection}{Precision and Recall}{12}
-\contentsline {paragraph}{Mean Average Precision (MAP)}{13}
-\contentsline {paragraph}{Mean Reciprocal Rank (MRR)}{13}
-\contentsline {paragraph}{Normalized Discounted Cumulative Gain (NDCG or nDCG)}{13}
+\contentsline {subsection}{\numberline {2.1.4}Evaluation}{10}
+\contentsline {subsubsection}{Precision and Recall}{11}
+\contentsline {paragraph}{Mean Average Precision (MAP)}{12}
+\contentsline {paragraph}{Mean Reciprocal Rank (MRR)}{12}
+\contentsline {paragraph}{Normalized Discounted Cumulative Gain (NDCG or nDCG)}{12}
 \contentsline {section}{\numberline {2.2}Learning to Rank (LETOR) In Information Retrieval}{13}
-\contentsline {subsection}{\numberline {2.2.1}Query Dependent Feature}{14}
+\contentsline {subsection}{\numberline {2.2.1}Query Dependent Feature}{13}
 \contentsline {subsection}{\numberline {2.2.2}Query Independent Feature}{14}
 \contentsline {subsection}{\numberline {2.2.3}Learning to Rank File Format}{14}
-\contentsline {subsection}{\numberline {2.2.4}Learning to Rank Model File Format}{15}
+\contentsline {subsection}{\numberline {2.2.4}Learning to Rank Model File Format}{14}
 \contentsline {subsection}{\numberline {2.2.5}Obtaining and Deploying a Learned Model}{15}
-\contentsline {subsection}{\numberline {2.2.6}Applying a Learned Model}{16}
+\contentsline {subsection}{\numberline {2.2.6}Applying a Learned Model}{15}
 \contentsline {subsection}{\numberline {2.2.7}Learning to Rank Algorithms}{16}
 \contentsline {subsubsection}{AdaRank}{16}
 \contentsline {subsubsection}{Coordinate Ascent}{16}
-\contentsline {subsection}{\numberline {2.2.8}K-fold Cross-validation}{16}
+\contentsline {subsection}{\numberline {2.2.8}K-fold Cross-validation}{17}
 \contentsline {section}{\numberline {2.3}Tools}{17}
 \contentsline {subsection}{\numberline {2.3.1}Terrier}{17}
 \contentsline {paragraph}{Terrier Indexing}{17}
@@ -53,41 +53,41 @@
 \contentsline {subsubsection}{Non-functional Requirements}{26}
 \contentsline {subsection}{\numberline {3.2.2}Design and Architecture of New System}{26}
 \contentsline {paragraph}{Retrieving Documents (Experts) with Respect to a Query}{27}
-\contentsline {chapter}{\numberline {4}Implementation}{29}
-\contentsline {section}{\numberline {4.1}Overview of Important Class Diagrams}{29}
-\contentsline {section}{\numberline {4.2}Data Extraction}{31}
-\contentsline {section}{\numberline {4.3}Indexing}{33}
-\contentsline {paragraph}{ContactsList.trec.gz}{33}
-\contentsline {paragraph}{Homepages.trec.gz}{33}
-\contentsline {paragraph}{Projects.trec.gz}{33}
-\contentsline {paragraph}{Publications.trec.gz}{34}
-\contentsline {paragraph}{association.txt}{34}
-\contentsline {section}{\numberline {4.4}Producing a Learned Model}{35}
-\contentsline {section}{\numberline {4.5}Applying a Learned Model}{36}
-\contentsline {section}{\numberline {4.6}User Interface of New System}{38}
-\contentsline {chapter}{\numberline {5}Evaluation}{42}
-\contentsline {section}{\numberline {5.1}Evaluation Without K-fold Cross-validation}{42}
-\contentsline {subsection}{\numberline {5.1.1}Experimental Setting}{42}
-\contentsline {subsubsection}{Training Queries}{43}
-\contentsline {subsubsection}{Testing Queries}{43}
-\contentsline {subsection}{\numberline {5.1.2}Experimental Results}{43}
-\contentsline {section}{\numberline {5.2}Evaluation With K-fold Cross-validation}{45}
-\contentsline {subsection}{\numberline {5.2.1}Experimental Setting}{45}
-\contentsline {subsubsection}{Fold 1}{45}
-\contentsline {subsubsection}{Fold 2}{45}
+\contentsline {chapter}{\numberline {4}Implementation}{28}
+\contentsline {section}{\numberline {4.1}Overview of Important Class Diagrams}{28}
+\contentsline {section}{\numberline {4.2}Data Extraction}{30}
+\contentsline {section}{\numberline {4.3}Indexing}{31}
+\contentsline {paragraph}{ContactsList.trec.gz}{32}
+\contentsline {paragraph}{Homepages.trec.gz}{32}
+\contentsline {paragraph}{Projects.trec.gz}{32}
+\contentsline {paragraph}{Publications.trec.gz}{33}
+\contentsline {paragraph}{association.txt}{33}
+\contentsline {section}{\numberline {4.4}Producing a Learned Model}{34}
+\contentsline {section}{\numberline {4.5}Applying a Learned Model}{34}
+\contentsline {section}{\numberline {4.6}User Interface of New System}{37}
+\contentsline {chapter}{\numberline {5}Evaluation}{40}
+\contentsline {section}{\numberline {5.1}Evaluation Without K-fold Cross-validation}{40}
+\contentsline {subsection}{\numberline {5.1.1}Experimental Setting}{40}
+\contentsline {subsubsection}{Training Queries}{41}
+\contentsline {subsubsection}{Testing Queries}{41}
+\contentsline {subsection}{\numberline {5.1.2}Experimental Results}{42}
+\contentsline {section}{\numberline {5.2}Evaluation With K-fold Cross-validation}{43}
+\contentsline {subsection}{\numberline {5.2.1}Experimental Setting}{43}
+\contentsline {subsubsection}{Fold 1}{43}
+\contentsline {subsubsection}{Fold 2}{43}
 \contentsline {subsubsection}{Fold 3}{45}
-\contentsline {subsubsection}{Fold 4}{51}
-\contentsline {subsubsection}{Fold 5}{51}
-\contentsline {subsection}{\numberline {5.2.2}Experimental Results}{51}
-\contentsline {section}{\numberline {5.3}Causes of Learning to Rank Failure}{56}
-\contentsline {chapter}{\numberline {6}Conclusions}{57}
-\contentsline {section}{\numberline {6.1}Requirements Acheived}{57}
-\contentsline {section}{\numberline {6.2}Challenges}{57}
-\contentsline {subsection}{\numberline {6.2.1}LETOR}{58}
-\contentsline {subsection}{\numberline {6.2.2}Relevance Judgement}{58}
-\contentsline {section}{\numberline {6.3}Problems Encountered}{58}
-\contentsline {subsection}{\numberline {6.3.1}Expert's Name Pattern Maching}{58}
-\contentsline {subsection}{\numberline {6.3.2}Lack of LETOR Algorithms Explanation}{58}
-\contentsline {subsection}{\numberline {6.3.3}Poor Quality of Relevance Judgements}{58}
-\contentsline {section}{\numberline {6.4}How would I have done differently?}{59}
-\contentsline {section}{\numberline {6.5}Future Work}{59}
+\contentsline {subsubsection}{Fold 4}{45}
+\contentsline {subsubsection}{Fold 5}{45}
+\contentsline {subsection}{\numberline {5.2.2}Experimental Results}{47}
+\contentsline {section}{\numberline {5.3}Causes of Learning to Rank Failure}{47}
+\contentsline {chapter}{\numberline {6}Conclusions}{49}
+\contentsline {section}{\numberline {6.1}Requirements Achieved}{49}
+\contentsline {section}{\numberline {6.2}Challenges}{49}
+\contentsline {subsection}{\numberline {6.2.1}LETOR}{50}
+\contentsline {subsection}{\numberline {6.2.2}Relevance Judgement}{50}
+\contentsline {section}{\numberline {6.3}Problems Encountered}{50}
+\contentsline {subsection}{\numberline {6.3.1}Expert's Name Pattern Matching}{50}
+\contentsline {subsection}{\numberline {6.3.2}Lack of LETOR Algorithms Explanation}{50}
+\contentsline {subsection}{\numberline {6.3.3}Poor Quality of Relevance Judgements}{50}
+\contentsline {section}{\numberline {6.4}How would I have done differently?}{51}
+\contentsline {section}{\numberline {6.5}Future Work}{51}

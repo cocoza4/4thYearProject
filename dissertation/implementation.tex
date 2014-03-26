@@ -39,7 +39,7 @@ to improve the retrieval performance of the system. But before we get to Learnin
 AcademTechQuerying Class and RetrievedResults Class which are components used in retrieving results with respect to a query. 
 \begin{figure}
 \centering
-\includegraphics[scale=0.4]{./figures/AcademTechQuerying.png}
+\includegraphics[scale=0.3]{./figures/AcademTechQuerying.png}
 \caption{AcademTechQuerying Class and RetrievedResults Class} \label{fig:AcademTechQuerying} 
 \end{figure}
 
@@ -99,13 +99,14 @@ Therefore, university is used as part of the matching as well.
 
 \begin{table}
 \centering
-\begin{tabular}{|c|c|}
+\scalebox{0.5}{\begin{tabular}{|c|c|}
 \hline \textbf{Source} & \textbf{Number of Funded Projects} \\
 \hline Grant on the Web & 32 \\
 \hline Research Councils UK & 337 \\
 \hline   & 369 total \\ 
 \hline
 \end{tabular}
+}
 \caption{The number of funded projects extracted from each source} \label{table:stats}
 \end{table}
 Figure ~\ref{table:stats} shows the number of funded projects extracted from each source. There are 1569 known candidates in the system.
@@ -212,12 +213,13 @@ Once all the files have been generated, Terrier indexes those files. Table~\ref{
 
 \begin{table}
 \centering
-\begin{tabular}{|c|c|}
+\scalebox{0.5}{\begin{tabular}{|c|c|}
 \hline Number of experts & 1569 \\
 \hline Number of all documents   & 25311 \\ 
 \hline Number of tokens (terms) & 6976895 \\
 \hline
 \end{tabular}
+}
 \caption{Statistics of New System After Indexing Process} \label{table:newtstats}
 \end{table}
 
@@ -276,13 +278,13 @@ Figure~\ref{fig:scoreandsorting} shows class diagrams of \textit{Candidatescores
 
 \begin{figure}
 \centering
-\includegraphics[scale=0.5]{./figures/score&sorting.png}
+\includegraphics[scale=0.3]{./figures/score&sorting.png}
 \caption{Class Diagrams of CandidateScores and CandidateSorting} \label{fig:scoreandsorting} 
 \end{figure}
 
 \begin{figure}
 \centering
-\includegraphics[scale=0.5]{./figures/searchsequence.png}
+\includegraphics[scale=0.4]{./figures/searchsequence.png}
 \caption{Sequence Diagram of Querying} \label{fig:searchsequence} 
 \end{figure}
 

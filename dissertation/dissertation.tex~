@@ -4,6 +4,9 @@
 \usepackage{url}
 \usepackage{mathtools}
 \usepackage[usenames,dvipsnames]{color}
+% \usepackage{algorithm}
+\usepackage{program}
+% \usepackage{float}
 
 % \renewcommand\thesection{\arabic{section}}
 % \renewcommand\thesubsection{\arabic{section}.\arabic{subsection}}
@@ -60,6 +63,11 @@ Thanks to Dr. Craig Macdonald for his advice and supervision throughout this pro
 \input{evaluation}
 
 %==============================================================================
+
+\input{conclusions}
+
+%==============================================================================
+
 \clearpage
 \bibliography{references}
 \bibliographystyle{plain}

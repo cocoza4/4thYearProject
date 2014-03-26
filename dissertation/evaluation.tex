@@ -2,7 +2,7 @@
 \chapter{Evaluation}\label{sec:evaluation}
 
 Before we discuss evaluation, we should have some goals set up. This is necessary because the evaluation results can be compared against the goals in order to
-conclude whether all goals are achieved or not. As stated in section~\ref{section:aims}, our goal is to integrate new kind of expertise evidence, funded projects,
+conclude whether all goals are achieved or not. As stated in chapter~\ref{section:aims}, our goal is to integrate new kind of expertise evidence, funded projects,
 with existing expertise evidence, publications, to enhance the performance of the retrieval system. At the end of this chapter, we have to be able to 
 answer the following question:
 
@@ -10,21 +10,21 @@ answer the following question:
  \textit{Does integrating funded projects with publications using learning to rank technique (LETOR) help improve the performance of the retrieval system?}
 \end{quotation}
 
-This chapter is aimed to demonstrate that applying LETOR techinque improves the performance of the retrieval system. To evaluate this, we use LETOR
-technique proposed in section~\ref{sec:letor}. Basically, there are 2 necessary datasets: training and testing datasets and 1 optional dataset:
+This chapter is aimed to demonstrate that applying LETOR technique improves the performance of the retrieval system. To evaluate this, we use LETOR
+technique proposed in chapter~\ref{sec:letor}. Basically, there are 2 necessary datasets: training and testing datasets and 1 optional dataset:
 validation dataset. In IR, 
 we refer them as training, testing and validation queries respectively. 
 Some of the queries were provided by Dr. Craig Macdonald and the others were made up by myself. 
 We made an assumption that the current system (using only publication as expertise evidence) is effective. This means that relevance judgements 
 (the experts retrieved in response to a query) can be obtained from the current system. To make relevance judgements, top 20 experts retrieved in response to a query
-are examined if they are truely an expert by visiting their official home page and with the help of Dr. Craig Macdonald.
+are examined if they are truly an expert by visiting their official home page and with the help of Dr. Craig Macdonald.
 Throughout this chapter, the queries annotated by * denote queries whose relevant experts are only from University of Glasgow. 
 It is difficult to judge experts not in University of Glasgow because we 
 do not know them. However, in practice, this will incur dataset quality~\cite{craig}.
 
 
 \section{Evaluation Without K-fold Cross-validation}
-This section is aimed to demonstrate that applying LETOR techinque improves the performance of the retrieval system. K-fold Cross-validation technique
+This section is aimed to demonstrate that applying LETOR technique improves the performance of the retrieval system. K-fold Cross-validation technique
 is not applied in this section.
 
 \subsection{Experimental Setting}
@@ -46,7 +46,7 @@ and perform step (5) and (6).
 
 \begin{table}
 \centering
-\begin{tabular}{|c|l|c|l|}
+\scalebox{0.5}{\begin{tabular}{|c|l|c|l|}
 \hline \textbf{\#} & \textbf{Query} & \textbf{\#} & \textbf{Query} \\
 \hline 1 & *language modelling & 18 & game theory\\
 \hline 2 & *manets & 19 & stable marriage \\
@@ -67,6 +67,7 @@ and perform step (5) and (6).
 \hline 17  & mobile hci & 34 & programming languages\\ 
 \hline
 \end{tabular}
+}
 \caption{Training Queries} \label{table:trainingqueries}
 \end{table}
 
@@ -74,7 +75,7 @@ and perform step (5) and (6).
 33 queries are used for testing as shown in table~\ref{table:testingqueries}.
 \begin{table}
 \centering
-\begin{tabular}{|c|l|c|l|}
+\scalebox{0.5}{\begin{tabular}{|c|l|c|l|}
 \hline \textbf{\#} & \textbf{Query} & \textbf{\#} & \textbf{Query} \\
 \hline 1 & *empirical methods & 18 & *3d human body segmentation\\
 \hline 2 & *eurosys 2008 & 19 & *anchor text \\
@@ -95,6 +96,7 @@ and perform step (5) and (6).
 \hline 17  & machine translation &  & \\ 
 \hline
 \end{tabular}
+}
 \caption{Testing Queries} \label{table:testingqueries}
 \end{table}
 
@@ -102,23 +104,24 @@ and perform step (5) and (6).
 
 \begin{table}
 \centering
-\begin{tabular}{|c|c|c|c|c|}
+\scalebox{0.5}{\begin{tabular}{|c|c|c|c|c|}
 \hline \textbf{Algorithm} & \textbf{MAP} & \textbf{NDCG} & \textbf{MRR} & \textbf{Number of Relevant Experts}\\
 \hline AdaRank & 0.0153 & 0.1872 & 0.0116 & 106\\
 \hline Coordinate Ascent & 0.5264 & 0.6618 & 0.6332 & 106 \\
 \hline Without LETOR  & 0.5499 & 0.6871 & 0.6484 & 106\\ 
 \hline
 \end{tabular}
+}
 \caption{Evaluation Results} \label{table:evaluationresult}
 \end{table}
 
-Table~\ref{table:evaluationresult} shows the retrieval performance of the proposed LETOR techniques and without LETOR techinque. It can be clearly seen
-that overall without LETOR gives better performance compared to using LETOR considering MAP, NDCG and MRR evaluating metrices. Coordinate Ascent gives second best 
-performance. Therefore, the answer to question is NO, using LETOR technique (without K-fold Cross-validation) does not enhance ther performance of the retrieval system.
+Table~\ref{table:evaluationresult} shows the retrieval performance of the proposed LETOR techniques and without LETOR technique. It can be clearly seen
+that overall without LETOR gives better performance compared to using LETOR considering MAP, NDCG and MRR evaluating metrics. Coordinate Ascent gives second best 
+performance. Therefore, the answer to the question is NO, using LETOR technique (without K-fold Cross-validation) does not enhance the performance of the retrieval system.
 
 \begin{table}
 \centering
-\begin{tabular}{|l|c|c|c|c|c|c|}
+\scalebox{0.5}{\begin{tabular}{|l|c|c|c|c|c|c|}
 \hline \textbf{Testing Queries} & \multicolumn{2}{|c|}{\textbf{AdaRank}} & \multicolumn{2}{|c|}{\textbf{Coordinate Ascent}} & \multicolumn{2}{|c|}{\textbf{Without LETOR}} \\
 \hline 				 & \textbf{MAP} & \textbf{MRR}  & \textbf{MAP} & \textbf{MRR}  & \textbf{MAP} & \textbf{MRR} \\
 \hline *3d audio & 0.0053 & 0.0053 & 1.0000 & 1.0000 & 1.0000 & 1.0000 \\
@@ -157,12 +160,13 @@ performance. Therefore, the answer to question is NO, using LETOR technique (wit
 \hline
 
 \end{tabular}
+}
 \caption{Evaluation Results of Each Testing Query} \label{table:eachqueryevaluationresult}
 \end{table}
 
-Table~\ref{table:eachqueryevaluationresult} shows the evaluation results of each testing query. Numbers hilighted in \textcolor{ForestGreen}{green}
+Table~\ref{table:eachqueryevaluationresult} shows the evaluation results of each testing query. Numbers highlighted in \textcolor{ForestGreen}{green}
 are numbers higher than ones without LETOR. It has shown that applying LETOR technique using
-Coordinate Ascent algorithm to the testing queries given below outperformed ones without LETOR technique considering MAP values:
+Coordinate Ascent algorithm to the testing queries given below outperformed ones without LETOR technique considering MAP/MRR values:
 \begin{itemize}
  \item force feedback
  \item haptic visualisation
@@ -173,7 +177,7 @@ Coordinate Ascent algorithm to the testing queries given below outperformed ones
 \end{itemize}
 
 \section{Evaluation With K-fold Cross-validation}
-In the previous section, the evaluation results have shown that applying LETOR makes the retrieval system perform poorly. 
+In the previous section, the evaluation results have shown that applying LETOR makes the retrieval system perform poorer than not applying LETOR. 
 This section aims to evaluate the performance of the system by applying K-fold Cross-validation
 technique described in section~\ref{sec:kfold}. We decided to choose $K = 5$. This is fairly normal for learning to rank~\cite{craig}.
 Higher K is possible, but that infers that the LETOR needs more training.
@@ -193,7 +197,7 @@ Tables~\ref{table:fold1testing},~\ref{table:fold1training} and~\ref{table:fold1v
 
 \begin{table}
 \centering
-\begin{tabular}{|l|l|}
+\scalebox{0.5}{\begin{tabular}{|l|l|}
 
 \hline \multicolumn{2}{|c|}{\textbf{Training Queries}} \\
 \hline *grid computing & *haptics \\
@@ -219,12 +223,13 @@ Tables~\ref{table:fold1testing},~\ref{table:fold1training} and~\ref{table:fold1v
 \hline programming languages & *information extraction \\
 \hline
 \end{tabular}
+}
 \caption{Training Queries for Fold 1} \label{table:fold1training}
 \end{table}
 
 \begin{table}
 \centering
-\begin{tabular}{|l|}
+\scalebox{0.5}{\begin{tabular}{|l|}
 \hline \multicolumn{1}{|c|}{\textbf{Testing Queries}} \\
 \hline *usability \\
 \hline stable marriage \\
@@ -241,12 +246,13 @@ Tables~\ref{table:fold1testing},~\ref{table:fold1training} and~\ref{table:fold1v
 \hline *visual impairment \\
 \hline
 \end{tabular}
+}
 \caption{Testing Queries for Fold 1} \label{table:fold1testing}
 \end{table}
 
 \begin{table}
 \centering
-\begin{tabular}{|l|}
+\scalebox{0.5}{\begin{tabular}{|l|}
 \hline \multicolumn{1}{|c|}{\textbf{Validation Queries}} \\
 \hline programming languages \\
 \hline *text searching \\
@@ -263,6 +269,7 @@ Tables~\ref{table:fold1testing},~\ref{table:fold1training} and~\ref{table:fold1v
 \hline *matching \\
 \hline
 \end{tabular}
+}
 \caption{Validation Queries for Fold 1} \label{table:fold1validating}
 \end{table}
 
@@ -270,7 +277,7 @@ Tables~\ref{table:fold1testing},~\ref{table:fold1training} and~\ref{table:fold1v
 Tables~\ref{table:fold2testing},~\ref{table:fold2training} and~\ref{table:fold2validating} show testing, training and validation queries respectively.
 \begin{table}
 \centering
-\begin{tabular}{|l|l|}
+\scalebox{0.5}{\begin{tabular}{|l|l|}
 
 \hline \multicolumn{2}{|c|}{\textbf{Training Queries}} \\
 \hline *grid computing & *older adults use of computers \\
@@ -296,12 +303,13 @@ Tables~\ref{table:fold2testing},~\ref{table:fold2training} and~\ref{table:fold2v
 \hline *match & *ecir 2008 \\
 \hline
 \end{tabular}
+}
 \caption{Training Queries for Fold 2} \label{table:fold2training}
 \end{table}
 
 \begin{table}
 \centering
-\begin{tabular}{|l|}
+\scalebox{0.5}{\begin{tabular}{|l|}
 \hline \multicolumn{1}{|c|}{\textbf{Testing Queries}} \\
 \hline *different matching coefficients \\
 \hline *haptics \\
@@ -318,12 +326,13 @@ Tables~\ref{table:fold2testing},~\ref{table:fold2training} and~\ref{table:fold2v
 \hline *3d audio \\
 \hline
 \end{tabular}
+}
 \caption{Testing Queries for Fold 2} \label{table:fold2testing}
 \end{table}
 
 \begin{table}
 \centering
-\begin{tabular}{|l|}
+\scalebox{0.5}{\begin{tabular}{|l|}
 \hline \multicolumn{1}{|c|}{\textbf{Validation Queries}} \\
 \hline *usability \\
 \hline *stable marriage \\
@@ -340,6 +349,7 @@ Tables~\ref{table:fold2testing},~\ref{table:fold2training} and~\ref{table:fold2v
 \hline *visual impairment \\
 \hline
 \end{tabular}
+}
 \caption{Validation Queries for Fold 2} \label{table:fold2validating}
 \end{table}
 
@@ -347,7 +357,7 @@ Tables~\ref{table:fold2testing},~\ref{table:fold2training} and~\ref{table:fold2v
 Tables~\ref{table:fold3testing},~\ref{table:fold3training} and~\ref{table:fold3validating} show testing, training and validation queries respectively.
 \begin{table}
 \centering
-\begin{tabular}{|l|l|}
+\scalebox{0.5}{\begin{tabular}{|l|l|}
 
 \hline \multicolumn{2}{|c|}{\textbf{Training Queries}} \\
 \hline *older adults use of computers & constraint modelling \\
@@ -371,12 +381,13 @@ Tables~\ref{table:fold3testing},~\ref{table:fold3training} and~\ref{table:fold3v
 \hline *trec collection class & *match \\
 \hline
 \end{tabular}
+}
 \caption{Training Queries for Fold 3} \label{table:fold3training}
 \end{table}
 
 \begin{table}
 \centering
-\begin{tabular}{|l|}
+\scalebox{0.5}{\begin{tabular}{|l|}
 \hline \multicolumn{1}{|c|}{\textbf{Testing Queries}} \\
 \hline *discrete event simulation \\
 \hline data mining \\
@@ -397,12 +408,13 @@ Tables~\ref{table:fold3testing},~\ref{table:fold3training} and~\ref{table:fold3v
 \hline *ecir 2008 \\
 \hline
 \end{tabular}
+}
 \caption{Testing Queries for Fold 3} \label{table:fold3testing}
 \end{table}
 
 \begin{table}
 \centering
-\begin{tabular}{|l|}
+\scalebox{0.5}{\begin{tabular}{|l|}
 \hline \multicolumn{1}{|c|}{\textbf{Validation Queries}} \\
 \hline *different matching coefficients \\
 \hline *haptics \\
@@ -419,6 +431,7 @@ Tables~\ref{table:fold3testing},~\ref{table:fold3training} and~\ref{table:fold3v
 \hline *3d audio \\
 \hline
 \end{tabular}
+}
 \caption{Validation Queries for Fold 3} \label{table:fold3validating}
 \end{table}
 
@@ -426,7 +439,7 @@ Tables~\ref{table:fold3testing},~\ref{table:fold3training} and~\ref{table:fold3v
 Tables~\ref{table:fold4testing},~\ref{table:fold4training} and~\ref{table:fold4validating} show testing, training and validation queries respectively.
 \begin{table}
 \centering
-\begin{tabular}{|l|l|}
+\scalebox{0.5}{\begin{tabular}{|l|l|}
 
 \hline \multicolumn{2}{|c|}{\textbf{Training Queries}} \\
 \hline *older adults use of computers & *constraint modelling \\
@@ -450,12 +463,13 @@ Tables~\ref{table:fold4testing},~\ref{table:fold4training} and~\ref{table:fold4v
 \hline *match & *information extraction \\
 \hline
 \end{tabular}
+}
 \caption{Training Queries for Fold 4} \label{table:fold4training}
 \end{table}
 
 \begin{table}
 \centering
-\begin{tabular}{|l|}
+\scalebox{0.5}{\begin{tabular}{|l|}
 \hline \multicolumn{1}{|c|}{\textbf{Testing Queries}} \\
 \hline programming languages \\
 \hline *neural network \\
@@ -473,12 +487,13 @@ Tables~\ref{table:fold4testing},~\ref{table:fold4training} and~\ref{table:fold4v
 \hline *wafer fab cost \\
 \hline
 \end{tabular}
+}
 \caption{Testing Queries for Fold 4} \label{table:fold4testing}
 \end{table}
 
 \begin{table}
 \centering
-\begin{tabular}{|l|}
+\scalebox{0.5}{\begin{tabular}{|l|}
 \hline \multicolumn{1}{|c|}{\textbf{Validation Queries}} \\
 \hline *discrete event simulation \\
 \hline data mining \\
@@ -499,6 +514,7 @@ Tables~\ref{table:fold4testing},~\ref{table:fold4training} and~\ref{table:fold4v
 \hline *ecir 2008 \\
 \hline
 \end{tabular}
+}
 \caption{Validation Queries for Fold 4} \label{table:fold4validating}
 \end{table}
 
@@ -508,7 +524,7 @@ Tables~\ref{table:fold5testing},~\ref{table:fold5training} and~\ref{table:fold5v
 
 \begin{table}
 \centering
-\begin{tabular}{|l|l|}
+\scalebox{0.5}{\begin{tabular}{|l|l|}
 
 \hline \multicolumn{2}{|c|}{\textbf{Training Queries}} \\
 \hline *grid computing & constraint modelling \\
@@ -534,12 +550,13 @@ Tables~\ref{table:fold5testing},~\ref{table:fold5training} and~\ref{table:fold5v
 \hline *ecir 2008 & *information extraction \\
 \hline
 \end{tabular}
+}
 \caption{Training Queries for Fold 5} \label{table:fold5training}
 \end{table}
 
 \begin{table}
 \centering
-\begin{tabular}{|l|}
+\scalebox{0.5}{\begin{tabular}{|l|}
 \hline \multicolumn{1}{|c|}{\textbf{Testing Queries}} \\
 \hline programming languages \\
 \hline *text searching \\
@@ -556,12 +573,13 @@ Tables~\ref{table:fold5testing},~\ref{table:fold5training} and~\ref{table:fold5v
 \hline *match \\
 \hline
 \end{tabular}
+}
 \caption{Testing Queries for Fold 5} \label{table:fold5testing}
 \end{table}
 
 \begin{table}
 \centering
-\begin{tabular}{|l|}
+\scalebox{0.5}{\begin{tabular}{|l|}
 \hline \multicolumn{1}{|c|}{\textbf{Validation Queries}} \\
 \hline programming languages \\
 \hline *neural network \\
@@ -579,6 +597,7 @@ Tables~\ref{table:fold5testing},~\ref{table:fold5training} and~\ref{table:fold5v
 \hline *wafer fab cost \\
 \hline
 \end{tabular}
+}
 \caption{Validation Queries for Fold 5} \label{table:fold5validating}
 \end{table}
 
@@ -589,10 +608,11 @@ and without LETOR techinque.
 It can be clearly seen that overall the evaluation result is similar to one not using K-fold cross-validation (without LETOR, the performance is better than
 with LETOR). Coordinate Ascent still gives second best performance. But using K-fold cross-validation technique, the performance is better than
 not using K-fold cross-validation (see last section). Therefore, the answer
-to the question is still NO, using LETOR technique with K-fold cross-validation does not enhance ther performance of the retrieval system.
-Table~\ref{table:kfoldqueryresult} shows the evaluation results of each testing query. Numbers hilighted in green are numbers higher
-than ones without LETOR. Numbers highlighted in red show that queries applying AdaRank algorithm perform better than ones applying Coordinate Ascent.
-The evaluation results of the testing queries applied with LETOR using Coordinate Ascent given below outperform ones without LETOR technique considering MAP values:
+to the question is still NO, using LETOR technique with K-fold cross-validation does not enhance the performance of the retrieval system.
+Table~\ref{table:kfoldqueryresult} shows the evaluation results of each testing query. Numbers highlighted in green show testing queries applying Coordinate Ascent 
+whose evaluation metrics are higher
+than ones without LETOR. Numbers highlighted in red show that testing queries applying AdaRank algorithm perform better than ones applying Coordinate Ascent.
+The evaluation results of the testing queries applied with LETOR using Coordinate Ascent given below outperform ones without LETOR technique considering MAP/MRR values:
 \begin{itemize}
  \item artificial intelligence
  \item ecir 2008
@@ -603,19 +623,20 @@ The evaluation results of the testing queries applied with LETOR using Coordinat
 
 \begin{table}
 \centering
-\begin{tabular}{|c|c|c|c|c|}
+\scalebox{0.5}{\begin{tabular}{|c|c|c|c|c|}
 \hline \textbf{Algorithm} & \textbf{MAP} & \textbf{NDCG} & \textbf{MRR} & \textbf{Number of Relevant Experts}\\
 \hline AdaRank & 0.0469 & 0.2397 & 0.0843 & 106 \\
 \hline Coordinate Ascent & 0.5321 & 0.6703 & 0.6366 & 106 \\
 \hline Without LETOR  & 0.5499 & 0.6871 & 0.6484 & 106 \\ 
 \hline
 \end{tabular}
+}
 \caption{Evaluation Results Using K-fold Cross-validation} \label{table:kfoldevaluationresult}
 \end{table}
 
 \begin{table}
 \centering
-\begin{tabular}{|l|c|c|c|c|c|c|}
+\scalebox{0.5}{\begin{tabular}{|l|c|c|c|c|c|c|}
 \hline \textbf{Testing Queries} & \multicolumn{2}{|c|}{\textbf{AdaRank}} & \multicolumn{2}{|c|}{\textbf{Coordinate Ascent}} & \multicolumn{2}{|c|}{\textbf{Without LETOR}} \\
 \hline 				 & \textbf{MAP} & \textbf{MRR}  & \textbf{MAP} & \textbf{MRR}  & \textbf{MAP} & \textbf{MRR} \\
 \hline 3d audio & 0.0227 & 0.0227 & 1.0000 & 1.0000 & 1.0000 & 1.0000\\
@@ -653,167 +674,14 @@ The evaluation results of the testing queries applied with LETOR using Coordinat
 \hline robotics & 0.0404 & 0.1111 & 0.5523 & 1.0000 & 0.5523 & 1.0000 \\
 \hline
 \end{tabular}
+}
 \caption{Evaluation Results of Each Testing Query Using K-fold Cross-validation} \label{table:kfoldqueryresult}
 \end{table}
 
-% \subsubsection{Fold 1}
-
-% \begin{quotation}
-%  \noindent \#\# AdaRank \\
-%  \#\# Iteration = 500 \\
-%  \#\# Train with enqueue: Yes \\
-%  \#\# Tolerance = 0.002 \\
-%  \#\# Max consecutive selection count = 5 \\
-% 4:0.0014159370413198572 4:0.0014158206559040467 4:0.001415704289386967 4:0.00141558794176376 4:0.0014154716130300108 4:0.001415355303181415 
-% 3:0.005550847175354773 3:0.005550890775576485 3:0.005550932368308491 3:0.005550973948875422 3:0.005551015517280245 3:0.0055510570735260376 
-% 3:0.0055510986176163166 4:0.001412174969726305 3:0.0055511507131073175 3:0.005551192229805469 3:0.005551233734358327 3:0.0055512752267689695 
-% 3:0.005551316707040693 3:0.005551358175176576 4:0.0014094612061284323 3:0.005551410154664949 3:0.005551451595459474 3:0.005551493024128708
-% \end{quotation}
-
-% \begin{quotation}
-%  \noindent \#\# Coordinate Ascent \\
-%   \#\# Restart = 2 \\
-%   \#\# MaxIteration = 25 \\
-%   \#\# StepBase = 0.05 \\
-%   \#\# StepScale = 2.0 \\
-%   \#\# Tolerance = 0.001 \\
-%   \#\# Regularized = false \\
-%   \#\# Slack = 0.001 \\
-% 1:0.9999842636134336 2:-1.544710209302526E-5 3:1.5678608957649887E-8 4:-2.720778699275898E-8 5:4.7155924881401985E-9 6:-2.3648696328023097E-7 7:5.195521907976407E-9
-% \end{quotation}
-
-% \subsubsection{Fold 2}
-% \begin{quotation}
-%  \noindent \#\# AdaRank \\
-%  \#\# Iteration = 500 \\
-%  \#\# Train with enqueue: Yes \\
-%  \#\# Tolerance = 0.002 \\
-%  \#\# Max consecutive selection count = 5 \\
-%  4:0.0054924004596775215
-% \end{quotation}
-
-% \begin{quotation}
-%  \noindent \#\# Coordinate Ascent \\
-%  \#\# Restart = 2 \\
-%  \#\# MaxIteration = 25 \\
-%  \#\# StepBase = 0.05 \\
-%  \#\# StepScale = 2.0 \\
-%  \#\# Tolerance = 0.001 \\
-%  \#\# Regularized = false \\
-%  \#\# Slack = 0.001 \\
-% 1:0.9999816645651269 2:1.6353088394546637E-5 3:2.9045675670831717E-8 4:5.569640588845966E-10 5:1.1459535511550575E-7 6:-1.8244750158912173E-6 7:-1.3673467645616846E-8
-% \end{quotation}
-
-% \subsubsection{Fold 3}
-% \begin{quotation}
-%  \noindent \#\# AdaRank \\
-%  \#\# Iteration = 500 \\
-%  \#\# Train with enqueue: Yes \\
-%  \#\# Tolerance = 0.002 \\
-%  \#\# Max consecutive selection count = 5 \\
-% 3:0.010377552714210208 3:0.010361717950924106 3:0.010345933495622312 3:0.010330199109703703 3:0.01031451455606127 3:0.010298879599070854 4:0.02013703653926264 4:0.02003277281570091 4:0.019929590976388026 4:0.01982747444287526 4:0.0197264069697595 4:0.019626372636457307 5:0.011538426672430232 4:0.019469380030362405 4:0.019371950016885815 4:0.019275498540152772 4:0.019180011071600837 4:0.019085473365697225 4:0.018991871453156704 5:0.011566592868438278 4:0.0188429723706634 4:0.01875175028590329 4:0.018661415744805235 4:0.018571955969512444 4:0.01848335842373475 4:0.018395610807125023 5:0.011593146899037114 4:0.018254144452644963 4:0.0181685772752211 4:0.018083817244503517 4:0.0179998530841533 4:0.017916673724852696 4:0.017834268299622383 5:0.011618224092661904 4:0.017699645352118744 4:0.0176192426800348 4:0.017539575883439122 4:0.01746063497896123 4:0.01738241016133821 4:0.017304891799497214 5:0.011641945094774857 4:0.017176584967021673 4:0.0171009105092282 4:0.01702590854602966 4:0.016951570211691303 4:0.
-% 01687788679427751 4:0.016804849732361547 5:0.011664417794994967 4:0.016682385763227087 4:0.016611050167692987 4:0.016540330533550394 4:0.016470218964650098 4:0.01640070769812146 4:0.0163317891015947 5:0.011685738960465954 4:0.016214741997733217 4:0.016147396779522268 4:0.016080616953492742 4:0.01601439546755282 4:0.015948725385493783 4:0.01588359988463803 5:0.011705995626055853 4:0.015771585111993995 4:0.015707917491100853 4:0.015644769905140094 4:0.01558213603922293 4:0.015520009679540875 4:0.015458384711367389 5:0.011725266282330287 4:0.015351054241052682 4:0.015290782736159888 4:0.015230990478442417 4:0.015171671798911074 4:0.015112821117016026 4:0.015054432938940996 5:0.011743621894602888 4:0.014951470983692415 4:0.014894341636819108 4:0.01483765476795005 4:0.014781405275700737 4:0.014725588136291512 4:0.014670198402088237 5:0.011761126780272645 4:0.01457131773714388 4:0.01451710086706882 4:0.014463293250349375 4:0.01440989028583241 4:0.01435688744065418 4:0.014304280248984813 5:0.01177783936680173 4:0.
-% 014209219026179932 4:0.014157706426861268 4:0.014106572991446267 4:0.014055814560849375 4:0.014005427036236053 4:0.013955406377943179 5:0.01179381284875658 4:0.013863925357688232 4:0.013814927872625777 4:0.013766282242640683 4:0.013717984700339211 4:0.013670031531624325 4:0.01362241907476147 5:0.01180909575918278 4:0.013534299213396328 4:0.013487644628792643 4:0.013441317062965193 4:0.013395313096452421 4:0.013349629357053104 4:0.013304262519016887 5:0.011823732468004427 4:0.013219302859469702 4:0.013174834068690479 4:0.013130669664396181 4:0.013086806536932907 4:0.013043241618652758 4:0.012999971883212105 5:0.011837763618050667 4:0.012917987705414274 4:0.012875561105125026 4:0.012833418228352001 4:0.012791556241941199 4:0.012749972350159964 4:0.012708663794084467 5:0.011851226507592948 4:0.012629484988578242 4:0.012588969073370348 4:0.012548717982348356 4:0.0125087291296811 4:0.012468999962946786 4:0.012429527962598918 5:0.011864155426863093 4:0.012352997596534602 4:0.01231427172414541 4:0.
-% 012275793359509207 4:0.012237560138493498 4:0.012199569726855259 4:0.012161819819773935 5:0.011876581954863161 4:0.01208779286924475 4:0.012050746172846079 4:0.012013931091439977 4:0.011977345460031085 4:0.011940987140419818 4:0.011904854020790478 5:0.011888535221807866 5:0.011890210415822174 5:0.011891881035241138 5:0.011893547091194695 5:0.01189520859479809 5:0.011896865557151765 4:0.01165606505979847 5:0.01190013237065609 5:0.011901775867451494 5:0.011903414867020588 5:0.011905049380387459 5:0.011906679418560428 5:0.011908304992532807 4:0.01141323123219012 5:0.011911475462366058 5:0.011913087894111534 5:0.011914695905015702 5:0.011916299505993728 5:0.01191789870794436 5:0.011919493521750597 4:0.011176187127384041 5:0.011922571055609881 5:0.011924153041948198 5:0.011925730682837633 5:0.011927303989080908 5:0.01192887297146532 5:0.011930437640760901 4:0.010944772718159149 5:0.011933425507378592 5:0.01193497765562761 5:0.01193652553281956 5:0.011938069149643049 5:0.01193960851677095 5:0.011941143644858113 4:
-% 0.010718833155297303 5:0.011944044980329218 5:0.011945567885683371 5:0.0119470865933661 5:0.01194860111395012 5:0.011950111457991004 5:0.011951617636027295 3:0.010678096805553115 5:0.01195445796572621 5:0.011955952149304375 5:0.011957442207744267 5:0.011958928151499728 5:0.011960409991007793 5:0.0119618877366876 3:0.010687245897317555 5:0.01196467443141832 5:0.011966140390797889 5:0.011967602296754856 5:0.011969060159546846 5:0.01197051400352729 5:0.011971963640448672 3:0.010696212208344767 5:0.011975648242817745 5:0.012014308006553355 5:0.014926481574840564 3:NaN
-
-% \end{quotation}
-
-% \begin{quotation}
-%  \noindent \#\# Coordinate Ascent \\
-%  \#\# Restart = 2 \\
-%  \#\# MaxIteration = 25 \\
-%  \#\# StepBase = 0.05 \\
-%  \#\# StepScale = 2.0 \\
-%  \#\# Tolerance = 0.001 \\
-%  \#\# Regularized = false \\
-%  \#\# Slack = 0.001 \\
-% 1:0.9862279288633707 2:0.012684175597566256 3:-9.552377980930068E-4 4:-1.2457639479908513E-5 5:-7.29157211311564E-5 6:4.706837377902405E-5 7:2.160065799108503E-7
-% \end{quotation}
-
-% \subsubsection{Fold 4}
-
-% \begin{quotation}
-%  \noindent \#\# AdaRank \\
-%  \#\# Iteration = 500 \\
-%  \#\# Train with enqueue: Yes \\
-%  \#\# Tolerance = 0.002 \\
-%  \#\# Max consecutive selection count = 5 \\
-% 5:0.01012893401237119 5:0.01011535629160015 5:0.010101814887152914 5:0.010088309656036515 5:0.010074840455995725 5:0.010061407145507158 
-% 4:0.020848550564400055 4:0.020735746034727682 2:0.1425917864583881 2:0.1429359389648261 2:0.1432676852216498 2:0.14358733324732878 
-% 2:0.14389225411855042 2:0.14418575963191402 2:0.14446816015408048 2:0.1447363396117369 2:0.14499411225703251 2:0.14524178363089962 
-% 2:0.14547965632939314 2:0.14570802950934775 6:0.07388327063161901 2:0.1460266710480709 2:0.14621665985500953 2:0.14639451113407836 
-% 2:0.1465644598677918 2:0.1467267760673954 2:0.1468817240210581 2:0.14702956213558485 2:0.1471659425293486 2:0.1472958471423301 
-% 2:0.14730274576293423 2:0.14730452349201872 2:0.14730142937854898 2:0.14728342641685543 2:0.1472612472908521 2:0.147142901671141 
-% 2:0.1470147568241134 2:0.14688390890779524 2:0.14674306570029738 2:0.14660019637453306 2:0.146455482863383 2:0.14630909855090732 
-% 2:0.14615324626770432 2:0.14598502013635303 2:0.14581611802977945 2:0.14564667358276054 2:0.1454710881134181 2:0.1452955152790455 
-% 2:0.14512005599439903 2:0.1449448052252473 2:0.14476985226229683 2:0.14450813852029812 2:0.14425060797444525 2:0.14399721366665383 
-% 2:0.1437406314205265 2:0.14348849302854585 2:0.14324073022121506 2:0.1429972743926002 2:0.14275805673584177 6:0.07384572308688775 
-% 2:0.14239660964520803 2:0.1421561530142018 2:0.14191853351262843 2:0.14168559337386774 2:0.14145723035481161 2:0.14123334409536556 
-% 2:0.1410138361258664 6:0.07357483278936991 2:0.1401222420452845 2:0.13886547833607812 2:0.13765954466261346 2:0.136501782373419 2:0.13538970651199062 
-% 2:0.134320992176461 6:0.07152793122482151 2:0.1327580554840092 2:0.13178763606935331 2:0.13085352570573114 2:0.1299539828879588 2:0.12908737015004074 
-% 2:0.1282521465663102 2:0.12742164510692355 2:0.1266217675220216 2:0.1258431006859965 2:0.12509277852622847 2:0.12436949325665643 2:0.1236431203002094 
-% 2:0.12294350114222707 2:0.12226641577471331 2:0.12161385795173968 2:0.1209847072431082 2:0.12021748968468418 2:0.11946561271951878 
-% 2:0.1187370003398246 2:0.11803065793150075 2:0.11734524895623293 2:0.11668030508668294 2:0.11598607002446235 2:0.11531443506791078 
-% 2:0.11466492512979139 2:0.1140360079670174 2:0.11342676840044937 2:0.11283634240133274 2:0.11220377849977 2:0.11152511385267143 2:0.11086448907465331 
-% 2:0.11022118102328528 2:0.10959450415572167 2:0.108981590003903 2:0.10837654276600453 2:0.1077617374724752 2:0.10716318989200022 2:0.10657535240041202 
-% 2:0.10600269851000188 2:0.10543915726156365 2:0.10486949502405217 2:0.10431496467370534 2:0.10377495014126609 2:0.10324886778159639 
-% 2:0.10273616432534712 6:0.06513293763931283 2:0.1019241452002301 2:0.10144355356399466 2:0.10097458322805966 2:0.10051679807429215 
-% 2:0.10006978333732011 2:0.09961915709306768 2:0.09917890482770819 2:0.09874865721696235 2:0.09832806226060235 2:0.09791678430133463 
-% 6:0.0647025279440403 2:0.09722982923374668 2:0.09680703385235988 2:0.09639342617761185 2:0.09598803677206998 2:0.09550497249235847 
-% 2:0.09503200018929933 2:0.09456170697846689 2:0.09410293341417418 2:0.09365528098341766 2:0.0932102667161697 2:0.09277600452624557 
-% 2:0.09235128825728867 2:0.09193668263163501 2:0.09152897550417584 2:0.09112940694067262 2:0.0907392326713924 2:0.0903583188220771 
-% 2:0.0899861884042894 2:0.08962255846443437 2:0.08926715800689734 2:0.0889197273712375 6:0.06436178523446288 2:0.08833792710476199 
-% 2:0.08801086884876139 2:0.08769103500979475 2:0.08737808039772603 2:0.08707179996831725 2:0.08677199670073053 2:0.08647600766647433 
-% 2:0.08618623329765897 2:0.0859003668509313 2:0.08561974903377752 2:0.08534209342093184 2:0.0850701608803434 2:0.08480379082503166 
-% 2:0.08454282854307536 1:0.708385673008743 1:0.7071759984545215 1:0.7061038596702037 1:0.7051497145392118 1:0.7043089765850286 1:0.7035902743794852 
-% 1:0.7029598249910037 1:0.6993869527247586 1:0.6952784819593715 1:0.6887464791630808 1:0.6805615299816604 1:0.6731851654063822 1:0.6666068040729821 
-% 1:0.6605681377025462 1:0.6552395622177438 1:0.6503576434955785 1:0.6459583571270525 1:0.6420612658777815 1:0.6315853505509912 1:0.6222155303846465 
-% 1:0.6115483787877725 1:0.6017472670818484 1:0.5908118978363898 1:0.5807914839810877 1:0.5684161623596359 1:0.5562156374723732 1:0.5380518156334146 
-% 1:0.5215626333792276 1:0.5065700609668468 1:0.4927947730347188 1:0.48014697916872334 1:0.4686281672766184 1:0.45825268627279186 1:0.4487403044402627 
-% 1:0.43994528501089397
-% \end{quotation}
-
-
-% \begin{quotation}
-%  \noindent \#\# Coordinate Ascent \\
-%  \#\# Restart = 2 \\
-%  \#\# MaxIteration = 25 \\
-%  \#\# StepBase = 0.05 \\
-%  \#\# StepScale = 2.0 \\
-%  \#\# Tolerance = 0.001 \\
-%  \#\# Regularized = false \\
-%  \#\# Slack = 0.001 \\
-% 1:0.9873301287801906 2:-0.01199462186035115 3:-4.2574636171324916E-4 4:-2.224905761528756E-5 5:1.593630351448595E-5 6:-2.086357735417609E-4 
-% 7:2.6818630733908446E-6
-% \end{quotation}
-
-% \subsubsection{Fold 5}
-% \begin{quotation}
-%  \noindent \#\# AdaRank \\
-%  \#\# Iteration = 500 \\
-%  \#\# Train with enqueue: Yes \\
-%  \#\# Tolerance = 0.002 \\
-%  \#\# Max consecutive selection count = 5 \\
-% 3:0.003899587367366286
-% \end{quotation}
-
-% \begin{quotation}
-%  \noindent \#\# Coordinate Ascent \\
-%  \#\# Restart = 2 \\
-%  \#\# MaxIteration = 25 \\
-%  \#\# StepBase = 0.05 \\
-%  \#\# StepScale = 2.0 \\
-%  \#\# Tolerance = 0.001 \\
-%  \#\# Regularized = false \\
-%  \#\# Slack = 0.001 \\
-% 1:0.9999907616965663 2:8.143529433787536E-6 3:-9.657683634448058E-7 4:-1.384127577455498E-8 5:-9.945994139356972E-8 6:-1.3841275774554981E-8 7:-1.8631436088245325E-9
-% \end{quotation}
-
 \section{Causes of Learning to Rank Failure}
-In has shown in the last section that applying LETOR technique fails. The followings are reasons behind it~\cite{craig}:
+It has shown in the last section that applying LETOR technique fails. The followings are reasons behind it~\cite{craig}:
 \begin{itemize}
- \item The size of training dataset is not big enough.
+ \item The size of training/validation dataset is not big enough.
  \item Selected LETOR Features are not very useful.
 \end{itemize}
 Therefore, we decided to apply K-fold Cross-validation technique as it gave better performance compared to not applying K-fold Cross-validation technique
