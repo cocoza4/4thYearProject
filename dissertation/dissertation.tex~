@@ -3,9 +3,12 @@
 \usepackage{graphicx}
 \usepackage{url}
 \usepackage{mathtools}
-\usepackage[usenames,dvipsnames]{color}
+% \usepackage[usenames,dvipsnames]{color}
+
+\usepackage[toc,page]{appendix}
 % \usepackage{algorithm}
 \usepackage{program}
+\usepackage[normalem]{ulem}
 % \usepackage{float}
 
 % \renewcommand\thesection{\arabic{section}}
@@ -40,7 +43,8 @@
 The dissertation would not have been completed without the help and support that I have received.
 First of all, I would like to thank Dr. Craig Macdonald for his advice and supervision throughout this project. He always encouraged me to 
 work hard and helped me overcome difficulties encountered during the development of this project. Second of all, I would like to thank 
-Dr. Iadh Ounis for his advice about this project. Finally, I would like to thank Professor. Joemon Jose and Dr. Simon Rogers
+Dr. Iadh Ounis for his advice about this project. Finally, I would like to thank Professor. Joemon Jose and Dr. Simon Rogers whose lectures are 
+of use for the scope of this project.
 \end{abstract}
 
 \tableofcontents
@@ -74,5 +78,9 @@ Dr. Iadh Ounis for his advice about this project. Finally, I would like to thank
 \clearpage
 \bibliography{references}
 \bibliographystyle{plain}
+
+\begin{appendices}
+\input{appendix}
+\end{appendices}
 
 \end{document}

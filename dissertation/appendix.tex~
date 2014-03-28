@@ -1,0 +1,618 @@
+
+% \chapter{appendix}
+
+Table~\ref{table:uogQueries} shows relevance judgements whose results are experts who are from the University of Glasgow.
+
+\footnotesize
+\begin{longtable}{|l|l|c|}
+
+% \begin{tabular}
+\hline \multicolumn{1}{|c|}{\textbf{Query}} & \multicolumn{1}{|c|}{\textbf{Relevant Experts}} & \multicolumn{1}{|c|}{\textbf{Graded Relevance Value}} \\
+\hline 3d audio & 1. Stephen Brewster (GLA\_00000078) & 2 \\
+\hline 3D Human Body Segmentation & 1. Stephen Brewster (GLA\_00000078) & 2\\
+\hline  & 2. Alessandro Vinciarelli (GLA\_00000042) & 1 \\
+\hline  & 3. Roderick Murray-Smith (GLA\_00000089) & 1 \\  
+\hline Anchor Text & 1. Iadh Ounis (GLA\_00000091) & 2 \\ 
+\hline  & 2. Craig Macdonald (GLA\_00000151) & 2 \\ 
+\hline  & 3. Peter Bailey (GLA\_00000002) & 1 \\ 
+\hline  & 4. Joemon Jose (GLA\_00000087) & 2 \\ 
+\hline  & 5. Ke Zhou (GLA\_00000056) & 1 \\ 
+\hline  & 6. Cornelis Van Rijsbergen (GLA\_00000074) & 2 \\ 
+\hline Clustering Algorithms & 1. Maurizio Filippone (GLA\_00000043) & 2 \\ 
+\hline  & 2. Cornelis Van Rijsbergen (GLA\_00000074) & 2 \\ 
+\hline  & 3. Robert Irving (GLA\_00000071) & 1 \\ 
+\hline  & 4. David Manlove (GLA\_00000088) & 2 \\ 
+\hline Different Matching Coefficients & 1. Robert Irving (GLA\_00000071) & 2 \\ 
+\hline  & 2. David Manlove (GLA\_00000088) & 2 \\ 
+\hline Discrete Event Simulation & 1. Lewis Mackenzie (GLA\_00000041) & 1 \\ 
+\hline Discrete Mathematics & 1. David Manlove (GLA\_00000088) & 1 \\ 
+\hline  & 2. Robert Irving (GLA\_00000071) & 1 \\ 
+\hline Distributed Predator Prey & 1. Joseph Sventek (GLA\_00000098) & 1 \\ 
+\hline Divergence From Randomness & 1. Iadh Ounis (GLA\_00000091) & 1 \\ 
+\hline  & 2. Craig Macdonald (GLA\_00000151) & 1 \\ 
+\hline  & 3. Cornelis Van Rijsbergen (GLA\_00000074) & 1 \\ 
+\hline  & 4. Gethin Norman (GLA\_00000036) & 1 \\ 
+\hline Ecir 2008 & 1. Iadh Ounis (GLA\_00000091) & 2 \\ 
+\hline  & 2. Craig Macdonald (GLA\_00000151) & 2 \\ 
+\hline  & 3. Joemon Jose (GLA\_00000087) & 2 \\ 
+\hline  & 4. Leif Azzopardi (GLA\_00000004) & 2 \\ 
+\hline Empirical Methods & 1. Helen Purchase (GLA\_00000095) & 2 \\ 
+\hline  & 2. Leif Azzopardi (GLA\_00000004) & 2 \\ 
+\hline  & 3. Stephen Roberts (GLA\_00000040) & 2 \\ 
+\hline  & 4. Cornelis Van Rijsbergen (GLA\_00000074) & 2 \\ 
+\hline  & 5. Patrick Prosser (GLA\_00000093) & 2 \\ 
+\hline Eurosys 2008 & 1. Joseph Sventek (GLA\_00000098) & 2 \\ 
+\hline Facial Reconstruction & 1. Joemon Jose (GLA\_00000087) & 2 \\ 
+\hline Force Feedback & 1. Stephen Brewster (GLA\_00000078) & 2 \\ 
+\hline  & 2. Roderick Murray-Smith (GLA\_00000089) & 1 \\ 
+\hline Functional Programming & 1. John O'Donnell (GLA\_00000100) & 2 \\ 
+\hline  & 2. Cordelia Hall (GLA\_00000090) & 2 \\ 
+\hline  & 3. Jeremy Singer (GLA\_00000050) & 1 \\ 
+\hline  & 4. David Watt (GLA\_00000020) & 1 \\ 
+\hline Glasgow Haskell Compiler & 1. Cordelia Hall (GLA\_00000090) & 2 \\ 
+\hline Grid Computing & 1. Joemon Jose (GLA\_00000087) & 1 \\ 
+\hline  & 2. Iadh Ounis (GLA\_00000091) & 1 \\ 
+\hline Group Response Systems & Quintin Cutts (GLA\_00000077) & 2 \\ 
+\hline Handwriting Pin & 1. Alessandro Vinciarelli (GLA\_00000042) & 2 \\ 
+\hline  & 2. Stephen Brewster (GLA\_00000078) & 2 \\ 
+\hline Haptics & 1. Stephen Brewster (GLA\_00000078) & 2 \\ 
+\hline  & 2. Roderick Murray-Smith (GLA\_00000089) & 2 \\ 
+\hline  & 3. Philip Gray (GLA\_00000027) & 2 \\ 
+\hline  & 4. David Mcgookin (GLA\_00000101) & 2 \\ 
+\hline  & 5. John Williamson (GLA\_00000097) & 2 \\ 
+\hline  & 6. Marilyn Mcgee-Lennon (GLA\_00000103) & 2 \\ 
+\hline Haptic Visualisation & 1. Stephen Brewster (GLA\_00000078) & 2 \\ 
+\hline  & 2. Roderick Murray-Smith (GLA\_00000089) & 2 \\ 
+\hline  & 3. John Williamson (GLA\_00000097) & 2 \\ 
+\hline  & 4. Philip Gray (GLA\_00000027) & 2 \\ 
+\hline HCI Issues in Mobile Devices & 1. Stephen Brewster (GLA\_00000078) & 2 \\ 
+\hline  & 2. Graham Wilson (GLA\_00000025) & 2 \\ 
+\hline  & 3. Roderick Murray-Smith (GLA\_00000089) & 2 \\ 
+\hline  & 4. John Williamson (GLA\_00000097) & 2 \\ 
+\hline  & 5. Philip Gray (GLA\_00000027) & 2 \\ 
+\hline  & 6. Julie Williamson (GLA\_00000038) & 1 \\ 
+\hline Human Error Health Care & 1. Stephen Roberts (GLA\_00000040) & 1 \\ 
+\hline Information Extraction & 1. Joemon Jose (GLA\_00000087) & 2 \\ 
+\hline  & 2. Alessandro Vinciarelli (GLA\_00000042) & 1 \\ 
+\hline Language Modelling & 1. Leif Azzopardi (GLA\_00000004) & 2 \\ 
+\hline  & 2. Cornelis Van Rijsbergen (GLA\_00000074) & 1 \\ 
+\hline MANETs & 1. Lewis Mackenzie (GLA\_00000041) & 2 \\ 
+\hline Match & 1. Robert Irving (GLA\_00000071) & 2 \\ 
+\hline  & 2. David Manlove (GLA\_00000088) & 2 \\ 
+\hline  & 3. Gregg O'Malley (GLA\_00000149) & 2 \\ 
+\hline  & 4. Joemon Jose (GLA\_00000087) & 1 \\ 
+\hline  & 5. Patrick Prosser (GLA\_00000093) & 2 \\ 
+\hline  & 6. Cornelis Van Rijsbergen (GLA\_00000074) & 1 \\ 
+\hline  & 7. Yuan Liu (GLA\_00000049) & 1 \\ 
+\hline Multimodal & 1. Stephen Brewster (GLA\_00000078)  & 1 \\ 
+\hline  & 2. Roderick Murray-Smith (GLA\_00000089) & 1 \\ 
+\hline  & 3. Marilyn Mcgee-Lennon (GLA\_00000103) & 1 \\ 
+\hline  & 4. Julie Williamson (GLA\_00000038) & 1 \\ 
+\hline  & 5. Philip Gray (GLA\_00000027) & 1 \\ 
+\hline  & 6. David Warnock (GLA\_00000006) & 1 \\ 
+\hline  & 7. John Williamson (GLA\_00000097) & 1 \\ 
+\hline  & 8. Andrew Ramsay (GLA\_00000005) & 1 \\ 
+\hline  & 9. Joemon Jose (GLA\_00000087) & 1 \\ 
+\hline  & 10. David Mcgookin (GLA\_00000101) & 1 \\ 
+\hline  & 11. Yashar Moshfeghi (GLA\_00000014) & 1 \\ 
+\hline Music as Navigation Cues & 1. Stephen Brewster (GLA\_00000078) & 2 \\ 
+\hline  & 2. Roderick Murray-Smith (GLA\_00000089) & 1 \\ 
+\hline Networking Security & 1. Fung Po Tso (GLA\_00000067) & 1 \\ 
+\hline Neural Network & Stephen Roberts (GLA\_00000040) & 2 \\ 
+\hline Older Adults Use of Computers & 1. Stephen Brewster (GLA\_00000078) & 1  \\ 
+\hline  & 2. Philip Gray (GLA\_00000027) & 1 \\ 
+\hline Parallel Logic Programming & 1. John O'Donnell (GLA\_00000100) & 2 \\ 
+\hline Query Expansion & 1. Iadh Ounis (GLA\_00000091) & 2 \\ 
+\hline  & 2. Cornelis Van Rijsbergen (GLA\_00000074) & 2 \\ 
+\hline  & 3. Leif Azzopardi (GLA\_00000004) & 2 \\ 
+\hline  & 4. Ronan Cummins (GLA\_00000037) & 1 \\ 
+\hline  & 5. Joemon Jose (GLA\_00000087) & 2 \\ 
+\hline  & 6. Craig Macdonald (GLA\_00000151) & 2 \\ 
+\hline Road Traffic Accident Statistics & Dimitrios Pezaros (GLA\_00000028) & 1 \\ 
+\hline  & 2. Joseph Sventek (GLA\_00000098) & 1 \\ 
+\hline  & 3. Christopher Johnson (GLA\_00000075) & 2 \\ 
+\hline Shoogle & 1. Roderick Murray-Smith (GLA\_00000089) & 2 \\ 
+\hline  & 2. John Williamson (GLA\_00000097) & 2 \\ 
+\hline Skill-based Behavior & 1. Alessandro Vinciarelli (GLA\_00000042) & 1 \\ 
+\hline  & 2. Hugues Salamin (GLA\_00000046) & 1 \\ 
+\hline Sound in Multimedia Human-Computer Interfaces & 1. Stephen Brewster (GLA\_00000078) & 2  \\ 
+\hline  & 2. Julie Williamson (GLA\_00000038) & 2 \\ 
+
+\hline Statistical Inference & 1. Roderick Murray-Smith (GLA\_00000089) & 1 \\
+\hline & 2. Maurizio Filippone (GLA\_00000043) & 1 \\
+\hline Suffix Tree & 1. Robert Irving (GLA\_00000071) & 2 \\
+\hline Terrier & 1. Iadh Ounis (GLA\_00000091) & 2 \\
+\hline & 2. Craig Macdonald (GLA\_00000151) & 2 \\
+\hline & 3. Richard Mccreadie (GLA\_00000019) & 2 \\
+\hline & 4. Nut Limsopatham (GLA\_00000008) & 1 \\
+\hline Text Searching & 1. Joemon Jose (GLA\_00000087) & 2 \\
+\hline & 2. Cornelis Van Rijsbergen (GLA\_00000074) & 2 \\
+\hline & 3. Iadh Ounis (GLA\_00000091) & 2 \\
+\hline trec collection class & 1. Peter Bailey (GLA\_00000002) & 2 \\
+\hline & 2. Iadh Ounis (GLA\_00000091) & 2 \\
+\hline & 3. Leif Azzopardi (GLA\_00000004) & 1 \\
+\hline & 4. Craig Macdonald (GLA\_00000151) & 2 \\
+\hline & 5. Joemon Jose (GLA\_00000087) & 1 \\
+\hline Usability & 1. Stephen Brewster (GLA\_00000078) & 2 \\
+\hline & 2. Helen Purchase (GLA\_00000095) & 1 \\
+\hline & 3. Roderick Murray-Smith (GLA\_00000089) & 2 \\
+\hline utf Support Terrier & 1. Iadh Ounis (GLA\_00000091) & 2\\
+\hline & 2. Craig Macdonald (GLA\_00000151) & 2 \\
+\hline & 3. Richard Mccreadie (GLA\_00000019) & 2 \\
+\hline & 4. Nut Limsopatham (GLA\_00000008) & 1 \\
+\hline Visual Impairment & 1. Stephen Brewster (GLA\_00000078) & 2 \\
+\hline & 2. David Mcgookin (GLA\_00000101) & 2 \\
+\hline Wafer Fab Cost & 1. Ying He (GLA\_00000059) & 1 \\
+
+\hline
+% \end{tabular}
+
+\caption{Queries of the University of Glasgow} \label{table:uogQueries}
+\end{longtable}
+\normalsize
+
+
+
+\footnotesize
+\begin{longtable}{|l|l|c|}
+
+\hline \multicolumn{1}{|c|}{\textbf{Query}} & \multicolumn{1}{|c|}{\textbf{Relevant Experts}} & \multicolumn{1}{|c|}{\textbf{Graded Relevance Value}} \\
+
+\hline Expert Search & 1. Craig Macdonald (GLA_00000151)  & 1 \\
+\hline  & 2. Iadh Ounis (GLA_00000091) & 2 \\
+\hline  &  &  \\
+\hline  &  &  \\
+\hline  &  &  \\
+\hline  &  &  \\
+\hline  &  &  \\
+\hline  &  &  \\
+\hline  &  &  \\
+\hline  &  &  \\
+\hline  &  &  \\
+\hline  &  &  \\
+\hline  &  &  \\
+\hline  &  &  \\
+\hline  &  &  \\
+\hline  &  &  \\
+\hline  &  &  \\
+\hline  &  &  \\
+\hline  &  &  \\
+\hline  &  &  \\
+\hline  &  &  \\
+\hline  &  &  \\
+\hline  &  &  \\
+\hline  &  &  \\
+\hline  &  &  \\
+\hline  &  &  \\
+\hline  &  &  \\
+\hline  &  &  \\
+\hline  &  &  \\
+\hline  &  &  \\
+\hline  &  &  \\
+\hline  &  &  \\
+\hline  &  &  \\
+\hline  &  &  \\
+\hline  &  &  \\
+\hline  &  &  \\
+\hline  &  &  \\
+\hline  &  &  \\
+\hline  &  &  \\
+\hline  &  &  \\
+\hline  &  &  \\
+\hline  &  &  \\
+\hline  &  &  \\
+\hline  &  &  \\
+\hline  &  &  \\
+\hline  &  &  \\
+\hline  &  &  \\
+\hline  &  &  \\
+\hline  &  &  \\
+\hline  &  &  \\
+\hline  &  &  \\
+\hline  &  &  \\
+\hline  &  &  \\
+\hline  &  &  \\
+\hline  &  &  \\
+\hline  &  &  \\
+\hline  &  &  \\
+\hline  &  &  \\
+\hline  &  &  \\
+\hline  &  &  \\
+\hline  &  &  \\
+\hline  &  &  \\
+\hline  &  &  \\
+\hline  &  &  \\
+\hline  &  &  \\
+\hline  &  &  \\
+\hline  &  &  \\
+\hline  &  &  \\
+\hline  &  &  \\
+\hline  &  &  \\
+\hline  &  &  \\
+\hline  &  &  \\
+\hline  &  &  \\
+\hline  &  &  \\
+\hline  &  &  \\
+\hline  &  &  \\
+\hline  &  &  \\
+\hline  &  &  \\
+\hline  &  &  \\
+\hline  &  &  \\
+\hline  &  &  \\
+\hline  &  &  \\
+\hline  &  &  \\
+\hline  &  &  \\
+\hline  &  &  \\
+\hline  &  &  \\
+\hline  &  &  \\
+\hline  &  &  \\
+\hline  &  &  \\
+\hline  &  &  \\
+\hline  &  &  \\
+\hline  &  &  \\
+\hline  &  &  \\
+\hline  &  &  \\
+\hline  &  &  \\
+\hline  &  &  \\
+\hline  &  &  \\
+\hline  &  &  \\
+\hline  &  &  \\
+\hline  &  &  \\
+\hline  &  &  \\
+\hline  &  &  \\
+\hline  &  &  \\
+\hline  &  &  \\
+\hline  &  &  \\
+\hline  &  &  \\
+\hline  &  &  \\
+\hline  &  &  \\
+\hline  &  &  \\
+\hline  &  &  \\
+\hline  &  &  \\
+\hline  &  &  \\
+\hline  &  &  \\
+\hline  &  &  \\
+\hline  &  &  \\
+\hline  &  &  \\
+\hline  &  &  \\
+\hline  &  &  \\
+\hline  &  &  \\
+\hline  &  &  \\
+\hline  &  &  \\
+\hline  &  &  \\
+\hline  &  &  \\
+\hline  &  &  \\
+\hline  &  &  \\
+\hline  &  &  \\
+\hline  &  &  \\
+\hline  &  &  \\
+\hline  &  &  \\
+\hline  &  &  \\
+\hline  &  &  \\
+\hline  &  &  \\
+\hline  &  &  \\
+\hline  &  &  \\
+\hline  &  &  \\
+\hline  &  &  \\
+\hline  &  &  \\
+\hline  &  &  \\
+\hline  &  &  \\
+\hline  &  &  \\
+\hline  &  &  \\
+\hline  &  &  \\
+\hline  &  &  \\
+\hline  &  &  \\
+\hline  &  &  \\
+\hline  &  &  \\
+\hline  &  &  \\
+\hline  &  &  \\
+\hline  &  &  \\
+\hline  &  &  \\
+\hline  &  &  \\
+\hline  &  &  \\
+\hline  &  &  \\
+\hline  &  &  \\
+\hline  &  &  \\
+\hline  &  &  \\
+\hline  &  &  \\
+\hline  &  &  \\
+\hline  &  &  \\
+\hline  &  &  \\
+\hline  &  &  \\
+\hline  &  &  \\
+\hline  &  &  \\
+\hline  &  &  \\
+\hline  &  &  \\
+\hline  &  &  \\
+\hline  &  &  \\
+\hline  &  &  \\
+\hline  &  &  \\
+\hline  &  &  \\
+\hline  &  &  \\
+\hline  &  &  \\
+\hline  &  &  \\
+\hline  &  &  \\
+\hline  &  &  \\
+\hline  &  &  \\
+\hline  &  &  \\
+\hline  &  &  \\
+\hline  &  &  \\
+\hline  &  &  \\
+\hline  &  &  \\
+\hline  &  &  \\
+\hline  &  &  \\
+\hline  &  &  \\
+\hline  &  &  \\
+\hline  &  &  \\
+\hline  &  &  \\
+\hline  &  &  \\
+\hline  &  &  \\
+\hline  &  &  \\
+\hline  &  &  \\
+\hline  &  &  \\
+\hline  &  &  \\
+\hline  &  &  \\
+\hline  &  &  \\
+\hline  &  &  \\
+\hline  &  &  \\
+\hline  &  &  \\
+\hline  &  &  \\
+\hline  &  &  \\
+\\\hline  &  &  \\
+\hline  &  &  \\
+\hline  &  &  \\
+\hline  &  &  \\
+\hline  &  &  \\
+\hline  &  &  \\
+\hline  &  &  \\
+\hline  &  &  \\
+\hline  &  &  \\
+\hline  &  &  \\
+\hline  &  &  \\
+\hline  &  &  \\
+\hline  &  &  \\
+\hline  &  &  \\
+\hline  &  &  \\
+\hline  &  &  \\
+\hline  &  &  \\
+\hline  &  &  \\
+\hline  &  &  \\
+\hline  &  &  \\
+\hline  &  &  \\
+\hline  &  &  \\
+\hline  &  &  \\
+\hline  &  &  \\
+\hline  &  &  \\
+\\\hline  &  &  \\
+\hline  &  &  \\
+\hline  &  &  \\
+\hline  &  &  \\
+\hline  &  &  \\
+\hline  &  &  \\
+\hline  &  &  \\
+\hline  &  &  \\
+\hline  &  &  \\
+\hline  &  &  \\
+\hline  &  &  \\
+\hline  &  &  \\
+\hline  &  &  \\
+\hline  &  &  \\
+\hline  &  &  \\
+\hline  &  &  \\
+\hline  &  &  \\
+\hline  &  &  \\
+\hline  &  &  \\
+\hline  &  &  \\
+\hline  &  &  \\
+\hline  &  &  \\
+\hline  &  &  \\
+\hline  &  &  \\
+\hline  &  &  \\
+\hline  &  &  \\
+\hline  &  &  \\
+\hline  &  &  \\
+\hline  &  &  \\
+\hline  &  &  \\
+\hline  &  &  \\
+\hline  &  &  \\
+\hline  &  &  \\
+\hline  &  &  \\
+\hline  &  &  \\
+\hline  &  &  \\
+\hline  &  &  \\
+\hline  &  &  \\
+\hline  &  &  \\
+\hline  &  &  \\
+\hline  &  &  \\
+\hline  &  &  \\
+\hline  &  &  \\
+\hline  &  &  \\
+\hline  &  &  \\
+\hline  &  &  \\
+\hline  &  &  \\
+\hline  &  &  \\
+\hline  &  &  \\
+\hline  &  &  \\
+\\\hline  &  &  \\
+\hline  &  &  \\
+\hline  &  &  \\
+\hline  &  &  \\
+\hline  &  &  \\
+\hline  &  &  \\
+\hline  &  &  \\
+\hline  &  &  \\
+\hline  &  &  \\
+\hline  &  &  \\
+\hline  &  &  \\
+\hline  &  &  \\
+\hline  &  &  \\
+\hline  &  &  \\
+\hline  &  &  \\
+\hline  &  &  \\
+\hline  &  &  \\
+\hline  &  &  \\
+\hline  &  &  \\
+\hline  &  &  \\
+\hline  &  &  \\
+\hline  &  &  \\
+\hline  &  &  \\
+\hline  &  &  \\
+\hline  &  &  \\
+\\\hline  &  &  \\
+\hline  &  &  \\
+\hline  &  &  \\
+\hline  &  &  \\
+\hline  &  &  \\
+\hline  &  &  \\
+\hline  &  &  \\
+\hline  &  &  \\
+\hline  &  &  \\
+\hline  &  &  \\
+\hline  &  &  \\
+\hline  &  &  \\
+\hline  &  &  \\
+\hline  &  &  \\
+\hline  &  &  \\
+\hline  &  &  \\
+\hline  &  &  \\
+\hline  &  &  \\
+\hline  &  &  \\
+\hline  &  &  \\
+\hline  &  &  \\
+\hline  &  &  \\
+\hline  &  &  \\
+\hline  &  &  \\
+\hline  &  &  \\
+\\\hline  &  &  \\
+\hline  &  &  \\
+\hline  &  &  \\
+\hline  &  &  \\
+\hline  &  &  \\
+\hline  &  &  \\
+\hline  &  &  \\
+\hline  &  &  \\
+\hline  &  &  \\
+\hline  &  &  \\
+\hline  &  &  \\
+\hline  &  &  \\
+\hline  &  &  \\
+\hline  &  &  \\
+\hline  &  &  \\
+\hline  &  &  \\
+\hline  &  &  \\
+\hline  &  &  \\
+\hline  &  &  \\
+\hline  &  &  \\
+\hline  &  &  \\
+\hline  &  &  \\
+\hline  &  &  \\
+\hline  &  &  \\
+\hline  &  &  \\
+\hline  &  &  \\
+\hline  &  &  \\
+\hline  &  &  \\
+\hline  &  &  \\
+\hline  &  &  \\
+\hline  &  &  \\
+\hline  &  &  \\
+\hline  &  &  \\
+\hline  &  &  \\
+\hline  &  &  \\
+\hline  &  &  \\
+\hline  &  &  \\
+\hline  &  &  \\
+\hline  &  &  \\
+\hline  &  &  \\
+\hline  &  &  \\
+\hline  &  &  \\
+\hline  &  &  \\
+\hline  &  &  \\
+\hline  &  &  \\
+\hline  &  &  \\
+\hline  &  &  \\
+\hline  &  &  \\
+\hline  &  &  \\
+\hline  &  &  \\
+\hline  &  &  \\
+\hline  &  &  \\
+\hline  &  &  \\
+\hline  &  &  \\
+\hline  &  &  \\
+\hline  &  &  \\
+\hline  &  &  \\
+\hline  &  &  \\
+\hline  &  &  \\
+\hline  &  &  \\
+\hline  &  &  \\
+\hline  &  &  \\
+\hline  &  &  \\
+\hline  &  &  \\
+\hline  &  &  \\
+\hline  &  &  \\
+\hline  &  &  \\
+\hline  &  &  \\
+\hline  &  &  \\
+\hline  &  &  \\
+\hline  &  &  \\
+\hline  &  &  \\
+\hline  &  &  \\
+\hline  &  &  \\
+\hline  &  &  \\
+\hline  &  &  \\
+\hline  &  &  \\
+\hline  &  &  \\
+\hline  &  &  \\
+\hline  &  &  \\
+\hline  &  &  \\
+\hline  &  &  \\
+\hline  &  &  \\
+\hline  &  &  \\
+\hline  &  &  \\
+\hline  &  &  \\
+\hline  &  &  \\
+\hline  &  &  \\
+\hline  &  &  \\
+\hline  &  &  \\
+\hline  &  &  \\
+\hline  &  &  \\
+\hline  &  &  \\
+\hline  &  &  \\
+\hline  &  &  \\
+\hline  &  &  \\
+\hline  &  &  \\
+\hline  &  &  \\
+\hline  &  &  \\
+\hline  &  &  \\
+\hline  &  &  \\
+\hline  &  &  \\
+\hline  &  &  \\
+\hline  &  &  \\
+\hline  &  &  \\
+\hline  &  &  \\
+\hline  &  &  \\
+\hline  &  &  \\
+\hline  &  &  \\
+\hline  &  &  \\
+\hline  &  &  \\
+\hline  &  &  \\
+\hline  &  &  \\
+\hline  &  &  \\
+\hline  &  &  \\
+\hline  &  &  \\
+\hline  &  &  \\
+\hline  &  &  \\
+\hline  &  &  \\
+\hline  &  &  \\
+\hline  &  &  \\
+\hline  &  &  \\
+\hline  &  &  \\
+\hline  &  &  \\
+\hline  &  &  \\
+
+
+
+\hline
+
+\caption{Queries of the University of Glasgow} \label{table:relevanceJudgements}
+\end{longtable}
+\normalsize

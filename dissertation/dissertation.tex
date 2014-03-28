@@ -3,9 +3,13 @@
 \usepackage{graphicx}
 \usepackage{url}
 \usepackage{mathtools}
-\usepackage[usenames,dvipsnames]{color}
+\usepackage{longtable}
+% \usepackage[usenames,dvipsnames]{color}
+
+\usepackage[toc,page]{appendix}
 % \usepackage{algorithm}
 \usepackage{program}
+\usepackage[normalem]{ulem}
 % \usepackage{float}
 
 % \renewcommand\thesection{\arabic{section}}
@@ -75,5 +79,9 @@ of use for the scope of this project.
 \clearpage
 \bibliography{references}
 \bibliographystyle{plain}
+
+\begin{appendices}
+\input{appendix}
+\end{appendices}
 
 \end{document}
