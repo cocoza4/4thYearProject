@@ -67,5 +67,5 @@ This section is necessary for readers to understand other sections.
 Section~\ref{section:implementation} discusses about implementations of the system and new system user interface design. 
 Section~\ref{sec:evaluation} provides results and analysis of the techniques used. 
 This section can be viewed as the most important part of the whole project since it 
-analyses whether applying a learning to rank technique improves the performance of the system or not. 
+analyses whether applying a learning to rank technique improves the effectiveness of the system or not. 
 The last section is the conclusions of the project.

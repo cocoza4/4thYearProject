@@ -1,18 +1,76 @@
-\documentclass[a4paper,10pt]{article}
+\documentclass{l4proj}
 \usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+\usepackage{url}
+\usepackage{mathtools}
+\usepackage[usenames,dvipsnames]{color}
+% \usepackage{algorithm}
+\usepackage{program}
+% \usepackage{float}
+
+% \renewcommand\thesection{\arabic{section}}
+% \renewcommand\thesubsection{\arabic{section}.\arabic{subsection}}
+% \renewcommand\thesubsubsection{\arabic{section}.\arabic{subsection}}
+% \setcounter{secnumdepth}{5}
+% \setcounter{tocdepth}{4}
+
+
+% \makeatletter
+% \renewcommand\p@subsection{\thesection.}
+% \makeatother
+\pagenumbering{arabic}
+%\usepackage{natbib}
+%%\usepackage{cite}
 
 %opening
-\title{}
-\author{}
+\title{Mining Academic Expertise from Funded Research (Expert Search System)}
+\author{Peeranat Fupongsiripan 2056647}
 
 \begin{document}
 
 \maketitle
 
 \begin{abstract}
-
+\input{abstract}
 \end{abstract}
 
-\section{}
+
+\renewcommand{\abstractname}{Acknowledgements}
+\begin{abstract}
+The dissertation would not have been completed without the help and support that I have received.
+First of all, I would like to thank Dr. Craig Macdonald for his advice and supervision throughout this project. 
+\end{abstract}
+
+\tableofcontents
+%\setcounter{secnumdepth}{4}
+%==============================================================================
+
+\input{introduction}
+
+%==============================================================================
+
+\input{background}
+
+%==============================================================================
+
+\input{requirements}
+
+%==============================================================================
+
+\input{implementation}
+
+%==============================================================================
+
+\input{evaluation}
+
+%==============================================================================
+
+\input{conclusions}
+
+%==============================================================================
+
+\clearpage
+\bibliography{references}
+\bibliographystyle{plain}
 
 \end{document}

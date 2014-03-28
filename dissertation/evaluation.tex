@@ -1,27 +1,26 @@
 
 \chapter{Evaluation}\label{sec:evaluation}
 
+This chapter is aimed to demonstrate that applying LETOR technique improves the effectiveness of the expert search system. 
+It separates into 2 experiments. The first experiment does not make use of K-fold Cross-validation technique but the second experiment does.
+We use LETOR technique proposed in Chapter~\ref{sec:letor}. Basically, there are 2 necessary datasets: training and testing datasets and 1 optional dataset:
+validation dataset. In IR, we refer them as training, testing and validation queries respectively. 
+Some of the queries were provided by Dr. Craig Macdonald and the others were made up by myself. 
+We made an assumption that the current system (using only publication as expertise evidence) is effective. This means that relevance judgements 
+(the experts retrieved in response to a query) can be obtained manually from the current system. To make relevance judgements, top 20 experts retrieved in response to a query
+are examined if they are truly an expert by visiting their official home page and with the help of Dr. Craig Macdonald.
+Throughout this chapter, the queries annotated by * denote queries whose relevant experts are restricted to those experts only from 
+the University of Glasgow. It is difficult to judge experts not in the University of Glasgow because we 
+do not know them. However, in practice, this will incur dataset quality~\cite{craig}.
+
 Before we discuss evaluation, we should have some goals set up. This is necessary because the evaluation results can be compared against the goals in order to
-conclude whether all goals are achieved or not. As stated in chapter~\ref{section:aims}, our goal is to integrate new kind of expertise evidence, funded projects,
-with existing expertise evidence, publications, to enhance the performance of the retrieval system. At the end of this chapter, we have to be able to 
+conclude whether all goals are achieved or not. As stated in Chapter~\ref{section:aims}, our goal is to integrate new kind of expertise evidence, funded projects,
+with existing expertise evidence, publications, to enhance the effectiveness of the expert search system. At the end of this chapter, we have to be able to 
 answer the following question:
 
 \begin{quotation}
  \textit{Does integrating funded projects with publications using learning to rank technique (LETOR) help improve the performance of the retrieval system?}
 \end{quotation}
-
-This chapter is aimed to demonstrate that applying LETOR technique improves the performance of the retrieval system. To evaluate this, we use LETOR
-technique proposed in chapter~\ref{sec:letor}. Basically, there are 2 necessary datasets: training and testing datasets and 1 optional dataset:
-validation dataset. In IR, 
-we refer them as training, testing and validation queries respectively. 
-Some of the queries were provided by Dr. Craig Macdonald and the others were made up by myself. 
-We made an assumption that the current system (using only publication as expertise evidence) is effective. This means that relevance judgements 
-(the experts retrieved in response to a query) can be obtained from the current system. To make relevance judgements, top 20 experts retrieved in response to a query
-are examined if they are truly an expert by visiting their official home page and with the help of Dr. Craig Macdonald.
-Throughout this chapter, the queries annotated by * denote queries whose relevant experts are only from University of Glasgow. 
-It is difficult to judge experts not in University of Glasgow because we 
-do not know them. However, in practice, this will incur dataset quality~\cite{craig}.
-
 
 \section{Evaluation Without K-fold Cross-validation}
 This section is aimed to demonstrate that applying LETOR technique improves the performance of the retrieval system. K-fold Cross-validation technique
@@ -191,9 +190,9 @@ be split into training, validation and testing queries manually to avoid one of 
 
 As discussed earlier, we decided to choose $K = 5$ for K-fold Cross-validation. Each of the 5 folds has all of the queries: 60\% for training, 
 20\% for validation and 20\% for testing~\cite{kfoldcv}. Across the 5 folds, each query will appear 3 times in training, once in validation and 
-once in testing queries. For each fold, training queries and validation queries are trained to obtain a learned model.
-Then a learned model for each fold is applied to testing queries. Results of each run across the 5 folds are combined into one results file in
-TREC format. This results file is then evaluated with trec\_eval. Finally, one of the learned models is used by the system.
+once in testing queries. For each fold, training queries are trained and validated by validation queries to obtain a learned model.
+Then a learned model for each fold is applied to testing queries of that fold. Results of each run across the 5 folds are combined into one results file in
+TREC format. With the qrels file, this results file is then evaluated with trec\_eval. Finally, one of the learned models is used by the system.
 
 \subsubsection{Fold 1}
 Tables~\ref{table:fold1testing},~\ref{table:fold1training} and~\ref{table:fold1validating} show testing, training and validation queries respectively.

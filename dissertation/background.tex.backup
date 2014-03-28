@@ -184,6 +184,30 @@ what the documents are really about. As a consequence, a query does not uniquely
 seems to be the most natural way to quantify uncertainty~\cite[P. 7]{probModel}. Based on a derivation from the probabilistic theory, the formula
 for BM25 is shown below:
 
+\begin{table}
+\centering
+\scalebox{0.5}{\begin{tabular}{|c|l|}
+\hline \textbf{Profiles} & \textbf{Docs}\\
+\hline C1 & D3, D4, D2 \\
+\hline C2 & D1, D2 \\
+\hline C3 & D3, D2 \\
+\hline C4 & D5, D6 \\  
+\hline
+\end{tabular}
+}
+\caption{Profiles} \label{table:profiles}
+\end{table}
+
+
+\begin{table}
+\centering
+\scalebox{0.5}{\begin{tabular}{|cc|c|c|c|}
+                ×
+               \end{tabular}
+
+\end{table}
+
+
 \begin{equation}\label{eq:BM25}
 score(d, \vec{q}) = \sum_{t \in \vec{q}} log_2 \frac{r_t/(R - r_t)}{(n_t - r_t)/(N - n_t - R + r_t)} \frac{(k_1 + 1)\cdot tf_{td}}{K + tf_{td}} \frac{k_2 + 1)\cdot tf_{tq}}{k_2 + tf_{tq}}
 \end{equation}
@@ -335,9 +359,9 @@ They both consist of queries and documents matching them together with relevance
 prepared manually by human assessors, who check results for some queries and determine relevance of each result or 
 derived automatically by analyzing clickthrough logs (i.e. search results which got clicks from users). However, they differ in the purpose of usage.
 \begin{itemize}
- \item \textit{Training data} is used by a learning algorithm to produce a ranking model or learned model which then computes relevance of documents 
- for actual queries~\cite{letorWiki}. This will discuss in more details in section~\ref{sec:learnedmodel}
- \item \textit{Testing data} is used to evaluate the performance of an obtained learned model~\cite{craig}.
+ \item \textit{Training data} is used by a learning algorithm to produce a ranking model or learned model~\cite{letorWiki}. 
+ This will discuss in more details in section~\ref{sec:learnedmodel}
+ \item \textit{Testing data} is applied with a learned model and used to evaluate the effectiveness of the system~\cite{craig}.
 \end{itemize}
 
 \subsection{Query Dependent Feature}\label{section:querydependent}
@@ -386,10 +410,10 @@ There can be any number of documents in the LETOR file. The example of a real LE
 \begin{quotation}
 \noindent\#1:publicationQuery \\
 \#2:projectQuery \\
-2 qid:Information\_Retrieval 1:3.4 2:1.1 \#docno = GLA_000001
+2 qid:Information\_Retrieval 1:3.4 2:1.1 \#docno = GLA\_000001
 \end{quotation}
 
-In this example, there are 2 features: publicationQuery and projectQuery. The document GLA_000001 with respect to the query $Information Retrieval$
+In this example, there are 2 features: publicationQuery and projectQuery. The document GLA\_000001 with respect to the query $Information Retrieval$
 is perfectly relevant with graded relevance value of 2. It has 2 feature values for publicationQuery and projectQuery which are 3.4 and 1.1 respectively.
 
 \subsection{Learning to Rank Model File Format} \label{sec:learnedmodelFile}
@@ -616,25 +640,28 @@ If a result in response to a query have all or some of these evidence, it has mo
 Figure \ref{fig:query} shows the results of the query ``database normalisation''. It is obvious that from the top 4 results, all of the article names
 include the keywords a user submitted, and the third result does not have query keywords included in the URL. Among all of which, the second result has more 
 evidence than others. It has an author's name, a photo of an author that other results do not. In this project, these evidence of credits also take into account.
-However, we are unable to take URL, and photo into account because the datasource (see Section~\ref{section:aims})
-does not provide photos of experts and URL is not used because it's not a web search engine.
+However, we are unable to take photo into account because the datasource (see Section~\ref{section:aims})
+does not provide photos of experts.
 
-\subsection{Voting Technique}\label{section:voting}
-In section ~\ref{section:retrieving}, we very briefly talked about weighting models or retrieval models. In other words, how documents are assigned scores. In this section,
-it aims to give an overview of voting technique used in this project. To understand this section, readers must understand what data fusion technique is. 
+\subsection{Voting Techniques}\label{section:voting}
+In section ~\ref{section:retrieving}, we very briefly talked about weighting models or retrieval models. In other words, how documents are assigned scores. 
+In expert search, we rank experts (people), not documents directly. In this section,
+it aims to give an overview of a voting technique used in this project. To understand this section, readers must understand what data fusion technique is. 
 ``Data fusion techniques also known as metasearch techniques, are used to combine separate rankings of documents into a single ranking,
 with the aim of improving over the performance of any constituent ranking''~\cite[P. 388]{expertsearch}. Within the context of this project, 
 expert search is seen as a voting problem. The profile of each candidate is a set of documents associated to him to represent their expertise.
 When each document associated to a candidate's profile get retrieved by the IR system, implicit vote for that candidate occurs~\cite[P. 389]{expertsearch}.
 Data fusion technique is then used to combine the ranking with respect to the query and the implicit vote. In expert search task, it shows that 
 ``improving the quality of the underlying document representation can significantly improve the retrieval performance of the data fusion techniques 
-on an expert search task''~\cite[P. 387]{expertsearch}. To give a simple example how data fusion technique works, take a look at this example
+on an expert search task''~\cite[P. 387]{expertsearch}. To give a simple example how voting technique works, take a look at this example
 
 Let $R(Q)$ be the set of documents retrieved for query $Q$, and the set of documents belonging to the profile candidate $C$ be denoted $profile(C)$. In expert
 search, we need to find a ranking of candidates, given $R(Q)$. Consider the simple example in Tables ~\ref{table:ranking} and ~\ref{table:profiles},
 the ranking of documents with respect to the query has retrieved documents \{$D1, D2, D3, D4$\}. Using the candidate profiles, candidate $C1$ has accumulated
 3 votes, $C2$ 2 votes, $C3$ 2 votes and $C4$ no votes. If all votes are counted equally, and each document in a candidate's profile is equally weighted, a possible
-ranking of candidates to this query could be \{$C1, C2, C3$\}. In this project, the technique used is $expCombMNZ$ and the formula is as follows
+ranking of candidates to this query could be \{$C1, C2, C3$\}. 
+There are various expert ranking approaches, however $expCombMNZ$ is used as it is already implemented in Terrier (see Section~\ref{section:terrier}).
+The formula of $expCombMNZ$ is as follows:
 
 \begin{table}
 \centering
@@ -664,23 +691,15 @@ ranking of candidates to this query could be \{$C1, C2, C3$\}. In this project, 
 \caption{Profiles} \label{table:profiles}
 \end{table}
 
-\begin{equation}
+\begin{equation}\label{eq:expCombMNZ}
  candScore(C,Q) = \|R(Q) \cap profile(C)\| \sum_{d \in R(Q) \cap profile(C)} exp(score_d)
 \end{equation}
 
 where $\|R(Q) \cap profile(C)\|$ is the number of documents from the profile of candidate $C$ that are in the ranking $R(Q)$ and $score_d$ is the score
-obtained using retrieval model of candidate $C$.
+of document $d$ obtained using retrieval model of candidate $C$. 
+It can be seen that this voting technique is not equally weighted as illustrated in the example before
+since it considers the score obtained using retrieval model of candidate $C$ ($score_d$) as well.
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+\section{Summary}
+So far, we have introduced some backgrounds required to understand the rest of the chapters in this project. Next chapter, we will discuss 
+design/architecture of the current system and proposals to the new system.

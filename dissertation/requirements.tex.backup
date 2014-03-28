@@ -1,6 +1,8 @@
 
 \chapter{Current System and Proposals, Requirements and Design of New System}\label{sec:currentsystemandproposals}
-In this chapter, Section~\ref{sec:currentsystem} is aimed to discuss the design/architecture and user interface of the current system.
+In this chapter, Section~\ref{sec:currentsystem} is aimed to discuss the design/architecture and user interface of the current system and 
+Section~\ref{section:goodexpert} is aimed to introduce expert search indicators of the new system and its design/architecture.
+
 \section{Current System}\label{sec:currentsystem}
 This section is intended to give some statistics and briefly discuss design of the current system. Table~\ref{table:currentstats} gives statistics 
 of current system.
@@ -30,7 +32,7 @@ of current system.
  \begin{figure}
  \centering
  \includegraphics[width=13cm,height=15cm,keepaspectratio]{./figures/oldProfilePage.png}
- \caption{Old Expert's Profile Facet} \label{fig:profilepage} 
+ \caption{Current Expert's Profile Facet} \label{fig:profilepage} 
 \end{figure}
 Figure~\ref{fig:oldsicsa} is the home page of SICSA. It provides a set of sample queries categorised in 4 different categories on the right of the 
 search panel. The top panel shows links to different SICSA pages. The middle panel is the search panel. It is independent of other panels. 
@@ -50,13 +52,19 @@ facet that shows popular terms appearing in an expert's profile and publications
  \includegraphics[scale=0.5,keepaspectratio]{./figures/currentSystemDesign.jpg}
  \caption{Design of Current System} \label{fig:currentDesign} 
 \end{figure}
-Figure~\ref{fig:currentDesign} shows design and architecture of current system. It makes use of publication as expertise. From the figure, after a user submits a query
-to the system, the system sends a query to Terrier and finally Terrier returns relevant experts to the user.
+Figure~\ref{fig:currentDesign} shows design and architecture of the current system. It makes use of publication as expertise evidence. 
+From the figure, after a user submits a query to the system, the system sends a query to Terrier. Terrier then processes the query using publication
+as expertise evidence. During this process, $PL2$ retrieval model and voting technique $expCombMNZ$ are applied to calcuate the score of each expert.
+The score of each expert is computed using equation~\ref{eq:expCombMNZ}
 
-\section{Expert Search Indicators of New System}\label{section:goodexpert}
-In section~\ref{sec:presentingQueryResult}, it was obvious that some evidence could be used to convince users how reliable a document (link) is.
+
+
+Finally Terrier returns relevant experts to the user.
+
+\section{Expert Search Indicators of the New System}\label{section:goodexpert}
+In Section~\ref{sec:presentingQueryResult}, it was obvious that some evidence could be used to convince users how reliable a document (link) is.
 In this section, the evidence within
-the context of this project will be discussed. As discussed in section~\ref{section:aims}, this project makes use of publications and funded projects as 
+the context of this project will be discussed. As discussed in Section~\ref{section:aims}, this project makes use of publications and funded projects as 
 expertise evidence. Based on these evidence, what makes an expert a good expert? we propose several intuitions about a relevant expert as follows 
 \begin{itemize}
  \item he has published a lot of publications.
@@ -66,12 +74,15 @@ expertise evidence. Based on these evidence, what makes an expert a good expert?
  \item he has involved in a lot of projects.
 \end{itemize}
 
+Reasons why such intuitions are chosen are because experts are likely to be professional if they have all intuitions described above. To give an example,
+If an expert is looking for co-workers for a project related to information retrieval, he of course would look for co-workers who have experience 
+(published lots of publications, involved in lots of projects, etc) and obtained lots of funding in the field of interest.
 It can be seen clearly that these assumptions or features in learning to rank are independent of the query a user submits. These features are query independent
-(section ~\ref{section:queryindependent}). However, query dependent features (section~\ref{section:querydependent}) should take into account as well. 
+(Section ~\ref{section:queryindependent}). However, query dependent features (Section~\ref{section:querydependent}) should take into account as well. 
 In this project, there are 2 query dependent features: 
 \begin{itemize}
- \item funded projects feature
- \item publication features feature
+ \item An expert has published publications on the topic of query (Current System)
+ \item An expert has been involved in projects on the topic of query
 \end{itemize}
 
 To sum up, a good expert should have high scores in both query dependent and independent features.
@@ -81,10 +92,10 @@ Due to the scope of the project it would be impossible to start without a clear 
 the end product should function. These requirements were decided on during the early stages of the project. 
 The reasoning behind them comes primarily from a number of sources:
 \begin{itemize}
- \item Research into a previous attempt at current SICSA system (section~\ref{sec:currentsystem}).
- \item Research into presenting query results (section~\ref{sec:presentingQueryResult}).
+ \item Research into a previous attempt at current SICSA system (Section~\ref{sec:currentsystem}).
+ \item Research into presenting query results (Section~\ref{sec:presentingQueryResult}).
  \item Research into learning to rank techniques to enhancing the performance of the retrieval system by integrating different kinds of 
- expertise evidence (section~\ref{sec:letor}).
+ expertise evidence (Section~\ref{sec:letor}).
  \item Discussion with Dr. Craig Macdonald.
 \end{itemize}
 % However, developing an IR system is researched based. Utilizing learning to rank technique might not 
@@ -97,8 +108,6 @@ The requirements have been split into 2 sections depending on their necessity: f
  \item Extracting funded projects from 2 different sources: Grant on the Web~\cite{gow} and Research Councils UK~\cite{gtr}.
  \item Integrating publications and funded projects as expertise evidence.
  \item Utilizing learning to rank techniques with an attempt to enhance the performance of the retrieval system using AdaRank and Coordinate Ascent algorithms.
- \item Conclusions that applying learning to rank techniques helps improve the performance of the retrieval system using evaluation metrics discussed
- in section~\ref{sec:background_evaluation}. 
 \end{itemize}
 
 \paragraph{Should Have} \hspace{0pt} \\
@@ -127,8 +136,8 @@ The requirements have been split into 2 sections depending on their necessity: f
 
 \subsection{Design and Architecture of New System} \label{section:union}
 Figure~\ref{fig:newDesign} shows design of new system. It makes use of learning to rank (LETOR) technique to integrate 
-both publication and funded projects as expertise evidence. From the figure, the design is quite similar except that query results (experts) are
-applied with learning to rank technique to obtain optimal ranking.
+both publication and funded projects as expertise evidence. From the figure, in contrast to the current system, 
+LETOR is applied to documents retrieved from Terrier. This LETOR reranks the documents to get the optimal ranking.
 
  \begin{figure}
  \centering
@@ -150,11 +159,52 @@ applied with learning to rank technique to obtain optimal ranking.
 \caption{Results After Union} \label{fig:union} 
 \end{figure}
 In the previous section, we gave a broad view of the new system retrieval scheme. In this section, we will be more specific on how we are going to 
-obtain results from user query and apply them to learning to rank technique to obtain optimal ranking.
+obtain results from user query before applying them to learning to rank technique to obtain optimal ranking.
 Figure~\ref{fig:quering} shows the process of obtaining documents (experts) with respect to a query. 
 
 Given a query $\vec{q}$, it is transformed into publication query $\vec{q}_{pub}$, using only publications as expertise evidence and project
 query $\vec{q}_{proj}$, using only funded projects as expertise evidence. 
-AcademTechQuerying Class then processes both $\vec{q}_{pub}$ and $\vec{q}_{proj}$. The results of both
-queries are then unioned, denoted $R_{pub,proj}(\vec{q})$ as shown in Figure ~\ref{fig:union}. The results obtained are based on query dependent features as discussed in section 
-~\ref{section:querydependent}.
+AcademTechQuerying Class then processes both $\vec{q}_{pub}$ and $\vec{q}_{proj}$. For each query, the system applies $PL2$
+retrieval model and voting technique $expCombMNZ$ (see Section~\ref{sec:currentsystem}). The results of both
+queries are then unioned, denoted $R_{pub,proj}(\vec{q})$ as shown in Figure ~\ref{fig:union}. The results obtained are based on query dependent features 
+as discussed in Section~\ref{section:querydependent}. This process is depicted mathematically as follows:
+
+\begin{equation}
+ \vec{q}_{pub} \rightarrow R_{cand}(\vec{q}_{pub}),  \vec{q}_{proj} \rightarrow R_{cand}(\vec{q}_{proj})
+\end{equation}
+
+\begin{equation}
+ R_{cand}(\vec{q}) = R_{cand}(\vec{q}_{pub})\cup R_{cand}(\vec{q}_{proj})
+\end{equation}
+
+where $R_{cand}$ is the ranking of candidates. $R_{pub}(\vec{q}_{pub})$ and $R_{proj}(\vec{q}_{proj})$ are the rankings of candidate with respect to $\vec{q}_{pub}$ and $\vec{q}_{proj}$
+respectively.
+
+\paragraph{Applying a Learned Model and Producing Final Ranking} \hspace{0pt} \\
+In the previous section, we discussed how ranking of candidates is obtained ($R_{cand}(\vec{q})$). In this section, we will propose how to apply the ranking
+with a learned model (see Sections~\ref{sec:learnedmodel} and~\ref{sec:background_applyLearnedModel}). 
+
+Given a ranking of candidates $R_{cand}$, the score of each candidate $C$ can be computed as follows:
+\begin{equation}
+ score(C, \vec{q}) = \sum_{f_{qi}} w_{f_{qi}}\cdot feat_{f_{qi}}(C) + w_{f_{q,pub}}\cdot score_{\vec{q}_{pub}}(C) + 
+ w_{f_{q,proj}}\cdot score_{\vec{q}_{proj}}(C)
+\end{equation}
+
+where $f_{qi}$ is a query independent feature discussed in Section~\ref{section:goodexpert}, $w_{f_{qi}}$ is a value of 
+query independent feature ${f_{qi}}$ in a learned model, and $feat_{f_{qi}}(C)$ is a value of query independent feature of candidate $C$.
+$w_{f_{q,pub}}$ and $w_{f_{q,proj}}$ are values of query depenent features of publications and projects respectively (see Section~\ref{section:goodexpert}).
+$score(C, \vec{q}_{pub})$ and $score(C, \vec{q}_{proj})$ are publication and project scores of candidate $C$ respectively (discussed in the previous section).
+
+Once each candidate has its final score computed, we sort all the candidates' score in decreasing order. This is a final ranking $R_{final}$. Sorting
+can be done efficiently using $O(n\cdot log n)$ sorting algorithm such as $Quick Sort$, or $Merge Sort$.
+
+\begin{equation}
+ R_{final} = sort(\hat{R}_{cand}(\vec{q}))
+\end{equation}
+
+where $\hat{R}_{cand}(\vec{q})$ is the ranking of cadidates for which each candidate's final score is computed.
+
+
+
+
+

@@ -188,7 +188,9 @@ for BM25 is shown below:
 score(d, \vec{q}) = \sum_{t \in \vec{q}} log_2 \frac{r_t/(R - r_t)}{(n_t - r_t)/(N - n_t - R + r_t)} \frac{(k_1 + 1)\cdot tf_{td}}{K + tf_{td}} \frac{k_2 + 1)\cdot tf_{tq}}{k_2 + tf_{tq}}
 \end{equation}
 where $K$ = $k_t((1 - b) + b\frac{dl}{avdl})$, $tf_{tq}$ and $tf_{td}$ are the frequency of term $t$ in the query $\vec{q}$ and document $d$ respectively,
-and $b$, $dl$ and $avdl$ are parameters set empirically. The proof of BM25 is beyond the scope of the project.
+and $b$, $dl$ and $avdl$ are parameters set empirically. $r_t$ is the number of documents containing term $t$ relevant to a query term $t$. 
+$R$ is the number of documents in the collection relevant to a query term $t$. $n_t$ is the number of documents in which the query term $t$ appears and
+$N$ is the number of all documents in the collection. The proof of BM25 is beyond the scope of the project.
 
 \paragraph{PL2} \hspace{0pt} \\
 PL2 is a model from the divergence from randomness framework, based on a poisson distribution~\cite{craig}. This project uses PL2 weighting model to 
@@ -284,9 +286,8 @@ overall IR system A (blue) has higher precision than IR system B (red), system A
 \caption{Precision-Recall Graph} \label{fig:pr_example} 
 \end{figure}
 
-However, in certain cases, precisions of system A may have higher values than system B in some recall points or vice versa. Therefore,
-Mean Average Precision (MAP), Normalized Discounted Cumulative Gain (NDCG) and Mean Reciprocal Rank (MRR) are used to address this problem.
-Each of them has different behaviours of evaluation.
+In this project, 3 evaluation metrics are chosen: Mean Average Precision (MAP), Normalized Discounted Cumulative Gain (NDCG) 
+and Mean Reciprocal Rank (MRR). Each of them has different behaviours.
 
 \paragraph{Mean Average Precision (MAP)} \hspace{0pt} \\
 MAP for a set of queries is the mean of the average precision scores for each query~\cite{IR}. The equation below is
@@ -335,9 +336,9 @@ They both consist of queries and documents matching them together with relevance
 prepared manually by human assessors, who check results for some queries and determine relevance of each result or 
 derived automatically by analyzing clickthrough logs (i.e. search results which got clicks from users). However, they differ in the purpose of usage.
 \begin{itemize}
- \item \textit{Training data} is used by a learning algorithm to produce a ranking model or learned model which then computes relevance of documents 
- for actual queries~\cite{letorWiki}. This will discuss in more details in section~\ref{sec:learnedmodel}
- \item \textit{Testing data} is used to evaluate the performance of an obtained learned model~\cite{craig}.
+ \item \textit{Training data} is used by a learning algorithm to produce a ranking model or learned model~\cite{letorWiki}. 
+ This will discuss in more details in section~\ref{sec:learnedmodel}
+ \item \textit{Testing data} is applied with a learned model and used to evaluate the effectiveness of the system~\cite{craig}.
 \end{itemize}
 
 \subsection{Query Dependent Feature}\label{section:querydependent}
@@ -667,7 +668,7 @@ The formula of $expCombMNZ$ is as follows:
 \caption{Profiles} \label{table:profiles}
 \end{table}
 
-\begin{equation}
+\begin{equation}\label{eq:expCombMNZ}
  candScore(C,Q) = \|R(Q) \cap profile(C)\| \sum_{d \in R(Q) \cap profile(C)} exp(score_d)
 \end{equation}
 

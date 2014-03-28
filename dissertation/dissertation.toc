@@ -14,7 +14,7 @@
 \contentsline {subsection}{\numberline {2.1.2}Retrieval Models}{9}
 \contentsline {paragraph}{Term Frequency\IeC {\textendash }Inverse Document Frequency (tf-idf)}{9}
 \contentsline {paragraph}{BM25}{9}
-\contentsline {paragraph}{PL2}{9}
+\contentsline {paragraph}{PL2}{10}
 \contentsline {subsection}{\numberline {2.1.3}Retrieval Process in Information Retrieval}{10}
 \contentsline {subsection}{\numberline {2.1.4}Evaluation}{11}
 \contentsline {subsubsection}{Precision and Recall}{11}
@@ -52,43 +52,46 @@
 \contentsline {paragraph}{Could Have}{27}
 \contentsline {paragraph}{Would Like to Have}{27}
 \contentsline {subsubsection}{Non-functional Requirements}{27}
-\contentsline {subsection}{\numberline {3.2.2}Design and Architecture of New System}{27}
+\contentsline {subsection}{\numberline {3.2.2}Design and Architecture of New System}{28}
 \contentsline {paragraph}{Retrieving Documents (Experts) with Respect to a Query}{28}
-\contentsline {chapter}{\numberline {4}Implementation}{29}
-\contentsline {section}{\numberline {4.1}Overview of Important Class Diagrams}{29}
-\contentsline {section}{\numberline {4.2}Data Extraction}{31}
-\contentsline {section}{\numberline {4.3}Indexing}{32}
-\contentsline {paragraph}{ContactsList.trec.gz}{33}
-\contentsline {paragraph}{Homepages.trec.gz}{33}
-\contentsline {paragraph}{Projects.trec.gz}{33}
-\contentsline {paragraph}{Publications.trec.gz}{34}
-\contentsline {paragraph}{association.txt}{34}
-\contentsline {section}{\numberline {4.4}Producing a Learned Model}{35}
-\contentsline {section}{\numberline {4.5}Applying a Learned Model}{35}
-\contentsline {section}{\numberline {4.6}User Interface of New System}{38}
-\contentsline {chapter}{\numberline {5}Evaluation}{41}
-\contentsline {section}{\numberline {5.1}Evaluation Without K-fold Cross-validation}{41}
-\contentsline {subsection}{\numberline {5.1.1}Experimental Setting}{41}
-\contentsline {subsubsection}{Training Queries}{42}
-\contentsline {subsubsection}{Testing Queries}{42}
-\contentsline {subsection}{\numberline {5.1.2}Experimental Results}{43}
-\contentsline {section}{\numberline {5.2}Evaluation With K-fold Cross-validation}{44}
-\contentsline {subsection}{\numberline {5.2.1}Experimental Setting}{44}
-\contentsline {subsubsection}{Fold 1}{44}
-\contentsline {subsubsection}{Fold 2}{45}
-\contentsline {subsubsection}{Fold 3}{45}
-\contentsline {subsubsection}{Fold 4}{45}
-\contentsline {subsubsection}{Fold 5}{48}
-\contentsline {subsection}{\numberline {5.2.2}Experimental Results}{48}
-\contentsline {section}{\numberline {5.3}Causes of Learning to Rank Failure}{49}
-\contentsline {chapter}{\numberline {6}Conclusions}{50}
-\contentsline {section}{\numberline {6.1}Requirements Achieved}{50}
-\contentsline {section}{\numberline {6.2}Challenges}{50}
-\contentsline {subsection}{\numberline {6.2.1}LETOR}{51}
-\contentsline {subsection}{\numberline {6.2.2}Relevance Judgement}{51}
-\contentsline {section}{\numberline {6.3}Problems Encountered}{51}
-\contentsline {subsection}{\numberline {6.3.1}Expert's Name Pattern Matching}{51}
-\contentsline {subsection}{\numberline {6.3.2}Lack of LETOR Algorithms Explanation}{51}
-\contentsline {subsection}{\numberline {6.3.3}Poor Quality of Relevance Judgements}{51}
-\contentsline {section}{\numberline {6.4}How would I have done differently?}{52}
-\contentsline {section}{\numberline {6.5}Future Work}{52}
+\contentsline {paragraph}{Applying a Learned Model and Producing Final Ranking}{29}
+\contentsline {chapter}{\numberline {4}Implementation}{30}
+\contentsline {section}{\numberline {4.1}Relationships between Expert, Project, Publication, and University}{30}
+\contentsline {section}{\numberline {4.2}Querying}{30}
+\contentsline {section}{\numberline {4.3}Data Extraction}{33}
+\contentsline {section}{\numberline {4.4}Indexing}{34}
+\contentsline {paragraph}{ContactsList.trec.gz}{34}
+\contentsline {paragraph}{Homepages.trec.gz}{35}
+\contentsline {paragraph}{Publications.trec.gz}{35}
+\contentsline {paragraph}{Projects.trec.gz}{35}
+\contentsline {paragraph}{association.txt}{36}
+\contentsline {section}{\numberline {4.5}Producing a Learned Model}{36}
+\contentsline {section}{\numberline {4.6}Applying a Learned Model and Producing Final Ranking}{38}
+\contentsline {section}{\numberline {4.7}Sequence Diagram of Querying Process}{39}
+\contentsline {section}{\numberline {4.8}User Interface of the New System}{40}
+\contentsline {chapter}{\numberline {5}Evaluation}{43}
+\contentsline {section}{\numberline {5.1}Evaluation Without K-fold Cross-validation}{43}
+\contentsline {subsection}{\numberline {5.1.1}Experimental Setting}{43}
+\contentsline {subsubsection}{Training Queries}{44}
+\contentsline {subsubsection}{Testing Queries}{44}
+\contentsline {subsection}{\numberline {5.1.2}Experimental Results}{45}
+\contentsline {section}{\numberline {5.2}Evaluation With K-fold Cross-validation}{46}
+\contentsline {subsection}{\numberline {5.2.1}Experimental Setting}{46}
+\contentsline {subsubsection}{Fold 1}{46}
+\contentsline {subsubsection}{Fold 2}{47}
+\contentsline {subsubsection}{Fold 3}{47}
+\contentsline {subsubsection}{Fold 4}{47}
+\contentsline {subsubsection}{Fold 5}{50}
+\contentsline {subsection}{\numberline {5.2.2}Experimental Results}{50}
+\contentsline {section}{\numberline {5.3}Causes of Learning to Rank Failure}{51}
+\contentsline {chapter}{\numberline {6}Conclusions}{52}
+\contentsline {section}{\numberline {6.1}Requirements Achieved}{52}
+\contentsline {section}{\numberline {6.2}Challenges}{52}
+\contentsline {subsection}{\numberline {6.2.1}LETOR}{53}
+\contentsline {subsection}{\numberline {6.2.2}Relevance Judgement}{53}
+\contentsline {section}{\numberline {6.3}Problems Encountered}{53}
+\contentsline {subsection}{\numberline {6.3.1}Expert's Name Pattern Matching}{53}
+\contentsline {subsection}{\numberline {6.3.2}Lack of LETOR Algorithms Explanation}{53}
+\contentsline {subsection}{\numberline {6.3.3}Poor Quality of Relevance Judgements}{53}
+\contentsline {section}{\numberline {6.4}How would I have done differently?}{54}
+\contentsline {section}{\numberline {6.5}Future Work}{54}
