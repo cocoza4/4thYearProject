@@ -77,11 +77,11 @@
 \contentsline {subsection}{\numberline {5.1.2}Experimental Results}{44}
 \contentsline {section}{\numberline {5.2}Evaluation With K-fold Cross-validation}{46}
 \contentsline {subsection}{\numberline {5.2.1}Experimental Setting}{46}
-\contentsline {subsubsection}{Fold 1}{46}
-\contentsline {subsubsection}{Fold 2}{46}
-\contentsline {subsubsection}{Fold 3}{48}
-\contentsline {subsubsection}{Fold 4}{48}
-\contentsline {subsubsection}{Fold 5}{48}
+\contentsline {subsubsection}{Fold 1}{47}
+\contentsline {subsubsection}{Fold 2}{47}
+\contentsline {subsubsection}{Fold 3}{49}
+\contentsline {subsubsection}{Fold 4}{49}
+\contentsline {subsubsection}{Fold 5}{49}
 \contentsline {subsection}{\numberline {5.2.2}Experimental Results}{51}
 \contentsline {section}{\numberline {5.3}Causes of Learning to Rank Failure}{51}
 \contentsline {chapter}{\numberline {6}Conclusions}{53}
