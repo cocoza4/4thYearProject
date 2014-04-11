@@ -52,7 +52,7 @@
 \contentsline {paragraph}{Could Have}{27}
 \contentsline {paragraph}{Would Like to Have}{27}
 \contentsline {subsubsection}{Non-functional Requirements}{27}
-\contentsline {subsection}{\numberline {3.2.2}Design and Architecture of New System}{28}
+\contentsline {subsection}{\numberline {3.2.2}Design and Architecture of New System}{27}
 \contentsline {paragraph}{Retrieving Documents (Experts) with Respect to a Query}{28}
 \contentsline {paragraph}{Applying a Learned Model and Producing Final Ranking}{29}
 \contentsline {chapter}{\numberline {4}Implementation}{30}
@@ -77,22 +77,19 @@
 \contentsline {subsection}{\numberline {5.1.2}Experimental Results}{44}
 \contentsline {section}{\numberline {5.2}Evaluation With K-fold Cross-validation}{46}
 \contentsline {subsection}{\numberline {5.2.1}Experimental Setting}{46}
-\contentsline {subsubsection}{Fold 1}{47}
-\contentsline {subsubsection}{Fold 2}{47}
-\contentsline {subsubsection}{Fold 3}{49}
-\contentsline {subsubsection}{Fold 4}{49}
-\contentsline {subsubsection}{Fold 5}{49}
-\contentsline {subsection}{\numberline {5.2.2}Experimental Results}{51}
-\contentsline {section}{\numberline {5.3}Causes of Learning to Rank Failure}{51}
-\contentsline {chapter}{\numberline {6}Conclusions}{53}
-\contentsline {section}{\numberline {6.1}Requirements Achieved}{53}
-\contentsline {section}{\numberline {6.2}Challenges}{53}
-\contentsline {subsection}{\numberline {6.2.1}LETOR}{54}
-\contentsline {subsection}{\numberline {6.2.2}Relevance Judgement}{54}
-\contentsline {section}{\numberline {6.3}Problems Encountered}{54}
-\contentsline {subsection}{\numberline {6.3.1}Expert's Name Pattern Matching}{54}
-\contentsline {subsection}{\numberline {6.3.2}Lack of LETOR Algorithms Explanation}{54}
-\contentsline {subsection}{\numberline {6.3.3}Poor Quality of Relevance Judgements}{54}
-\contentsline {section}{\numberline {6.4}How would I have done differently?}{55}
-\contentsline {section}{\numberline {6.5}Future Work}{55}
-\contentsline {chapter}{Appendices}{57}
+\contentsline {subsection}{\numberline {5.2.2}Experimental Results}{47}
+\contentsline {section}{\numberline {5.3}Causes of Learning to Rank Failure}{47}
+\contentsline {chapter}{\numberline {6}Conclusions}{49}
+\contentsline {section}{\numberline {6.1}Requirements Achieved}{49}
+\contentsline {section}{\numberline {6.2}Challenges}{49}
+\contentsline {subsection}{\numberline {6.2.1}LETOR}{50}
+\contentsline {subsection}{\numberline {6.2.2}Relevance Judgement}{50}
+\contentsline {section}{\numberline {6.3}Problems Encountered}{50}
+\contentsline {subsection}{\numberline {6.3.1}Expert's Name Pattern Matching}{50}
+\contentsline {subsection}{\numberline {6.3.2}Lack of LETOR Algorithms Explanation}{50}
+\contentsline {subsection}{\numberline {6.3.3}Poor Quality of Relevance Judgements}{50}
+\contentsline {section}{\numberline {6.4}How would I have done differently?}{51}
+\contentsline {section}{\numberline {6.5}Future Work}{51}
+\contentsline {chapter}{Appendices}{53}
+\contentsline {section}{\numberline {.1}K-fold Cross-validation}{55}
+\contentsline {section}{\numberline {.2}Relevance Judgements}{58}

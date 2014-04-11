@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012/Debian) (format=pdflatex 2012.11.18)  28 MAR 2014 05:18
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012/Debian) (format=pdflatex 2012.11.18)  28 MAR 2014 17:56
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -496,38 +496,83 @@ File: ueur.fd 2009/06/22 v3.00 Euler Roman
 \ULC@box=\box35
 Package: ulem 2012/05/18
 \ULdepth=\dimen184
-) (./dissertation.aux)
+)
+(/usr/share/texlive/texmf-dist/tex/latex/fancyvrb/fancyvrb.sty
+Package: fancyvrb 2008/02/07
+
+Style option: `fancyvrb' v2.7a, with DG/SPQR fixes, and firstline=lastline fix 
+<2008/02/07> (tvz)
+\FV@CodeLineNo=\count116
+\FV@InFile=\read1
+\FV@TabBox=\box36
+\c@FancyVerbLine=\count117
+\FV@StepNumber=\count118
+\FV@OutFile=\write3
+) (/usr/share/texlive/texmf-dist/tex/latex/subfig/subfig.sty
+Package: subfig 2005/06/28 ver: 1.3 subfig package
+
+(/usr/share/texlive/texmf-dist/tex/latex/caption/caption.sty
+Package: caption 2012/02/19 v3.2f Customizing captions (AR)
+
+(/usr/share/texlive/texmf-dist/tex/latex/caption/caption3.sty
+Package: caption3 2012/01/12 v1.4b caption3 kernel (AR)
+\captionmargin=\dimen185
+\captionmargin@=\dimen186
+\captionwidth=\dimen187
+\caption@indent=\dimen188
+\caption@parindent=\dimen189
+\caption@hangindent=\dimen190
+)
+\c@ContinuedFloat=\count119
+Package caption Info: longtable package is loaded.
+
+(/usr/share/texlive/texmf-dist/tex/latex/caption/ltcaption.sty
+Package: ltcaption 2011/09/12 v1.3 longtable captions (AR)
+))
+\c@KVtest=\count120
+\sf@farskip=\skip55
+\sf@captopadj=\dimen191
+\sf@capskip=\skip56
+\sf@nearskip=\skip57
+\c@subfigure=\count121
+\c@subfigure@save=\count122
+\c@lofdepth=\count123
+\c@subtable=\count124
+\c@subtable@save=\count125
+\c@lotdepth=\count126
+\sf@top=\skip58
+\sf@bottom=\skip59
+)
+(./dissertation.aux)
 \openout1 = `dissertation.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 33.
-LaTeX Font Info:    ... okay on input line 33.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 33.
-LaTeX Font Info:    ... okay on input line 33.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 33.
-LaTeX Font Info:    ... okay on input line 33.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 33.
-LaTeX Font Info:    ... okay on input line 33.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 33.
-LaTeX Font Info:    ... okay on input line 33.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 33.
-LaTeX Font Info:    ... okay on input line 33.
-LaTeX Font Info:    Try loading font information for OT1+ptm on input line 33.
-
-(/usr/share/texlive/texmf-dist/tex/latex/psnfss/ot1ptm.fd
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 35.
+LaTeX Font Info:    ... okay on input line 35.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 35.
+LaTeX Font Info:    ... okay on input line 35.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 35.
+LaTeX Font Info:    ... okay on input line 35.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 35.
+LaTeX Font Info:    ... okay on input line 35.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 35.
+LaTeX Font Info:    ... okay on input line 35.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 35.
+LaTeX Font Info:    ... okay on input line 35.
+LaTeX Font Info:    Try loading font information for OT1+ptm on input line 35.
+ (/usr/share/texlive/texmf-dist/tex/latex/psnfss/ot1ptm.fd
 File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
-)
-(/usr/share/texlive/texmf-dist/tex/context/base/supp-pdf.mkii
+) (/usr/share/texlive/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count116
-\scratchdimen=\dimen185
-\scratchbox=\box36
-\nofMPsegments=\count117
-\nofMParguments=\count118
+\scratchcounter=\count127
+\scratchdimen=\dimen192
+\scratchbox=\box37
+\nofMPsegments=\count128
+\nofMParguments=\count129
 \everyMPshowfont=\toks25
-\MPscratchCnt=\count119
-\MPscratchDim=\dimen186
-\MPnumerator=\count120
-\makeMPintoPDFobject=\count121
+\MPscratchCnt=\count130
+\MPscratchDim=\dimen193
+\MPnumerator=\count131
+\makeMPintoPDFobject=\count132
 \everyMPtoPDFconversion=\toks26
 ) (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
 Package: pdftexcmds 2011/11/29 v0.20 Utility functions of pdfTeX for LuaTeX (HO
@@ -607,6 +652,9 @@ e
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: subfig package v1.3 is loaded.
+Package caption Info: End \AtBeginDocument code.
 Package epstopdf Info: Source file: <figures/CompSci_colour.eps>
 (epstopdf)                    date: 2014-03-14 01:06:02
 (epstopdf)                    size: 443112 bytes
@@ -616,17 +664,17 @@ f>
 (epstopdf)                    size: 28096 bytes
 (epstopdf)             Command: <repstopdf --outfile=figures/CompSci_colour-eps
 -converted-to.pdf figures/CompSci_colour.eps>
-(epstopdf)             \includegraphics on input line 35.
+(epstopdf)             \includegraphics on input line 37.
 Package epstopdf Info: Output file is already uptodate.
 <figures/CompSci_colour-eps-converted-to.pdf, id=1, 340.27126pt x 49.18375pt>
 File: figures/CompSci_colour-eps-converted-to.pdf Graphic file (type pdf)
 
 <use figures/CompSci_colour-eps-converted-to.pdf>
 Package pdftex.def Info: figures/CompSci_colour-eps-converted-to.pdf used on in
-put line 35.
+put line 37.
 (pdftex.def)             Requested size: 283.36508pt x -7.72174pt.
 
-Overfull \hbox (0.2754pt too wide) in paragraph at lines 35--35
+Overfull \hbox (0.2754pt too wide) in paragraph at lines 37--37
 \OT1/ptm/m/n/17.28 Mining Aca-demic Ex-per-tise from Funded Re-search (Ex-pert 
 Search Sys-
  []
@@ -636,23 +684,23 @@ Search Sys-
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map} <./figures/CompSci_colour-e
 ps-converted-to.pdf>]
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10.95> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 37.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 39.
  (./abstract.tex) [1] [1]
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <24.88> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 51.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 53.
  (./dissertation.toc [1
 
 ]
 [2])
-\tf@toc=\write3
-\openout3 = `dissertation.toc'.
+\tf@toc=\write4
+\openout4 = `dissertation.toc'.
 
  (./introduction.tex [3]
 Chapter 1.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <20.74> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 4.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <14.4> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 9.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 11.
 [4
 
 ]) (./background.tex [5]
@@ -791,8 +839,8 @@ Package pdftex.def Info: ./figures/terrierindexing.png used on input line 521.
 (pdftex.def)             Requested size: 232.62085pt x 153.80077pt.
 
 Underfull \hbox (badness 10000) in paragraph at lines 522--522
-[]\OT1/ptm/m/n/10.95 Figure 2.9: In-dex-ing Ar-chi-tec-ture of Ter-rier from $\
-OT1/pcr/m/n/10.95 http : / / terrier . org / docs / v3 . 5 /
+[]\OT1/ptm/m/n/10.95 Figure 2.9: |In-dex-ing Ar-chi-tec-ture of Ter-rier from $
+\OT1/pcr/m/n/10.95 http : / / terrier . org / docs / v3 . 5 /
  []
 
 LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <10.95> not available
@@ -844,22 +892,22 @@ Package pdftex.def Info: ./figures/currentSystemDesign.jpg used on input line 5
 ] [24 <./figures/oldsicsa.png (PNG copy)> <./figures/oldsearch.png (PNG copy)>]
  [25 <./figures/oldProfilePage.png (PNG copy)> <./figures/currentSystemDesign.j
 pg>] [26]
-Underfull \hbox (badness 10000) in paragraph at lines 103--104
+Underfull \hbox (badness 10000) in paragraph at lines 101--102
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 110--111
+Underfull \hbox (badness 10000) in paragraph at lines 108--109
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 116--117
+Underfull \hbox (badness 10000) in paragraph at lines 114--115
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 121--122
+Underfull \hbox (badness 10000) in paragraph at lines 119--120
 
  []
 
@@ -867,25 +915,25 @@ Underfull \hbox (badness 10000) in paragraph at lines 121--122
 File: ./figures/newSystemDesign.png Graphic file (type png)
 
 <use ./figures/newSystemDesign.png>
-Package pdftex.def Info: ./figures/newSystemDesign.png used on input line 141.
+Package pdftex.def Info: ./figures/newSystemDesign.png used on input line 139.
 (pdftex.def)             Requested size: 187.89867pt x 171.6382pt.
- [27]
-Underfull \hbox (badness 10000) in paragraph at lines 145--146
+
+Underfull \hbox (badness 10000) in paragraph at lines 143--144
 
  []
 
-<./figures/querying.png, id=145, 501.37312pt x 191.21437pt>
+<./figures/querying.png, id=142, 501.37312pt x 191.21437pt>
 File: ./figures/querying.png Graphic file (type png)
 
 <use ./figures/querying.png>
-Package pdftex.def Info: ./figures/querying.png used on input line 149.
+Package pdftex.def Info: ./figures/querying.png used on input line 147.
 (pdftex.def)             Requested size: 200.54568pt x 76.48439pt.
-
+ [27]
 <./figures/union.png, id=146, 143.03438pt x 153.57375pt>
 File: ./figures/union.png Graphic file (type png)
 
 <use ./figures/union.png>
-Package pdftex.def Info: ./figures/union.png used on input line 155.
+Package pdftex.def Info: ./figures/union.png used on input line 153.
 (pdftex.def)             Requested size: 100.12337pt x 107.50089pt.
  [28 <./figures/newSystemDesign.png> <./figures/querying.png (PNG copy)> <./fig
 ures/union.png (PNG copy)>]) (./implementation.tex
@@ -929,14 +977,14 @@ action.png (PNG copy)>] [34] [35]
 File: ./figures/sampleletorfile.png Graphic file (type png)
 
 <use ./figures/sampleletorfile.png>
-Package pdftex.def Info: ./figures/sampleletorfile.png used on input line 248.
+Package pdftex.def Info: ./figures/sampleletorfile.png used on input line 249.
 (pdftex.def)             Requested size: 397.18694pt x 195.73276pt.
 
 <./figures/learningModel.png, id=178, 511.9125pt x 401.5pt>
 File: ./figures/learningModel.png Graphic file (type png)
 
 <use ./figures/learningModel.png>
-Package pdftex.def Info: ./figures/learningModel.png used on input line 254.
+Package pdftex.def Info: ./figures/learningModel.png used on input line 255.
 (pdftex.def)             Requested size: 358.3363pt x 281.04808pt.
  [36] [37 <./figures/sampleletorfile.png> <./figures/learningModel.png (PNG cop
 y)>]
@@ -944,28 +992,28 @@ y)>]
 File: ./figures/samplemodel.png Graphic file (type png)
 
 <use ./figures/samplemodel.png>
-Package pdftex.def Info: ./figures/samplemodel.png used on input line 274.
+Package pdftex.def Info: ./figures/samplemodel.png used on input line 275.
 (pdftex.def)             Requested size: 387.55087pt x 55.40741pt.
 
 <./figures/adarankModel.png, id=186, 1277.77374pt x 659.46375pt>
 File: ./figures/adarankModel.png Graphic file (type png)
 
 <use ./figures/adarankModel.png>
-Package pdftex.def Info: ./figures/adarankModel.png used on input line 280.
+Package pdftex.def Info: ./figures/adarankModel.png used on input line 281.
 (pdftex.def)             Requested size: 383.33508pt x 197.84064pt.
 
 <./figures/score&sorting.png, id=187, 1013.7875pt x 572.1375pt>
 File: ./figures/score&sorting.png Graphic file (type png)
 
 <use ./figures/score&sorting.png>
-Package pdftex.def Info: ./figures/score&sorting.png used on input line 293.
+Package pdftex.def Info: ./figures/score&sorting.png used on input line 294.
 (pdftex.def)             Requested size: 304.1386pt x 171.64256pt.
  [38 <./figures/samplemodel.png (PNG copy)> <./figures/adarankModel.png>]
 <./figures/searchsequence.png, id=191, 820.06375pt x 505.89pt>
 File: ./figures/searchsequence.png Graphic file (type png)
 
 <use ./figures/searchsequence.png>
-Package pdftex.def Info: ./figures/searchsequence.png used on input line 312.
+Package pdftex.def Info: ./figures/searchsequence.png used on input line 313.
 (pdftex.def)             Requested size: 328.01968pt x 202.3524pt.
  [39 <./figures/score&sorting.png (PNG copy)> <./figures/searchsequence.png (PN
 G copy)>]
@@ -973,43 +1021,43 @@ G copy)>]
 File: ./figures/newsearch.png Graphic file (type png)
 
 <use ./figures/newsearch.png>
-Package pdftex.def Info: ./figures/newsearch.png used on input line 326.
-(pdftex.def)             Requested size: 369.88367pt x 214.4437pt.
+Package pdftex.def Info: ./figures/newsearch.png used on input line 327.
+(pdftex.def)             Requested size: 343.52463pt x 199.16179pt.
 
 <./figures/newProfilePagePublication.png, id=196, 1171.37625pt x 677.53125pt>
 File: ./figures/newProfilePagePublication.png Graphic file (type png)
 
 <use ./figures/newProfilePagePublication.png>
 Package pdftex.def Info: ./figures/newProfilePagePublication.png used on input 
-line 335.
-(pdftex.def)             Requested size: 369.87917pt x 213.94038pt.
+line 336.
+(pdftex.def)             Requested size: 344.33759pt x 199.16698pt.
 
 <./figures/newPofilePageProject.png, id=197, 822.07124pt x 670.505pt>
 File: ./figures/newPofilePageProject.png Graphic file (type png)
 
 <use ./figures/newPofilePageProject.png>
 Package pdftex.def Info: ./figures/newPofilePageProject.png used on input line 
-343.
-(pdftex.def)             Requested size: 369.87846pt x 301.68353pt.
+344.
+(pdftex.def)             Requested size: 244.18977pt x 199.16823pt.
 
 <./figures/newProfileSelectedProject.png, id=198, 833.1125pt x 681.54625pt>
 File: ./figures/newProfileSelectedProject.png Graphic file (type png)
 
 <use ./figures/newProfileSelectedProject.png>
 Package pdftex.def Info: ./figures/newProfileSelectedProject.png used on input 
-line 351.
-(pdftex.def)             Requested size: 369.88853pt x 302.59555pt.
- [40 <./figures/newsearch.png>]
-[41 <./figures/newProfilePagePublication.png> <./figures/newPofilePageProject.p
-ng>]) (./evaluation.tex [42 <./figures/newProfileSelectedProject.png>]
+line 352.
+(pdftex.def)             Requested size: 243.46513pt x 199.17207pt.
+ [40 <./figures/newsearch.png> <./figures/newProfilePagePublication.png>] [41 <
+./figures/newPofilePageProject.png> <./figures/newProfileSelectedProject.png>])
+ (./evaluation.tex [42]
 Chapter 5.
 [43
 
-] [44] [45] [46] [47] [48] [49] [50] [51]) (./conclusions.tex [52]
+] [44] [45] [46] [47]) (./conclusions.tex [48]
 Chapter 6.
-[53
+[49
 
-] [54]) [55] (./dissertation.bbl
+] [50]) [51] (./dissertation.bbl
 Underfull \hbox (badness 10000) in paragraph at lines 12--15
 []\OT1/ptm/m/n/10.95 K-fold cross-validation.  $\OT1/pcr/m/n/10.95 http : / / e
 n . wikipedia . org / wiki / Cross-[]validation _
@@ -1027,31 +1075,58 @@ Underfull \hbox (badness 10000) in paragraph at lines 71--75
 /n/10.95 http : / / nlp . stanford . edu / IR-[]book / html /
  []
 
-[56
+[52
 
 
-]) [57] [58
+]) [53] [54
 
 ] (./appendix.tex
+Underfull \hbox (badness 10000) in paragraph at lines 81--81
+[]\OT1/ptm/m/n/9 (b) |Val-i-da-tion
+ []
+
+
+Underfull \hbox (badness 6608) in paragraph at lines 139--139
+[]\OT1/ptm/m/n/9 (a) |Test-ing Queries
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 319--319
+[]\OT1/ptm/m/n/9 (b) |Val-i-da-tion
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 392--392
+[]\OT1/ptm/m/n/9 (a) |Val-i-da-tion
+ []
+
+
+Underfull \hbox (badness 2556) in paragraph at lines 413--413
+[]\OT1/ptm/m/n/9 (b) |Test-ing Queries
+ []
+
+[55] [56] [57]
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <9> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 11.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 425.
 
-Underfull \vbox (badness 10000) detected at line 31
+Underfull \vbox (badness 10000) detected at line 445
  []
 
-[59] [60]
-Underfull \vbox (badness 10000) detected at line 181
+[58
+
+] [59]
+Underfull \vbox (badness 10000) detected at line 595
  []
 
-[61] [62]) [63] (./dissertation.aux) ) 
+[60] [61]) [62] (./dissertation.aux) ) 
 Here is how much of TeX's memory you used:
- 4550 strings out of 495059
- 63523 string characters out of 3182029
- 168407 words of memory out of 3000000
- 7550 multiletter control sequences out of 15000+200000
+ 6087 strings out of 495059
+ 90192 string characters out of 3182029
+ 203321 words of memory out of 3000000
+ 9070 multiletter control sequences out of 15000+200000
  35924 words of font info for 75 fonts, out of 3000000 for 9000
  14 hyphenation exceptions out of 8191
- 38i,10n,24p,309b,315s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 44i,10n,46p,309b,431s stack positions out of 5000i,500n,10000p,200000b,50000s
 {/usr/share/texlive/texmf-dist/fonts/enc/
 dvips/base/8r.enc}</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm
 /cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi1
@@ -1067,10 +1142,10 @@ uhvr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></us
 r/share/texlive/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb></usr/share/texliv
 e/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-dist/fo
 nts/type1/urw/times/utmri8a.pfb>
-Output written on dissertation.pdf (66 pages, 2111980 bytes).
+Output written on dissertation.pdf (65 pages, 2111838 bytes).
 PDF statistics:
- 327 PDF objects out of 1000 (max. 8388607)
- 197 compressed objects within 2 object streams
+ 324 PDF objects out of 1000 (max. 8388607)
+ 195 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
  186 words of extra memory for PDF output out of 10000 (max. 10000000)
 

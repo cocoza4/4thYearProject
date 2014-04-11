@@ -24,7 +24,7 @@ A list of members of SICSA can be found in Chapter~\ref{sec:whatissicsa}.
 \end{figure}
 
 \section{Querying}\label{sec:queryingImpl}
-This section is devoted to introduce classes used to handle querying process. Figure~\ref{fig:tableFactory} shows class diagrams of \textit{TableFactory}, and \textit{Search}. These two components can also be viewed as the core
+This section is devoted to introduction of classes used to handle querying process. Figure~\ref{fig:tableFactory} shows class diagrams of \textit{TableFactory}, and \textit{Search}. These two components can also be viewed as the core
 part of the system. The responsibility of each class is given below:
 \begin{figure}
 \centering
@@ -46,8 +46,8 @@ part of the system. The responsibility of each class is given below:
  \item \textit{doGet()} handles a GET request when user submits a query. It also generates HTML page of the query results.
 \end{itemize}
 
-As stated in section ~\ref{section:goodexpert}, the features extracted from funded projects and publications of each expert will be used in Learning to Rank
-to improve the retrieval performance of the system. But before we get to Learning to Rank, first of all, we need to understand
+As stated in Chapter~\ref{section:goodexpert}, the features extracted from funded projects and publications of each expert will be used in Learning to Rank
+to improve the effectiveness of the system. But before we get to Learning to Rank, first of all, we need to understand
 AcademTechQuerying Class and RetrievedResults Class which are components used in retrieving results with respect to a query. 
 \begin{figure}
 \centering
@@ -56,8 +56,8 @@ AcademTechQuerying Class and RetrievedResults Class which are components used in
 \end{figure}
 
 
-Figure~\ref{fig:AcademTechQuerying} shows class diagrams of AcademTechQuerying and RetrievedResults. As stated in section~\ref{section:terrier},
-the search engine platform used in this project is Terrier. It handles indexing and retrieval processes discussed in section~\ref{section:IRarchitecture}.
+Figure~\ref{fig:AcademTechQuerying} shows class diagrams of AcademTechQuerying and RetrievedResults. As stated in Chapter~\ref{section:terrier},
+the search engine platform used in this project is Terrier. It handles indexing and retrieval processes discussed in Chapter~\ref{section:IRarchitecture}.
 The AcademTechQuerying Class makes use of 2 Terrier components as follows:  
 \begin{itemize}
  \item \textit{queryingManager} of type Manager, responsible for handling/co-ordinating the main high-level operations of a query.
@@ -80,9 +80,9 @@ The RetrievedResults Class has 3 attributes as follows:
 \includegraphics[scale=0.35]{./figures/projectsExtraction.png}
 \caption{Projects Extraction Class Diagrams} \label{fig:projectsExtraction} 
 \end{figure}
-In section~\ref{section:aims}, it was stated that funded projects are obtained from Grant on the Web~\cite{gow} and Research Councils UK~\cite{gtr}.
+In Chapter~\ref{section:aims}, it was stated that funded projects are obtained from Grant on the Web~\cite{gow} and Research Councils UK~\cite{gtr}.
 This section shows classes used to extract funded projects from each source and gives statistics regarding the number of funded projects from each source.
-Figure~\ref{fig:projectsExtraction} shows class diagram related to projects extraction task.
+Figure~\ref{fig:projectsExtraction} shows a class diagram related to projects extraction task.
 
 \begin{itemize}
  \item \textbf{AcademicsHashTable} is an abstract class which makes use of HashMap data structure, \\ 
@@ -195,7 +195,8 @@ funded project which is for filter modes in Terrier.
 
 \paragraph{Projects.trec.gz} \hspace{0pt} \\
 This file compressed in gz format stores a list of funded projects in TREC format. Each funded project is recorded in the following format:
-\begin{verbatim}
+
+\begin{Verbatim}
 <DOC>
 	<DOCNO>funded project's id</DOCNO>
 	<type>type of evidence</type>
@@ -210,7 +211,7 @@ This file compressed in gz format stores a list of funded projects in TREC forma
 	</people>
 </DOC>
 
-\end{verbatim}
+\end{Verbatim}
 where \textit{$<$type$>$} tag's value is always \textit{proj} which tells Terrier that this document is of type \textit{proj}. This tag is very useful when 
 the system transforms the query to retrieve documents using only funded projects as expertise evidence (see section~\ref{section:union}).
 
@@ -237,11 +238,11 @@ Once all the files have been generated, Terrier indexes those files. Table~\ref{
 \end{table}
 
 \section{Producing a Learned Model}\label{section:producelearnedmodel}
-Section ~\ref{sec:learnedmodel} described general steps in producing a learned model. This section aims to discuss classes involved in producing a learned model.
-As section~\ref{sec:learnedmodel} suggested, the first step in producing a learned model is to generate a set of training queries. 
-Then all features described in Section~\ref{section:goodexpert} for each document (expert) with respect to each training query are extracted and saved
-in a file. This file in learning to rank is called LETOR file (see section~\ref{sec:letorFile}).
-Figure~\ref{fig:sampleletorfile} is a LETOR file. There are 7 features as described section~\ref{section:goodexpert}.
+Chapter~\ref{sec:learnedmodel} described general steps in producing a learned model. This section aims to discuss classes involved in producing a learned model.
+As Chapter~\ref{sec:learnedmodel} suggested, the first step in producing a learned model is to generate a set of training queries. 
+Then all features described in Chapter~\ref{section:goodexpert} for each document (expert) with respect to each training query are extracted and saved
+in a file. This file in learning to rank is called LETOR file (see Chapter~\ref{sec:letorFile}).
+Figure~\ref{fig:sampleletorfile} is a LETOR file. There are 7 features as described in Chapter~\ref{section:goodexpert}.
 
 \begin{figure}
 \centering
@@ -264,7 +265,7 @@ Figure ~\ref{fig:learningmodel} shows a class diagram that is used to produce a 
  \item \textit{learnModel()} is a method that produces a learned model using RankLib.
 \end{itemize}
 
-As stated in Section~\ref{section:rankLib}, learning to rank algorithms used in this project are AdaRank and Coordinate Ascent. The performance of each
+As stated in Chapter~\ref{section:rankLib}, learning to rank algorithms used in this project are AdaRank and Coordinate Ascent. The performance of each
 of them will be discussed in Evaluation Section. Figures~\ref{fig:samplemodel} and~\ref{fig:adarankModel} show learned models 
 using \textit{Coordinate Ascent} and \textit{AdaRank} Algorithms.
 Section~\ref{section:applyinglearnedmodel} will explain a component used to apply a learned model.
@@ -285,7 +286,7 @@ Section~\ref{section:applyinglearnedmodel} will explain a component used to appl
 In Chapter~\ref{section:union}, we explained the process of applying a learned model and generating a final ranking. 
 This section aims to describe components
 that handle these tasks. The class \textit{CandidateScores} has a method called, getTotalScore() taking a learnedModel component as a parameter. 
-This method applies a learned model as described in section~\ref{sec:background_applyLearnedModel} and returns a score associated with an expert.
+This method applies a learned model as described in Chapter~\ref{sec:background_applyLearnedModel} and returns a score associated with an expert.
 Figure~\ref{fig:scoreandsorting} shows class diagrams of \textit{Candidatescores} and \textit{LearnedModel}.
 
 \begin{figure}
@@ -297,7 +298,7 @@ Figure~\ref{fig:scoreandsorting} shows class diagrams of \textit{Candidatescores
 The \textit{CandidateScores} is used for computing scores of candidates based on a learned model. The \textit{CandidateSorting}
 sorts scores of candidates obtained after applying a learned model in descending score.
 The sorting algorithm applied in this class is \textbf{merge sort}~\cite{mergesort}, giving time complexity of $O(n\cdot log\, n)$ where $n$ is the 
-number of candidates (experts) to be sorted. The time taked to do merge sort is roughly 0.75 milliseconds on average.
+number of candidates (experts) to be sorted. The time taken to do merge sort is roughly 0.75 milliseconds on average.
 Figure~\ref{fig:scoreandsorting} shows class diagrams of \textit{CandidateScores}, \textit{LearnedModel} and \textit{CandidateSorting}.
 Important attributes and methods are only shown.
 
@@ -323,7 +324,7 @@ is sorted by CandidateSorting Class to produce the final ranking $R_{final}$.
 
 \begin{figure}
  \centering
- \includegraphics[width=13cm,height=15cm,keepaspectratio]{./figures/newsearch.png}
+ \includegraphics[width=13cm,height=7cm,keepaspectratio]{./figures/newsearch.png}
  \caption{New Facets : Experts In Response to ``information retrieval'' Query} \label{fig:newsearch} 
  \end{figure}
  Figure~\ref{fig:newsearch} shows a new search facet in response to a query ``information retrieval''. The number of 
@@ -332,7 +333,7 @@ expertise evidence, and by projects' total funding are added on the right panel 
 
  \begin{figure}
  \centering
- \includegraphics[width=13cm,height=15cm,keepaspectratio]{./figures/newProfilePagePublication.png}
+ \includegraphics[width=13cm,height=7cm,keepaspectratio]{./figures/newProfilePagePublication.png}
  \caption{New Expert's Profile Facet} \label{fig:newProfilePage} 
  \end{figure}
  Figure~\ref{fig:newProfilePage} shows a new facet of profile page. There are 2 tabs for publications and funded projects and a drop down box for selecting
@@ -340,7 +341,7 @@ expertise evidence, and by projects' total funding are added on the right panel 
  
  \begin{figure}
  \centering
- \includegraphics[width=13cm,height=15cm,keepaspectratio]{./figures/newPofilePageProject.png}
+ \includegraphics[width=13cm,height=7cm,keepaspectratio]{./figures/newPofilePageProject.png}
  \caption{Project Tab} \label{fig:newPofilePageProject} 
  \end{figure}
  Figure~\ref{fig:newPofilePageProject} shows a facet when a project tab is selected. The right hand side of the page shows the most project collaborators
@@ -348,7 +349,7 @@ expertise evidence, and by projects' total funding are added on the right panel 
  
  \begin{figure}
  \centering
- \includegraphics[width=13cm,height=15cm,keepaspectratio]{./figures/newProfileSelectedProject.png}
+ \includegraphics[width=13cm,height=7cm,keepaspectratio]{./figures/newProfileSelectedProject.png}
  \caption{Project Page} \label{fig:newProfileSelectedProject} 
  \end{figure}
  

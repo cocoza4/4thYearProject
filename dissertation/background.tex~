@@ -13,7 +13,7 @@ submitted query may not give the satisfying results for the user. In this case, 
 search process. As information resources were not originally intended for access (Retrieval of unstructured data)[P. 7]~\cite{IRlecture}, 
 it is impossible for a user query to uniquely identify a single object in the collection. Instead, several objects may match the query, 
 with different degrees of relevancy. In the IR field, there are various types of retrieval models used to compute the degree of relevancy. This will
-be discussed in more details in section~\ref{section:retrievalmodel}.
+be discussed in more details in Section~\ref{section:retrievalmodel}.
 
 A search engine is an information retrieval system designed to help find information stored on a computer system~\cite{searchengine}. The search results are usually 
 presented in a list ordered by the degree of relevancy and are commonly called hits. 
@@ -287,7 +287,7 @@ overall IR system A (blue) has higher precision than IR system B (red), system A
 \end{figure}
 
 In this project, 3 evaluation metrics are chosen: Mean Average Precision (MAP), Normalized Discounted Cumulative Gain (NDCG) 
-and Mean Reciprocal Rank (MRR). Each of them has different behaviours of evaluation.
+and Mean Reciprocal Rank (MRR). Each of them has different behaviours.
 
 \paragraph{Mean Average Precision (MAP)} \hspace{0pt} \\
 MAP for a set of queries is the mean of the average precision scores for each query~\cite{IR}. The equation below is
@@ -337,7 +337,7 @@ prepared manually by human assessors, who check results for some queries and det
 derived automatically by analyzing clickthrough logs (i.e. search results which got clicks from users). However, they differ in the purpose of usage.
 \begin{itemize}
  \item \textit{Training data} is used by a learning algorithm to produce a ranking model or learned model~\cite{letorWiki}. 
- This will discuss in more details in section~\ref{sec:learnedmodel}
+ This will discuss in more details in Section~\ref{sec:learnedmodel}
  \item \textit{Testing data} is applied with a learned model and used to evaluate the effectiveness of the system~\cite{craig}.
 \end{itemize}
 
@@ -380,7 +380,7 @@ In this LETOR file, there are 2 features, \textit{feature\_name1} and \textit{fe
 The lines not preceded by hash symbol are learned. They represent documents with scores
 of each feature. \textit{graded\_relevance\_value} is a label which indicates the degree of relevancy (see last section).
 If the label is 0, it means the document is irrelevant with respect to a query. If it is 1, the document is relevant. 
-In this project, \textit{graded\_relevance\_value} range from 0 to 2 in order of 
+In this project, \textit{graded\_relevance\_value} ranges from 0 to 2 in order of 
 the degree of relevancy. To the left of the label is a \textit{query} preceded by \textit{$qid:$} and scores of each feature associated to a document.
 There can be any number of documents in the LETOR file. The example of a real LETOR file is given below:
 
@@ -437,7 +437,7 @@ Once a learned model has been obtained from the above learning steps, it can be 
 \caption{An architecture of a machine-learned IR system from \protect\url{http://en.wikipedia.org/wiki/Learning_to_rank}} \label{fig:letor} 
 \end{figure}
 Figure~\ref{fig:letor} illustrates an architecture of a machine-learned IR system. How this architecture links to our approach will be discussed in
-section~\ref{section:implementation}.
+Section~\ref{section:implementation}.
 
 \subsection{Applying a Learned Model}\label{sec:background_applyLearnedModel}
 Once a learned model has been generated, then for each document retrieved after retrieval, 
@@ -555,8 +555,8 @@ Currently 8 popular algorithms have been implemented:
 This library was chosen because it is easy to use, written in Java which can be easily combined with this system as it is also developed using Java, and
 it implements 8 different learning to rank algorithms which makes it possible for users to try different algorithms.
 However, AdaRank and Coordinate Ascent were only used in the project because other algorithms are too complex and not part of the scope of this project.
-RankLib provides k-fold cross validation functionally given only training dataset. This saves us time to split data for validation, training and 
-testing as described in section~\ref{sec:letor}.
+RankLib provides k-fold cross validation functionality given only training dataset. This saves us time to split data for validation, training and 
+testing as described in Section~\ref{sec:letor}.
 
 \subsection{trec\_eval}\label{sec:treceval}
 trec\_eval is the standard tool used by the TREC community~\cite{trec} for evaluating a retrieval run, given the results file and a
@@ -582,7 +582,7 @@ an additional argument (-m ndcg) when it is run.
 
 
 \section{Expert Search}\label{sec:background_expertsearch}
-In section~\ref{sec:expertsearch}, we discussed about the definition of Expert Search. This section will give 5 scenarios proposed by Yimam-Seid \& Kobsa
+In Section~\ref{sec:expertsearch}, we discussed about the definition of Expert Search. This section will give 5 scenarios proposed by Yimam-Seid \& Kobsa
 why expert search is needed~\cite[P. 387]{expertsearch} and outline several ways to present query results.
 \begin{quotation}
   \item \textit{1. Access to non-documented information - e.g. in an organisation where not all relevant information is documented.}
@@ -608,7 +608,7 @@ Perhaps, there has to be some evidence to convince him by just looking at the re
  \item Author's Name
  \item keywords of the article name
 \end{itemize}
-If a result in response to a query have all or some of these evidence, it has more credits than ones with no evidence at all. 
+If a result in response to a query has all or some of these evidence, it has more credits than ones with no evidence at all. 
 \begin{figure}
 \centering
 \includegraphics[scale=0.3]{./figures/query.png}
@@ -621,7 +621,7 @@ However, we are unable to take photo into account because the datasource (see Se
 does not provide photos of experts.
 
 \subsection{Voting Techniques}\label{section:voting}
-In section ~\ref{section:retrieving}, we very briefly talked about weighting models or retrieval models. In other words, how documents are assigned scores. 
+In Section ~\ref{section:retrieving}, we very briefly talked about weighting models or retrieval models. In other words, how documents are assigned scores. 
 In expert search, we rank experts (people), not documents directly. In this section,
 it aims to give an overview of a voting technique used in this project. To understand this section, readers must understand what data fusion technique is. 
 ``Data fusion techniques also known as metasearch techniques, are used to combine separate rankings of documents into a single ranking,
@@ -629,7 +629,7 @@ with the aim of improving over the performance of any constituent ranking''~\cit
 expert search is seen as a voting problem. The profile of each candidate is a set of documents associated to him to represent their expertise.
 When each document associated to a candidate's profile get retrieved by the IR system, implicit vote for that candidate occurs~\cite[P. 389]{expertsearch}.
 Data fusion technique is then used to combine the ranking with respect to the query and the implicit vote. In expert search task, it shows that 
-``improving the quality of the underlying document representation can significantly improve the retrieval performance of the data fusion techniques 
+``improving the quality of the underlying document representation can significantly improve the retrieval effectiveness of the data fusion techniques 
 on an expert search task''~\cite[P. 387]{expertsearch}. To give a simple example how voting technique works, take a look at this example
 
 Let $R(Q)$ be the set of documents retrieved for query $Q$, and the set of documents belonging to the profile candidate $C$ be denoted $profile(C)$. In expert

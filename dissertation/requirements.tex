@@ -21,17 +21,17 @@ of current system.
 
 \begin{figure}
  \centering
-\includegraphics[width=13cm,height=15cm,keepaspectratio]{./figures/oldsicsa.png}
+\includegraphics[width=13cm,height=10cm,keepaspectratio]{./figures/oldsicsa.png}
  \caption{Home Page} \label{fig:oldsicsa} 
  \end{figure}
  \begin{figure}
  \centering
- \includegraphics[width=13cm,height=15cm,keepaspectratio]{./figures/oldsearch.png}
+ \includegraphics[width=13cm,height=10cm,keepaspectratio]{./figures/oldsearch.png}
  \caption{Experts In Response to ``information retrieval'' Query} \label{fig:resultspage} 
  \end{figure}
  \begin{figure}
  \centering
- \includegraphics[width=13cm,height=15cm,keepaspectratio]{./figures/oldProfilePage.png}
+ \includegraphics[width=13cm,height=10cm,keepaspectratio]{./figures/oldProfilePage.png}
  \caption{Current Expert's Profile Facet} \label{fig:profilepage} 
 \end{figure}
 Figure~\ref{fig:oldsicsa} is the home page of SICSA. It provides a set of sample queries categorised in 4 different categories on the right of the 
@@ -39,7 +39,7 @@ search panel. The top panel shows links to different SICSA pages. The middle pan
 Experts (results) with respect to a query are independently shown in this panel without reloading other panels. Figure~\ref{fig:resultspage} shows
 the interface when experts with respect to a query, ``information retrieval'' are shown. Also, the system demonstrates 
 faceted search for academics by presenting refinement options using university, location and total publication range categories.
-Below the refinement options is popular tags (terms) appear in expert's profiles the system retrieved.
+Below the refinement options is popular tags (terms) appearing in expert's profiles.
 Each result in the search panel includes expert's details: university, number of publications, publication period and total number of coauthors.
 
 Figure~\ref{fig:profilepage} illustrates a profile page of an expert. This page introduces most collaborated coauthors facet on the right of the page, a 
@@ -59,9 +59,7 @@ The score of each expert is computed using equation~\ref{eq:expCombMNZ} where $s
 Finally Terrier returns relevant experts to the user.
 
 \section{Expert Search Indicators of the New System}\label{section:goodexpert}
-In Section~\ref{sec:presentingQueryResult}, it was obvious that some evidence could be used to convince users how reliable a document (link) is.
-In this section, the evidence within
-the context of this project will be discussed. As discussed in Section~\ref{section:aims}, this project makes use of publications and funded projects as 
+As discussed in Chapter~\ref{section:aims}, this project makes use of publications and funded projects as 
 expertise evidence. Based on these evidence, what makes an expert a good expert? we propose several intuitions about a relevant expert as follows 
 \begin{itemize}
  \item he has published a lot of publications.
@@ -73,9 +71,9 @@ expertise evidence. Based on these evidence, what makes an expert a good expert?
 
 Reasons why such intuitions are chosen are because experts are likely to be professional if they have all intuitions described above. To give an example,
 If an expert is looking for co-workers for a project related to information retrieval, he of course would look for co-workers who have experience 
-(published lots of publications, involved in lots of projects, etc) and obtained lots of funding in the field of interest.
-It can be seen clearly that these assumptions or features in learning to rank are independent of the query a user submits. These features are query independent
-(Section ~\ref{section:queryindependent}). However, query dependent features (Section~\ref{section:querydependent}) should take into account as well. 
+(published lots of publications, involved in lots of projects, etc) and received lots of funding in the field of interest.
+It can be seen clearly that these intuitions or features in learning to rank are independent of the query a user submits. These features are query independent
+(see Chapter~\ref{section:queryindependent}). However, query dependent features (see Chapter~\ref{section:querydependent}) are taken into account as well. 
 In this project, there are 2 query dependent features: 
 \begin{itemize}
  \item An expert has published publications on the topic of query (Current System)
@@ -104,7 +102,7 @@ The requirements have been split into 2 sections depending on their necessity: f
 \begin{itemize}
  \item Extracting funded projects from 2 different sources: Grant on the Web~\cite{gow} and Research Councils UK~\cite{gtr}.
  \item Integrating publications and funded projects as expertise evidence.
- \item Utilizing learning to rank techniques with an attempt to enhance the performance of the retrieval system using AdaRank and Coordinate Ascent algorithms.
+ \item Utilizing learning to rank techniques with an attempt to improve the effectiveness of the retrieval system using AdaRank and Coordinate Ascent algorithms.
 \end{itemize}
 
 \paragraph{Should Have} \hspace{0pt} \\
@@ -132,8 +130,8 @@ The requirements have been split into 2 sections depending on their necessity: f
 \end{itemize}
 
 \subsection{Design and Architecture of New System} \label{section:union}
-Figure~\ref{fig:newDesign} shows design of new system. It makes use of learning to rank (LETOR) technique to integrate 
-both publication and funded projects as expertise evidence. From the figure, in contrast to the current system, 
+Figure~\ref{fig:newDesign} shows design of the new system. It makes use of learning to rank (LETOR) technique to integrate 
+both publications and funded projects as expertise evidence. From the figure, in contrast to the current system, 
 LETOR is applied to documents retrieved from Terrier. This LETOR reranks the documents to get the optimal ranking.
 
  \begin{figure}
@@ -164,7 +162,7 @@ query $\vec{q}_{proj}$, using only funded projects as expertise evidence.
 AcademTechQuerying Class then processes both $\vec{q}_{pub}$ and $\vec{q}_{proj}$. For each query, the system applies $PL2$
 retrieval model and voting technique $expCombMNZ$ (see Section~\ref{sec:currentsystem}). The results of both
 queries are then unioned, denoted $R_{cand}(\vec{q})$ as shown in Figure ~\ref{fig:union}. The results obtained are based on query dependent features 
-as discussed in Section~\ref{section:querydependent}. This process is depicted mathematically as follows:
+as discussed in Chapter~\ref{section:querydependent}. This process is depicted mathematically as follows:
 
 \begin{equation}
  \vec{q}_{pub} \rightarrow R_{cand}(\vec{q}_{pub}),  \vec{q}_{proj} \rightarrow R_{cand}(\vec{q}_{proj})
@@ -179,7 +177,7 @@ respectively.
 
 \paragraph{Applying a Learned Model and Producing Final Ranking} \hspace{0pt} \\
 In the previous section, we discussed how ranking of candidates is obtained ($R_{cand}(\vec{q})$). In this section, we will propose how to apply the ranking
-with a learned model (see Sections~\ref{sec:learnedmodel} and~\ref{sec:background_applyLearnedModel}). 
+with a learned model (see Chapters~\ref{sec:learnedmodel} and~\ref{sec:background_applyLearnedModel}). 
 
 Given a ranking of candidates $R_{cand}(\vec{q})$, the score of each candidate $C$ can be computed as follows:
 \begin{equation}

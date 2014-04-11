@@ -1,6 +1,420 @@
 
 % \chapter{appendix}
 
+\section{K-fold Cross-validation}\label{app:fold}
+Throughout this chapter, the queries annotated by * denote queries whose relevant experts are restricted to those experts only from the
+University of Glasgow.
+\begin{table}
+\centering
+\scalebox{0.5}{\begin{tabular}{|l|l|}
+
+\hline \multicolumn{2}{|c|}{\textbf{Training Queries}} \\
+\hline *grid computing & *haptics \\
+\hline *hci issues in mobile devices & *neural network \\
+\hline operating system & computer vision\\
+\hline functional programming & *divergence from randomness\\ 
+\hline quantum computation & *facial reconstruction \\
+\hline *clustering algorithms & *eurosys 2008\\ 
+\hline *glasgow haskell compiler & *human error health care \\
+\hline *query expansion & *terrier \\ 
+\hline *different matching coefficients & *distributed predator prey \\
+\hline *parallel logic programming & information security\\ 
+\hline information retrieval & *group response systems\\
+\hline expert search & distributed systems\\ 
+\hline *empirical methods & *handwriting pin\\
+\hline machine translation & artificial intelligence\\
+\hline computer graphics & *force feedback\\
+\hline *wafer fab cost & *haptic visualisation\\
+\hline *3d audio & *3d human body segmentation\\
+\hline *discrete event simulation & *anchor text\\
+\hline data mining & robotics\\
+\hline *discrete mathematics & *ecir 2008\\
+\hline programming languages & *information extraction \\
+\hline
+\end{tabular}
+}
+\caption{Training Queries for Fold 1} \label{table:fold1training}
+\end{table}
+
+\begin{table}
+\centering
+\subfloat[Testing Queries for Fold 1]{%
+\scalebox{0.5}{\begin{tabular}{|l|}
+\hline \multicolumn{1}{|c|}{\textbf{Testing Queries}} \\
+\hline *usability \\
+\hline stable marriage \\
+\hline constraint modelling \\
+\hline mobile hci \\ 
+\hline *language modelling \\
+\hline home networks \\ 
+\hline *multimodal \\
+\hline networking security \\ 
+\hline *suffix tree \\
+\hline *sound in multimedia human-computer interfaces \\ 
+\hline wireless sensor networks \\
+\hline game theory \\ 
+\hline *visual impairment \\
+\hline
+\end{tabular}
+}
+}
+\qquad\qquad% --- set horizontal distance between tables here
+\subfloat[Validation Queries for Fold 1]{%
+\scalebox{0.5}{\begin{tabular}{|l|}
+\hline \multicolumn{1}{|c|}{\textbf{Validation Queries}} \\
+\hline programming languages \\
+\hline *text searching \\
+\hline *older adults use of computers \\
+\hline *music as navigation cues \\ 
+\hline *statistical inference \\
+\hline *road traffic accident statistics \\ 
+\hline *shoogle \\
+\hline *skill-based behavior \\ 
+\hline database \\
+\hline *manets \\ 
+\hline *suffix tree \\
+\hline *trec collection class \\ 
+\hline *matching \\
+\hline
+\end{tabular}
+}
+}
+\end{table}
+
+
+
+\begin{table}
+\centering
+\scalebox{0.5}{\begin{tabular}{|l|l|}
+
+\hline \multicolumn{2}{|c|}{\textbf{Training Queries}} \\
+\hline *grid computing & *older adults use of computers \\
+\hline operating system & *statistical inference \\
+\hline functional programming & quantum computation \\
+\hline *clustering algorithms & *glasgow haskell compiler \\ 
+\hline *query expansion & *parallel logic programming \\
+\hline expert search & information retrieval \\ 
+\hline *suffix tree & machine translation \\
+\hline computer graphics & *discrete event simulation \\ 
+\hline *wafer fab cost & *discrete mathematics \\
+\hline data mining & *text searching \\ 
+\hline programming languages & *haptics \\
+\hline *neural network & *road traffic accident statistics \\ 
+\hline *music as navigation cues & *eurosys 2008 \\
+\hline *facial reconstruction & *shoogle \\
+\hline *human error health care & *terrier \\
+\hline *distributed predator prey & database \\
+\hline *skill-based behavior & distributed systems \\
+\hline artificial intelligence & *force feedback \\
+\hline *manets & *anchor text \\
+\hline *trec collection class & robotics \\
+\hline *match & *ecir 2008 \\
+\hline
+\end{tabular}
+}
+\caption{Training Queries for Fold 2} \label{table:fold2training}
+\end{table}
+
+\begin{table}
+\centering
+\subfloat[Testing Queries for Fold 2]{%
+\scalebox{0.5}{\begin{tabular}{|l|}
+\hline \multicolumn{1}{|c|}{\textbf{Testing Queries}} \\
+\hline *different matching coefficients \\
+\hline *haptics \\
+\hline *hci issues in mobile devices \\
+\hline computer vision \\ 
+\hline *empirical methods \\
+\hline *divergence from randomness \\ 
+\hline *haptic visualisation \\
+\hline *3d human body segmentation \\ 
+\hline information security \\
+\hline *group response systems \\ 
+\hline *handwriting pin \\
+\hline *information extraction \\ 
+\hline *3d audio \\
+\hline
+\end{tabular}
+}
+}
+\qquad\qquad% --- set horizontal distance between tables here
+\subfloat[Validation Queries for Fold 2]{%
+\scalebox{0.5}{\begin{tabular}{|l|}
+\hline \multicolumn{1}{|c|}{\textbf{Validation Queries}} \\
+\hline *usability \\
+\hline *stable marriage \\
+\hline constraint modelling \\
+\hline *mobile hci \\ 
+\hline *language modelling \\
+\hline home networks \\ 
+\hline *multimodal \\
+\hline networking security \\ 
+\hline *suffix tree \\
+\hline *sound in multimedia human-computer interfaces \\ 
+\hline *wireless sensor networks \\
+\hline game theory \\ 
+\hline *visual impairment \\
+\hline
+\end{tabular}
+}
+}
+\end{table}
+
+\begin{table}
+\centering
+\scalebox{0.5}{\begin{tabular}{|l|l|}
+
+\hline \multicolumn{2}{|c|}{\textbf{Training Queries}} \\
+\hline *older adults use of computers & constraint modelling \\
+\hline operating system & *multimodal \\
+\hline *statistical inference & quantum computation \\
+\hline *query expansion & *usability \\ 
+\hline stable marriage & *parallel logic programming \\
+\hline information retrieval & expert search \\ 
+\hline home networks & networking security \\
+\hline *suffix tree & *wireless sensor networks \\ 
+\hline computer graphics & *wafer fab cost \\
+\hline game theory & *visual impairment \\ 
+\hline programming languages & *text searching \\
+\hline *neural network & mobile hci \\ 
+\hline *road traffic accident statistics & *facial reconstruction \\
+\hline *music as navigation cues & *shoogle \\
+\hline *terrier & *sound in multimedia human-computer interfaces \\
+\hline distributed systems & skill-based behavior \\
+\hline database & *force feedback \\
+\hline *language modelling & *manets \\
+\hline *trec collection class & *match \\
+\hline
+\end{tabular}
+}
+\caption{Training Queries for Fold 3} \label{table:fold3training}
+\end{table}
+
+\begin{table}
+\centering
+\subfloat[Testing Queries for Fold 3]{%
+\scalebox{0.5}{\begin{tabular}{|l|}
+\hline \multicolumn{1}{|c|}{\textbf{Testing Queries}} \\
+\hline *discrete event simulation \\
+\hline data mining \\
+\hline *discrete mathematics \\
+\hline *grid computing \\ 
+\hline *haptics \\
+\hline *eurosys 2008 \\ 
+\hline functional programming \\
+\hline *human error health care \\ 
+\hline *distributed predator prey \\
+\hline *clustering algorithms \\ 
+\hline *glasgow haskell compiler \\
+\hline artificial intelligence \\ 
+\hline expert search \\
+\hline *anchor text \\
+\hline robotics \\
+\hline *machine translation \\
+\hline *ecir 2008 \\
+\hline
+\end{tabular}
+}
+}
+\qquad\qquad% --- set horizontal distance between tables here
+\subfloat[Validation Queries for Fold 3]{%
+\scalebox{0.5}{\begin{tabular}{|l|}
+\hline \multicolumn{1}{|c|}{\textbf{Validation Queries}} \\
+\hline *different matching coefficients \\
+\hline *haptics \\
+\hline *hci issues in mobile devices \\
+\hline computer vision \\ 
+\hline *empirical methods \\
+\hline *divergence from randomness \\ 
+\hline *haptic visualisation \\
+\hline *3d human body segmentation \\ 
+\hline information security \\
+\hline *group response systems \\ 
+\hline *handwriting pin \\
+\hline *information extraction \\ 
+\hline *3d audio \\
+\hline
+\end{tabular}
+}
+}
+\end{table}
+
+\begin{table}
+\centering
+\scalebox{0.5}{\begin{tabular}{|l|l|}
+
+\hline \multicolumn{2}{|c|}{\textbf{Training Queries}} \\
+\hline *older adults use of computers & *constraint modelling \\
+\hline *hci issues in mobile devices & *multimodal \\
+\hline *statistical inference & *usability \\
+\hline *different matching coefficients & stable marriage \\ 
+\hline *empirical methods & home networks \\
+\hline networking security & *suffix tree \\ 
+\hline wireless sensor networks & game theory \\
+\hline *visual impairment & *3d audio \\ 
+\hline *haptics & programming languages \\
+\hline *text searching & mobile hci \\ 
+\hline computer vision & *divergence from randomness \\
+\hline *road traffic accident statistics & *music as navigation cues \\ 
+\hline *shoogle & *sound in multimedia human-computer interfaces \\
+\hline information security & *group response systems \\
+\hline *skill-based behavior & database \\
+\hline *handwriting pin & *language modelling \\
+\hline *manets & *haptic visualisation \\
+\hline *3d human body segmentation & *trec collection class \\
+\hline *match & *information extraction \\
+\hline
+\end{tabular}
+}
+\caption{Training Queries for Fold 4} \label{table:fold4training}
+\end{table}
+
+\begin{table}
+\centering
+\subfloat[Testing Queries for Fold 4]{%
+\scalebox{0.5}{\begin{tabular}{|l|}
+\hline \multicolumn{1}{|c|}{\textbf{Testing Queries}} \\
+\hline programming languages \\
+\hline *neural network \\
+\hline operating system \\
+\hline *facial reconstruction \\ 
+\hline quantum computation \\
+\hline *terrier \\ 
+\hline distributed systems \\
+\hline *query expansion \\ 
+\hline *force feedback \\
+\hline *parallel logic programming \\ 
+\hline expert search \\
+\hline information retrieval \\ 
+\hline computer graphics \\
+\hline *wafer fab cost \\
+\hline
+\end{tabular}
+}
+}%
+\qquad\qquad% --- set horizontal distance between tables here
+\subfloat[Validation Queries for Fold 4]{%
+\scalebox{0.5}{\begin{tabular}{|l|}
+\hline \multicolumn{1}{|c|}{\textbf{Validation Queries}} \\
+\hline *discrete event simulation \\
+\hline data mining \\
+\hline *discrete mathematics \\
+\hline *grid computing \\ 
+\hline *haptics \\
+\hline *eurosys 2008 \\ 
+\hline functional programming \\
+\hline *human error health care \\ 
+\hline *distributed predator prey \\
+\hline *clustering algorithms \\ 
+\hline *glasgow haskell compiler \\
+\hline artificial intelligence \\ 
+\hline expert search \\
+\hline *anchor text \\
+\hline robotics \\
+\hline machine translation \\
+\hline *ecir 2008 \\
+\hline
+\end{tabular}
+}
+}%
+\end{table}
+
+\begin{table}
+\centering
+\scalebox{0.5}{\begin{tabular}{|l|l|}
+
+\hline \multicolumn{2}{|c|}{\textbf{Training Queries}} \\
+\hline *grid computing & constraint modelling \\
+\hline *hci issues in mobile devices & *multimodal \\
+\hline functional programming & *clustering algorithms \\
+\hline *glasgow haskell compiler & *usability \\ 
+\hline *different matching coefficients & stable marriage \\
+\hline expert search & *empirical methods \\ 
+\hline home networks & networking security \\
+\hline *suffix tree & machine translation \\ 
+\hline *wireless sensor networks & game theory \\
+\hline *visual impairment & *3d audio \\ 
+\hline *discrete event simulation & data mining \\
+\hline *discrete mathematics & *haptics \\ 
+\hline mobile hci & computer vision \\
+\hline *divergence from randomness & *eurosys 2008 \\
+\hline *human error health care & *distributed predator prey \\
+\hline *sound in multimedia human-computer interfaces & information security \\
+\hline *group response systems & *handwriting pin \\
+\hline artificial intelligence & language modelling\\
+\hline *haptic visualisation & *3d human body segmentation \\
+\hline *anchor text & robotics \\
+\hline *ecir 2008 & *information extraction \\
+\hline
+\end{tabular}
+}
+\caption{Training Queries for Fold 5} \label{table:fold5training}
+\end{table}
+
+
+
+% \begin{table}
+% \centering
+% 
+% \caption{Testing Queries for Fold 5} \label{table:fold5testing}
+% \end{table}
+
+% \begin{table}
+% \centering
+% 
+% \caption{Validation Queries for Fold 5} \label{table:fold5validating}
+% \end{table}
+
+
+
+\begin{table}
+\centering
+\subfloat[Validation Queries for Fold 5]{%
+\scalebox{0.5}{\begin{tabular}{|l|}
+\hline \multicolumn{1}{|c|}{\textbf{Validation Queries}} \\
+\hline programming languages \\
+\hline *neural network \\
+\hline operating system \\
+\hline *facial reconstruction \\ 
+\hline quantum computation \\
+\hline *terrier \\ 
+\hline distributed systems \\
+\hline *query expansion \\ 
+\hline *force feedback \\
+\hline *parallel logic programming \\ 
+\hline expert search \\
+\hline information retrieval \\ 
+\hline computer graphics \\
+\hline *wafer fab cost \\
+\hline
+\end{tabular}
+}
+}%
+\qquad\qquad% --- set horizontal distance between tables here
+\subfloat[Testing Queries for Fold 5]{%
+\scalebox{0.5}{\begin{tabular}{|l|}
+\hline \multicolumn{1}{|c|}{\textbf{Testing Queries}} \\
+\hline programming languages \\
+\hline *text searching \\
+\hline *older adults use of computers \\
+\hline *music as navigation cues \\ 
+\hline *statistical inference \\
+\hline *road traffic accident statistics \\ 
+\hline *shoogle \\
+\hline *skill-based behavior \\ 
+\hline database \\
+\hline *manets \\ 
+\hline *suffix tree \\
+\hline *trec collection class \\ 
+\hline *match \\
+\hline
+\end{tabular}
+}
+}
+\end{table}
+
+\clearpage
+\section{Relevance Judgements}
 Table~\ref{table:uogQueries} shows 47 relevance judgements whose results are experts who are from the University of Glasgow.
 Table~\ref{table:relevanceJudgements} shows 20 relevance judgements. The total number of relevance judgements is 67.
 
@@ -8,7 +422,7 @@ Table~\ref{table:relevanceJudgements} shows 20 relevance judgements. The total n
 \begin{longtable}{|l|l|c|}
 
 % \begin{tabular}
-\hline \multicolumn{1}{|c|}{\textbf{Query}} & \multicolumn{1}{|c|}{\textbf{Relevant Experts}} & \multicolumn{1}{|c|}{\textbf{Graded Relevance Value}} \\
+\hline \multicolumn{1}{|c|}{\textbf{Query}} & \multicolumn{1}{|c|}{\textbf{Relevant Experts (ID)}} & \multicolumn{1}{|c|}{\textbf{Graded Relevance Value}} \\
 \hline 3d audio & 1. Stephen Brewster (GLA\_00000078) & 2 \\
 \hline 3D Human Body Segmentation & 1. Stephen Brewster (GLA\_00000078) & 2\\
 \hline  & 2. Alessandro Vinciarelli (GLA\_00000042) & 1 \\
@@ -157,7 +571,7 @@ Table~\ref{table:relevanceJudgements} shows 20 relevance judgements. The total n
 \footnotesize
 \begin{longtable}{|l|l|c|}
 
-\hline \multicolumn{1}{|c|}{\textbf{Query}} & \multicolumn{1}{|c|}{\textbf{Relevant Experts}} & \multicolumn{1}{|c|}{\textbf{Graded Relevance Value}} \\
+\hline \multicolumn{1}{|c|}{\textbf{Query}} & \multicolumn{1}{|c|}{\textbf{Relevant Experts  (ID)}} & \multicolumn{1}{|c|}{\textbf{Graded Relevance Value}} \\
 
 \hline Expert Search & 1. Craig Macdonald (GLA\_00000151)  & 1 \\
 \hline  & 2. Iadh Ounis (GLA\_00000091) & 2 \\

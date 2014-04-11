@@ -1,0 +1,64 @@
+\BOOKMARK [0][-]{chapter.1}{Introduction}{}% 1
+\BOOKMARK [1][-]{section.1.1}{The Scottish Informatics and Computer Science Alliance \(SICSA\)}{chapter.1}% 2
+\BOOKMARK [1][-]{section.1.2}{Definition of Mining Academic Expertise from Funded Research and Aims}{chapter.1}% 3
+\BOOKMARK [1][-]{section.1.3}{Context}{chapter.1}% 4
+\BOOKMARK [1][-]{section.1.4}{Overview}{chapter.1}% 5
+\BOOKMARK [0][-]{chapter.2}{Background}{}% 6
+\BOOKMARK [1][-]{section.2.1}{Information Retrieval \(IR\) and Search Engine}{chapter.2}% 7
+\BOOKMARK [2][-]{subsection.2.1.1}{Brief Overview of Information Retrieval System Architecture}{section.2.1}% 8
+\BOOKMARK [2][-]{subsection.2.1.2}{Retrieval Models}{section.2.1}% 9
+\BOOKMARK [2][-]{subsection.2.1.3}{Retrieval Process in Information Retrieval}{section.2.1}% 10
+\BOOKMARK [2][-]{subsection.2.1.4}{Evaluation}{section.2.1}% 11
+\BOOKMARK [1][-]{section.2.2}{Learning to Rank \(LETOR\) In Information Retrieval}{chapter.2}% 12
+\BOOKMARK [2][-]{subsection.2.2.1}{Query Dependent Feature}{section.2.2}% 13
+\BOOKMARK [2][-]{subsection.2.2.2}{Query Independent Feature}{section.2.2}% 14
+\BOOKMARK [2][-]{subsection.2.2.3}{Learning to Rank File Format}{section.2.2}% 15
+\BOOKMARK [2][-]{subsection.2.2.4}{Learning to Rank Model File Format}{section.2.2}% 16
+\BOOKMARK [2][-]{subsection.2.2.5}{Obtaining and Deploying a Learned Model}{section.2.2}% 17
+\BOOKMARK [2][-]{subsection.2.2.6}{Applying a Learned Model}{section.2.2}% 18
+\BOOKMARK [2][-]{subsection.2.2.7}{Learning to Rank Algorithms}{section.2.2}% 19
+\BOOKMARK [2][-]{subsection.2.2.8}{K-fold Cross-validation}{section.2.2}% 20
+\BOOKMARK [1][-]{section.2.3}{Tools}{chapter.2}% 21
+\BOOKMARK [2][-]{subsection.2.3.1}{Terrier}{section.2.3}% 22
+\BOOKMARK [2][-]{subsection.2.3.2}{RankLib}{section.2.3}% 23
+\BOOKMARK [2][-]{subsection.2.3.3}{trec\137eval}{section.2.3}% 24
+\BOOKMARK [1][-]{section.2.4}{Expert Search}{chapter.2}% 25
+\BOOKMARK [2][-]{subsection.2.4.1}{Presenting Query Results}{section.2.4}% 26
+\BOOKMARK [2][-]{subsection.2.4.2}{Voting Techniques}{section.2.4}% 27
+\BOOKMARK [1][-]{section.2.5}{Summary}{chapter.2}% 28
+\BOOKMARK [0][-]{chapter.3}{Current System and Proposals, Requirements and Design of New System}{}% 29
+\BOOKMARK [1][-]{section.3.1}{Current System}{chapter.3}% 30
+\BOOKMARK [1][-]{section.3.2}{Expert Search Indicators of the New System}{chapter.3}% 31
+\BOOKMARK [2][-]{subsection.3.2.1}{Requirements Specification}{section.3.2}% 32
+\BOOKMARK [2][-]{subsection.3.2.2}{Design and Architecture of New System}{section.3.2}% 33
+\BOOKMARK [0][-]{chapter.4}{Implementation}{}% 34
+\BOOKMARK [1][-]{section.4.1}{Relationships between Expert, Project, Publication, and University}{chapter.4}% 35
+\BOOKMARK [1][-]{section.4.2}{Querying}{chapter.4}% 36
+\BOOKMARK [1][-]{section.4.3}{Data Extraction}{chapter.4}% 37
+\BOOKMARK [1][-]{section.4.4}{Indexing}{chapter.4}% 38
+\BOOKMARK [1][-]{section.4.5}{Producing a Learned Model}{chapter.4}% 39
+\BOOKMARK [1][-]{section.4.6}{Applying a Learned Model and Producing Final Ranking}{chapter.4}% 40
+\BOOKMARK [1][-]{section.4.7}{Sequence Diagram of Querying Process}{chapter.4}% 41
+\BOOKMARK [1][-]{section.4.8}{User Interface of the New System}{chapter.4}% 42
+\BOOKMARK [0][-]{chapter.5}{Evaluation}{}% 43
+\BOOKMARK [1][-]{section.5.1}{Evaluation Without K-fold Cross-validation}{chapter.5}% 44
+\BOOKMARK [2][-]{subsection.5.1.1}{Experimental Setting}{section.5.1}% 45
+\BOOKMARK [2][-]{subsection.5.1.2}{Experimental Results}{section.5.1}% 46
+\BOOKMARK [1][-]{section.5.2}{Evaluation With K-fold Cross-validation}{chapter.5}% 47
+\BOOKMARK [2][-]{subsection.5.2.1}{Experimental Setting}{section.5.2}% 48
+\BOOKMARK [2][-]{subsection.5.2.2}{Experimental Results}{section.5.2}% 49
+\BOOKMARK [1][-]{section.5.3}{Causes of Learning to Rank Failure}{chapter.5}% 50
+\BOOKMARK [0][-]{chapter.6}{Conclusions}{}% 51
+\BOOKMARK [1][-]{section.6.1}{Requirements Achieved}{chapter.6}% 52
+\BOOKMARK [1][-]{section.6.2}{Challenges}{chapter.6}% 53
+\BOOKMARK [2][-]{subsection.6.2.1}{LETOR}{section.6.2}% 54
+\BOOKMARK [2][-]{subsection.6.2.2}{Relevance Judgement}{section.6.2}% 55
+\BOOKMARK [1][-]{section.6.3}{Problems Encountered}{chapter.6}% 56
+\BOOKMARK [2][-]{subsection.6.3.1}{Expert's Name Pattern Matching}{section.6.3}% 57
+\BOOKMARK [2][-]{subsection.6.3.2}{Lack of LETOR Algorithms Explanation}{section.6.3}% 58
+\BOOKMARK [2][-]{subsection.6.3.3}{Poor Quality of Relevance Judgements}{section.6.3}% 59
+\BOOKMARK [1][-]{section.6.4}{How would I have done differently?}{chapter.6}% 60
+\BOOKMARK [1][-]{section.6.5}{Future Work}{chapter.6}% 61
+\BOOKMARK [0][-]{chapter*.71}{Appendices}{}% 62
+\BOOKMARK [1][-]{section.0.1}{K-fold Cross-validation}{chapter*.71}% 63
+\BOOKMARK [1][-]{section.0.2}{Relevance Judgements}{chapter*.71}% 64

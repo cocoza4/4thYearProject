@@ -11,7 +11,7 @@ However, AdaRank and Coordinate Ascent algorithms are chosen due to its simplici
 \noindent The reasons behind LETOR failure can be found in the previous chapter.
 
 \section{Requirements Achieved}
-The following is a summary of the requirements (see chapter~\ref{sec:requirements}) that have been achieved.
+The following is a summary of the requirements (see Chapter~\ref{sec:requirements}) that have been achieved.
 \begin{itemize}
  \item All of the system's Must Have requirements.
  \item All of the system's Should Have requirements.
@@ -45,7 +45,7 @@ During the development of the project, we have encountered various problems. Som
 list a number of problems encountered during development life cycle.
 
 \subsection{Expert's Name Pattern Matching}
-In chapter~\ref{sec:dataextraction}, we discussed approaches used to handle differences between expert's name formats in each funded projects datasource. 
+In Chapter~\ref{sec:dataextraction}, we discussed approaches used to handle differences between expert's name formats in each funded projects datasource. 
 Still, we have problems regarding pattern matching between expert's names from Grant on the Web~\cite{gow}. Consider Professor Joemon Jose,
 he is currently a professor in computing science at Glasgow University. Grant on the Web records his name as Jose, Professor JM.
 This makes it impossible to accurately pattern match the name with our known candidates if there are experts named Professor Joemon Jose and 
@@ -57,14 +57,14 @@ Clear explanations of the Coordinate Ascent and AdaRank LETOR algorithms are dif
 the algorithms is not an easy task for 4th year student as it is based on mathematics and statistics.
 
 \subsection{Poor Quality of Relevance Judgements}
-In chapter~\ref{sec:evaluation}, we talked about the problems we encountered when constructing relevance judgements. That is,
+In Chapter~\ref{sec:evaluation}, we talked about the problems we encountered when constructing relevance judgements. That is,
 we managed to construct training queries whose results (relevant experts) are only from University of Glasgow (see last chapter). 
 The reason behind this is that it is difficult to judge experts not in University of Glasgow because we do not know them.
 As a consequence of poor relevance judgements, the dataset used for training and evaluation becomes poor~\cite{craig}.
 
 
 \section{How would I have done differently?}
-In sections~\ref{sec:challenges} and~\ref{sec:problems}, we discussed challenges and problems encountered during the development of the system.
+In Sections~\ref{sec:challenges} and~\ref{sec:problems}, we discussed challenges and problems encountered during the development of the system.
 However, these issues could be minimised or eliminated if 
 \begin{itemize}
  \item The behaviours of LETOR algorithms is well understood at the early stage of the development - this means that we could experiment only 
@@ -73,8 +73,6 @@ However, these issues could be minimised or eliminated if
  validation and testing datasets.
  \item Relevance Judgements are prepared by experienced persons - this means that the performance of LETOR techniques could be enhanced as relevance judgements
  are used to produce training and validation datasets.
- \item Tools used in this project are familiarised at the early stage of the development - this means that we could focus more on other aspects of the 
- project.
 \end{itemize}
 
 
@@ -83,7 +81,7 @@ In the previous chapter, the experimental results have shown that applying LETOR
 does not improve the performance
 of the system. This might not be true however, if the system applies other LETOR algorithms provided by RankLib since each algorithm has its own behaviours.
 In addition, good training/validation datasets and feature selections play the main roles to the performance of the system~\cite{craig}. I strongly believe that the intuitions (features)
-proposed in chapter~\ref{section:goodexpert} are very useful but the main reason why LETOR fails is due to small training dataset. 
+proposed in Chapter~\ref{section:goodexpert} are very useful but the main reason why LETOR fails is due to small training dataset. 
 We had 34 training queries which is very small. Each testing query can be analysed to determine why applying a learned model gives better or worse
 performance compared to not applying LETOR. This can be done by for example, analysing the number of all terms,
 the number of funded projects terms and of publications terms relevant to each testing query.
